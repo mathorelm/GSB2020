@@ -99,7 +99,7 @@ class PdoGsb
     /*TODO Test si la fonction est exécutée avec un faux login / faux mdp  --> erreur */
     /*TODO Test si la fonction est exécutée avec un vrai login / vrai mdp  --> erreur */
     {
-        $requetePrepare = PdoGsb::$monPdo->prepare('SELECT personnels.id AS id, personnels.nom AS nom, ' . 'personnels.prenom AS prenom, ' . 'personnels.metier AS metier ' . 'FROM personnels ' . 'WHERE personnels.login = :unLogin AND personnels.mdp = :unMdp');
+        $requetePrepare = PdoGsb::$monPdo->prepare('SELECT personnels.id AS id, personnels.nom AS nom, ' . 'personnels.prenom AS prenom, ' . 'metiers.libelle AS metier ' . 'FROM personnels,metiers ' . 'WHERE personnels.login = :unLogin AND personnels.mdp = :unMdp' . ' AND personnels.metier = metiers.idMetiers');
         $requetePrepare->bindParam(':unLogin', $login, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMdp', $mdp, PDO::PARAM_STR);
         $requetePrepare->execute();
@@ -468,11 +468,11 @@ class PdoGsb
     /*TODO Test qui balaie l'intégralité de la table est vérifie*/
     /*TODO qu'aucune fiche d'un mois précédent ne reste "CR"*/
     {
-        //retourne le mois précédent       
-        $moisPrecedent = getMois(date('d-m-Y', strtotime('-1 month')));       
-        $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . 'SET idetat = CL, datemodif = now() ' . 'WHERE fichefrais.mois = :unMois'); 
+        //retourne le mois précédent
+        $moisPrecedent = getMois(date('d-m-Y', strtotime('-1 month')));
+        $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . 'SET idetat = CL, datemodif = now() ' . 'WHERE fichefrais.mois = :unMois');
         $requetePrepare->bindParam(':unMois', $moisPrecedent, PDO::PARAM_STR);
-        $requetePrepare->execute();        
+        $requetePrepare->execute();
         
     }
 }

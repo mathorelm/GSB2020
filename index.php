@@ -43,5 +43,12 @@ switch ($uc) {
     case 'deconnexion':
         include 'controleurs/c_deconnexion.php';
         break;
+    case 'valideFrais':
+        // clôturer ici les fiches de frais du mois précédent
+        clotureFichesMoisPrecedent();
+        
+        break;
+    case 'suivreFrais':
+        break;
 }
 require 'vues/v_pied.php';
