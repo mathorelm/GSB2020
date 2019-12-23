@@ -408,7 +408,29 @@ class PdoGsb
         }
         return $lesMois;
     }
-
+    
+    /**
+     * Retourne les visiteurs de la liste
+     *
+     * @return un tableau associatif comportant nom, prenom de tous les visiteurs
+     */
+    public function getLesVisiteurs()    
+    {
+        $requetePrepare = PdoGSB::$monPdo->prepare('SELECT personnels.id,personnels.nom,personnels.prenom from personnels WHERE metier=1 ORDER BY personnels.nom ASC');        
+        $requetePrepare->execute();
+        $lesVisiteurs = array();
+        while ($laLigne = $requetePrepare->fetch()) {
+            $unID = $laLigne['id'];
+            $nom = $laLigne['nom'];
+            $prenom = $laLigne['prenom'];
+            $lesVisiteurs[] = array(
+                'id' => $unID,
+                'nom' => $nom,
+                'prenom' => $prenom                
+            );
+        }
+        return $lesVisiteurs;
+    }
     /**
      * Retourne les informations d'une fiche de frais d'un visiteur pour un
      * mois donné

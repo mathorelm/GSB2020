@@ -44,9 +44,7 @@ switch ($uc) {
         include 'controleurs/c_deconnexion.php';
         break;
     case 'valideFrais':
-        // clôturer ici les fiches de frais du mois précédent
-        clotureFichesMoisPrecedent();
-        
+        include 'controleurs/c_valideFrais.php';        
         break;
     case 'suivreFrais':
         break;

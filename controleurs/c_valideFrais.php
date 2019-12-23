@@ -13,13 +13,26 @@
  * @link      http://gsb2020.free.fr Contexte « Laboratoire GSB »
  */
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
-$idVisiteur = $_SESSION['idVisiteur'];
 //Clôturer les fiches de frais du mois précédent
-//clotureFichesMoisPrecedent();
+$pdo->clotureFichesMoisPrecedent();
 switch ($action) {
     case 'afficheFrais':
-        //TODO Forcer à la sélection d'un nom, d'une fiche avant de l'afficher. JS ?
-        //include 'vues/v_afficheFrais.php';
-        phpinfo();
+        $lesVisiteurs = $pdo->getLesVisiteurs();  
+        $i=0;
+        foreach ($lesVisiteurs as $unVisiteur) {            
+            $unJeuDonnees = $pdo->getLesMoisDisponibles($unVisiteur['id']);
+            if (isset($unJeuDonnees)) {
+                foreach ($unJeuDonnees as $Donnee) {
+                    $TouslesMois[$i] = array(
+                        'ID' => $unVisiteur['id'],
+                        'mois' => $Donnee['mois'],
+                        'numAnnee' => $Donnee['numAnnee'],
+                        'numMois' => $Donnee['numMois']
+                    );                    
+                    $i++;
+                };
+            };
+        }        
+        include 'vues/v_listeVisiteurs.php';        
         break;
 }
