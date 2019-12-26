@@ -35,9 +35,8 @@ switch ($action) {
         break;
     case 'validerCreationFrais':
         $dateFrais = filter_input(INPUT_POST, 'dateFrais', FILTER_SANITIZE_STRING);
-        $libelle = filter_input(INPUT_POST, 'libelle', FILTER_SANITIZE_STRING);
-        $montant = filter_input(INPUT_POST, 'montant', FILTER_VALIDATE_FLOAT);
-        valideInfosFrais($dateFrais, $libelle, $montant);
+        $libelle = filter_input(INPUT_POST, 'libelle', FILTER_SANITIZE_STRING);        
+        $montant = filter_input(INPUT_POST, 'montant', FILTER_VALIDATE_FLOAT);        
         if (nbErreurs() != 0) {
             include 'vues/v_erreurs.php';
         } else {

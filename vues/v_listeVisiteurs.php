@@ -40,7 +40,7 @@
 			mesMois = document.getElementById("lstMois");
 			monChoix = mesVisiteurs.options[mesVisiteurs.selectedIndex].value;
 			maFiche = mesMois.options[mesMois.selectedIndex].value;
-			alert("Je vais chercher l'ID #"+ monChoix + " et la fiche "+ maFiche);
+			document.forms["formulaire"].submit();
 			}
 				
 		window.addEventListener("load",function() {
@@ -55,10 +55,11 @@
         <h5>Sélectionner un visiteur : </h5>          
     </div>         
     <div class="col-md-4">
-        <form action="index.php?uc=valideFrais&action=voirListeFrais" 
+        <form id="formulaire" action="index.php?uc=valideFrais&action=voirListeFrais" 
               method="post" role="form">
             <div class="form-group">                
                 <select id="lstVisiteurs" name="lstVisiteurs" class="form-control">
+                    <option label="entete" value="0" disabled selected>...</option>
                     <?php
                     foreach ($lesVisiteurs as $unVisiteur) {
                         $unId = $unVisiteur['id'];

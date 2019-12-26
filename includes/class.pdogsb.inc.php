@@ -105,7 +105,22 @@ class PdoGsb
         $requetePrepare->execute();
         return $requetePrepare->fetch();
     }
-
+    /**
+     * Retourne le nom d'un visiteur en fonction de son ID.
+     *
+     * @param String $id
+     *            ID du visiteur 
+     *
+     * @return le nom et le prénom sous la forme d'un tableau associatif
+     */
+    public function getNomVisiteur($id)
+    {
+        $requetePrepare = PdoGsb::$monPdo->prepare('SELECT personnels.nom AS nom, ' . 'personnels.prenom AS prenom FROM personnels WHERE personnels.id = :unId');
+        $requetePrepare->bindParam(':unId', $id, PDO::PARAM_STR);        
+        $requetePrepare->execute();
+        return $requetePrepare->fetch();
+    }
+    
     /**
      * Retourne sous forme d'un tableau associatif toutes les lignes de frais
      * hors forfait concernées par les deux arguments.
@@ -363,7 +378,29 @@ class PdoGsb
         $requetePrepare->bindParam(':unMontant', $montant, PDO::PARAM_INT);
         $requetePrepare->execute();
     }
-
+    
+    /**
+     * Met à jour la fiche avec le numéro $idFrais
+     * @param String $idVisiteur
+     * @param String $mois
+     * @param String $libelle
+     * @param String $date
+     * @param Float $montant
+     * @param Int $idFrais
+     */
+    public function majFraisHorsForfait($idVisiteur,$mois,$libelle,$date,$montant,$idFrais)
+    {
+        $dateFr = dateFrancaisVersAnglais($date);
+        $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE lignefraishorsforfait SET libelle=:unLibelle,date=:uneDateFr,montant=:unMontant WHERE id=:unIdFrais AND idvisiteur=:unIdVisiteur AND mois=:unMois');
+        $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unLibelle', $libelle, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':uneDateFr', $dateFr, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unMontant', $montant, PDO::PARAM_INT);
+        $requetePrepare->bindParam(':unIdFrais', $idFrais, PDO::PARAM_INT);
+        $requetePrepare->execute();
+    }
+    
     /**
      * Supprime le frais hors forfait dont l'id est passé en argument
      *

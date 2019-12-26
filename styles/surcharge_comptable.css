@@ -21,3 +21,24 @@ a:focus {
   color: #fff;  
   background-color: #ec971f;
 }
+
+h2 {
+	color : #f0ad4e;
+}
+
+.panel-warning {
+  border-color: #f0ad4e;
+}
+.panel-warning > .panel-heading {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
+input:focus:invalid {
+  outline: none;
+}
