@@ -46,7 +46,7 @@
                             	<br>Afficher mes fiches de frais</a>
                        	<?php }?>
                        	<?php if ($_SESSION['metier']=="comptable") {?>
-                        	<a href="index.php?uc=valideFrais&action=afficheFrais"
+                        	<a href="index.php?uc=valideFrais&action=selectionnerUtilisateur"
                            		class="btn btn-warning btn-lg" role="button">
                             	<span class="glyphicon glyphicon-ok"></span>
                             	<br>Valider la fiche de frais</a>

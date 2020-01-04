@@ -262,4 +262,33 @@ function nbErreurs()
     } else {
         return count($_REQUEST['erreurs']);
     }
+    /**
+     * Ajoute le libellé d'une information au tableau des informations
+     *
+     * @param String $msg
+     *            Libellé de l'information
+     *
+     * @return null
+     */
+}
+function ajouterInfo($msg)
+    {
+        if (! isset($_REQUEST['infos'])) {
+            $_REQUEST['infos'] = array();
+        }
+        $_REQUEST['infos'][] = $msg;
+    }
+    
+    /**
+     * Retoune le nombre de lignes du tableau des informations
+     *
+     * @return Integer le nombre d'informations
+     */
+function nbInfos()
+    {
+        if (! isset($_REQUEST['infos'])) {
+            return 0;
+        } else {
+            return count($_REQUEST['infos']);
+        }
 }

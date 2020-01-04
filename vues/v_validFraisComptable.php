@@ -35,15 +35,17 @@
                                name="lesFrais[<?php echo $idFrais ?>]"
                                size="8" maxlength="5" 
                                value="<?php echo $quantite ?>" 
-                               class="form-control" required>
-                       <input id="idNom" name="idNom" type="hidden" value="<?php echo $id_visiteur?>">
-                       <input id="mois" name="mois" type="hidden" value="<?php echo $mois_fiche?>">                        
+                               class="form-control" required
+                               onChange="document.getElementById('corrigerForfait').disabled=false;"
+                        >                                               
                     </div>
                     <?php
                 }
                 ?>
-                <button class="btn btn-success" type="submit">Corriger</button>
-                <button class="btn btn-danger" type="reset">Réinitialiser</button>
+                <input id="idNom" name="idNom" type="hidden" value="<?php echo $id_visiteur?>">
+                <input id="mois" name="mois" type="hidden" value="<?php echo $mois_fiche?>">
+                <button class="btn btn-success" type="submit" id="corrigerForfait" disabled=true>Corriger</button>
+                <button class="btn btn-danger" type="reset" onclick="document.getElementById('corrigerForfait').disabled=true;">Réinitialiser</button>
             </fieldset>
         </form>
     </div>

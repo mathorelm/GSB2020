@@ -401,6 +401,30 @@ class PdoGsb
         $requetePrepare->execute();
     }
     
+   /**
+    * Reporte les éléments passés en arguments sur le mois suivant. Crée la fiche du mois suivant si nécessaire.
+    * @param String $id_visiteur
+    * @param String $mois_fiche
+    * @param String $libelle
+    * @param String $dateFrais
+    * @param Float $montant
+    * @param Int $id_fiche
+    */
+    public function reporteFraisHorsForfait($id_visiteur, $mois_fiche, $libelle, $dateFrais, $montant,$id_fiche) 
+    {
+        //supprimer la ligne dans le mois actuel
+        $this->supprimerFraisHorsForfait($id_fiche);
+        //vérifier si il existe une fiche pour le mois suivant --> la créer avec frais à zéro en forfaitisé.
+        $mois_suivant = date('d-m-Y', strtotime('+1 month'));
+        $mois_suivant = str_replace("-","/",$mois_suivant);
+        $mois_suivant=getMois($mois_suivant);
+        if ($this->estPremierFraisMois($id_visiteur, $mois_suivant)) {
+            //il n'y a pas de fiche...créer les frais forfaits à zéro
+            $this->creeNouvellesLignesFrais($id_visiteur, $mois_suivant);            
+        }
+        $this->creeNouveauFraisHorsForfait($id_visiteur, $mois_suivant, $libelle, $dateFrais, $montant);          
+    }
+    
     /**
      * Supprime le frais hors forfait dont l'id est passé en argument
      *
@@ -446,6 +470,34 @@ class PdoGsb
         return $lesMois;
     }
     
+    /**
+     * Retourne les mois pour lesquel un visiteur a une fiche à valider
+     *
+     * @param String $idVisiteur
+     *            ID du visiteur
+     *
+     * @return un tableau associatif de clé un mois -aaaamm- et de valeurs
+     *         l'année et le mois correspondant
+     */
+    public function getLesMoisAValider($idVisiteur)
+    /*TODO Test sur un visiteur faux --> erreur*/
+    {
+        $requetePrepare = PdoGSB::$monPdo->prepare('SELECT fichefrais.mois AS mois FROM fichefrais ' . "WHERE fichefrais.idvisiteur = :unIdVisiteur AND idetat = 'CL'" . 'ORDER BY fichefrais.mois desc');
+        $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        $lesMois = array();
+        while ($laLigne = $requetePrepare->fetch()) {
+            $mois = $laLigne['mois'];
+            $numAnnee = substr($mois, 0, 4);
+            $numMois = substr($mois, 4, 2);
+            $lesMois[] = array(
+                'mois' => $mois,
+                'numAnnee' => $numAnnee,
+                'numMois' => $numMois
+            );
+        }
+        return $lesMois;
+    }
     /**
      * Retourne les visiteurs de la liste
      *
@@ -528,8 +580,10 @@ class PdoGsb
     /*TODO qu'aucune fiche d'un mois précédent ne reste "CR"*/
     {
         //retourne le mois précédent
-        $moisPrecedent = getMois(date('d-m-Y', strtotime('-1 month')));
-        $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . 'SET idetat = CL, datemodif = now() ' . 'WHERE fichefrais.mois = :unMois');
+        $laDate = date('d-m-Y', strtotime('-1 month'));
+        $laDate = str_replace("-","/",$laDate);
+        $moisPrecedent = getMois($laDate);
+        $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . "SET idetat = 'CL', datemodif = now() " . "WHERE fichefrais.mois = :unMois AND idetat = 'CR'");
         $requetePrepare->bindParam(':unMois', $moisPrecedent, PDO::PARAM_STR);
         $requetePrepare->execute();
         

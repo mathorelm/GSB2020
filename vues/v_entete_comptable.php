@@ -6,7 +6,7 @@
                                 	</a>
                             	</li>
                             	<li <?php if ($uc == 'valideFrais') { ?>class="active"<?php } ?>>
-                                	<a href="index.php?uc=valideFrais&action=afficheFrais">
+                                	<a href="index.php?uc=valideFrais&action=selectionnerUtilisateur">
                                     	<span class="glyphicon glyphicon-ok"></span>
                                     	Valider les fiches de Frais
                                 	</a>
