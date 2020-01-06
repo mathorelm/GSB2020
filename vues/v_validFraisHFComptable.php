@@ -15,26 +15,7 @@
  */
 ?>
 <?php $lignes_a_justifier = count($lesFraisHorsForfait);?>
-<script>
-	function reporterLigne(iD) {
-		libelleTest = "REPORT : " + document.getElementById("HFlibelle"+iD).value;
-		if (libelleTest.length > 100) {
-			document.getElementById("HFlibelle"+iD).value = libelleTest.substr(0,100);
-		} else {
-			document.getElementById("HFlibelle"+iD).value = libelleTest;
-		}		
-		document.forms["form"+iD].submit();
-	};
-	function refuserLigne(iD) {		
-		libelleTest = "REFUSE : " + document.getElementById("HFlibelle"+iD).value;
-		if (libelleTest.length > 100) {
-			document.getElementById("HFlibelle"+iD).value = libelleTest.substr(0,100);
-		} else {
-			document.getElementById("HFlibelle"+iD).value = libelleTest;
-		}		
-		document.forms["form"+iD].submit();
-	};	
-</script>
+<script type="text/javascript" src="js/js_report_refus.js"></script> 
 <hr>
 <div class="row">
     <div class="panel panel-warning">
