@@ -15,7 +15,7 @@
  */
 ?>
 <?php $lignes_a_justifier = count($lesFraisHorsForfait);?>
-<script type="text/javascript" src="js/js_report_refus.js"></script> 
+<script type="text/javascript" src="js_report_refus.js"></script> 
 <hr>
 <div class="row">
     <div class="panel panel-warning">
@@ -55,9 +55,12 @@
                          <input id="mois<?php echo $id?>" name="mois" type="hidden" value="<?php echo $mois_fiche?>"> 
                     	 <input id="idFiche<?php echo $id?>" name="idFiche" type="hidden" value="<?php echo $id?>">
                     	 <button class="btn btn-success" type="submit" id="Corriger<?php echo $id?>">Corriger</button>
-            			 <button class="btn btn-warning" type="button" id="Reporter<?php echo $id?>" onclick="reporterLigne(<?php echo $id?>)">Reporter</button>           			
-          	         	 <button class="btn" type="button" id="Refuser<?php echo $id?>" onclick="refuserLigne(<?php echo $id?>)" <?php if (substr($libelle,0,6)=='REFUSE') 
-          	         	 {echo ' disabled';$lignes_a_justifier = $lignes_a_justifier - 1;} ?>>Refuser</button>            			 
+            			 <button class="btn btn-warning" type="button" id="Reporter<?php echo $id?>"
+            			 onclick="reporterLigne(<?php echo $id?>)">Reporter</button>           			
+          	         	 <button class="btn" type="button" id="Refuser<?php echo $id?>" 
+          	         	 onclick="refuserLigne(<?php echo $id?>)" 
+          	         	 <?php if (substr($libelle,0,6)=='REFUSE'){echo ' disabled';$lignes_a_justifier = $lignes_a_justifier - 1;} ?>
+          	         	 >Refuser</button>            			 
             			 <button class="btn btn-danger" type="reset">Réinitialiser</button>
                     </td>
                     </form>
