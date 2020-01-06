@@ -30,13 +30,13 @@
                     $libelle = htmlspecialchars($unFrais['libelle']);
                     $quantite = $unFrais['quantite']; ?>
                     <div class="form-group">
-                        <label for="idFrais"><?php echo $libelle ?></label>
-                        <input type="text" id="idFrais" 
+                        <label for="idFrais<?php echo $idFrais?>"><?php echo $libelle ?></label>
+                        <input type="text" id="idFrais<?php echo $idFrais?>" 
                                name="lesFrais[<?php echo $idFrais ?>]"
                                size="8" maxlength="5" 
                                value="<?php echo $quantite ?>" 
                                class="form-control" required
-                               onChange="document.getElementById('corrigerForfait').disabled=false;"
+                               onKeyUp="document.getElementById('corrigerForfait').disabled=false;"
                         >                                               
                     </div>
                     <?php
@@ -44,7 +44,7 @@
                 ?>
                 <input id="idNom" name="idNom" type="hidden" value="<?php echo $id_visiteur?>">
                 <input id="mois" name="mois" type="hidden" value="<?php echo $mois_fiche?>">
-                <button class="btn btn-success" type="submit" id="corrigerForfait" disabled=true>Corriger</button>
+                <button class="btn btn-success" type="submit" id="corrigerForfait" disabled>Corriger</button>
                 <button class="btn btn-danger" type="reset" onclick="document.getElementById('corrigerForfait').disabled=true;">Réinitialiser</button>
             </fieldset>
         </form>

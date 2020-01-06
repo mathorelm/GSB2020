@@ -80,7 +80,7 @@ switch ($action) {
             if (substr($libelle,0,6)=="REPORT") {
                 //traitement spécifique : suppression mois actuel + insertion mois suivant
                 $pdo->reporteFraisHorsForfait($id_visiteur, $mois_fiche, $libelle, $dateFrais, $montant,$id_fiche);
-                ajouterInfo("Report de la ligne '"+ "test" +"' au mois suivant.");                
+                ajouterInfo("Report de la ligne au mois suivant.");                
             } else {            
                 $pdo->majFraisHorsForfait($id_visiteur, $mois_fiche, $libelle, $dateFrais, $montant,$id_fiche);
                 ajouterInfo("La modification demandée a été effectuée pour '" . $libelle . "' (" . $montant . "€) à la date du " . $dateFrais);
@@ -95,9 +95,12 @@ switch ($action) {
         break;
     
     case "validerFiche":
-        //$pdo ->majEtatFicheFrais($id_visiteur, $mois_fiche, "VA");
-        //modifier les justificatifs
-        //ajouter la somme validée        
+        $nbJustificatifs = filter_input(INPUT_POST,'nbJustificatifs',FILTER_SANITIZE_STRING);
+        $id_visiteur = filter_input(INPUT_POST,'idNom',FILTER_SANITIZE_STRING);
+        $mois_fiche = filter_input(INPUT_POST,'mois',FILTER_SANITIZE_STRING);
+        $pdo->majNbJustificatifs($id_visiteur, $mois_fiche, $nbJustificatifs);
+        $pdo->valideSommeFrais($id_visiteur,$mois_fiche);
+        $pdo->majEtatFicheFrais($id_visiteur, $mois_fiche, "VA");              
         header('Location: index.php');
         break;
 }

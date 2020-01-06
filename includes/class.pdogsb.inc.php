@@ -258,13 +258,66 @@ class PdoGsb
     /*TODO Test sur un mois erroné (mois non présent en BDD) --> pas d'erreur mais enregistrement vide ?*/
     /*TODO Test sur une tableau $nbJustificatifs non fourni --> comportement ?*/
     {
-        $requetePrepare = PdoGB::$monPdo->prepare('UPDATE fichefrais ' . 'SET nbjustificatifs = :unNbJustificatifs ' . 'WHERE fichefrais.idvisiteur = :unIdVisiteur ' . 'AND fichefrais.mois = :unMois');
+        $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE fichefrais ' . 'SET nbjustificatifs = :unNbJustificatifs ' . 'WHERE fichefrais.idvisiteur = :unIdVisiteur ' . 'AND fichefrais.mois = :unMois');
         $requetePrepare->bindParam(':unNbJustificatifs', $nbJustificatifs, PDO::PARAM_INT);
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->execute();
     }
-
+    
+    /**
+     * Insère dans ficheFrais le montant validé par le comptable
+     * @param String $idVisiteur
+     * @param String $mois
+     */
+    public function valideSommeFrais($idVisiteur,$mois) {
+        $montantValide = 0;
+        $montantValide = $this->effectueTotalFraisForfait($idVisiteur,$mois);
+        $montantValide +=$this->effectueTotalFraisHF($idVisiteur,$mois);
+        $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE fichefrais ' . 'SET montantvalide = :unMontant ' . 'WHERE fichefrais.idvisiteur = :unIdVisiteur ' . 'AND fichefrais.mois = :unMois');
+        $requetePrepare->bindParam(':unMontant', $montantValide, PDO::PARAM_INT);
+        $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
+        $requetePrepare->execute();
+    }
+    
+    /**
+     * Retourne le total des frais au forfait de la fiche (en exploitant le montant unitaire)
+     * @param String $idVisiteur
+     * @param String $mois
+     * @return Float le total des frais forfait
+     */
+    public function effectueTotalFraisForfait($idVisiteur,$mois) {
+        $maRequete = 'SELECT SUM(lignefraisforfait.quantite*fraisforfait.montant) as total';
+        $maRequete = $maRequete . ' FROM lignefraisforfait JOIN fraisforfait';
+        $maRequete = $maRequete . ' ON lignefraisforfait.idfraisforfait = fraisforfait.id';
+        $maRequete = $maRequete . ' WHERE idvisiteur = :unIdVisiteur AND mois = :unMois';
+        
+        $requetePrepare = PdoGSB::$monPdo->prepare($maRequete);
+        $requetePrepare->bindParam(':unIdVisiteur',$idVisiteur,PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unMois',$mois,PDO::PARAM_STR);
+        $requetePrepare->execute();
+        $TEST_retour = $requetePrepare->fetch();
+        return (float) $TEST_retour['total'];
+    }
+    
+    /**
+     * Retourne le total des frais hors forfait (hors lignes REFUSE)
+     * @param String $idVisiteur
+     * @param String $mois
+     * @return Float le total des frais hors forfait
+     */
+    public function effectueTotalFraisHF($idVisiteur,$mois) {
+        $lesFraisHorsForfait = $this->getLesFraisHorsForfait($idVisiteur, $mois);
+        $totalFrais = 0;
+        foreach ($lesFraisHorsForfait as $unFraisHorsForfait) {
+            $testlibelle=substr($unFraisHorsForfait['libelle'],0,6);
+            if ($testlibelle<>"REFUSE") {
+                $totalFrais += $unFraisHorsForfait['montant'];
+            }
+        }
+        return (float) $totalFrais;
+    }
     /**
      * Teste si un visiteur possède une fiche de frais pour le mois passé en argument
      *
