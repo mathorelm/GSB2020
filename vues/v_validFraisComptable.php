@@ -14,6 +14,7 @@
  * @link      http://gsb2020.free.fr Contexte « Laboratoire GSB »
  */
 ?>
+<script type="text/javascript" src="/vues/js/js_dynamique_valideFrais.js"></script>
 <div class="row">    
     <h2>Valider la fiche de frais 
         <?php echo $mois_fiche . ' - ' . $nom_prenom['nom'] . ' ' . $nom_prenom['prenom'] ?>
@@ -36,7 +37,7 @@
                                size="8" maxlength="5" 
                                value="<?php echo $quantite ?>" 
                                class="form-control" required
-                               onKeyUp="document.getElementById('corrigerForfait').disabled=false;"
+                               
                         >                                               
                     </div>
                     <?php
@@ -45,7 +46,7 @@
                 <input id="idNom" name="idNom" type="hidden" value="<?php echo $id_visiteur?>">
                 <input id="mois" name="mois" type="hidden" value="<?php echo $mois_fiche?>">
                 <button class="btn btn-success" type="submit" id="corrigerForfait" disabled>Corriger</button>
-                <button class="btn btn-danger" type="reset" onclick="document.getElementById('corrigerForfait').disabled=true;">Réinitialiser</button>
+                <button id="reinit" class="btn btn-danger" type="reset">Réinitialiser</button>
             </fieldset>
         </form>
     </div>

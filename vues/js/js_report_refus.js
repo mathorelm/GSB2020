@@ -20,13 +20,14 @@
 	 * @returns null
 	 */
 	function reporterLigne(iD) {
-		libelleTest = "REPORT : " + document.getElementById("HFlibelle"+iD).value;
+		/*libelleTest = "REPORT : " + document.getElementById("HFlibelle"+iD).value;
 		if (libelleTest.length > 100) {
 			document.getElementById("HFlibelle"+iD).value = libelleTest.substr(9,100);
 		} else {
 			document.getElementById("HFlibelle"+iD).value = libelleTest;
 		}		
-		document.forms["form"+iD].submit();
+		document.forms["form"+iD].submit();*/
+		alert('Déclenchement report !');
 	};
 	/**
 	 * Insère "REFUSE : " sur la ligne demandée puis provoque l'envoi du formulaire
@@ -35,11 +36,21 @@
 	 * @returns null
 	 */
 	function refuserLigne(iD) {		
-		libelleTest = "REFUSE : " + document.getElementById("HFlibelle"+iD).value;
+		/*libelleTest = "REFUSE : " + document.getElementById("HFlibelle"+iD).value;
 		if (libelleTest.length > 100) {
 			document.getElementById("HFlibelle"+iD).value = libelleTest.substr(9,100);
 		} else {
 			document.getElementById("HFlibelle"+iD).value = libelleTest;
 		}		
-		document.forms["form"+iD].submit();
-	};	
+		document.forms["form"+iD].submit();*/
+		alert('Déclenchement refus !');
+	};
+	
+	function testfunction() {
+		alert('Test !');
+	}
+	
+	window.addEventListener("load", function() {
+		//document.getElementsByClassName("form-control").addEventListener("click", testfunction);
+		alert('Evénement de chargement');
+	});
