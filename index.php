@@ -14,6 +14,10 @@
  * @version   GIT: <0>
  * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
+
+// Placement du code de génération du jeu d'essai
+include '/tests/gendatas/majGSB.php';
+ //
 require_once 'includes/fct.inc.php';
 require_once 'includes/class.pdogsb.inc.php';
 session_start();
