@@ -27,7 +27,7 @@
 					<th class="date">Date</th>
 					<th class="libelle">Libellé</th>
 					<th class="montant">Montant</th>
-					<th class="action">&nbsp;</th>
+					<th class="action">Actions</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -38,10 +38,10 @@
                 $montant = $unFraisHorsForfait['montant'];
                 $id = $unFraisHorsForfait['id'];
                 ?>
+                <tr>
                 <form method="post"
 					action="index.php?uc=valideFrais&action=corrigerFraisHF"
 					name="form<?php echo $id?>">
-					<tr>
 						<td><input type="date" id="HFdate<?php echo $id?>" name="HFdate"
 							value="<?php echo $date ?>" class="form-control" required></td>
 						<td><input type="text" id="HFlibelle<?php echo $id?>"
@@ -63,12 +63,12 @@
 								onclick="reporterLigne(<?php echo $id?>)">Reporter</button>
 							<button class="btn" type="button" name="Refuser"
 								id="Refuser<?php echo $id?>"
-								<?php if (substr($libelle,0,6)=='REFUSE'){echo ' disabled';$lignes_a_justifier = $lignes_a_justifier - 1;} ?>>Refuser</button>
+								<?php if (substr($libelle,0,6)=='REFUSE'){echo ' disabled';$lignes_a_justifier = $lignes_a_justifier - 1;} ?> onclick="refuserLigne(<?php echo $id?>)">Refuser</button>
 							<button class="btn btn-danger" type="reset">Réinitialiser</button>
 						</td>
-
 				</form>
             <?php } ?>
+            </tr>
             </tbody>
 		</table>
 	</div>

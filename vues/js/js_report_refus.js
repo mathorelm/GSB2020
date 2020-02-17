@@ -20,13 +20,13 @@
 	 * @returns null
 	 */
 	function reporterLigne(id) {
-		/*libelleTest = "REPORT : " + document.getElementById("HFlibelle"+id).value;
+		libelleTest = "REPORT : " + document.getElementById("HFlibelle"+id).value;
 		if (libelleTest.length > 100) {
 			document.getElementById("HFlibelle"+id).value = libelleTest.substr(9,100);
 		} else {
 			document.getElementById("HFlibelle"+id).value = libelleTest;
 		}
-		document.forms["form"+iD].submit();*/
+		document.forms["form"+iD].submit();
 		//alert('Déclenchement report ! id='+id);
 	};
 	/**
@@ -36,21 +36,21 @@
 	 * @returns null
 	 */
 	function refuserLigne(id) {
-		/*libelleTest = "REFUSE : " + document.getElementById("HFlibelle"+id).value;
+		libelleTest = "REFUSE : " + document.getElementById("HFlibelle"+id).value;
 		if (libelleTest.length > 100) {
 			document.getElementById("HFlibelle"+id).value = libelleTest.substr(9,100);
 		} else {
 			document.getElementById("HFlibelle"+id).value = libelleTest;
 		}
-		document.forms["form"+id].submit();*/
+		document.forms["form"+id].submit();
 		//alert('Déclenchement refus ! id='+id);
 	};
 
-	window.addEventListener("load", function() {
+	/*window.addEventListener("load", function() {
 		let tabButtonsReporter = window.document.querySelectorAll('button[name="Reporter"]');
 		let tabButtonsRefuser = window.document.querySelectorAll('button[name="Refuser"]');
 		for (let i=0;i<tabButtonsReporter.length;i++) {
-			tabButtonsReporter[i].addEventListener("click",reporterLigne(i));
-			tabButtonsRefuser[i].addEventListener("click", refuserLigne(i));
-		}
-	});
+			tabButtonsReporter[i].addEventListener("click",reporterLigne(id));
+			tabButtonsRefuser[i].addEventListener("click", refuserLigne(id));
+		}*/
+	//});
