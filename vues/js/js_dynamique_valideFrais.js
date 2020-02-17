@@ -12,16 +12,18 @@
  * @version   GIT: <0>
  * @link      http://gsb2020.free.fr
  */
-	
-	
+
+
+	function activerBoutonCorriger() {
+		document.getElementById('corrigerForfait').disabled=false;
+	}
 	function desactiverBoutonCorriger() {
 		document.getElementById('corrigerForfait').disabled=true;
 	}
-	function sactiverBoutonCorriger() {
-		document.getElementById('corrigerForfait').disabled=false;
-	}
-	
+
 	window.addEventListener("load", function() {
-		window.document.getElementById("#reinit").addEventListener("click", desactiverBoutonCorriger);
-		window.document.getElementById(".form-control").addEventListener("click", activerBoutonCorriger);
+		window.document.getElementById("reinit").addEventListener("click", desactiverBoutonCorriger);
+		for (let i=0;i<tabZonesText.length;i++) {
+			tabZonesText[i].addEventListener("change",activerBoutonCorriger);
+		}
 	});
