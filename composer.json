@@ -1,0 +1,20 @@
+{
+	"name" : "gsb2020/gsb2020",
+	"description" : "contexte GSB CNED BTS 2020",
+	"type" : "project",
+	"license" : "OPL-1.0",
+	"minimum-stability" : "dev",
+	"support" : {},
+	"keywords" : [
+		"BTS SIO CNED GSB"
+	],
+	"require": {
+		"phpunit/phpunit": "8.5.x-dev",
+		"phpmd/phpmd": "dev-master",
+		"phploc/phploc": "^5.0",
+		"theseer/phpdox": "dev-master",
+		"squizlabs/php_codesniffer": "^3.0@dev",
+		"sebastian/phpcpd": "^4.1",
+		"pdepend/pdepend": "^2.0@dev"
+	}
+}
