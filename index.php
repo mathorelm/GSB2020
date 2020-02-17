@@ -15,11 +15,11 @@
  * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
 
-error_reporting(E_ALL);
 require_once 'includes/fct.inc.php';
 require_once 'includes/class.pdogsb.inc.php';
 
 session_start();
+error_reporting(E_ALL);
 $pdo = PdoGsb::getPdoGsb();
 $estConnecte = estConnecte();
 require 'vues/v_entete.php';
@@ -50,7 +50,7 @@ switch ($uc) {
         include 'controleurs/c_valideFrais.php';
         break;
     case 'suivreFrais':
-        include 'controleurs/c_suivreFrais.php;
+        include 'controleurs/c_suivreFrais.php';
         break;
 }
 require 'vues/v_pied.php';

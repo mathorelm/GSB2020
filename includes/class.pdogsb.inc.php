@@ -99,25 +99,21 @@ class PdoGsb
     /*TODO Test si la fonction est exécutée avec un faux login / faux mdp  --> erreur */
     /*TODO Test si la fonction est exécutée avec un vrai login / vrai mdp  --> erreur */
     {
-        $requetePrepare = PdoGsb::$monPdo->prepare('SELECT personnels.id AS id, personnels.nom AS nom, ' . 'personnels.prenom AS prenom, ' . 'metiers.libelle AS metier ' . 'FROM personnels,metiers ' . 'WHERE personnels.login = :unLogin AND personnels.mdp = :unMdp' . ' AND personnels.metier = metiers.idMetiers');
+        $requetePrepare = PdoGsb::$monPdo->prepare('SELECT personnels.id AS id, personnels.nom AS nom, ' . 'personnels.prenom AS prenom, personnels.mdp as mdp,' . 'metiers.libelle AS metier ' . 'FROM personnels,metiers ' . 'WHERE personnels.login = :unLogin' . ' AND personnels.metier = metiers.idMetiers');
         $requetePrepare->bindParam(':unLogin', $login, PDO::PARAM_STR);
-        $requetePrepare->bindParam(':unMdp', $mdp, PDO::PARAM_STR);
+        //Ne plus utiliser le mot de passe comme critère de SELECT car il est entré en clair dans l'IHM
+        //$requetePrepare->bindParam(':unMdp', $mdp, PDO::PARAM_STR);
         $requetePrepare->execute();
         $res = $requetePrepare->fetch();
-        if (strlen($res['mdp'])!=60) {
-            //Mot de passe à crypter
-            $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE personnels ' . 'SET personnel.mdp = :unHash ' . 'WHERE personnels.login = :unLogin ');
-            $requetePrepare->bindParam(':unLogin', $login, PDO::PARAM_STR);
-            $requetePrepare->bindParam(':unHash', password_hash($res['mdp']), PDO::PARAM_STR);
-            $requetePrepare->execute();
-            if ($mdp==$res['mdp']) { return $res;}
-        } else {
-            //Proposition à crypter
-            $hash=password_hash($mdp,PASSWORD_BCRYPT);
-            if ($hash==$mdp) { return $res;}
-
+        // Proposition à crypter
+        echo "Pour le login : ".$login.", le mot de passe entré est : ".$mdp."/r/n";
+        echo "Le hash correspondant est : ".password_hash($mdp,PASSWORD_BCRYPT)."/r/n";
+        echo "La BDD a en base : ".$res['mdp'];
+        if (password_verify($mdp, $res['mdp'])) {
+            return $res;
         }
     }
+
     /**
      * Retourne le nom d'un visiteur en fonction de son ID.
      *
@@ -280,13 +276,15 @@ class PdoGsb
 
     /**
      * Insère dans ficheFrais le montant validé par le comptable
+     *
      * @param String $idVisiteur
      * @param String $mois
      */
-    public function valideSommeFrais($idVisiteur,$mois) {
+    public function valideSommeFrais($idVisiteur, $mois)
+    {
         $montantValide = 0;
-        $montantValide = $this->effectueTotalFraisForfait($idVisiteur,$mois);
-        $montantValide +=$this->effectueTotalFraisHF($idVisiteur,$mois);
+        $montantValide = $this->effectueTotalFraisForfait($idVisiteur, $mois);
+        $montantValide += $this->effectueTotalFraisHF($idVisiteur, $mois);
         $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE fichefrais ' . 'SET montantvalide = :unMontant ' . 'WHERE fichefrais.idvisiteur = :unIdVisiteur ' . 'AND fichefrais.mois = :unMois');
         $requetePrepare->bindParam(':unMontant', $montantValide, PDO::PARAM_INT);
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
@@ -296,19 +294,21 @@ class PdoGsb
 
     /**
      * Retourne le total des frais au forfait de la fiche (en exploitant le montant unitaire)
+     *
      * @param String $idVisiteur
      * @param String $mois
      * @return Float le total des frais forfait
      */
-    public function effectueTotalFraisForfait($idVisiteur,$mois) {
+    public function effectueTotalFraisForfait($idVisiteur, $mois)
+    {
         $maRequete = 'SELECT SUM(lignefraisforfait.quantite*fraisforfait.montant) as total';
         $maRequete = $maRequete . ' FROM lignefraisforfait JOIN fraisforfait';
         $maRequete = $maRequete . ' ON lignefraisforfait.idfraisforfait = fraisforfait.id';
         $maRequete = $maRequete . ' WHERE idvisiteur = :unIdVisiteur AND mois = :unMois';
 
         $requetePrepare = PdoGSB::$monPdo->prepare($maRequete);
-        $requetePrepare->bindParam(':unIdVisiteur',$idVisiteur,PDO::PARAM_STR);
-        $requetePrepare->bindParam(':unMois',$mois,PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->execute();
         $TEST_retour = $requetePrepare->fetch();
         return (float) $TEST_retour['total'];
@@ -316,21 +316,24 @@ class PdoGsb
 
     /**
      * Retourne le total des frais hors forfait (hors lignes REFUSE)
+     *
      * @param String $idVisiteur
      * @param String $mois
      * @return Float le total des frais hors forfait
      */
-    public function effectueTotalFraisHF($idVisiteur,$mois) {
+    public function effectueTotalFraisHF($idVisiteur, $mois)
+    {
         $lesFraisHorsForfait = $this->getLesFraisHorsForfait($idVisiteur, $mois);
         $totalFrais = 0;
         foreach ($lesFraisHorsForfait as $unFraisHorsForfait) {
-            $testlibelle=substr($unFraisHorsForfait['libelle'],0,6);
-            if ($testlibelle<>"REFUSE") {
+            $testlibelle = substr($unFraisHorsForfait['libelle'], 0, 6);
+            if ($testlibelle != "REFUSE") {
                 $totalFrais += $unFraisHorsForfait['montant'];
             }
         }
         return (float) $totalFrais;
     }
+
     /**
      * Teste si un visiteur possède une fiche de frais pour le mois passé en argument
      *
@@ -447,6 +450,7 @@ class PdoGsb
 
     /**
      * Met à jour la fiche avec le numéro $idFrais
+     *
      * @param String $idVisiteur
      * @param String $mois
      * @param String $libelle
@@ -454,7 +458,7 @@ class PdoGsb
      * @param Float $montant
      * @param Int $idFrais
      */
-    public function majFraisHorsForfait($idVisiteur,$mois,$libelle,$date,$montant,$idFrais)
+    public function majFraisHorsForfait($idVisiteur, $mois, $libelle, $date, $montant, $idFrais)
     {
         $dateFr = dateFrancaisVersAnglais($date);
         $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE lignefraishorsforfait SET libelle=:unLibelle,date=:uneDateFr,montant=:unMontant WHERE id=:unIdFrais AND idvisiteur=:unIdVisiteur AND mois=:unMois');
@@ -467,25 +471,27 @@ class PdoGsb
         $requetePrepare->execute();
     }
 
-   /**
-    * Reporte les éléments passés en arguments sur le mois suivant. Crée la fiche du mois suivant si nécessaire.
-    * @param String $id_visiteur
-    * @param String $mois_fiche
-    * @param String $libelle
-    * @param String $dateFrais
-    * @param Float $montant
-    * @param Int $id_fiche
-    */
-    public function reporteFraisHorsForfait($id_visiteur, $mois_fiche, $libelle, $dateFrais, $montant,$id_fiche)
+    /**
+     * Reporte les éléments passés en arguments sur le mois suivant.
+     * Crée la fiche du mois suivant si nécessaire.
+     *
+     * @param String $id_visiteur
+     * @param String $mois_fiche
+     * @param String $libelle
+     * @param String $dateFrais
+     * @param Float $montant
+     * @param Int $id_fiche
+     */
+    public function reporteFraisHorsForfait($id_visiteur, $mois_fiche, $libelle, $dateFrais, $montant, $id_fiche)
     {
-        //supprimer la ligne dans le mois actuel
+        // supprimer la ligne dans le mois actuel
         $this->supprimerFraisHorsForfait($id_fiche);
-        //vérifier si il existe une fiche pour le mois suivant --> la créer avec frais à zéro en forfaitisé.
+        // vérifier si il existe une fiche pour le mois suivant --> la créer avec frais à zéro en forfaitisé.
         $mois_suivant = date('d-m-Y', strtotime('+1 month'));
-        $mois_suivant = str_replace("-","/",$mois_suivant);
-        $mois_suivant=getMois($mois_suivant);
+        $mois_suivant = str_replace("-", "/", $mois_suivant);
+        $mois_suivant = getMois($mois_suivant);
         if ($this->estPremierFraisMois($id_visiteur, $mois_suivant)) {
-            //il n'y a pas de fiche...créer les frais forfaits à zéro
+            // il n'y a pas de fiche...créer les frais forfaits à zéro
             $this->creeNouvellesLignesFrais($id_visiteur, $mois_suivant);
         }
         $this->creeNouveauFraisHorsForfait($id_visiteur, $mois_suivant, $libelle, $dateFrais, $montant);
@@ -564,6 +570,7 @@ class PdoGsb
         }
         return $lesMois;
     }
+
     /**
      * Retourne les visiteurs de la liste
      *
@@ -586,6 +593,29 @@ class PdoGsb
         }
         return $lesVisiteurs;
     }
+
+    /**
+     * Effectue le cryptage des mots de passe des personnels, si inférieurs à 60 caractères
+     *
+     * @return nb de mots de passe cryptés
+     */
+    public function crypterMotsDePasse()
+    {
+        $requetePrepare = PdoGSB::$monPdo->prepare('SELECT personnels.id,personnels.mdp from personnels WHERE length(mdp)<60');
+        $requetePrepare->execute();
+        $res = $requetePrepare->fetchAll();
+        $compteur = 0;
+        foreach ($res as $unPersonnel) {
+            $hash = password_hash($unPersonnel['mdp'], PASSWORD_BCRYPT);
+            $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE personnels ' . 'SET personnels.mdp = :unHash ' . 'WHERE personnels.id = :unId ');
+            $requetePrepare->bindParam(':unId', $unPersonnel['id'], PDO::PARAM_STR);
+            $requetePrepare->bindParam(':unHash', $hash, PDO::PARAM_STR);
+            $requetePrepare->execute();
+            $compteur++;
+        }
+        return $compteur;
+    }
+
     /**
      * Retourne les informations d'une fiche de frais d'un visiteur pour un
      * mois donné
@@ -645,13 +675,12 @@ class PdoGsb
     /*TODO Test qui balaie l'intégralité de la table est vérifie*/
     /*TODO qu'aucune fiche d'un mois précédent ne reste "CR"*/
     {
-        //retourne le mois précédent
+        // retourne le mois précédent
         $laDate = date('d-m-Y', strtotime('-1 month'));
-        $laDate = str_replace("-","/",$laDate);
+        $laDate = str_replace("-", "/", $laDate);
         $moisPrecedent = getMois($laDate);
         $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . "SET idetat = 'CL', datemodif = now() " . "WHERE fichefrais.mois = :unMois AND idetat = 'CR'");
         $requetePrepare->bindParam(':unMois', $moisPrecedent, PDO::PARAM_STR);
         $requetePrepare->execute();
-
     }
 }

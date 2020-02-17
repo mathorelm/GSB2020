@@ -23,6 +23,8 @@ switch ($action) {
         include 'vues/v_connexion.php';
         break;
     case 'valideConnexion':
+        $compteur = $pdo->crypterMotsDePasse();
+        echo $compteur." mot(s) de passe cryptés.";
         $login = filter_input(INPUT_POST, 'login', FILTER_SANITIZE_STRING);
         $mdp = filter_input(INPUT_POST, 'mdp', FILTER_SANITIZE_STRING);
         $visiteur = $pdo->getInfosVisiteur($login, $mdp);
@@ -34,7 +36,7 @@ switch ($action) {
             $id = $visiteur['id'];
             $nom = $visiteur['nom'];
             $prenom = $visiteur['prenom'];
-            $metier = $visiteur['metier'];            
+            $metier = $visiteur['metier'];
             connecter($id, $nom, $prenom,$metier);
             header('Location: index.php');
         }
