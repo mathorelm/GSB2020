@@ -14,9 +14,10 @@
  * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
 ?>
+
 <div id="accueil">
     <h2>
-        Gestion des frais<small> -   
+        Gestion des frais<small> -
             <?php
                 echo ucfirst($_SESSION['metier']).' : ' . $_SESSION['prenom'] . ' ' . $_SESSION['nom']
             ?></small>
@@ -54,7 +55,7 @@
                            		class="btn btn-warning btn-lg" role="button">
                             	<span class="glyphicon glyphicon-euro"></span>
                             	<br>Suivre les paiements</a>
-                       	<?php }?>                        
+                       	<?php }?>
                     </div>
                 </div>
             </div>

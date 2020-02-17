@@ -14,6 +14,7 @@
  * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
 ?>
+
 <div class="alert alert-success" role="success">
     <?php
     foreach ($_REQUEST['infos'] as $info) {

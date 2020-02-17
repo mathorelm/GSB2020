@@ -14,12 +14,13 @@
  * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="UTF-8">
-        <title>Intranet du Laboratoire Galaxy-Swiss Bourdin</title> 
+        <title>Intranet du Laboratoire Galaxy-Swiss Bourdin</title>
         <meta name="description" content="">
         <meta name="author" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,20 +38,20 @@
                 	<div class="row vertical-align">
                     	<div class="col-md-4">
                         	<h1>
-                            	<img src="./images/logo.jpg" class="img-responsive" 
-                                 	 alt="Laboratoire Galaxy-Swiss Bourdin" 
+                            	<img src="./images/logo.jpg" class="img-responsive"
+                                 	 alt="Laboratoire Galaxy-Swiss Bourdin"
                                      title="Laboratoire Galaxy-Swiss Bourdin">
                         	</h1>
                     	</div>
                     	<div class="col-md-8">
                         	<ul class="nav nav-pills pull-right" role="tablist">
-                            	<?php include_once 'vues/v_entete_' . $_SESSION['metier'] . '.php'?>                            
+                            	<?php include_once 'vues/v_entete_' . $_SESSION['metier'] . '.php'?>
                         	</ul>
                     	</div>
                 	</div>
             	</div>
-            <?php } else { 
-            ?>   
+            <?php } else {
+            ?>
                 <h1>
                     <img src="./images/logo.jpg"
                          class="img-responsive center-block"

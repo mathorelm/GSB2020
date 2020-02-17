@@ -15,7 +15,7 @@
  * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
 
-//require_once 'tests/gendatas/majGSB.php';
+error_reporting(E_ALL);
 require_once 'includes/fct.inc.php';
 require_once 'includes/class.pdogsb.inc.php';
 

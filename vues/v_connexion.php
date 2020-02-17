@@ -14,6 +14,7 @@
  * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
 ?>
+
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
         <div class="panel panel-default">
@@ -21,7 +22,7 @@
                 <h3 class="panel-title">Identification utilisateur</h3>
             </div>
             <div class="panel-body">
-                <form role="form" method="post" 
+                <form role="form" method="post"
                       action="index.php?uc=connexion&action=valideConnexion">
                     <fieldset>
                         <div class="form-group">

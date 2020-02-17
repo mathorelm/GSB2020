@@ -2,3 +2,5 @@
 /composer.lock
 /.project
 /composer.phar
+/doc/
+/nbproject/

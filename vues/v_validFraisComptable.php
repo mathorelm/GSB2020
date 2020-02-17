@@ -14,6 +14,7 @@
  * @link      http://gsb2020.free.fr Contexte « Laboratoire GSB »
  */
 ?>
+
 <script type="text/javascript"
 	src="/vues/js/js_dynamique_valideFrais.js"></script>
 <div class="row">

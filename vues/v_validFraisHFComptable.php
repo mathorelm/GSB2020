@@ -15,6 +15,7 @@
  * onclick="reporterLigne(<?php echo $id?>)"
  */
 ?>
+
 <?php $lignes_a_justifier = count($lesFraisHorsForfait);?>
 <script type="text/javascript" src="/vues/js/js_report_refus.js"></script>
 <hr>

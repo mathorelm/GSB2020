@@ -13,8 +13,10 @@
  * @version   GIT: <0>
  * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
+
 deconnecter();
 ?>
+
 <div class="alert alert-info" role="alert">
     <p>Vous avez bien été déconnecté ! <a href="index.php">Cliquez ici</a>
         pour revenir à la page de connexion.</p>
