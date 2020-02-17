@@ -12,6 +12,7 @@
  * @license   Réseau CERTA
  * @version   GIT: <0>
  * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
+ * onclick="reporterLigne(<?php echo $id?>)"
  */
 ?>
 <?php $lignes_a_justifier = count($lesFraisHorsForfait);?>
@@ -57,8 +58,7 @@
                     	 <button class="btn btn-success" type="submit" id="Corriger<?php echo $id?>">Corriger</button>
             			 <button class="btn btn-warning" type="button" name="Reporter" id="Reporter<?php echo $id?>"
             			 onclick="reporterLigne(<?php echo $id?>)">Reporter</button>           			
-          	         	 <button class="btn" type="button" name="Refuser" id="Refuser<?php echo $id?>" 
-          	         	 onclick="refuserLigne(<?php echo $id?>)" 
+          	         	 <button class="btn" type="button" name="Refuser" id="Refuser<?php echo $id?>"           	         	  
           	         	 <?php if (substr($libelle,0,6)=='REFUSE'){echo ' disabled';$lignes_a_justifier = $lignes_a_justifier - 1;} ?>
           	         	 >Refuser</button>            			 
             			 <button class="btn btn-danger" type="reset">Réinitialiser</button>

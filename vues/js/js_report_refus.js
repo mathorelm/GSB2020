@@ -53,4 +53,10 @@
 	window.addEventListener("load", function() {
 		//document.getElementsByClassName("form-control").addEventListener("click", testfunction);
 		alert('Evénement de chargement');
+		let tabButtonsReporter = window.document.querySelectorAll('button[name="Reporter"]');
+		let tabButtonsRefuser = window.document.querySelectorAll('button[name="Refuser"]');
+		for (let i=0;i<tabButtonsReporter.length;i++) {
+			tabButtonsReporter[i].addEventListener("click",reporterLigne(id));
+			tabButtonsRefuser[i].addEventListener("click", refuserLigne(id));
+		}
 	});
