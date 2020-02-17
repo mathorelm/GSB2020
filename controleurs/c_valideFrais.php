@@ -101,6 +101,8 @@ switch ($action) {
         $pdo->majNbJustificatifs($id_visiteur, $mois_fiche, $nbJustificatifs);
         $pdo->valideSommeFrais($id_visiteur,$mois_fiche);
         $pdo->majEtatFicheFrais($id_visiteur, $mois_fiche, "VA");
+        ajouterInfo("La validation a été effectuée !");
+        include('vues/v_info.php');
         header('Location: index.php');
         break;
 }
