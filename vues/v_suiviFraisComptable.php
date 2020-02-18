@@ -27,8 +27,18 @@
 	<h2>Supervision des mises en paiement des fiches</h2>
 </div>
 <div class="row">
-	<H3>Balance actuelle du compte de paiement : <span id=b_actuelle><?php echo $balance;?></span> euros.</H3>
-	<H3>Balance projetée pour le 30 du mois    : <span id=b_future><?php echo ($balance-$montantMP);?></span> euros.</H3>
+	<H3>Balance actuelle du compte de paiement : <span <?php if ($balance<0) {
+	                                                           echo 'style="background:red;color:white"';
+	                                                           };
+	                                                   ?> >
+	                                                   <?php echo $balance; ?>
+	                                             </span> euros.</H3>
+	<H3>Balance estimée au 30 du mois          : <span <?php if (($balance-$montantMP) <0) {
+	                                                           echo 'style="background:red;color:white"';
+	                                                           };
+	                                                   ?> >
+	                                                   <?php echo ($balance-$montantMP); ?>
+	                                             </span> euros.</H3>
 	<p> Fiche en retard en <a style="background:red;color:white">rouge</a></p>
 </div>
 <hr/>

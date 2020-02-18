@@ -49,16 +49,6 @@ input:focus:invalid {
 	box-shadow : 6px 6px 6px black;
 }
 
-#b_actuelle {
-	font-style:bold;
-	color : white;
-	background : #ec971f;
-}
-#b_future {
-	font-style:bold;
-	color : white;
-	background : #ec971f;
-}
 form {
 	display:inline;
 }
