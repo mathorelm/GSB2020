@@ -19,9 +19,9 @@
     $jour_actuel=(int) date('j');
     $mois_actuel=(int) date('n');
     $mois_precedent=(int) date('n', strtotime('-1 month'));
-    $limiteVAVersMP = 20;
-    $limiteMPVersRB = 30;
-    $balance = 623925.24;
+
+
+
 ?>
 <div class="row">
 	<h2>Supervision des mises en paiement des fiches</h2>
@@ -34,15 +34,15 @@
 <hr/>
 <div class="row">
 	<div class="col-sm-4 text-center">
-		Nb de fiches validées : <?php echo count($lesfichesVA);?>
+		fiches validées : <?php echo count($lesfichesVA);?>
 		<br/>
 		Montant total : <?php echo $montantVA;?> euros.
 		<hr/>
 		<?php foreach($lesfichesVA as $uneFiche) {
 		          ?>
 			<div class="card">
-				<?php $mois_fiche = (int) date('n',substr($uneFiche['date'],4,2));
-				if (($mois_fiche=$mois_precedent)&&($jour_actuel<$limiteVAVersMP)) {
+				<?php $mois_fiche = (int) substr($uneFiche['mois'],4,2);
+				if (($mois_fiche!=$mois_precedent)&&($jour_actuel<$limiteVAVersMP)) {
 				    $couleur = "red";
 				} else {
 				    $couleur = "green";
@@ -67,15 +67,15 @@
 		<?php };?>
 	</div>
 	<div class="col-sm-4 text-center">
-		Nb de fiches mises en paiement : <?php echo count($lesfichesMP);?>
+		fiches mises en paiement : <?php echo count($lesfichesMP);?>
 		<br/>
 		Montant total : <?php echo $montantMP;?> euros.
 		<hr/>
 		<?php foreach($lesfichesMP as $uneFiche) {
 		          ?>
 			<div class="card">
-				<?php $mois_fiche = (int) date('n',substr($uneFiche['date'],4,2));
-				if (($mois_fiche=$mois_precedent)&&($jour_actuel>$limiteVAVersMP)&&($jour_actuel<$limiteMPversRB)) {
+				<?php $mois_fiche = (int) substr($uneFiche['mois'],4,2);
+				if (($mois_fiche!=$mois_precedent)&&($jour_actuel<$limiteMPVersRB)) {
 				    $couleur = "red";
 				} else {
 				    $couleur = "green";
@@ -105,7 +105,7 @@
 		<?php };?>
 	</div>
 	<div class="col-sm-4 text-center">
-		Nb de fiches remboursées (1 an) : <?php echo $ficheaffichee;?>
+		fiches remboursées (1 an) : <?php echo $ficheaffichee;?>
 		<br/>
 		Montant total : <?php echo $montantRB;?> euros.
 		<hr/>

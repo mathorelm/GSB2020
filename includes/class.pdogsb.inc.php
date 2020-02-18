@@ -694,5 +694,21 @@ class PdoGsb
             $requetePrepare->execute();
         };
     }
+    /**
+     * script de remboursement des fiches "MP"
+     * du mois précédent si le jour du mois actuel > 30
+     */
+    public function rembourserMPMoisPrecedent()
+    {
+        // retourne le mois précédent
+        $laDate = date('d-m-Y', strtotime('-1 month'));
+        $laDate = str_replace("-", "/", $laDate);
+        $moisPrecedent = getMois($laDate);
+        if (((int) date("j"))>30) {
+            $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . "SET idetat = 'RB', datemodif = now() " . "WHERE fichefrais.mois = :unMois AND idetat = 'VA'");
+            $requetePrepare->bindParam(':unMois', $moisPrecedent, PDO::PARAM_STR);
+            $requetePrepare->execute();
+        };
+    }
 
 }

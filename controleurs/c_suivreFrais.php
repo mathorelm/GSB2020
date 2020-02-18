@@ -12,9 +12,18 @@
  * @version   GIT: <0>
  * @link      http://gsb2020.org Contexte « Laboratoire GSB »
  */
+
+//--------------------------------------------------------------
+// Jeu de variables pour adaptation du comportement du programme
+$balance = 14221.21;                //balance du compte de paiement
+$limiteVAVersMP = 20;               //jour de mise en paiement
+$limiteMPVersRB = 30;               //jour (présumé) de remboursement
+//--------------------------------------------------------------
+
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 
 $pdo->mettreEnPaiementVAMoisPrecedent();
+$pdo->rembourserMPMoisPrecedent();
 
 $id_visiteur=filter_input(INPUT_POST,'visiteur',FILTER_SANITIZE_STRING);
 $mois=filter_input(INPUT_POST,'mois',FILTER_SANITIZE_STRING);
