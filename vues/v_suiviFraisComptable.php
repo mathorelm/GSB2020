@@ -47,6 +47,9 @@
 					<h6 class="card-title">Statut : <?php echo $uneFiche['statut']. ' ('.dateAnglaisVersFrancais($uneFiche['date']).')';?></h6>
 					<p class="card-text">Montant : <?php echo $uneFiche['montant'].' euros ';?></p>
 				</div>
+				<div class="card-footer text-right">
+					<a href="#" class="btn btn-primary btn-sm">Paiement manuel >>></a>
+				</div>
 			</div>
 			<hr/>
 		<?php };?>
@@ -72,6 +75,9 @@
 				<div class="card-body text-left">
 					<h6 class="card-title">Statut : <?php echo $uneFiche['statut']. ' ('.dateAnglaisVersFrancais($uneFiche['date']).')';?></h6>
 					<p class="card-text">Montant : <?php echo $uneFiche['montant'].' euros ';?></p>
+					</div>
+				<div class="card-footer text-left">
+					<a href="#" class="btn btn-danger btn-sm">&lt&lt&lt Annuler le paiement</a>
 				</div>
 			</div>
 			<hr/>
