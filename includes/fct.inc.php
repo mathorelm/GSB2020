@@ -62,7 +62,7 @@ function deconnecter()
  *
  * @param String $maDate
  *            au format jj/mm/aaaa
- *            
+ *
  * @return Date au format anglais aaaa-mm-jj
  */
 function dateFrancaisVersAnglais($maDate)
@@ -77,7 +77,7 @@ function dateFrancaisVersAnglais($maDate)
  *
  * @param String $maDate
  *            au format aaaa-mm-jj
- *            
+ *
  * @return Date au format format français jj/mm/aaaa
  */
 function dateAnglaisVersFrancais($maDate)
@@ -92,7 +92,7 @@ function dateAnglaisVersFrancais($maDate)
  *
  * @param String $date
  *            au format jj/mm/aaaa
- *            
+ *
  * @return String Mois au format aaaamm
  */
 function getMois($date)
@@ -112,7 +112,7 @@ function getMois($date)
  *
  * @param Integer $valeur
  *            Valeur
- *            
+ *
  * @return Boolean vrai ou faux
  */
 function estEntierPositif($valeur)
@@ -125,7 +125,7 @@ function estEntierPositif($valeur)
  *
  * @param Array $tabEntiers
  *            Un tableau d'entier
- *            
+ *
  * @return Boolean vrai ou faux
  */
 function estTableauEntiers($tabEntiers)
@@ -144,7 +144,7 @@ function estTableauEntiers($tabEntiers)
  *
  * @param String $dateTestee
  *            Date à tester
- *            
+ *
  * @return Boolean vrai ou faux
  */
 function estDateDepassee($dateTestee)
@@ -162,7 +162,7 @@ function estDateDepassee($dateTestee)
  *
  * @param String $date
  *            Date à tester
- *            
+ *
  * @return Boolean vrai ou faux
  */
 function estDateValide($date)
@@ -188,7 +188,7 @@ function estDateValide($date)
  *
  * @param Array $lesFrais
  *            Tableau d'entier
- *            
+ *
  * @return Boolean vrai ou faux
  */
 function lesQteFraisValides($lesFrais)
@@ -208,7 +208,7 @@ function lesQteFraisValides($lesFrais)
  *            Libellé des frais
  * @param Float $montant
  *            Montant des frais
- *            
+ *
  * @return null
  */
 function valideInfosFrais($dateFrais, $libelle, $montant)
@@ -239,7 +239,7 @@ function valideInfosFrais($dateFrais, $libelle, $montant)
  *
  * @param String $msg
  *            Libellé de l'erreur
- *            
+ *
  * @return null
  */
 function ajouterErreur($msg)
@@ -278,7 +278,7 @@ function ajouterInfo($msg)
         }
         $_REQUEST['infos'][] = $msg;
     }
-    
+
     /**
      * Retoune le nombre de lignes du tableau des informations
      *
@@ -291,4 +291,36 @@ function nbInfos()
         } else {
             return count($_REQUEST['infos']);
         }
+}
+
+/**
+ * Retourne le nombre de fiches de plus d'un an dans le tableau passé en paramètre
+ * @param array() $tableauDeFiches
+ * @return integer nb de fiches périmées
+ */
+function compterFichesPerimees($tableauDeFiches) {
+    //Comptabiliser les fiches de plus de 1 an
+    $compteur=0;
+    foreach ($tableauDeFiches as $uneFiche) {
+        if (!estDateDepassee(dateAnglaisVersFrancais($uneFiche['date']))) {
+            $compteur++;
+        }
+    }
+    return $compteur;
+}
+
+/**
+ * Retourne le montant total des fiches dans le tableau passé en paramètre
+ * @param array() $tableauDeFiches
+ * @return float montant total
+ */
+function compterMontantTotal($tableauDeFiches) {
+    //Comptabiliser les fiches de plus de 1 an
+    $montant=0;
+    foreach ($tableauDeFiches as $uneFiche) {
+        if (!estDateDepassee(dateAnglaisVersFrancais($uneFiche['date']))) {
+            $montant +=(float) $uneFiche['montant'];
+        }
+    }
+    return $montant;
 }

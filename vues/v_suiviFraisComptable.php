@@ -17,9 +17,66 @@
 
 <div class="row">
 	<h2>Supervision des mises en paiement des fiches</h2>
-	<h3>Nb de fiches VA : <?php echo count($lesfichesVA)?></h3>
-	<h3>Nb de fiches MP : <?php echo count($lesfichesMP)?></h3>
-	<h3>Nb de fiches RB : <?php echo count($lesfichesRB)?></h3>
-
+</div>
+<div class="row">
+	<div class="col-sm-4 text-center">
+		Nb de fiches validées : <?php echo count($lesfichesVA);?>
+		<br/>
+		Montant total : <?php echo $montantVA;?> euros.
+		<hr/>
+		<?php foreach($lesfichesVA as $uneFiche) {
+		          ?>
+			<div class="card" style='border:solid'>
+				<h5 class="card-header" style='background:gray;color:white'>
+					<strong>FICHE</strong> <?php echo $uneFiche['mois'].' - '.$uneFiche['nom'].' '.$uneFiche['prenom'];?>
+				</h5>
+				<div class="card-body text-left">
+					<h6 class="card-title">Statut : <?php echo $uneFiche['statut']. ' ('.dateAnglaisVersFrancais($uneFiche['date']).')';?></h6>
+					<p class="card-text">Montant : <?php echo $uneFiche['montant'].' euros ';?></p>
+				</div>
+			</div>
+			<hr/>
+		<?php };?>
+	</div>
+	<div class="col-sm-4 text-center">
+		Nb de fiches mises en paiement : <?php echo count($lesfichesMP);?>
+		<br/>
+		Montant total : <?php echo $montantMP;?> euros.
+		<hr/>
+		<?php foreach($lesfichesMP as $uneFiche) {
+		          ?>
+			<div class="card" style='border:solid'>
+				<h5 class="card-header" style='background:gray;color:white'>
+					<strong>FICHE</strong> <?php echo $uneFiche['mois'].' - '.$uneFiche['nom'].' '.$uneFiche['prenom'];?>
+				</h5>
+				<div class="card-body text-left">
+					<h6 class="card-title">Statut : <?php echo $uneFiche['statut']. ' ('.dateAnglaisVersFrancais($uneFiche['date']).')';?></h6>
+					<p class="card-text">Montant : <?php echo $uneFiche['montant'].' euros ';?></p>
+				</div>
+			</div>
+			<hr/>
+		<?php };?>
+	</div>
+	<div class="col-sm-4 text-center">
+		Nb de fiches remboursées (1 an) : <?php echo $ficheaffichee;?>
+		<br/>
+		Montant total : <?php echo $montantRB;?> euros.
+		<hr/>
+		<?php foreach($lesfichesRB as $uneFiche) {
+		    //TODO : limiter l'affichage à un an
+		    if (!estDateDepassee(dateAnglaisVersFrancais($uneFiche['date']))) {
+		          ?>
+			<div class="card" style='border:solid'>
+				<h5 class="card-header" style='background:gray;color:white'>
+					<strong>FICHE</strong> <?php echo $uneFiche['mois'].' - '.$uneFiche['nom'].' '.$uneFiche['prenom'];?>
+				</h5>
+				<div class="card-body text-left">
+					<h6 class="card-title">Statut : <?php echo $uneFiche['statut']. ' ('.dateAnglaisVersFrancais($uneFiche['date']).')';?></h6>
+					<p class="card-text">Montant : <?php echo $uneFiche['montant'].' euros ';?></p>
+				</div>
+			</div>
+			<hr/>
+		<?php }; };?>
+	</div>
 </div>
 

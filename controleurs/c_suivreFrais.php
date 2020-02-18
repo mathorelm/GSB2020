@@ -16,11 +16,14 @@ $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 
 switch ($action) {
     case 'afficherSuivi':
-        //Récupérer les données de la base pour les ordonner par colonnes
         $lesfichesVA = $pdo->getLesFiches('VA');
-
         $lesfichesMP = $pdo->getLesFiches('MP');
         $lesfichesRB = $pdo->getLesFiches('RB');
+        //Déterminer les montants totaux concernés.
+        $montantVA = CompterMontantTotal($lesfichesVA);
+        $montantMP = CompterMontantTotal($lesfichesMP);
+        $montantRB = CompterMontantTotal($lesfichesRB);
+        $ficheaffichee=CompterfichesPerimees($lesfichesRB);
         include 'vues/v_suiviFraisComptable.php';
         break;
 }
