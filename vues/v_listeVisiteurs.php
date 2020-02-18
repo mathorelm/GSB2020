@@ -15,6 +15,8 @@
  */
 ?>
 
+<?php //TODO passer le script dans un fichier JS
+?>
 <script>
 		function afficheListeMois() {
 

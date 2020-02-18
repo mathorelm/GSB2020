@@ -95,9 +95,6 @@ class PdoGsb
      * @return l'id, le nom et le prénom sous la forme d'un tableau associatif
      */
     public function getInfosVisiteur($login, $mdp)
-    /*TODO Test si la fonction est exécutée avec un faux login / vrai mdp  --> erreur */
-    /*TODO Test si la fonction est exécutée avec un faux login / faux mdp  --> erreur */
-    /*TODO Test si la fonction est exécutée avec un vrai login / vrai mdp  --> erreur */
     {
         $requetePrepare = PdoGsb::$monPdo->prepare('SELECT personnels.id AS id, personnels.nom AS nom, ' . 'personnels.prenom AS prenom, personnels.mdp as mdp,' . 'metiers.libelle AS metier ' . 'FROM personnels,metiers ' . 'WHERE personnels.login = :unLogin' . ' AND personnels.metier = metiers.idMetiers');
         $requetePrepare->bindParam(':unLogin', $login, PDO::PARAM_STR);
@@ -145,8 +142,6 @@ class PdoGsb
      *         d'un tableau associatif
      */
     public function getLesFraisHorsForfait($idVisiteur, $mois)
-    /*TODO Test sur un visiteur faux --> erreur*/
-    /*TODO Test sur un mois erroné (mois non présent en BDD) --> pas d'erreur mais enregistrement vide ?*/
     {
         $requetePrepare = PdoGsb::$monPdo->prepare('SELECT * FROM lignefraishorsforfait ' . 'WHERE lignefraishorsforfait.idvisiteur = :unIdVisiteur ' . 'AND lignefraishorsforfait.mois = :unMois');
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
@@ -171,8 +166,6 @@ class PdoGsb
      * @return le nombre entier de justificatifs
      */
     public function getNbjustificatifs($idVisiteur, $mois)
-    /*TODO Test sur un visiteur faux --> erreur*/
-    /*TODO Test sur un mois erroné (mois non présent en BDD) --> pas d'erreur mais enregistrement vide ?*/
     {
         $requetePrepare = PdoGsb::$monPdo->prepare('SELECT fichefrais.nbjustificatifs as nb FROM fichefrais ' . 'WHERE fichefrais.idvisiteur = :unIdVisiteur ' . 'AND fichefrais.mois = :unMois');
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
@@ -195,8 +188,6 @@ class PdoGsb
      *         associatif
      */
     public function getLesFraisForfait($idVisiteur, $mois)
-    /*TODO Test sur un visiteur faux --> erreur*/
-    /*TODO Test sur un mois erroné (mois non présent en BDD) --> pas d'erreur mais enregistrement vide ?*/
     {
         $requetePrepare = PdoGSB::$monPdo->prepare('SELECT fraisforfait.id as idfrais, ' . 'fraisforfait.libelle as libelle, ' . 'lignefraisforfait.quantite as quantite ' . 'FROM lignefraisforfait ' . 'INNER JOIN fraisforfait ' . 'ON fraisforfait.id = lignefraisforfait.idfraisforfait ' . 'WHERE lignefraisforfait.idvisiteur = :unIdVisiteur ' . 'AND lignefraisforfait.mois = :unMois ' . 'ORDER BY lignefraisforfait.idfraisforfait');
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
@@ -233,9 +224,6 @@ class PdoGsb
      * @return null
      */
     public function majFraisForfait($idVisiteur, $mois, $lesFrais)
-    /*TODO Test sur un visiteur faux --> erreur*/
-    /*TODO Test sur un mois erroné (mois non présent en BDD) --> pas d'erreur mais enregistrement vide ?*/
-    /*TODO Test sur une tableau $lesFrais non fourni --> comportement ?*/
     {
         $lesCles = array_keys($lesFrais);
         foreach ($lesCles as $unIdFrais) {
@@ -263,9 +251,6 @@ class PdoGsb
      * @return null
      */
     public function majNbJustificatifs($idVisiteur, $mois, $nbJustificatifs)
-    /*TODO Test sur un visiteur faux --> erreur*/
-    /*TODO Test sur un mois erroné (mois non présent en BDD) --> pas d'erreur mais enregistrement vide ?*/
-    /*TODO Test sur une tableau $nbJustificatifs non fourni --> comportement ?*/
     {
         $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE fichefrais ' . 'SET nbjustificatifs = :unNbJustificatifs ' . 'WHERE fichefrais.idvisiteur = :unIdVisiteur ' . 'AND fichefrais.mois = :unMois');
         $requetePrepare->bindParam(':unNbJustificatifs', $nbJustificatifs, PDO::PARAM_INT);
@@ -345,8 +330,6 @@ class PdoGsb
      * @return vrai ou faux
      */
     public function estPremierFraisMois($idVisiteur, $mois)
-    /*TODO Test sur un visiteur faux --> erreur*/
-    /*TODO Test sur un mois erroné (>mois actuel) --> erreur*/
     {
         $boolReturn = false;
         $requetePrepare = PdoGsb::$monPdo->prepare('SELECT fichefrais.mois FROM fichefrais ' . 'WHERE fichefrais.mois = :unMois ' . 'AND fichefrais.idvisiteur = :unIdVisiteur');
@@ -394,8 +377,6 @@ class PdoGsb
      * @return null
      */
     public function creeNouvellesLignesFrais($idVisiteur, $mois)
-    /*TODO Test sur un visiteur faux --> erreur*/
-    /*TODO Test sur un mois erroné (mois non présent en BDD) --> pas d'erreur mais enregistrement vide ?*/
     {
         $dernierMois = $this->dernierMoisSaisi($idVisiteur);
         $laDerniereFiche = $this->getLesInfosFicheFrais($idVisiteur, $dernierMois);
@@ -435,8 +416,6 @@ class PdoGsb
      */
     public function creeNouveauFraisHorsForfait($idVisiteur, $mois, $libelle, $date, $montant
     )
-    /*TODO Test sur un visiteur faux --> erreur*/
-    /*TODO Test sur un paramètre passé vide --> erreur ?*/
     {
         $dateFr = dateFrancaisVersAnglais($date);
         $requetePrepare = PdoGSB::$monPdo->prepare('INSERT INTO lignefraishorsforfait ' . 'VALUES (null, :unIdVisiteur,:unMois, :unLibelle, :uneDateFr,' . ':unMontant) ');
@@ -506,7 +485,6 @@ class PdoGsb
      * @return null
      */
     public function supprimerFraisHorsForfait($idFrais)
-    /*TODO Test sur une $idFrais erroné --> comportement ?*/
     {
         $requetePrepare = PdoGSB::$monPdo->prepare('DELETE FROM lignefraishorsforfait ' . 'WHERE lignefraishorsforfait.id = :unIdFrais');
         $requetePrepare->bindParam(':unIdFrais', $idFrais, PDO::PARAM_STR);
@@ -523,7 +501,6 @@ class PdoGsb
      *         l'année et le mois correspondant
      */
     public function getLesMoisDisponibles($idVisiteur)
-    /*TODO Test sur un visiteur faux --> erreur*/
     {
         $requetePrepare = PdoGSB::$monPdo->prepare('SELECT fichefrais.mois AS mois FROM fichefrais ' . 'WHERE fichefrais.idvisiteur = :unIdVisiteur ' . 'ORDER BY fichefrais.mois desc');
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
@@ -552,7 +529,6 @@ class PdoGsb
      *         l'année et le mois correspondant
      */
     public function getLesMoisAValider($idVisiteur)
-    /*TODO Test sur un visiteur faux --> erreur*/
     {
         $requetePrepare = PdoGSB::$monPdo->prepare('SELECT fichefrais.mois AS mois FROM fichefrais ' . "WHERE fichefrais.idvisiteur = :unIdVisiteur AND idetat = 'CL'" . 'ORDER BY fichefrais.mois desc');
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
@@ -569,6 +545,31 @@ class PdoGsb
             );
         }
         return $lesMois;
+    }
+
+    /**
+     * Retourne les fiches dont l'état est passé en paramètre
+     *
+     * @param String $etat
+     *        CR:En Cours, CL:Clos, VA:Validé, MP:Mise en Paiement, RB:Remboursée
+     *
+     * @return un tableau associatif de clé un mois -aaaamm- et de valeurs
+     *         l'année et le mois correspondant
+     */
+    public function getlesFiches($etat)
+    {
+        $requetePrepare = PdoGSB::$monPdo->prepare('SELECT fichefrais.mois AS mois,'.
+            'personnels.nom AS nom , personnels.prenom AS prenom,'.
+            'fichefrais.idetat AS statut,'.
+            'fichefrais.datemodif AS date,'.
+            'fichefrais.montantvalide AS montant,'.
+            'fichefrais.nbjustificatifs as pj '.
+            'FROM fichefrais '.
+            'LEFT OUTER JOIN personnels ON fichefrais.idVisiteur=personnels.id '.
+            'WHERE idetat = '."':unEtat'" . ' ORDER BY fichefrais.mois desc');
+        $requetePrepare->bindParam(':unEtat', $etat, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        return $requetePrepare->fetchAll();
     }
 
     /**
@@ -629,8 +630,6 @@ class PdoGsb
      *         et la ligne d'état
      */
     public function getLesInfosFicheFrais($idVisiteur, $mois)
-    /*TODO Test sur un visiteur faux --> erreur*/
-    /*TODO Test sur un mois erroné (mois non présent en BDD) --> pas d'erreur mais enregistrement vide ?*/
     {
         $requetePrepare = PdoGSB::$monPdo->prepare('SELECT fichefrais.idetat as idEtat, ' . 'fichefrais.datemodif as dateModif,' . 'fichefrais.nbjustificatifs as nbJustificatifs, ' . 'fichefrais.montantvalide as montantValide, ' . 'etat.libelle as libEtat ' . 'FROM fichefrais ' . 'INNER JOIN etat ON fichefrais.idetat = etat.id ' . 'WHERE fichefrais.idvisiteur = :unIdVisiteur ' . 'AND fichefrais.mois = :unMois');
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
@@ -654,9 +653,6 @@ class PdoGsb
      * @return null
      */
     public function majEtatFicheFrais($idVisiteur, $mois, $etat)
-    /*TODO Test sur un visiteur faux --> erreur*/
-    /*TODO Test sur un mois erroné (mois non présent en BDD) --> pas d'erreur mais enregistrement vide ?*/
-    /*TODO Test sur $etat non fourni/erroné ? --> comportement ?*/
     {
         $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . 'SET idetat = :unEtat, datemodif = now() ' . 'WHERE fichefrais.idvisiteur = :unIdVisiteur ' . 'AND fichefrais.mois = :unMois');
         $requetePrepare->bindParam(':unEtat', $etat, PDO::PARAM_STR);
@@ -672,8 +668,6 @@ class PdoGsb
      * @return null
      */
     public function clotureFichesMoisPrecedent()
-    /*TODO Test qui balaie l'intégralité de la table est vérifie*/
-    /*TODO qu'aucune fiche d'un mois précédent ne reste "CR"*/
     {
         // retourne le mois précédent
         $laDate = date('d-m-Y', strtotime('-1 month'));
