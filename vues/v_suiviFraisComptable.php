@@ -15,6 +15,12 @@
  */
 ?>
 
+<?php
+    $jour_actuel=(int) date('j');
+    $mois_actuel=(int) date('n');
+    $mois_precedent=(int) date('n', strtotime('-1 month'));
+    $limiteVAVersMP = 20;
+?>
 <div class="row">
 	<h2>Supervision des mises en paiement des fiches</h2>
 </div>
@@ -27,7 +33,14 @@
 		<?php foreach($lesfichesVA as $uneFiche) {
 		          ?>
 			<div class="card" style='border:solid'>
-				<h5 class="card-header" style='background:gray;color:white'>
+				<?php $mois_fiche = (int) date('n',substr($uneFiche['date'],4,2));
+				if (($mois_fiche=$mois_precedent)&&($jour_actuel<$limiteVAVersMP)) {
+				    $couleur = "red";
+				} else {
+				    $couleur = "green";
+				}
+				?>
+				<h5 class="card-header" style='background:<?php echo $couleur ?>;color:white'>
 					<strong>FICHE</strong> <?php echo $uneFiche['mois'].' - '.$uneFiche['nom'].' '.$uneFiche['prenom'];?>
 				</h5>
 				<div class="card-body text-left">
@@ -46,7 +59,14 @@
 		<?php foreach($lesfichesMP as $uneFiche) {
 		          ?>
 			<div class="card" style='border:solid'>
-				<h5 class="card-header" style='background:gray;color:white'>
+				<?php $mois_fiche = (int) date('n',substr($uneFiche['date'],4,2));
+				if (($mois_fiche=$mois_precedent)&&($jour_actuel>$limiteVAVersMP)) {
+				    $couleur = "red";
+				} else {
+				    $couleur = "green";
+				}
+				?>
+				<h5 class="card-header" style='background:<?php echo $couleur ?>;color:white'>
 					<strong>FICHE</strong> <?php echo $uneFiche['mois'].' - '.$uneFiche['nom'].' '.$uneFiche['prenom'];?>
 				</h5>
 				<div class="card-body text-left">

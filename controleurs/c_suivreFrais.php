@@ -16,6 +16,7 @@ $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 
 switch ($action) {
     case 'afficherSuivi':
+        $pdo->mettreEnPaiementVAMoisPrecedent();
         $lesfichesVA = $pdo->getLesFiches('VA');
         $lesfichesMP = $pdo->getLesFiches('MP');
         $lesfichesRB = $pdo->getLesFiches('RB');

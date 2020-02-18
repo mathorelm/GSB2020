@@ -566,7 +566,7 @@ class PdoGsb
             'fichefrais.nbjustificatifs as pj '.
             'FROM fichefrais '.
             'LEFT OUTER JOIN personnels ON fichefrais.idVisiteur=personnels.id '.
-            'WHERE idetat = '.":unEtat" . ' ORDER BY fichefrais.mois desc');
+            'WHERE idetat = '.":unEtat" . ' ORDER BY fichefrais.datemodif asc');
         $requetePrepare->bindParam(':unEtat', $etat, PDO::PARAM_STR);
         $requetePrepare->execute();
         return $requetePrepare->fetchAll();
@@ -677,4 +677,21 @@ class PdoGsb
         $requetePrepare->bindParam(':unMois', $moisPrecedent, PDO::PARAM_STR);
         $requetePrepare->execute();
     }
+    /**
+     * script de mise en paiement des fiches "VA"
+     * du mois précédent si le jour du mois actuel > 20
+     */
+    public function mettreEnPaiementVAMoisPrecedent()
+    {
+        // retourne le mois précédent
+        $laDate = date('d-m-Y', strtotime('-1 month'));
+        $laDate = str_replace("-", "/", $laDate);
+        $moisPrecedent = getMois($laDate);
+        if (((int) date("j"))>17) {
+            $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . "SET idetat = 'MP', datemodif = now() " . "WHERE fichefrais.mois = :unMois AND idetat = 'VA'");
+            $requetePrepare->bindParam(':unMois', $moisPrecedent, PDO::PARAM_STR);
+            $requetePrepare->execute();
+        };
+    }
+
 }
