@@ -32,7 +32,7 @@
 		<hr/>
 		<?php foreach($lesfichesVA as $uneFiche) {
 		          ?>
-			<div class="card" style='border:solid'>
+			<div class="card">
 				<?php $mois_fiche = (int) date('n',substr($uneFiche['date'],4,2));
 				if (($mois_fiche=$mois_precedent)&&($jour_actuel<$limiteVAVersMP)) {
 				    $couleur = "red";
@@ -61,7 +61,7 @@
 		<hr/>
 		<?php foreach($lesfichesMP as $uneFiche) {
 		          ?>
-			<div class="card" style='border:solid'>
+			<div class="card">
 				<?php $mois_fiche = (int) date('n',substr($uneFiche['date'],4,2));
 				if (($mois_fiche=$mois_precedent)&&($jour_actuel>$limiteVAVersMP)) {
 				    $couleur = "red";
@@ -92,7 +92,7 @@
 		    //TODO : limiter l'affichage à un an
 		    if (!estDateDepassee(dateAnglaisVersFrancais($uneFiche['date']))) {
 		          ?>
-			<div class="card" style='border:solid'>
+			<div class="card">
 				<h5 class="card-header" style='background:gray;color:white'>
 					<strong>FICHE</strong> <?php echo $uneFiche['mois'].' - '.$uneFiche['nom'].' '.$uneFiche['prenom'];?>
 				</h5>

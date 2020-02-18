@@ -18,7 +18,7 @@ a:focus {
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  color: #fff;  
+  color: #fff;
   background-color: #ec971f;
 }
 
@@ -41,4 +41,10 @@ input:invalid {
 
 input:focus:invalid {
   outline: none;
+}
+
+.card {
+	border:ridge;
+	border-radius: 10px 5px 10px 5px;
+	box-shadow : 6px 6px 6px black;
 }
