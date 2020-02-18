@@ -102,10 +102,6 @@ class PdoGsb
         //$requetePrepare->bindParam(':unMdp', $mdp, PDO::PARAM_STR);
         $requetePrepare->execute();
         $res = $requetePrepare->fetch();
-        // Proposition à crypter
-        echo "Pour le login : ".$login.", le mot de passe entré est : ".$mdp."/r/n";
-        echo "Le hash correspondant est : ".password_hash($mdp,PASSWORD_BCRYPT)."/r/n";
-        echo "La BDD a en base : ".$res['mdp'];
         if (password_verify($mdp, $res['mdp'])) {
             return $res;
         }
