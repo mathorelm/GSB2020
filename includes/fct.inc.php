@@ -248,6 +248,7 @@ function ajouterErreur($msg)
         $_REQUEST['erreurs'] = array();
     }
     $_REQUEST['erreurs'][] = $msg;
+
 }
 
 /**
@@ -277,6 +278,7 @@ function ajouterInfo($msg)
             $_REQUEST['infos'] = array();
         }
         $_REQUEST['infos'][] = $msg;
+        addLogEvent('Erreur ("'.$msg.'") de '.$_SESSION['prenom'] . ' ' . $_SESSION['nom'].' (IP = '.$_SERVER['REMOTE_ADDR']);
     }
 
     /**
@@ -323,4 +325,15 @@ function compterMontantTotal($tableauDeFiches) {
         }
     }
     return $montant;
+}
+
+/**
+ * Ajoute l'événement (avec TimeStamp) au fichier GSB2020.log
+ * @param string $event
+ */
+function addLogEvent($event) {
+    $time = date("D, d M Y H:i:s");
+    $time = "[".$time."] ";
+    $event = $time.$event."\n";
+    file_put_contents("GSB2020.log", $event, FILE_APPEND);
 }

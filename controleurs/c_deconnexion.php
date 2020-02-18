@@ -21,6 +21,7 @@ if (! $uc) {
 switch ($action) {
     case 'demandeDeconnexion':
         include 'vues/v_deconnexion.php';
+        addLogEvent('Déconnexion de : '.$_SESSION['prenom'] . ' ' . $_SESSION['nom'].' (IP = '.$_SERVER['REMOTE_ADDR']);
         break;
     case 'valideDeconnexion':
         if (estConnecte()) {
