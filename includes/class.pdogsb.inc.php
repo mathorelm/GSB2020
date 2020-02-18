@@ -566,7 +566,7 @@ class PdoGsb
             'fichefrais.nbjustificatifs as pj '.
             'FROM fichefrais '.
             'LEFT OUTER JOIN personnels ON fichefrais.idVisiteur=personnels.id '.
-            'WHERE idetat = '."':unEtat'" . ' ORDER BY fichefrais.mois desc');
+            'WHERE idetat = '.":unEtat" . ' ORDER BY fichefrais.mois desc');
         $requetePrepare->bindParam(':unEtat', $etat, PDO::PARAM_STR);
         $requetePrepare->execute();
         return $requetePrepare->fetchAll();

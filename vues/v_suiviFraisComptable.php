@@ -16,6 +16,10 @@
 ?>
 
 <div class="row">
-	<h1>Supervision des mises en paiement des fiches</h1>
+	<h2>Supervision des mises en paiement des fiches</h2>
+	<h3>Nb de fiches VA : <?php echo count($lesfichesVA)?></h3>
+	<h3>Nb de fiches MP : <?php echo count($lesfichesMP)?></h3>
+	<h3>Nb de fiches RB : <?php echo count($lesfichesRB)?></h3>
+
 </div>
 

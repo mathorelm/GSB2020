@@ -18,6 +18,7 @@ switch ($action) {
     case 'afficherSuivi':
         //Récupérer les données de la base pour les ordonner par colonnes
         $lesfichesVA = $pdo->getLesFiches('VA');
+
         $lesfichesMP = $pdo->getLesFiches('MP');
         $lesfichesRB = $pdo->getLesFiches('RB');
         include 'vues/v_suiviFraisComptable.php';
