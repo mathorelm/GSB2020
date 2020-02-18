@@ -14,17 +14,30 @@
  */
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 
+$pdo->mettreEnPaiementVAMoisPrecedent();
+
+$id_visiteur=filter_input(INPUT_POST,'visiteur',FILTER_SANITIZE_STRING);
+$mois=filter_input(INPUT_POST,'mois',FILTER_SANITIZE_STRING);
+
 switch ($action) {
     case 'afficherSuivi':
-        $pdo->mettreEnPaiementVAMoisPrecedent();
-        $lesfichesVA = $pdo->getLesFiches('VA');
-        $lesfichesMP = $pdo->getLesFiches('MP');
-        $lesfichesRB = $pdo->getLesFiches('RB');
-        //Déterminer les montants totaux concernés.
-        $montantVA = CompterMontantTotal($lesfichesVA);
-        $montantMP = CompterMontantTotal($lesfichesMP);
-        $montantRB = CompterMontantTotal($lesfichesRB);
-        $ficheaffichee=CompterfichesPerimees($lesfichesRB);
-        include 'vues/v_suiviFraisComptable.php';
+        break;
+    case 'VAversMP':
+        $pdo->majEtatFicheFrais($id_visiteur,$mois,'MP');
+        break;
+    case 'MPversVA':
+        $pdo->majEtatFicheFrais($id_visiteur,$mois,'VA');
+        break;
+    case 'MPversRB':
+        $pdo->majEtatFicheFrais($id_visiteur,$mois,'RB');
         break;
 }
+$lesfichesVA = $pdo->getLesFiches('VA');
+$lesfichesMP = $pdo->getLesFiches('MP');
+$lesfichesRB = $pdo->getLesFiches('RB');
+//Déterminer les montants totaux concernés.
+$montantVA = CompterMontantTotal($lesfichesVA);
+$montantMP = CompterMontantTotal($lesfichesMP);
+$montantRB = CompterMontantTotal($lesfichesRB);
+$ficheaffichee=CompterfichesPerimees($lesfichesRB);
+include 'vues/v_suiviFraisComptable.php';

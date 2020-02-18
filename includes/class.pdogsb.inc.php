@@ -563,7 +563,8 @@ class PdoGsb
             'fichefrais.idetat AS statut,'.
             'fichefrais.datemodif AS date,'.
             'fichefrais.montantvalide AS montant,'.
-            'fichefrais.nbjustificatifs as pj '.
+            'fichefrais.nbjustificatifs as pj,'.
+            'fichefrais.idVisiteur as id '.
             'FROM fichefrais '.
             'LEFT OUTER JOIN personnels ON fichefrais.idVisiteur=personnels.id '.
             'WHERE idetat = '.":unEtat" . ' ORDER BY fichefrais.datemodif asc');
@@ -687,7 +688,7 @@ class PdoGsb
         $laDate = date('d-m-Y', strtotime('-1 month'));
         $laDate = str_replace("-", "/", $laDate);
         $moisPrecedent = getMois($laDate);
-        if (((int) date("j"))>17) {
+        if (((int) date("j"))>20) {
             $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . "SET idetat = 'MP', datemodif = now() " . "WHERE fichefrais.mois = :unMois AND idetat = 'VA'");
             $requetePrepare->bindParam(':unMois', $moisPrecedent, PDO::PARAM_STR);
             $requetePrepare->execute();

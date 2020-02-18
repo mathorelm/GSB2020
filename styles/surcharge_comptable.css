@@ -48,3 +48,17 @@ input:focus:invalid {
 	border-radius: 10px 5px 10px 5px;
 	box-shadow : 6px 6px 6px black;
 }
+
+#b_actuelle {
+	font-style:bold;
+	color : white;
+	background : #ec971f;
+}
+#b_future {
+	font-style:bold;
+	color : white;
+	background : #ec971f;
+}
+form {
+	display:inline;
+}

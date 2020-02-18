@@ -20,10 +20,18 @@
     $mois_actuel=(int) date('n');
     $mois_precedent=(int) date('n', strtotime('-1 month'));
     $limiteVAVersMP = 20;
+    $limiteMPVersRB = 30;
+    $balance = 623925.24;
 ?>
 <div class="row">
 	<h2>Supervision des mises en paiement des fiches</h2>
 </div>
+<div class="row">
+	<H3>Balance actuelle du compte de paiement : <span id=b_actuelle><?php echo $balance;?></span> euros.</H3>
+	<H3>Balance projetée pour le 30 du mois    : <span id=b_future><?php echo ($balance-$montantMP);?></span> euros.</H3>
+	<p> Fiche en retard en <a style="background:red;color:white">rouge</a></p>
+</div>
+<hr/>
 <div class="row">
 	<div class="col-sm-4 text-center">
 		Nb de fiches validées : <?php echo count($lesfichesVA);?>
@@ -48,7 +56,11 @@
 					<p class="card-text">Montant : <?php echo $uneFiche['montant'].' euros ';?></p>
 				</div>
 				<div class="card-footer text-right">
-					<a href="#" class="btn btn-primary btn-sm">Paiement manuel >>></a>
+				<form action="index.php?uc=suivreFrais&action=VAversMP" method="post" role="form">
+					<input	id="visiteur" name="visiteur" type="hidden"	value="<?php echo $uneFiche['id'];?>">
+					<input	id="mois" name="mois" type="hidden"	value="<?php echo $uneFiche['mois'];?>">
+					<button class="btn btn-success btn-sm" type="submit">>>></button>
+				</form>
 				</div>
 			</div>
 			<hr/>
@@ -63,7 +75,7 @@
 		          ?>
 			<div class="card">
 				<?php $mois_fiche = (int) date('n',substr($uneFiche['date'],4,2));
-				if (($mois_fiche=$mois_precedent)&&($jour_actuel>$limiteVAVersMP)) {
+				if (($mois_fiche=$mois_precedent)&&($jour_actuel>$limiteVAVersMP)&&($jour_actuel<$limiteMPversRB)) {
 				    $couleur = "red";
 				} else {
 				    $couleur = "green";
@@ -76,8 +88,17 @@
 					<h6 class="card-title">Statut : <?php echo $uneFiche['statut']. ' ('.dateAnglaisVersFrancais($uneFiche['date']).')';?></h6>
 					<p class="card-text">Montant : <?php echo $uneFiche['montant'].' euros ';?></p>
 					</div>
-				<div class="card-footer text-left">
-					<a href="#" class="btn btn-danger btn-sm">&lt&lt&lt Annuler le paiement</a>
+				<div class="card-footer">
+				<form action="index.php?uc=suivreFrais&action=MPversVA" method="post" role="form">
+					<input	id="visiteur" name="visiteur" type="hidden"	value="<?php echo $uneFiche['id'];?>">
+					<input	id="mois" name="mois" type="hidden"	value="<?php echo $uneFiche['mois'];?>">
+					<button class="btn btn-danger btn-sm" type="submit">&lt&lt&lt</button>
+				</form>
+				<form action="index.php?uc=suivreFrais&action=MPversRB" method="post" role="form">
+					<input	id="visiteur" name="visiteur" type="hidden"	value="<?php echo $uneFiche['id'];?>">
+					<input	id="mois" name="mois" type="hidden"	value="<?php echo $uneFiche['mois'];?>">
+					<button class="btn btn-success btn-sm" type="submit">>>></button>
+				</form>
 				</div>
 			</div>
 			<hr/>
