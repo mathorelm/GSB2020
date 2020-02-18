@@ -39,7 +39,7 @@
 	                                                   ?> >
 	                                                   <?php echo ($balance-$montantMP); ?>
 	                                             </span> euros.</H3>
-	<p> Fiche en retard en <a style="background:red;color:white">rouge</a></p>
+	<p> Fiche en retard en <a style="background:red;color:white">rouge</a>. Le classement va des fiches les plus anciennes aux plus jeunes.</p>
 </div>
 <hr/>
 <div class="row">
@@ -66,9 +66,9 @@
 					<p class="card-text">Montant : <?php echo $uneFiche['montant'].' euros ';?></p>
 				</div>
 				<div class="card-footer text-right">
-				<form action="index.php?uc=suivreFrais&action=VAversMP" method="post" role="form">
-					<input	id="visiteur" name="visiteur" type="hidden"	value="<?php echo $uneFiche['id'];?>">
-					<input	id="mois" name="mois" type="hidden"	value="<?php echo $uneFiche['mois'];?>">
+				<form action="index.php?uc=suivreFrais&action=VAversMP" method="post">
+					<input	id="visiteur<?php echo $uneFiche['id'].$uneFiche['mois']?>" name="visiteur" type="hidden"	value="<?php echo $uneFiche['id'];?>">
+					<input	id="mois<?php echo $uneFiche['id'].$uneFiche['mois']?>" name="mois" type="hidden"	value="<?php echo $uneFiche['mois'];?>">
 					<button class="btn btn-success btn-sm" type="submit">>>></button>
 				</form>
 				</div>
@@ -99,14 +99,14 @@
 					<p class="card-text">Montant : <?php echo $uneFiche['montant'].' euros ';?></p>
 					</div>
 				<div class="card-footer">
-				<form action="index.php?uc=suivreFrais&action=MPversVA" method="post" role="form">
-					<input	id="visiteur" name="visiteur" type="hidden"	value="<?php echo $uneFiche['id'];?>">
-					<input	id="mois" name="mois" type="hidden"	value="<?php echo $uneFiche['mois'];?>">
-					<button class="btn btn-danger btn-sm" type="submit">&lt&lt&lt</button>
+				<form action="index.php?uc=suivreFrais&action=MPversVA" method="post">
+					<input	id="visiteur2<?php echo $uneFiche['id'].$uneFiche['mois']?>" name="visiteur" type="hidden"	value="<?php echo $uneFiche['id'];?>">
+					<input	id="mois2<?php echo $uneFiche['id'].$uneFiche['mois']?>" name="mois" type="hidden"	value="<?php echo $uneFiche['mois'];?>">
+					<button class="btn btn-danger btn-sm" type="submit"><?php echo chr(38).'#60'.chr(38).'#60'.chr(38).'#60'?></button>
 				</form>
-				<form action="index.php?uc=suivreFrais&action=MPversRB" method="post" role="form">
-					<input	id="visiteur" name="visiteur" type="hidden"	value="<?php echo $uneFiche['id'];?>">
-					<input	id="mois" name="mois" type="hidden"	value="<?php echo $uneFiche['mois'];?>">
+				<form action="index.php?uc=suivreFrais&action=MPversRB" method="post">
+					<input	id="visiteur3<?php echo $uneFiche['id'].$uneFiche['mois']?>" name="visiteur" type="hidden"	value="<?php echo $uneFiche['id'];?>">
+					<input	id="mois3<?php echo $uneFiche['id'].$uneFiche['mois']?>" name="mois" type="hidden"	value="<?php echo $uneFiche['mois'];?>">
 					<button class="btn btn-success btn-sm" type="submit">>>></button>
 				</form>
 				</div>
