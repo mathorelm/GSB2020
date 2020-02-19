@@ -25,6 +25,7 @@
         <strong><u>Montant validé :</u></strong> <?php echo $montantValide ?>
         <?php if ($lien_pdf!="") {?>
         	<div class="row text-right">
+        	<?php //TODO : améliorer frontend sur image PDF ?>
         	<i>Téléchargez votre PDF :</i>
         	<a href="<?php echo $lien_pdf ?>">
         		<img class="pdf" src="./images/pdf.jpg" alt="Cliquez ici">

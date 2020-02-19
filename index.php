@@ -15,6 +15,10 @@
  * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
 
+//TODO : dans les listes proposant les fiches, différencier par couleurs suivant le statut
+//TODO : ajouter une explication sur les pages nécessaires.
+//TODO : reprendre le BootStrap pour s'assurer d'une représentation correcte tout le temps (entete)
+//TODO : jeu de tests unitaires.
 require_once 'includes/fct.inc.php';
 require_once 'includes/class.pdogsb.inc.php';
 

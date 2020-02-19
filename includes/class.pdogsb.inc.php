@@ -644,7 +644,7 @@ class PdoGsb
      */
     public function getLesInfosFicheFrais($idVisiteur, $mois)
     {
-        $requetePrepare = PdoGSB::$monPdo->prepare('SELECT fichefrais.idetat as idEtat, ' . 'fichefrais.datemodif as dateModif,' . 'fichefrais.nbjustificatifs as nbJustificatifs, ' . 'fichefrais.montantvalide as montantValide, ' . 'etat.libelle as libEtat ' . 'FROM fichefrais ' . 'INNER JOIN etat ON fichefrais.idetat = etat.id ' . 'WHERE fichefrais.idvisiteur = :unIdVisiteur ' . 'AND fichefrais.mois = :unMois');
+        $requetePrepare = PdoGSB::$monPdo->prepare('SELECT fichefrais.etatPDF as etatPDF, fichefrais.idetat as idEtat, ' . 'fichefrais.datemodif as dateModif,' . 'fichefrais.nbjustificatifs as nbJustificatifs, ' . 'fichefrais.montantvalide as montantValide, ' . 'etat.libelle as libEtat ' . 'FROM fichefrais ' . 'INNER JOIN etat ON fichefrais.idetat = etat.id ' . 'WHERE fichefrais.idvisiteur = :unIdVisiteur ' . 'AND fichefrais.mois = :unMois');
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->execute();
@@ -721,6 +721,18 @@ class PdoGsb
             $requetePrepare->bindParam(':unMois', $moisPrecedent, PDO::PARAM_STR);
             $requetePrepare->execute();
         };
+    }
+
+    /**
+     * Met à TRUE l'indicateur 'etatPDF' de la table fichefrais
+     * @param string $idVisiteur Visiteur concerné
+     * @param string $mois       Référence de la fiche
+     */
+    public function setPDFtraite($idVisiteur,$mois) {
+        $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . 'SET etatPDF = true, datemodif = now() ' . 'WHERE fichefrais.idvisiteur = :unIdVisiteur ' . 'AND fichefrais.mois = :unMois');
+        $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
+        $requetePrepare->execute();
     }
 
 }

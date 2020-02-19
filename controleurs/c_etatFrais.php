@@ -40,8 +40,18 @@ switch ($action) {
         $nbJustificatifs = $lesInfosFicheFrais['nbJustificatifs'];
         $dateModif = dateAnglaisVersFrancais($lesInfosFicheFrais['dateModif']);
         //AJOUTER FONCTION GENERATION PDF
-
-        $lien_pdf = "#";
+        //La génération doit avoir lieu a 2 conditions :
+        // - le fichier ne doit pas avoir été déjà généré
+        // - la fiche de frais doit être remboursée
+        //-----------------------------------------------
+        //TODO : attention si la fiche a été générée, il faut la proposer à l'impression !
+        if (($lesInfosFicheFrais['idEtat']=="RB") AND ($lesInfosFicheFrais['etatPDF']==False)) {
+            $lien_pdf = genererPDF($pdo, $lesFraisHorsForfait,$lesFraisForfait,$lesInfosFicheFrais);
+            //TODO tester si la génération s'est bien passée avant de passer imprimé à TRUE
+            $pdo->setPDFtraite($idVisiteur,$leMois);
+        } else {
+            $lien_pdf="";
+        }
         //FIN GENERATION
         include 'vues/v_etatFrais.php';
 }

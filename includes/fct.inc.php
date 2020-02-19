@@ -105,6 +105,17 @@ function getMois($date)
     return $annee . $mois;
 }
 
+/**
+ * Inverse la présentation du libellé aaaamm en mm/aaaa
+ * @param string $leLibelle au format aaaamm
+ * @return string le mois au format mm/aaaa
+ */
+function inverseMois(string $leLibelle):string {
+    $annee = substr($leLibelle,0,4);
+    $mois = substr($leLibelle,4,2);
+    return $mois."/".$annee;
+}
+
 /* gestion des erreurs */
 
 /**
@@ -337,7 +348,10 @@ function addLogEvent($event) {
     $event = $time.$event."\n";
     file_put_contents("GSB2020.log", $event, FILE_APPEND);
 }
-
+/**
+ * Emettre un email vers l'adresse gsb2020@free.fr avec le log en cours.
+ * A l'issue, vider le log.
+ */
 function envoyerleLog() {
     //----------------------------------
     // Construction de l'entête
@@ -421,5 +435,51 @@ function envoyerleLog() {
     $destinataire = 'gsb2020@free.fr';
     $expediteur   = 'ne-pas-repondre@gsb2020.org';
     $reponse      = 'gsb2020@free.fr';
-     mail($destinataire, 'GSB2020 : transmission du log', $msg,"Reply-to: $reponse\r\nFrom: $expediteur\r\n".$header);
+    $ret= mail($destinataire, 'GSB2020 : transmission du log', $msg,"Reply-to: $reponse\r\nFrom: $expediteur\r\n".$header);
+    if ($ret) {
+        unlink('gsb2020.log');
+    }
+}
+
+/**
+ * Génère un fichier PDF contenant les informations de la fiche de frais
+ * @param array $lesFraisHorsForfait tableau associatif comportant les frais HF
+ * @param array $lesFraisForfait tableau associatif comportant les frais forfaitisés
+ * @param array $lesInfosFicheFrais informations concernant la fiche de frais
+ * @return string
+ */
+function genererPDF($pdo, array $lesFraisHorsForfait,array $lesFraisForfait,array $lesInfosFicheFrais):string {
+
+    //Préparation de l'action : mise en place des variables nécessaires à la page
+    require_once('./includes/fpdf.php');
+    $id_visiteur = $lesFraisHorsForfait[0]['idvisiteur'];
+    $donnees_visiteur = $pdo->getNomVisiteur($id_visiteur);
+    $nom_visiteur = $donnees_visiteur['nom'];
+    $prenom_visiteur = $donnees_visiteur['prenom'];
+    $nr_fiche = $lesFraisHorsForfait[0]['mois'];
+    $fichier_PDF = $nr_fiche.'-'.$nom_visiteur.'.pdf';
+    $mois_annee = inverseMois($nr_fiche);
+    $montant_valide = $lesInfosFicheFrais['montantValide'];
+    $date_validation = $lesInfosFicheFrais['dateModif'];
+
+    //Génération avec FPDF
+    $pdf = new FPDF();
+    $pdf->AddPage();
+    $pdf->SetFont('Arial','B',16);
+    $pdf->Cell(40,10,"Brouillon de fiche");
+    $pdf->SetFont('Arial','',12);
+    $pdf->Write(10,"\n\n\n");
+    $pdf->Write(10,'ID visiteur : '.$id_visiteur."\n");
+    $pdf->Write(10,'Nom,prenom : '.$nom_visiteur.' '.$prenom_visiteur."\n");
+    $pdf->Write(10,'NR FICHE : '.$nr_fiche."\n");
+    $pdf->Write(10,'mois/annee : '.$mois_annee."\n");
+    $pdf->Write(10,'montant valide : '.$montant_valide." euros \n");
+    $pdf->Write(10,'date de la validation : '.dateAnglaisVersFrancais($date_validation)."\n");
+    try {
+        $pdf->Output('F','PDF/'.$fichier_PDF);
+    } catch (Exception $e) {
+        echo $e->getMessage();
+        return "";
+    }
+    return "PDF/".$fichier_PDF;
 }

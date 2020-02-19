@@ -102,7 +102,7 @@
 				<form action="index.php?uc=suivreFrais&action=MPversVA" method="post">
 					<input	id="visiteur2<?php echo $uneFiche['id'].$uneFiche['mois']?>" name="visiteur" type="hidden"	value="<?php echo $uneFiche['id'];?>">
 					<input	id="mois2<?php echo $uneFiche['id'].$uneFiche['mois']?>" name="mois" type="hidden"	value="<?php echo $uneFiche['mois'];?>">
-					<button class="btn btn-danger btn-sm" type="submit"><?php echo chr(38).'#60'.chr(38).'#60'.chr(38).'#60'?></button>
+					<button class="btn btn-danger btn-sm" type="submit"><?php echo chr(38).'#60;'.chr(38).'#60;'.chr(38).'#60;'?></button>
 				</form>
 				<form action="index.php?uc=suivreFrais&action=MPversRB" method="post">
 					<input	id="visiteur3<?php echo $uneFiche['id'].$uneFiche['mois']?>" name="visiteur" type="hidden"	value="<?php echo $uneFiche['id'];?>">
