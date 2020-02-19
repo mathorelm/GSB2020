@@ -335,7 +335,6 @@ function addLogEvent($event) {
     $time = date("D, d M Y H:i:s");
     $time = "[".$time."] ";
     $event = $time.$event."\n";
-    if (str_len($event)>70) { $event=substr($event,70);}
     file_put_contents("GSB2020.log", $event, FILE_APPEND);
 }
 

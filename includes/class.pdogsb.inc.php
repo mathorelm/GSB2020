@@ -224,7 +224,10 @@ class PdoGsb
         $lesCles = array_keys($lesFrais);
         foreach ($lesCles as $unIdFrais) {
             $qte = $lesFrais[$unIdFrais];
-            $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE lignefraisforfait ' . 'SET lignefraisforfait.quantite = :uneQte ' . 'WHERE lignefraisforfait.idvisiteur = :unIdVisiteur ' . 'AND lignefraisforfait.mois = :unMois ' . 'AND lignefraisforfait.idfraisforfait = :idFrais');
+            $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE lignefraisforfait ' . 'SET lignefraisforfait.quantite = :uneQte ' .
+                'WHERE lignefraisforfait.idvisiteur = :unIdVisiteur ' .
+                'AND lignefraisforfait.mois = :unMois ' .
+                'AND lignefraisforfait.idfraisforfait = :idFrais');
             $requetePrepare->bindParam(':uneQte', $qte, PDO::PARAM_INT);
             $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
             $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
@@ -275,6 +278,7 @@ class PdoGsb
 
     /**
      * Retourne le total des frais au forfait de la fiche (en exploitant le montant unitaire)
+     * Le calcul des frais KM s'appuie sur les indemnités définies par véhicule détenu
      *
      * @param String $idVisiteur
      * @param String $mois
@@ -286,13 +290,25 @@ class PdoGsb
         $maRequete = $maRequete . ' FROM lignefraisforfait JOIN fraisforfait';
         $maRequete = $maRequete . ' ON lignefraisforfait.idfraisforfait = fraisforfait.id';
         $maRequete = $maRequete . ' WHERE idvisiteur = :unIdVisiteur AND mois = :unMois';
-
+        $maRequete = $maRequete . ' AND lignefraisforfait.idfraisforfait <> "KM"';
         $requetePrepare = PdoGSB::$monPdo->prepare($maRequete);
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->execute();
-        $TEST_retour = $requetePrepare->fetch();
-        return (float) $TEST_retour['total'];
+        $retour = $requetePrepare->fetch();
+        $total = $retour['total'];
+        //effectuer l'ajout des frais kilométriques
+        $maRequete = 'SELECT SUM(lignefraisforfait.quantite*vehicule.indemnite) as total';
+        $maRequete .= 'FROM lignefraisforfait JOIN personnels ON idvisiteur = personnels.id';
+        $maRequete .= 'JOIN vehicule ON personnels.vehicule = vehicule.id WHERE idvisiteur =:unIdVisiteur';
+        $maRequete .= 'AND mois= :unMois AND lignefraisforfait.idfraisforfait = "KM"';
+        $requetePrepare = PdoGSB::$monPdo->prepare($maRequete);
+        $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        $retour = $requetePrepare->fetch();
+        $total += $retour['total'];
+        return (float) $total;
     }
 
     /**

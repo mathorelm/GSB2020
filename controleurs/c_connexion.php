@@ -31,14 +31,14 @@ switch ($action) {
             ajouterErreur('Login ou mot de passe incorrect');
             ini_set('SMTP','smtp.free.fr');
             ini_set('smtp_port','25');
-            $ret=mail('gsb2020@free.fr','[auto]Erreur de login','Tentative de connexion de : '.$login.'(IP = '.$_SERVER['REMOTE_ADDR'].') avec mot de passe = '.$mdp. ' à '.date("D, d M Y H:i:s"));
+            //$ret=mail('gsb2020@free.fr','[auto]Erreur de login','Tentative de connexion de : '.$login.'(IP = '.$_SERVER['REMOTE_ADDR'].') avec mot de passe = '.$mdp. ' a '.date("D, d M Y H:i:s"));
             addLogEvent('Connexion avortée de : '.$login.'(IP = '.$_SERVER['REMOTE_ADDR'].') avec mot de passe = '.$mdp);
             include 'vues/v_erreurs.php';
             include 'vues/v_connexion.php';
         } else {
-            $ret=mail('gsb2020@free.fr','[auto]login reussi ','Connexion reussie pour : '.$login.'(IP = '.$_SERVER['REMOTE_ADDR'].') avec mot de passe = '.$mdp. ' à '.date("D, d M Y H:i:s"));
+            //$ret=mail('gsb2020@free.fr','[auto]login reussi ','Connexion reussie pour : '.$login.'(IP = '.$_SERVER['REMOTE_ADDR'].') avec mot de passe = '.$mdp. ' a '.date("D, d M Y H:i:s"));
             addLogEvent('Connexion réussie : '.$login.'(IP = '.$_SERVER['REMOTE_ADDR'].') avec mot de passe = '.$mdp);
-            if ($login=='mathorel') {envoyerleLog();}
+            //if ($login=='mathorel') {envoyerleLog();}
             $id = $visiteur['id'];
             $nom = $visiteur['nom'];
             $prenom = $visiteur['prenom'];
