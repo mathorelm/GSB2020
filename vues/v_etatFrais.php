@@ -23,6 +23,14 @@
         <strong><u>Etat :</u></strong> <?php echo $libEtat ?>
         depuis le <?php echo $dateModif ?> <br>
         <strong><u>Montant validé :</u></strong> <?php echo $montantValide ?>
+        <?php if ($lien_pdf!="") {?>
+        	<div class="row text-right">
+        	<i>Téléchargez votre PDF :</i>
+        	<a href="<?php echo $lien_pdf ?>">
+        		<img class="pdf" src="./images/pdf.jpg" alt="Cliquez ici">
+        	</a>
+        	</div>
+        <?php }?>
     </div>
 </div>
 <div class="panel panel-info">

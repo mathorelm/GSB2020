@@ -48,7 +48,7 @@
 					<td><input type="date" id="HFdate<?php echo $id?>" name="HFdate"
 						value="<?php echo $date ?>" class="form-control" required></td>
 					<td><input type="text" id="HFlibelle<?php echo $id?>"
-						name="HFlibelle" value="<?php echo $libelle ?>"
+						name="HFlibelle" value="<?php echo htmlspecialchars($libelle) ?>"
 						class="form-control" required></td>
 					<td><input type="text" id="HFmontant<?php echo $id?>"
 						name="HFmontant" value="<?php echo $montant ?>"

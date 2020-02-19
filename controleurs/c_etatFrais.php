@@ -39,5 +39,9 @@ switch ($action) {
         $montantValide = $lesInfosFicheFrais['montantValide'];
         $nbJustificatifs = $lesInfosFicheFrais['nbJustificatifs'];
         $dateModif = dateAnglaisVersFrancais($lesInfosFicheFrais['dateModif']);
+        //AJOUTER FONCTION GENERATION PDF
+
+        $lien_pdf = "#";
+        //FIN GENERATION
         include 'vues/v_etatFrais.php';
 }
