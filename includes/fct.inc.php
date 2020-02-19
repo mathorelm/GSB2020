@@ -38,7 +38,7 @@ function estConnecte()
  *            Code représentant le métier exercé
  * @return null
  */
-function connecter($idVisiteur, $nom, $prenom,$metier)
+function connecter($idVisiteur, $nom, $prenom, $metier)
 {
     $_SESSION['idVisiteur'] = $idVisiteur;
     $_SESSION['nom'] = $nom;
@@ -107,13 +107,16 @@ function getMois($date)
 
 /**
  * Inverse la présentation du libellé aaaamm en mm/aaaa
- * @param string $leLibelle au format aaaamm
+ *
+ * @param string $leLibelle
+ *            au format aaaamm
  * @return string le mois au format mm/aaaa
  */
-function inverseMois(string $leLibelle):string {
-    $annee = substr($leLibelle,0,4);
-    $mois = substr($leLibelle,4,2);
-    return $mois."/".$annee;
+function inverseMois(string $leLibelle): string
+{
+    $annee = substr($leLibelle, 0, 4);
+    $mois = substr($leLibelle, 4, 2);
+    return $mois . "/" . $annee;
 }
 
 /* gestion des erreurs */
@@ -259,7 +262,6 @@ function ajouterErreur($msg)
         $_REQUEST['erreurs'] = array();
     }
     $_REQUEST['erreurs'][] = $msg;
-
 }
 
 /**
@@ -274,49 +276,52 @@ function nbErreurs()
     } else {
         return count($_REQUEST['erreurs']);
     }
-    /**
-     * Ajoute le libellé d'une information au tableau des informations
-     *
-     * @param String $msg
-     *            Libellé de l'information
-     *
-     * @return null
-     */
+/**
+ * Ajoute le libellé d'une information au tableau des informations
+ *
+ * @param String $msg
+ *            Libellé de l'information
+ *
+ * @return null
+ */
 }
-function ajouterInfo($msg)
-    {
-        if (! isset($_REQUEST['infos'])) {
-            $_REQUEST['infos'] = array();
-        }
-        $_REQUEST['infos'][] = $msg;
-        addLogEvent('Erreur ("'.$msg.'") de '.$_SESSION['prenom'] . ' ' . $_SESSION['nom'].' (IP = '.$_SERVER['REMOTE_ADDR']);
-    }
 
-    /**
-     * Retoune le nombre de lignes du tableau des informations
-     *
-     * @return Integer le nombre d'informations
-     */
+function ajouterInfo($msg)
+{
+    if (! isset($_REQUEST['infos'])) {
+        $_REQUEST['infos'] = array();
+    }
+    $_REQUEST['infos'][] = $msg;
+    addLogEvent('Erreur ("' . $msg . '") de ' . $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' (IP = ' . $_SERVER['REMOTE_ADDR']);
+}
+
+/**
+ * Retoune le nombre de lignes du tableau des informations
+ *
+ * @return Integer le nombre d'informations
+ */
 function nbInfos()
-    {
-        if (! isset($_REQUEST['infos'])) {
-            return 0;
-        } else {
-            return count($_REQUEST['infos']);
-        }
+{
+    if (! isset($_REQUEST['infos'])) {
+        return 0;
+    } else {
+        return count($_REQUEST['infos']);
+    }
 }
 
 /**
  * Retourne le nombre de fiches de plus d'un an dans le tableau passé en paramètre
+ *
  * @param array() $tableauDeFiches
  * @return integer nb de fiches périmées
  */
-function compterFichesPerimees($tableauDeFiches) {
-    //Comptabiliser les fiches de plus de 1 an
-    $compteur=0;
+function compterFichesPerimees($tableauDeFiches)
+{
+    // Comptabiliser les fiches de plus de 1 an
+    $compteur = 0;
     foreach ($tableauDeFiches as $uneFiche) {
-        if (!estDateDepassee(dateAnglaisVersFrancais($uneFiche['date']))) {
-            $compteur++;
+        if (! estDateDepassee(dateAnglaisVersFrancais($uneFiche['date']))) {
+            $compteur ++;
         }
     }
     return $compteur;
@@ -324,15 +329,17 @@ function compterFichesPerimees($tableauDeFiches) {
 
 /**
  * Retourne le montant total des fiches dans le tableau passé en paramètre
+ *
  * @param array() $tableauDeFiches
  * @return float montant total
  */
-function compterMontantTotal($tableauDeFiches) {
-    //Comptabiliser les fiches de plus de 1 an
-    $montant=0;
+function compterMontantTotal($tableauDeFiches)
+{
+    // Comptabiliser les fiches de plus de 1 an
+    $montant = 0;
     foreach ($tableauDeFiches as $uneFiche) {
-        if (!estDateDepassee(dateAnglaisVersFrancais($uneFiche['date']))) {
-            $montant +=(float) $uneFiche['montant'];
+        if (! estDateDepassee(dateAnglaisVersFrancais($uneFiche['date']))) {
+            $montant += (float) $uneFiche['montant'];
         }
     }
     return $montant;
@@ -340,26 +347,30 @@ function compterMontantTotal($tableauDeFiches) {
 
 /**
  * Ajoute l'événement (avec TimeStamp) au fichier GSB2020.log
+ *
  * @param string $event
  */
-function addLogEvent($event) {
+function addLogEvent($event)
+{
     $time = date("D, d M Y H:i:s");
-    $time = "[".$time."] ";
-    $event = $time.$event."\n";
+    $time = "[" . $time . "] ";
+    $event = $time . $event . "\n";
     file_put_contents("GSB2020.log", $event, FILE_APPEND);
 }
+
 /**
  * Emettre un email vers l'adresse gsb2020@free.fr avec le log en cours.
  * A l'issue, vider le log.
  */
-function envoyerleLog() {
-    //----------------------------------
+function envoyerleLog()
+{
+    // ----------------------------------
     // Construction de l'entête
-    //----------------------------------
+    // ----------------------------------
     // On choisi généralement de construire une frontière générée aléatoirement
     // comme suit. (le document pourra ainsi etre attache dans un autre mail
     // dans le cas d'un transfert par exemple)
-    $boundary = "-----=".md5(uniqid(rand()));
+    $boundary = "-----=" . md5(uniqid(rand()));
 
     // Ici, on construit un entête contenant les informations
     // minimales requises.
@@ -370,9 +381,9 @@ function envoyerleLog() {
     $header .= "Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n";
     $header .= "\r\n";
 
-    //--------------------------------------------------
+    // --------------------------------------------------
     // Construction du message proprement dit
-    //--------------------------------------------------
+    // --------------------------------------------------
 
     // Pour le cas, où le logiciel de mail du destinataire
     // n'est pas capable de lire le format MIME de cette version
@@ -380,10 +391,10 @@ function envoyerleLog() {
     // REM: Ce message n'apparaît pas pour les logiciels sachant lire ce format
     $msg = "Je vous informe que ceci est un message au format MIME 1.0 multipart/mixed.\r\n";
 
-    //---------------------------------
+    // ---------------------------------
     // 1ère partie du message
     // Le texte
-    //---------------------------------
+    // ---------------------------------
     // Chaque partie du message est séparée par une frontière
     $msg .= "--$boundary\r\n";
 
@@ -397,13 +408,13 @@ function envoyerleLog() {
     $msg .= "Ceci est un mail avec un fichier joint\r\n";
     $msg .= "\r\n";
 
-    //---------------------------------
+    // ---------------------------------
     // 2nde partie du message
     // Le fichier
-    //---------------------------------
+    // ---------------------------------
     // Tout d'abord lire le contenu du fichier
     $file = 'GSB2020.log';
-    $fp = fopen($file, 'rb');   // b c'est pour les windowsiens
+    $fp = fopen($file, 'rb'); // b c'est pour les windowsiens
     $attachment = fread($fp, filesize($file));
     fclose($fp);
 
@@ -433,9 +444,9 @@ function envoyerleLog() {
     $msg .= "--$boundary--\r\n";
 
     $destinataire = 'gsb2020@free.fr';
-    $expediteur   = 'ne-pas-repondre@gsb2020.org';
-    $reponse      = 'gsb2020@free.fr';
-    $ret= mail($destinataire, 'GSB2020 : transmission du log', $msg,"Reply-to: $reponse\r\nFrom: $expediteur\r\n".$header);
+    $expediteur = 'ne-pas-repondre@gsb2020.org';
+    $reponse = 'gsb2020@free.fr';
+    $ret = mail($destinataire, 'GSB2020 : transmission du log', $msg, "Reply-to: $reponse\r\nFrom: $expediteur\r\n" . $header);
     if ($ret) {
         unlink('gsb2020.log');
     }
@@ -443,43 +454,64 @@ function envoyerleLog() {
 
 /**
  * Génère un fichier PDF contenant les informations de la fiche de frais
- * @param array $lesFraisHorsForfait tableau associatif comportant les frais HF
- * @param array $lesFraisForfait tableau associatif comportant les frais forfaitisés
- * @param array $lesInfosFicheFrais informations concernant la fiche de frais
+ *
+ * @param array $lesFraisHorsForfait
+ *            tableau associatif comportant les frais HF
+ * @param array $lesFraisForfait
+ *            tableau associatif comportant les frais forfaitisés
+ * @param array $lesInfosFicheFrais
+ *            informations concernant la fiche de frais
  * @return string
  */
-function genererPDF($pdo, array $lesFraisHorsForfait,array $lesFraisForfait,array $lesInfosFicheFrais):string {
+function genererPDF($pdo, array $lesFraisHorsForfait, array $lesFraisForfait, array $lesInfosFicheFrais): string
+{
 
-    //Préparation de l'action : mise en place des variables nécessaires à la page
-    require_once('./includes/fpdf.php');
+    // Préparation de l'action : mise en place des variables nécessaires à la page
+    require_once ('./includes/fpdf.php');
     $id_visiteur = $lesFraisHorsForfait[0]['idvisiteur'];
     $donnees_visiteur = $pdo->getNomVisiteur($id_visiteur);
     $nom_visiteur = $donnees_visiteur['nom'];
     $prenom_visiteur = $donnees_visiteur['prenom'];
     $nr_fiche = $lesFraisHorsForfait[0]['mois'];
-    $fichier_PDF = $nr_fiche.'-'.$nom_visiteur.'.pdf';
+    $fichier_PDF = $nr_fiche . '-' . $nom_visiteur . '.pdf';
     $mois_annee = inverseMois($nr_fiche);
+    //TODO définir le mois /année en lettre : Juillet 2019
     $montant_valide = $lesInfosFicheFrais['montantValide'];
     $date_validation = $lesInfosFicheFrais['dateModif'];
-
-    //Génération avec FPDF
+    // Génération avec FPDF
     $pdf = new FPDF();
     $pdf->AddPage();
-    $pdf->SetFont('Arial','B',16);
-    $pdf->Cell(40,10,"Brouillon de fiche");
-    $pdf->SetFont('Arial','',12);
-    $pdf->Write(10,"\n\n\n");
-    $pdf->Write(10,'ID visiteur : '.$id_visiteur."\n");
-    $pdf->Write(10,'Nom,prenom : '.$nom_visiteur.' '.$prenom_visiteur."\n");
-    $pdf->Write(10,'NR FICHE : '.$nr_fiche."\n");
-    $pdf->Write(10,'mois/annee : '.$mois_annee."\n");
-    $pdf->Write(10,'montant valide : '.$montant_valide." euros \n");
-    $pdf->Write(10,'date de la validation : '.dateAnglaisVersFrancais($date_validation)."\n");
+    $pdf->SetMargins(25,25);
+    $pdf->setDrawColor(130,163, 206);       //Bleu Clair GSB
+    $pdf->Rect(25, 55, 160, 247);
+    $pdf->Image('images/logo.jpg', 89, 20, 32,20);
+    $pdf->SetFont('Arial', 'B', 16);
+    $pdf->SetXY(25,55);
+    $pdf->setDrawColor(0,0,0);
+    $pdf->setLineWidth(0.6);
+    $pdf->setTextColor(82,127,192);     //Bleu foncé GSB
+    $pdf->Cell(160,7,"REMBOURSEMENT DE FRAIS ENGAGES","B",1,"C");
+    $pdf->setLineWidth(0.2);
+    $pdf->setTextColor(0,0,0);
+    $pdf->SetFont('Arial', '', 12);
+    $pdf->SetXY(25,75);
+    $pdf->Cell(5,10);
+    $pdf->Cell(20,10,"Visiteur ",0,0,'L');
+    $pdf->Cell(40,10);
+    $pdf->Cell(20,10,$id_visiteur,0,0,'L');
+    $pdf->Cell(10,10);
+    $pdf->Cell(20,10,$prenom_visiteur,0,0,'L');
+    $pdf->Cell(20,10,strtoupper($nom_visiteur),0,0,'L');
+    $pdf->SetXY(25,85);
+    $pdf->Cell(5,10);
+    $pdf->Cell(20,10,"Mois",0,0,'L');
+    $pdf->Cell(40,10);
+    $pdf->Cell(20,10,$nr_fiche,0,0,'L');
     try {
-        $pdf->Output('F','PDF/'.$fichier_PDF);
+        $pdf->Output('F', 'PDF/' . $fichier_PDF);
     } catch (Exception $e) {
         echo $e->getMessage();
         return "";
     }
-    return "PDF/".$fichier_PDF;
+    return "PDF/" . $fichier_PDF;
 }
