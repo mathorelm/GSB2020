@@ -298,10 +298,11 @@ class PdoGsb
         $retour = $requetePrepare->fetch();
         $total = $retour['total'];
         //effectuer l'ajout des frais kilométriques
+        //TODO : problème SQL STATE [HY093]
         $maRequete = 'SELECT SUM(lignefraisforfait.quantite*vehicule.indemnite) as total';
         $maRequete .= 'FROM lignefraisforfait JOIN personnels ON idvisiteur = personnels.id';
-        $maRequete .= 'JOIN vehicule ON personnels.vehicule = vehicule.id WHERE idvisiteur =:unIdVisiteur';
-        $maRequete .= 'AND mois= :unMois AND lignefraisforfait.idfraisforfait = "KM"';
+        $maRequete .= 'JOIN vehicule ON personnels.vehicule = vehicule.id WHERE idvisiteur =:unIdVisiteur ';
+        $maRequete .= 'AND mois=:unMois AND lignefraisforfait.idfraisforfait = "KM"';
         $requetePrepare = PdoGSB::$monPdo->prepare($maRequete);
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
