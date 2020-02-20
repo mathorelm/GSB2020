@@ -15,3 +15,86 @@
 [Wed, 19 Feb 2020 21:50:39] Erreur ("La validation a été effectuée !") de Louis Mathorel (IP = ::1
 [Wed, 19 Feb 2020 21:52:47] Erreur ("La validation a été effectuée !") de Louis Mathorel (IP = ::1
 [Wed, 19 Feb 2020 21:53:00] Erreur ("La validation a été effectuée !") de Louis Mathorel (IP = ::1
+[Thu, 20 Feb 2020 06:10:30] Connexion réussie : ecadic(IP = ::1) avec mot de passe = 6u8dc
+[Thu, 20 Feb 2020 10:42:52] Connexion réussie : ecadic(IP = ::1) avec mot de passe = 6u8dc
+[Thu, 20 Feb 2020 11:04:37] Déconnexion de : Eric Cadic (IP = ::1
+[Thu, 20 Feb 2020 11:04:43] Connexion réussie : mathorel(IP = ::1) avec mot de passe = mathorel
+[Thu, 20 Feb 2020 11:20:17] Erreur ("La modification des frais forfaitisés à été prise en compte ! ") de Louis Mathorel (IP = ::1
+[Thu, 20 Feb 2020 11:20:22] Erreur ("La modification demandée a été effectuée pour 'Location véhicule' (100€) à la date du 08/12/2019") de Louis Mathorel (IP = ::1
+[Thu, 20 Feb 2020 11:20:27] Erreur ("La modification demandée a été effectuée pour 'Achat de matériel de papèterie' (200€) à la date du 14/12/2019") de Louis Mathorel (IP = ::1
+[Thu, 20 Feb 2020 11:20:31] forfait hors KM = 2150.00
+[Thu, 20 Feb 2020 11:20:31] forfait avec KM = 2150
+[Thu, 20 Feb 2020 11:20:31] frais HF =300
+[Thu, 20 Feb 2020 11:20:31] Total des frais : 2450
+[Thu, 20 Feb 2020 11:20:31] Erreur ("La validation a été effectuée !") de Louis Mathorel (IP = ::1
+[Thu, 20 Feb 2020 11:20:58] Déconnexion de : Louis Mathorel (IP = ::1
+[Thu, 20 Feb 2020 11:21:05] Connexion réussie : ecadic(IP = ::1) avec mot de passe = 6u8dc
+[Thu, 20 Feb 2020 11:29:32] Déconnexion de : Eric Cadic (IP = ::1
+[Thu, 20 Feb 2020 11:29:38] Connexion réussie : mathorel(IP = ::1) avec mot de passe = mathorel
+[Thu, 20 Feb 2020 11:30:42] forfait hors KM = 2150.00
+[Thu, 20 Feb 2020 11:30:42] remboursement KM = 
+[Thu, 20 Feb 2020 11:30:42] forfait avec KM = 2150
+[Thu, 20 Feb 2020 11:30:42] frais HF =300
+[Thu, 20 Feb 2020 11:30:42] Total des frais : 2450
+[Thu, 20 Feb 2020 11:30:42] Erreur ("La validation a été effectuée !") de Louis Mathorel (IP = ::1
+[Thu, 20 Feb 2020 11:59:34] forfait hors KM = 2150.00
+[Thu, 20 Feb 2020 11:59:34] remboursement KM = 
+[Thu, 20 Feb 2020 11:59:34] forfait avec KM = 2150
+[Thu, 20 Feb 2020 11:59:34] frais HF =300
+[Thu, 20 Feb 2020 11:59:34] Total des frais : 2450
+[Thu, 20 Feb 2020 11:59:34] Erreur ("La validation a été effectuée !") de Louis Mathorel (IP = ::1
+[Thu, 20 Feb 2020 12:01:04] Déconnexion de : Louis Mathorel (IP = ::1
+[Thu, 20 Feb 2020 12:02:33] Connexion réussie : mathorel(IP = ::1) avec mot de passe = mathorel
+[Thu, 20 Feb 2020 12:02:43] forfait hors KM = 2150.00
+[Thu, 20 Feb 2020 12:02:43] retour SQL = 
+[Thu, 20 Feb 2020 12:02:43] remboursement KM = 
+[Thu, 20 Feb 2020 12:02:43] forfait avec KM = 2150
+[Thu, 20 Feb 2020 12:02:43] frais HF =300
+[Thu, 20 Feb 2020 12:02:43] Total des frais : 2450
+[Thu, 20 Feb 2020 12:02:43] Info ("La validation a été effectuée !") de Louis Mathorel (IP = ::1
+[Thu, 20 Feb 2020 12:06:03] forfait hors KM = 2150.00
+[Thu, 20 Feb 2020 12:06:35] forfait hors KM = 2150.00
+[Thu, 20 Feb 2020 12:06:35] retour SQL = 
+[Thu, 20 Feb 2020 12:06:35] remboursement KM = 6.20
+[Thu, 20 Feb 2020 12:06:35] forfait avec KM = 2156.2
+[Thu, 20 Feb 2020 12:06:35] frais HF =300
+[Thu, 20 Feb 2020 12:06:35] Total des frais : 2456.2
+[Thu, 20 Feb 2020 12:06:35] Info ("La validation a été effectuée !") de Louis Mathorel (IP = ::1
+[Thu, 20 Feb 2020 12:07:10] Déconnexion de : Louis Mathorel (IP = ::1
+[Thu, 20 Feb 2020 12:07:19] Connexion réussie : ecadic(IP = ::1) avec mot de passe = 6u8dc
+[Thu, 20 Feb 2020 13:35:34] Déconnexion de : Eric Cadic (IP = ::1
+[Thu, 20 Feb 2020 13:35:43] Connexion réussie : mathorel(IP = ::1) avec mot de passe = mathorel
+[Thu, 20 Feb 2020 13:35:52] forfait hors KM = 2150.00
+[Thu, 20 Feb 2020 13:35:52] retour SQL = 
+[Thu, 20 Feb 2020 13:35:52] remboursement KM = 6.20
+[Thu, 20 Feb 2020 13:35:52] forfait avec KM = 2156.2
+[Thu, 20 Feb 2020 13:35:52] frais HF =300
+[Thu, 20 Feb 2020 13:35:52] Total des frais : 2456.2
+[Thu, 20 Feb 2020 13:35:52] Info ("La validation a été effectuée !") de Louis Mathorel (IP = ::1
+[Thu, 20 Feb 2020 13:36:26] Déconnexion de : Louis Mathorel (IP = ::1
+[Thu, 20 Feb 2020 13:36:34] Connexion réussie : ecadic(IP = ::1) avec mot de passe = 6u8dc
+[Thu, 20 Feb 2020 13:36:39] Déconnexion de : Eric Cadic (IP = ::1
+[Thu, 20 Feb 2020 13:36:43] Connexion réussie : mathorel(IP = ::1) avec mot de passe = mathorel
+[Thu, 20 Feb 2020 13:36:53] forfait hors KM = 2150.00
+[Thu, 20 Feb 2020 13:36:53] retour SQL = 
+[Thu, 20 Feb 2020 13:36:53] remboursement KM = 6.20
+[Thu, 20 Feb 2020 13:36:53] forfait avec KM = 2156.2
+[Thu, 20 Feb 2020 13:36:53] frais HF =300
+[Thu, 20 Feb 2020 13:36:53] Total des frais : 2456.2
+[Thu, 20 Feb 2020 13:36:53] Info ("La validation a été effectuée !") de Louis Mathorel (IP = ::1
+[Thu, 20 Feb 2020 13:37:04] Déconnexion de : Louis Mathorel (IP = ::1
+[Thu, 20 Feb 2020 13:37:37] Connexion réussie : mathorel(IP = ::1) avec mot de passe = mathorel
+[Thu, 20 Feb 2020 13:37:45] forfait hors KM = 2150.00
+[Thu, 20 Feb 2020 13:37:45] retour SQL = 
+[Thu, 20 Feb 2020 13:37:45] remboursement KM = 
+[Thu, 20 Feb 2020 13:37:45] forfait avec KM = 2150
+[Thu, 20 Feb 2020 13:37:45] frais HF =300
+[Thu, 20 Feb 2020 13:37:45] Total des frais : 2450
+[Thu, 20 Feb 2020 13:37:45] Info ("La validation a été effectuée !") de Louis Mathorel (IP = ::1
+[Thu, 20 Feb 2020 13:41:01] forfait hors KM = 2150.00
+[Thu, 20 Feb 2020 13:41:01] retour SQL = 
+[Thu, 20 Feb 2020 13:41:01] remboursement KM = 6.20
+[Thu, 20 Feb 2020 13:41:01] forfait avec KM = 2156.2
+[Thu, 20 Feb 2020 13:41:01] frais HF =300
+[Thu, 20 Feb 2020 13:41:01] Total des frais : 2456.2
+[Thu, 20 Feb 2020 13:41:01] Info ("La validation a été effectuée !") de Louis Mathorel (IP = ::1

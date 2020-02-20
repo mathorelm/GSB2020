@@ -44,12 +44,15 @@ switch ($action) {
         // - le fichier ne doit pas avoir été déjà généré
         // - la fiche de frais doit être remboursée
         // -----------------------------------------------
-        // TODO : attention si la fiche a été générée, il faut la proposer à l'impression !
-        if (($lesInfosFicheFrais['idEtat'] == "RB") && ($lesInfosFicheFrais['etatPDF'] == False)) {
-            echo "génération PDF";
-            $lien_pdf = genererPDF($pdo, $lesFraisHorsForfait, $lesFraisForfait, $lesInfosFicheFrais);
-            // TODO tester si la génération s'est bien passée avant de passer imprimé à TRUE
-            // $pdo->setPDFtraite($idVisiteur,$leMois);
+        if ($lesInfosFicheFrais['idEtat'] == "RB") {
+            if ($lesInfosFicheFrais['etatPDF']) {
+                $donnees_visiteur = $pdo->getNomVisiteur($idVisiteur);
+                $nom_visiteur = $donnees_visiteur['nom'];
+                $lien_pdf = 'PDF/'.$lesFraisHorsForfait[0]['mois'] . '-' . $nom_visiteur . '.pdf';
+            } else {
+                $lien_pdf = genererPDF($pdo, $lesFraisHorsForfait, $lesFraisForfait, $lesInfosFicheFrais);
+                if ($lien_pdf!="") {$pdo->setPDFtraite($idVisiteur,$leMois);}
+            }
         } else {
             $lien_pdf = "";
         }
