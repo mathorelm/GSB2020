@@ -272,7 +272,7 @@ function ajouterErreur($msg)
         $_REQUEST['erreurs'] = array();
     }
     $_REQUEST['erreurs'][] = $msg;
-    LogEvent('Erreur ("' . $msg . '") de ' . $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' (IP = ' . $_SERVER['REMOTE_ADDR']);
+    addLogEvent('Erreur ("' . $msg . '") de ' . $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' (IP = ' . $_SERVER['REMOTE_ADDR']);
 
 }
 
