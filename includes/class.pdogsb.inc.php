@@ -25,16 +25,16 @@ class PdoGsb
 {
 
     //Jeu d'éléments dev
-    /*static $serveur = 'mysql:host=localhost';
+    static $serveur = 'mysql:host=localhost';
     static $bdd = 'dbname=gsb_frais';
     static $user = 'userGsb';
-    static $mdp = 'secret';*/
+    static $mdp = 'secret';
 
     //Jeu d'éléments prod
-    static $serveur = 'mysql:host=db5000291103.hosting-data.io';
-    static $bdd = 'dbname=dbs284383';
-    static $user = 'dbu504895';
-    static $mdp = 'Mjoelner.29';
+    //static $serveur = 'mysql:host=db5000291103.hosting-data.io';
+    //static $bdd = 'dbname=dbs284383';
+    //static $user = 'dbu504895';
+    //static $mdp = 'Mjoelner.29';
 
 
     static $monPdo;

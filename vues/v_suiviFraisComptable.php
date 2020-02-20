@@ -51,7 +51,7 @@
 		          ?>
 			<div class="card">
 				<?php $mois_fiche = (int) substr($uneFiche['mois'],4,2);
-				if (($mois_fiche!=$mois_precedent)&&($jour_actuel<$limiteVAVersMP)) {
+				if (($mois_fiche!=$mois_precedent)&&($jour_actuel<=$limiteVAVersMP)) {
 				    $couleur = "red";
 				} else {
 				    $couleur = "green";
@@ -90,7 +90,7 @@
 		          ?>
 			<div class="card">
 				<?php $mois_fiche = (int) substr($uneFiche['mois'],4,2);
-				if (($mois_fiche!=$mois_precedent)&&($jour_actuel<$limiteMPVersRB)) {
+				if (($mois_fiche!=$mois_precedent)&&($jour_actuel<=$limiteMPVersRB)) {
 				    $couleur = "red";
 				} else {
 				    $couleur = "green";
