@@ -16,14 +16,14 @@
  */
 
 //TODO : dans les listes proposant les fiches, différencier par couleurs suivant le statut
-//TODO : ajouter une explication sur les pages nécessaires.
 //TODO : reprendre le BootStrap pour s'assurer d'une représentation correcte tout le temps (entete)
 //TODO : jeu de tests unitaires.
 require_once 'includes/fct.inc.php';
 require_once 'includes/class.pdogsb.inc.php';
 
 session_start();
-error_reporting(E_ALL);
+//Ligne a commenter pour mise en production site
+//error_reporting(E_ALL);
 $pdo = PdoGsb::getPdoGsb();
 $estConnecte = estConnecte();
 require 'vues/v_entete.php';

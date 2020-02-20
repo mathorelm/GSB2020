@@ -530,7 +530,6 @@ function genererPDF($pdo, array $lesFraisHorsForfait, array $lesFraisForfait, ar
     $index=0;
     foreach($lesFraisForfait as $unFrais) {
         if ($unFrais['idfrais']=="KM") {
-            echo "Indemnité KM : ".$vehicule['indemnite'];
             $unFrais['montant_unitaire']=$vehicule['indemnite'];
         }
         $pdf->SetXY(40,($index*8)+106);
