@@ -43,6 +43,7 @@ class PdoGsb
     private function __construct()
     {
         PdoGsb::$monPdo = new PDO(PdoGsb::$serveur . ';' . PdoGsb::$bdd, PdoGsb::$user, PdoGsb::$mdp);
+        //Ligne inférieure à commenter si mise en prod : déclenchement des Exceptions PDO
         PdoGsb::$monPdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         PdoGsb::$monPdo->query('SET CHARACTER SET utf8');
     }

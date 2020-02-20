@@ -19,10 +19,9 @@
     $jour_actuel=(int) date('j');
     $mois_actuel=(int) date('n');
     $mois_precedent=(int) date('n', strtotime('-1 month'));
-
-
-
 ?>
+<script type="text/javascript"
+	src="/vues/js/js_suiviFraisComptable.js"></script>
 <div class="row">
 	<h2>Supervision des mises en paiement des fiches</h2>
 </div>
@@ -66,10 +65,16 @@
 					<p class="card-text">Montant : <?php echo $uneFiche['montant'].' euros ';?></p>
 				</div>
 				<div class="card-footer text-right">
+				<form action="index.php?uc=suivreFrais&action=VAversCL" method="post">
+					<input	id="visiteur2<?php echo $uneFiche['id'].$uneFiche['mois']?>" name="visiteur" type="hidden"	value="<?php echo $uneFiche['id'];?>">
+					<input	id="mois2<?php echo $uneFiche['id'].$uneFiche['mois']?>" name="mois" type="hidden"	value="<?php echo $uneFiche['mois'];?>">
+					<button class="btn btn-danger btn-sm" type="submit" data-toggle="tooltip" data-placement="top" title="invalider la fiche">
+					<?php echo chr(38).'#60;'.chr(38).'#60;'.chr(38).'#60;'?></button>
+				</form>
 				<form action="index.php?uc=suivreFrais&action=VAversMP" method="post">
 					<input	id="visiteur<?php echo $uneFiche['id'].$uneFiche['mois']?>" name="visiteur" type="hidden"	value="<?php echo $uneFiche['id'];?>">
 					<input	id="mois<?php echo $uneFiche['id'].$uneFiche['mois']?>" name="mois" type="hidden"	value="<?php echo $uneFiche['mois'];?>">
-					<button class="btn btn-success btn-sm" type="submit">>>></button>
+					<button class="btn btn-success btn-sm" type="submit" data-toggle="tooltip" data-placement="top" title="forcer mise en paiement">>>></button>
 				</form>
 				</div>
 			</div>
@@ -102,12 +107,12 @@
 				<form action="index.php?uc=suivreFrais&action=MPversVA" method="post">
 					<input	id="visiteur2<?php echo $uneFiche['id'].$uneFiche['mois']?>" name="visiteur" type="hidden"	value="<?php echo $uneFiche['id'];?>">
 					<input	id="mois2<?php echo $uneFiche['id'].$uneFiche['mois']?>" name="mois" type="hidden"	value="<?php echo $uneFiche['mois'];?>">
-					<button class="btn btn-danger btn-sm" type="submit"><?php echo chr(38).'#60;'.chr(38).'#60;'.chr(38).'#60;'?></button>
+					<button class="btn btn-danger btn-sm" type="submit" data-toggle="tooltip" data-placement="top" title="suspendre la mise en paiement (retour VA)"><?php echo chr(38).'#60;'.chr(38).'#60;'.chr(38).'#60;'?></button>
 				</form>
 				<form action="index.php?uc=suivreFrais&action=MPversRB" method="post">
 					<input	id="visiteur3<?php echo $uneFiche['id'].$uneFiche['mois']?>" name="visiteur" type="hidden"	value="<?php echo $uneFiche['id'];?>">
 					<input	id="mois3<?php echo $uneFiche['id'].$uneFiche['mois']?>" name="mois" type="hidden"	value="<?php echo $uneFiche['mois'];?>">
-					<button class="btn btn-success btn-sm" type="submit">>>></button>
+					<button class="btn btn-success btn-sm" type="submit" data-toggle="tooltip" data-placement="top" title="placer en archive (remboursée)">>>></button>
 				</form>
 				</div>
 			</div>

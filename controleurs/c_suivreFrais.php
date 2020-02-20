@@ -40,6 +40,9 @@ switch ($action) {
     case 'MPversRB':
         $pdo->majEtatFicheFrais($id_visiteur,$mois,'RB');
         break;
+    case 'VAversCL':
+        $pdo->majEtatFicheFrais($id_visiteur,$mois,'CL');
+        break;
 }
 $lesfichesVA = $pdo->getLesFiches('VA');
 $lesfichesMP = $pdo->getLesFiches('MP');

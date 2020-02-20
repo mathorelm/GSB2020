@@ -98,3 +98,11 @@
 [Thu, 20 Feb 2020 13:41:01] frais HF =300
 [Thu, 20 Feb 2020 13:41:01] Total des frais : 2456.2
 [Thu, 20 Feb 2020 13:41:01] Info ("La validation a été effectuée !") de Louis Mathorel (IP = ::1
+[Thu, 20 Feb 2020 14:10:40] Connexion réussie : mathorel(IP = ::1) avec mot de passe = mathorel
+[Thu, 20 Feb 2020 14:11:20] forfait hors KM = 1960.00
+[Thu, 20 Feb 2020 14:11:20] retour SQL = 
+[Thu, 20 Feb 2020 14:11:20] remboursement KM = 230.84
+[Thu, 20 Feb 2020 14:11:20] forfait avec KM = 2190.84
+[Thu, 20 Feb 2020 14:11:20] frais HF =1035
+[Thu, 20 Feb 2020 14:11:20] Total des frais : 3225.84
+[Thu, 20 Feb 2020 14:11:20] Info ("La validation a été effectuée !") de Louis Mathorel (IP = ::1
