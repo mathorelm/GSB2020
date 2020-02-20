@@ -49,7 +49,7 @@ class PdoGsb
     {
         PdoGsb::$monPdo = new PDO(PdoGsb::$serveur . ';' . PdoGsb::$bdd, PdoGsb::$user, PdoGsb::$mdp);
         //Ligne inférieure à commenter si mise en prod : déclenchement des Exceptions PDO
-        PdoGsb::$monPdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        //PdoGsb::$monPdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         PdoGsb::$monPdo->query('SET CHARACTER SET utf8');
     }
 
@@ -673,7 +673,7 @@ class PdoGsb
         $laDate = date('d-m-Y', strtotime('-1 month'));
         $laDate = str_replace("-", "/", $laDate);
         $moisPrecedent = getMois($laDate);
-        $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . "SET idetat = 'CL', datemodif = now() " . "WHERE fichefrais.mois = :unMois AND idetat = 'CR'");
+        $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE fichefrais ' . "SET idetat = 'CL', datemodif = now() " . "WHERE fichefrais.mois = :unMois AND idetat = 'CR'");
         $requetePrepare->bindParam(':unMois', $moisPrecedent, PDO::PARAM_STR);
         $requetePrepare->execute();
     }
