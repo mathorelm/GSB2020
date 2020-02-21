@@ -33,7 +33,7 @@
                     <div class="form-group">
                         <label for="idFrais"><?php echo $libelle;
                         if ($idFrais=="KM") {
-                            $vehicule=$pdo->getVehicule($id_visiteur);
+                            $vehicule=$pdo->getVehicule($_SESSION['idVisiteur']);
                             echo "<br/>";
                             echo " (".strtoupper($vehicule['carburant'])." ".$vehicule['puissance_admin']." CV)";
                         }?></label>
