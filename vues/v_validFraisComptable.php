@@ -38,6 +38,7 @@
 					if ($idFrais="KM") {
 					    $vehicule=$pdo->getVehicule($id_visiteur);
 					    echo " (".strtoupper($vehicule['carburant'])." ".$vehicule['puissance_admin']." CV)";
+					}
 					?></label>
 					<input type="text" id="idFrais<?php echo $idFrais?>"
 						name="lesFrais[<?php echo $idFrais ?>]" size="8" maxlength="5"
