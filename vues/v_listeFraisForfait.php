@@ -34,7 +34,6 @@
                         <label for="idFrais"><?php echo $libelle;
                         if ($idFrais=="KM") {
                             $vehicule=$pdo->getVehicule($_SESSION['idVisiteur']);
-                            echo "<br/>";
                             echo " (".strtoupper($vehicule['carburant'])." ".$vehicule['puissance_admin']." CV)";
                         }?></label>
                         <input type="text" id="idFrais"
