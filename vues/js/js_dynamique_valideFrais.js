@@ -25,6 +25,6 @@ window.addEventListener("load", function() {
 			desactiverBoutonCorriger);
 	let tabZonesText = window.document.querySelectorAll('.form-control');
 	for (let i = 0; i < tabZonesText.length; i++) {
-		tabZonesText[i].addEventListener("change", activerBoutonCorriger);
+		tabZonesText[i].addEventListener("keypress", activerBoutonCorriger);
 	}
 });
