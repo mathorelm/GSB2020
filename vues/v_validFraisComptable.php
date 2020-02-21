@@ -34,7 +34,7 @@
                     $quantite = $unFrais['quantite'];
                     ?>
                     <div class="form-group">
-					<label for="idFrais<?php echo $idFrais?>"><?php echo $libelle
+					<label for="idFrais<?php echo $idFrais?>"><?php echo $libelle;
 					if ($idFrais="KM") {
 					    $vehicule=$pdo->getVehicule($id_visiteur);
 					    echo " (".strtoupper($vehicule['carburant'])." ".$vehicule['puissance_admin']." CV)";
