@@ -276,7 +276,6 @@ class PdoGsb
      */
     public function effectueTotalFraisForfait($idVisiteur, $mois)
     {
-        // OK
         $maRequete = 'SELECT SUM(lignefraisforfait.quantite*fraisforfait.montant) as total';
         $maRequete = $maRequete . ' FROM lignefraisforfait JOIN fraisforfait';
         $maRequete = $maRequete . ' ON lignefraisforfait.idfraisforfait = fraisforfait.id';
@@ -288,8 +287,6 @@ class PdoGsb
         $requetePrepare->execute();
         $retour = $requetePrepare->fetch();
         $total = $retour['total'];
-        addLogEvent("forfait hors KM = " . $total);
-        // OK
         // effectuer l'ajout des frais kilométriques
         $maRequete = 'SELECT SUM(lignefraisforfait.quantite*vehicule.indemnite) as total ';
         $maRequete .= 'FROM lignefraisforfait JOIN personnels ON idvisiteur = personnels.id ';
@@ -300,10 +297,7 @@ class PdoGsb
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->execute();
         $retour = $requetePrepare->fetch();
-        addLogEvent("retour SQL = " . var_dump($retour));
-        (float) $total += (float) $retour['total'];
-        addLogevent("remboursement KM = " . $retour['total']);
-        addLogEvent("forfait avec KM = " . $total);
+        $total += $retour['total'];
         return $total;
     }
 
@@ -688,7 +682,7 @@ class PdoGsb
         $laDate = date('d-m-Y', strtotime('-1 month'));
         $laDate = str_replace("-", "/", $laDate);
         $moisPrecedent = getMois($laDate);
-        if (((int) date("j")) > 20) {
+        if (((int) date("j")) >= 20) {
             $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . "SET idetat = 'MP', datemodif = now() " . "WHERE fichefrais.mois = :unMois AND idetat = 'VA'");
             $requetePrepare->bindParam(':unMois', $moisPrecedent, PDO::PARAM_STR);
             $requetePrepare->execute();
@@ -706,7 +700,7 @@ class PdoGsb
         $laDate = date('d-m-Y', strtotime('-1 month'));
         $laDate = str_replace("-", "/", $laDate);
         $moisPrecedent = getMois($laDate);
-        if (((int) date("j")) > 30) {
+        if (((int) date("j")) >= 30) {
             $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . "SET idetat = 'RB', datemodif = now() " . "WHERE fichefrais.mois = :unMois AND idetat = 'VA'");
             $requetePrepare->bindParam(':unMois', $moisPrecedent, PDO::PARAM_STR);
             $requetePrepare->execute();

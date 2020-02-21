@@ -15,26 +15,26 @@
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 //Clôturer les fiches de frais du mois précédent
 $pdo->clotureFichesMoisPrecedent();
+$lesVisiteurs = $pdo->getLesVisiteurs();
+$i=0;
+foreach ($lesVisiteurs as $unVisiteur) {
+    $unJeuDonnees = $pdo->getLesMoisAValider($unVisiteur['id']);
+    if ($unJeuDonnees !=null) {
+        foreach ($unJeuDonnees as $Donnee) {
+            $TouslesMois[$i] = array(
+                'ID' => $unVisiteur['id'],
+                'mois' => $Donnee['mois'],
+                'numAnnee' => $Donnee['numAnnee'],
+                'numMois' => $Donnee['numMois']
+            );
+            $i++;
+        };
+    } else {
+        unset($lesVisiteurs[array_search($unVisiteur,$lesVisiteurs)]);
+    };
+}
 switch ($action) {
     case 'selectionnerUtilisateur':
-        $lesVisiteurs = $pdo->getLesVisiteurs();
-        $i=0;
-        foreach ($lesVisiteurs as $unVisiteur) {
-            $unJeuDonnees = $pdo->getLesMoisAValider($unVisiteur['id']);
-            if ($unJeuDonnees !=null) {
-                foreach ($unJeuDonnees as $Donnee) {
-                    $TouslesMois[$i] = array(
-                        'ID' => $unVisiteur['id'],
-                        'mois' => $Donnee['mois'],
-                        'numAnnee' => $Donnee['numAnnee'],
-                        'numMois' => $Donnee['numMois']
-                    );
-                    $i++;
-                };
-            } else {
-                unset($lesVisiteurs[array_search($unVisiteur,$lesVisiteurs)]);
-            };
-        }
         include 'vues/v_listeVisiteurs.php';
         break;
     case 'voirListeFrais':
@@ -44,6 +44,7 @@ switch ($action) {
         $lesFraisForfait = $pdo->getLesFraisForfait($id_visiteur, $mois_fiche);
         $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($id_visiteur, $mois_fiche);
         $nbJustificatifs = $pdo ->getNbjustificatifs($id_visiteur, $mois_fiche);
+        include 'vues/v_listeVisiteurs.php';
         include 'vues/v_validFraisComptable.php';
         include 'vues/v_validFraisHFComptable.php';
         break;
@@ -63,6 +64,7 @@ switch ($action) {
         $lesFraisForfait = $pdo->getLesFraisForfait($id_visiteur, $mois_fiche);
         $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($id_visiteur, $mois_fiche);
         $nbJustificatifs = $pdo ->getNbjustificatifs($id_visiteur, $mois_fiche);
+        include 'vues/v_listeVisiteurs.php';
         include 'vues/v_validFraisComptable.php';
         include 'vues/v_validFraisHFComptable.php';
         break;
@@ -90,6 +92,7 @@ switch ($action) {
         $lesFraisForfait = $pdo->getLesFraisForfait($id_visiteur, $mois_fiche);
         $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($id_visiteur, $mois_fiche);
         $nbJustificatifs = $pdo ->getNbjustificatifs($id_visiteur, $mois_fiche);
+        include 'vues/v_listeVisiteurs.php';
         include 'vues/v_validFraisComptable.php';
         include 'vues/v_validFraisHFComptable.php';
         break;
