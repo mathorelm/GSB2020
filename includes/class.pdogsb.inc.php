@@ -261,7 +261,6 @@ class PdoGsb
         $requetePrepare->bindParam(':unMontant', $montantValide);
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
-        addLogEvent("Total des frais : " . $montantValide);
         $requetePrepare->execute();
     }
 
@@ -317,7 +316,6 @@ class PdoGsb
                 $totalFrais += $unFraisHorsForfait['montant'];
             }
         }
-        addLogEvent("frais HF =" . $totalFrais);
         return (float) $totalFrais;
     }
 
@@ -682,6 +680,7 @@ class PdoGsb
         $laDate = str_replace("-", "/", $laDate);
         $moisPrecedent = getMois($laDate);
         if (((int) date("j")) >= 20) {
+            addLogEvent('Requête UPDATE VA --> MP');
             $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . "SET idetat = 'MP', datemodif = now() " . "WHERE fichefrais.mois = :unMois AND idetat = 'VA'");
             $requetePrepare->bindParam(':unMois', $moisPrecedent, PDO::PARAM_STR);
             $requetePrepare->execute();
@@ -700,6 +699,7 @@ class PdoGsb
         $laDate = str_replace("-", "/", $laDate);
         $moisPrecedent = getMois($laDate);
         if (((int) date("j")) >= 30) {
+            addLogEvent('Requête UPDATE MP --> RB');
             $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . "SET idetat = 'RB', datemodif = now() " . "WHERE fichefrais.mois = :unMois AND idetat = 'VA'");
             $requetePrepare->bindParam(':unMois', $moisPrecedent, PDO::PARAM_STR);
             $requetePrepare->execute();
