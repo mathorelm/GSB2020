@@ -225,7 +225,7 @@ class PdoGsb
     }
 
     /**
-     * Met à jour le nombre de justificatifs de la table ficheFrais
+     * Met à jour le nombre de justificatifs de la table fichefrais
      * pour le mois et le visiteur concerné
      *
      * @param String $idVisiteur
@@ -247,7 +247,7 @@ class PdoGsb
     }
 
     /**
-     * Insère dans ficheFrais le montant validé par le comptable
+     * Insère dans fichefrais le montant validé par le comptable
      *
      * @param String $idVisiteur
      * @param String $mois
@@ -379,9 +379,9 @@ class PdoGsb
     public function creeNouvellesLignesFrais($idVisiteur, $mois)
     {
         $dernierMois = $this->dernierMoisSaisi($idVisiteur);
-        $laDerniereFiche = $this->getLesInfosFicheFrais($idVisiteur, $dernierMois);
+        $laDerniereFiche = $this->getLesInfosfichefrais($idVisiteur, $dernierMois);
         if ($laDerniereFiche['idEtat'] == 'CR') {
-            $this->majEtatFicheFrais($idVisiteur, $dernierMois, 'CL');
+            $this->majEtatfichefrais($idVisiteur, $dernierMois, 'CL');
         }
         $requetePrepare = PdoGsb::$monPdo->prepare('INSERT INTO fichefrais (idvisiteur,mois,nbjustificatifs,' . 'montantvalide,datemodif,idetat) ' . "VALUES (:unIdVisiteur,:unMois,0,0,now(),'CR')");
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
@@ -620,7 +620,7 @@ class PdoGsb
      * @return un tableau avec des champs de jointure entre une fiche de frais
      *         et la ligne d'état
      */
-    public function getLesInfosFicheFrais($idVisiteur, $mois)
+    public function getLesInfosfichefrais($idVisiteur, $mois)
     {
         $requetePrepare = PdoGSB::$monPdo->prepare('SELECT fichefrais.etatPDF as etatPDF, fichefrais.idetat as idEtat, ' . 'fichefrais.datemodif as dateModif,' . 'fichefrais.nbjustificatifs as nbJustificatifs, ' . 'fichefrais.montantvalide as montantValide, ' . 'etat.libelle as libEtat ' . 'FROM fichefrais ' . 'INNER JOIN etat ON fichefrais.idetat = etat.id ' . 'WHERE fichefrais.idvisiteur = :unIdVisiteur ' . 'AND fichefrais.mois = :unMois');
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
@@ -643,9 +643,9 @@ class PdoGsb
      *
      * @return null
      */
-    public function majEtatFicheFrais($idVisiteur, $mois, $etat)
+    public function majEtatfichefrais($idVisiteur, $mois, $etat)
     {
-        $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . 'SET idetat = :unEtat, datemodif = now() ' . 'WHERE fichefrais.idvisiteur = :unIdVisiteur ' . 'AND fichefrais.mois = :unMois');
+        $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE fichefrais ' . 'SET idetat = :unEtat, datemodif = now() ' . 'WHERE fichefrais.idvisiteur = :unIdVisiteur ' . 'AND fichefrais.mois = :unMois');
         $requetePrepare->bindParam(':unEtat', $etat, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
@@ -680,8 +680,7 @@ class PdoGsb
         $laDate = str_replace("-", "/", $laDate);
         $moisPrecedent = getMois($laDate);
         if (((int) date("j")) >= 20) {
-            addLogEvent('Requête UPDATE VA --> MP');
-            $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . "SET idetat = 'MP', datemodif = now() " . "WHERE fichefrais.mois = :unMois AND idetat = 'VA'");
+            $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE fichefrais ' . "SET idetat = 'MP', datemodif = now() " . "WHERE fichefrais.mois = :unMois AND idetat = 'VA'");
             $requetePrepare->bindParam(':unMois', $moisPrecedent, PDO::PARAM_STR);
             $requetePrepare->execute();
         }
@@ -699,8 +698,7 @@ class PdoGsb
         $laDate = str_replace("-", "/", $laDate);
         $moisPrecedent = getMois($laDate);
         if (((int) date("j")) >= 30) {
-            addLogEvent('Requête UPDATE MP --> RB');
-            $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . "SET idetat = 'RB', datemodif = now() " . "WHERE fichefrais.mois = :unMois AND idetat = 'VA'");
+            $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE fichefrais ' . "SET idetat = 'RB', datemodif = now() " . "WHERE fichefrais.mois = :unMois AND idetat = 'VA'");
             $requetePrepare->bindParam(':unMois', $moisPrecedent, PDO::PARAM_STR);
             $requetePrepare->execute();
         }
@@ -717,7 +715,7 @@ class PdoGsb
      */
     public function setPDFtraite($idVisiteur, $mois)
     {
-        $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE ficheFrais ' . 'SET etatPDF = true, datemodif = now() ' . 'WHERE fichefrais.idvisiteur = :unIdVisiteur ' . 'AND fichefrais.mois = :unMois');
+        $requetePrepare = PdoGSB::$monPdo->prepare('UPDATE fichefrais ' . 'SET etatPDF = true, datemodif = now() ' . 'WHERE fichefrais.idvisiteur = :unIdVisiteur ' . 'AND fichefrais.mois = :unMois');
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->execute();
