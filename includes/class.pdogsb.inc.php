@@ -34,7 +34,7 @@ class PdoGsb
     //static $serveur = 'mysql:host=db5000291103.hosting-data.io';
     //static $bdd = 'dbname=dbs284383';
     //static $user = 'dbu504895';
-    //static $mdp = 'Mjoelner.29';
+    //static $mdp = 'fkbW(w83';
 
 
     static $monPdo;

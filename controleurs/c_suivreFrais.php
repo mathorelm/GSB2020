@@ -22,14 +22,13 @@ $limiteMPVersRB = 30;               //jour (présumé) de remboursement
 
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 
-$pdo->mettreEnPaiementVAMoisPrecedent();
-$pdo->rembourserMPMoisPrecedent();
-
 $id_visiteur=filter_input(INPUT_POST,'visiteur',FILTER_SANITIZE_STRING);
 $mois=filter_input(INPUT_POST,'mois',FILTER_SANITIZE_STRING);
 
 switch ($action) {
     case 'afficherSuivi':
+        $pdo->mettreEnPaiementVAMoisPrecedent();
+        $pdo->rembourserMPMoisPrecedent();
         break;
     case 'VAversMP':
         $pdo->majEtatFicheFrais($id_visiteur,$mois,'MP');

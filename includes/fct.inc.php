@@ -467,6 +467,8 @@ function envoyerleLog()
 /**
  * Génère un fichier PDF contenant les informations de la fiche de frais
  *
+ * @param object $pdo
+ *           passage du pointeur pdo pour accéder à ses fonctions
  * @param array $lesFraisHorsForfait
  *            tableau associatif comportant les frais HF
  * @param array $lesFraisForfait

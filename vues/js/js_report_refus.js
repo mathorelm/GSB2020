@@ -10,7 +10,7 @@
  * @copyright 2017 Réseau CERTA
  * @license   Réseau CERTA
  * @version   GIT: <0>
- * @link      http://gsb2020.free.fr
+ * @link      http://gsb2020.org
  */
 
 	/**
