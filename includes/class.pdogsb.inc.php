@@ -25,16 +25,17 @@ class PdoGsb
 {
 
     //Jeu d'éléments dev
+    /*
     static $serveur = 'mysql:host=localhost';
     static $bdd = 'dbname=gsb_frais';
     static $user = 'userGsb';
-    static $mdp = 'secret';
+    static $mdp = 'secret';*/
 
     //Jeu d'éléments prod
-    //static $serveur = 'mysql:host=db5000291103.hosting-data.io';
-    //static $bdd = 'dbname=dbs284383';
-    //static $user = 'dbu504895';
-    //static $mdp = 'fkbW(w83';
+    static $serveur = 'mysql:host=db5000291103.hosting-data.io';
+    static $bdd = 'dbname=dbs284383';
+    static $user = 'dbu504895';
+    static $mdp = 'fkbW(w83';
 
 
     static $monPdo;
@@ -90,8 +91,6 @@ class PdoGsb
     {
         $requetePrepare = PdoGsb::$monPdo->prepare('SELECT personnels.id AS id, personnels.nom AS nom, ' . 'personnels.prenom AS prenom, personnels.mdp as mdp,' . 'metiers.libelle AS metier ' . 'FROM personnels,metiers ' . 'WHERE personnels.login = :unLogin' . ' AND personnels.metier = metiers.idMetiers');
         $requetePrepare->bindParam(':unLogin', $login, PDO::PARAM_STR);
-        // Ne plus utiliser le mot de passe comme critère de SELECT car il est entré en clair dans l'IHM
-        // $requetePrepare->bindParam(':unMdp', $mdp, PDO::PARAM_STR);
         $requetePrepare->execute();
         $res = $requetePrepare->fetch();
         if (password_verify($mdp, $res['mdp'])) {
