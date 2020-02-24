@@ -4,12 +4,12 @@
  *
  * PHP Version 7
  *
- * @package   GSB
- * @author    Louis-Marin MATHOREL <gsb2020@free.fr>
- * @copyright 2017 Réseau CERTA
- * @license   Réseau CERTA
- * @version   GIT: <0>
- * @link      http://gsb2020.org Contexte « Laboratoire GSB »
+ * /package   GSB
+ * /author    Louis-Marin MATHOREL <gsb2020@free.fr>
+ * /copyright 2017 Réseau CERTA
+ * /license   Réseau CERTA
+ * /version   GIT: <0>
+ * /link      http://gsb2020.org Contexte « Laboratoire GSB »
  */
 
 //--------------------------------------------------------------

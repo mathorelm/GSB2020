@@ -5,14 +5,13 @@
  *
  * PHP Version 7
  *
- * @category  PPE
- * @package   GSB
- * @author    Réseau CERTA <contact@reseaucerta.org>
- * @author    José GIL <jgil@ac-nice.fr>
- * @copyright 2017 Réseau CERTA
- * @license   Réseau CERTA
- * @version   GIT: <0>
- * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
+ * \package   GSB
+ * \author    Réseau CERTA <contact@reseaucerta.org>
+ * \author    José GIL <jgil@ac-nice.fr>
+ * \copyright 2017 Réseau CERTA
+ * \license   Réseau CERTA
+ * \version   GIT: <0>
+ * \link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
 
 /**
@@ -20,7 +19,7 @@
  *
  * @param PDO $pdo
  *            instance de la classe PDO utilisée pour se connecter
- *            
+ *
  * @return Array de visiteurs
  */
 function getLesVisiteurs($pdo)
@@ -38,7 +37,7 @@ function getLesVisiteurs($pdo)
  *            Instance de la classe PDO utilisée pour se connecter
  * @param String $table
  *            Nom de la table que l'on veut utiliser
- *            
+ *
  * @return Integer avec le nombre d'enregistrements
  */
 function getNbTable($pdo, $table)
@@ -54,7 +53,7 @@ function getNbTable($pdo, $table)
  *
  * @param PDO $pdo
  *            instance de la classe PDO utilisée pour se connecter
- *            
+ *
  * @return Array de fiches de frais
  */
 function getLesFichesFrais($pdo)
@@ -70,7 +69,7 @@ function getLesFichesFrais($pdo)
  *
  * @param PDO $pdo
  *            instance de la classe PDO utilisée pour se connecter
- *            
+ *
  * @return Array de id de fiches de frais
  */
 function getLesIdFraisForfait($pdo)
@@ -86,7 +85,7 @@ function getLesIdFraisForfait($pdo)
  *
  * @param String $mois
  *            Contient le mois à utiliser
- *            
+ *
  * @return String le mois d'après
  */
 function getMoisSuivant($mois)
@@ -110,7 +109,7 @@ function getMoisSuivant($mois)
  *
  * @param String $mois
  *            Contient le mois à utiliser
- *            
+ *
  * @return String le mois d'avant
  */
 function getMoisPrecedent($mois)
@@ -134,7 +133,7 @@ function getMoisPrecedent($mois)
  *
  * @param PDO $pdo
  *            instance de la classe PDO utilisée pour se connecter
- *            
+ *
  * @return null
  */
 function creationFichesFrais($pdo)
@@ -177,7 +176,7 @@ function creationFichesFrais($pdo)
  *
  * @param PDO $pdo
  *            instance de la classe PDO utilisée pour se connecter
- *            
+ *
  * @return null
  */
 function creationFraisForfait($pdo)
@@ -274,7 +273,7 @@ function getDesFraisHorsForfait()
  *
  * @param PDO $pdo
  *            instance de la classe PDO utilisée pour se connecter
- *            
+ *
  * @return null
  */
 function updateMdpVisiteur($pdo)
@@ -300,7 +299,7 @@ function updateMdpVisiteur($pdo)
  *
  * @param PDO $pdo
  *            instance de la classe PDO utilisée pour se connecter
- *            
+ *
  * @return null
  */
 function creationFraisHorsForfait($pdo)
@@ -338,7 +337,7 @@ function creationFraisHorsForfait($pdo)
  *
  * @param String $date
  *            Date à utiliser pour extraire le mois
- *            
+ *
  * @return String avec le mois au format aaaamm
  */
 function getMois($date)
@@ -356,7 +355,7 @@ function getMois($date)
  *
  * @param PDO $pdo
  *            instance de la classe PDO utilisée pour se connecter
- *            
+ *
  * @return null
  */
 function majFicheFrais($pdo)

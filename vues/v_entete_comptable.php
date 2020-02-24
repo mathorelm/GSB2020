@@ -4,13 +4,13 @@
  *
  * PHP Version 7
  *
- * @package   GSB
- * @author    Réseau CERTA <contact@reseaucerta.org>
- * @author   Louis-Marin Mathorel <gsb2020@free.fr>
- * @copyright 2017 Réseau CERTA
- * @license   Réseau CERTA
- * @version   GIT: <0>
- * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
+ * /package   GSB
+ * /author    Réseau CERTA <contact@reseaucerta.org>
+ * /author   Louis-Marin Mathorel <gsb2020@free.fr>
+ * /copyright 2017 Réseau CERTA
+ * /license   Réseau CERTA
+ * /version   GIT: <0>
+ * /link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
 ?>
                              	<li <?php if (!$uc || $uc == 'accueil') { ?>class="active" <?php } ?>>
