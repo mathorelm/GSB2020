@@ -1,8 +1,8 @@
 <?php
 /**
- * Vue Formulaire liste de frais hors forfait
+ * \details Vue Formulaire liste de frais hors forfait
  *
- * PHP Version 7
+ * \details PHP Version 7
  *
  * \package   GSB
  * \author    Réseau CERTA <contact@reseaucerta.org>
