@@ -260,12 +260,11 @@ function valideInfosFrais($dateFrais, $libelle, $montant)
 /**
  * Ajoute le libellé d'une erreur au tableau des erreurs
  *
- * @param String $msg
- *            Libellé de l'erreur
+ * @param String $msg Libellé de l'erreur
  *
  * @return null
  */
-function ajouterErreur($msg)
+function ajouterErreur(string $msg)
 {
     if (! isset($_REQUEST['erreurs'])) {
         $_REQUEST['erreurs'] = array();
@@ -323,10 +322,10 @@ function nbInfos()
 /**
  * Retourne le nombre de fiches de plus d'un an dans le tableau passé en paramètre
  *
- * @param array() $tableauDeFiches
+ * @param array tableau de fiches de visiteurs
  * @return integer nb de fiches périmées
  */
-function compterFichesPerimees($tableauDeFiches)
+function compterFichesPerimees(array $tableauDeFiches):integer
 {
     // Comptabiliser les fiches de plus de 1 an
     $compteur = 0;
@@ -341,10 +340,10 @@ function compterFichesPerimees($tableauDeFiches)
 /**
  * Retourne le montant total des fiches dans le tableau passé en paramètre
  *
- * @param array() $tableauDeFiches
+ * @param array tableau de fiches de visiteurs
  * @return float montant total
  */
-function compterMontantTotal($tableauDeFiches)
+function compterMontantTotal(array $tableauDeFiches) :float
 {
     // Comptabiliser les fiches de plus de 1 an
     $montant = 0;
