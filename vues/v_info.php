@@ -4,7 +4,6 @@
  *
  * PHP Version 7
  *
- * @category  PPE
  * @package   GSB
  * @author    Réseau CERTA <contact@reseaucerta.org>
  * @author    José GIL <jgil@ac-nice.fr>

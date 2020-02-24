@@ -4,7 +4,6 @@
  *
  * PHP Version 7
  *
- * @category  PPE
  * @package   GSB
  * @author    Louis-Marin MATHOREL <gsb2020@free.fr>
  * @copyright 2017 Réseau CERTA
