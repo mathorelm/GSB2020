@@ -1,7 +1,7 @@
 <?php
 require_once 'includes/fct.inc.php';
 require_once 'includes/class.pdogsb.inc.php';
-use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
+use PHPUnit_Framework_TestCase;
 
 class fctincTest extends PHPUnit_Framework_TestCase
 

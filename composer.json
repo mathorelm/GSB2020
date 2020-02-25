@@ -3,9 +3,7 @@
 	"description" : "CNED 2020 - Site internet GSB",
 	"type" : "ppe",
 	"license" : "OSL-3.0",
-	"autoload" : {
-		"psr-4" : {
-			"GSB" : ""
-		}
+	"require" : {
+		"phpunit/phpunit" : "8.5.2"
 	}
 }
