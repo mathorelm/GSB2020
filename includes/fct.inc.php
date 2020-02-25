@@ -66,7 +66,7 @@ function deconnecter()
  */
 function dateFrancaisVersAnglais($maDate)
 {
-    /list ($jour, $mois, $annee) = explode('/', $maDate);
+    @list ($jour, $mois, $annee) = explode('/', $maDate);
     return date('Y-m-d', mktime(0, 0, 0, $mois, $jour, $annee));
 }
 
@@ -81,7 +81,7 @@ function dateFrancaisVersAnglais($maDate)
  */
 function dateAnglaisVersFrancais($maDate)
 {
-    /list ($annee, $mois, $jour) = explode('-', $maDate);
+    @list ($annee, $mois, $jour) = explode('-', $maDate);
     $date = $jour . '/' . $mois . '/' . $annee;
     return $date;
 }
@@ -96,7 +96,7 @@ function dateAnglaisVersFrancais($maDate)
  */
 function getMois($date)
 {
-    /list ($jour, $mois, $annee) = explode('/', $date);
+    @list ($jour, $mois, $annee) = explode('/', $date);
     unset($jour);
     if (strlen($mois) == 1) {
         $mois = '0' . $mois;
@@ -173,10 +173,10 @@ function estTableauEntiers($tabEntiers)
 function estDateDepassee($dateTestee)
 {
     $dateActuelle = date('d/m/Y');
-    /list ($jour, $mois, $annee) = explode('/', $dateActuelle);
+    @list ($jour, $mois, $annee) = explode('/', $dateActuelle);
     $annee --;
     $anPasse = $annee . $mois . $jour;
-    /list ($jourTeste, $moisTeste, $anneeTeste) = explode('/', $dateTestee);
+    @list ($jourTeste, $moisTeste, $anneeTeste) = explode('/', $dateTestee);
     return ($anneeTeste . $moisTeste . $jourTeste < $anPasse);
 }
 
