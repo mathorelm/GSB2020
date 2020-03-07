@@ -1,9 +1,9 @@
 <?php
-require_once 'includes/fct.inc.php';
-require_once 'includes/class.pdogsb.inc.php';
-use PHPUnit_Framework_TestCase;
+//equire_once 'includes/fct.inc.php';
+//require_once 'includes/class.pdogsb.inc.php';
+use PHPUnit\Framework\TestCase;
 
-class fctincTest extends PHPUnit_Framework_TestCase
+class fctincTest extends TestCase
 
 {
 
