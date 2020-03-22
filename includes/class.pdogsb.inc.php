@@ -24,21 +24,25 @@ class PdoGsb
 {
 
     // Jeu d'éléments dev
-    static $serveur = 'mysql:host=localhost';
-
-    static $bdd = 'dbname=gsb_frais';
-
-    static $user = 'userGsb';
-
-    static $mdp = 'secret';
+    /*
+     * static $serveur = 'mysql:host=localhost';
+     *
+     * static $bdd = 'dbname=gsb_frais';
+     *
+     * static $user = 'userGsb';
+     *
+     * static $mdp = 'secret';
+     */
 
     // Jeu d'éléments prod
-    /*
-     * static $serveur = 'mysql:host=db5000291103.hosting-data.io';
-     * static $bdd = 'dbname=dbs284383';
-     * static $user = 'dbu504895';
-     * static $mdp = 'fkbW(w83';
-     */
+    static $serveur = 'mysql:host=db5000291103.hosting-data.io';
+
+    static $bdd = 'dbname=dbs284383';
+
+    static $user = 'dbu504895';
+
+    static $mdp = 'fkbW(w83';
+
     static $monPdo;
 
     static $monPdoGsb = null;
@@ -52,7 +56,7 @@ class PdoGsb
         PdoGsb::$monPdo = new PDO(PdoGsb::$serveur . ';' . PdoGsb::$bdd,
             PdoGsb::$user, PdoGsb::$mdp);
         // Ligne inférieure à commenter si mise en prod : déclenchement des Exceptions PDO
-        PdoGsb::$monPdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // PdoGsb::$monPdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         PdoGsb::$monPdo->query('SET CHARACTER SET utf8');
     }
 
