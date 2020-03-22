@@ -24,7 +24,8 @@ switch ($action) {
         }
         break;
     case 'validerMajFraisForfait':
-        $lesFrais = filter_input(INPUT_POST, 'lesFrais', FILTER_DEFAULT, FILTER_FORCE_ARRAY);
+        $lesFrais = filter_input(INPUT_POST, 'lesFrais', FILTER_DEFAULT,
+            FILTER_FORCE_ARRAY);
         if (lesQteFraisValides($lesFrais)) {
             $pdo->majFraisForfait($idVisiteur, $mois, $lesFrais);
         } else {
@@ -33,13 +34,15 @@ switch ($action) {
         }
         break;
     case 'validerCreationFrais':
-        $dateFrais = dateAnglaisVersFrancais(filter_input(INPUT_POST, 'dateFrais', FILTER_SANITIZE_STRING));
+        $dateFrais = dateAnglaisVersFrancais(
+            filter_input(INPUT_POST, 'dateFrais', FILTER_SANITIZE_STRING));
         $libelle = filter_input(INPUT_POST, 'libelle', FILTER_SANITIZE_STRING);
         $montant = filter_input(INPUT_POST, 'montant', FILTER_VALIDATE_FLOAT);
         if (nbErreurs() != 0) {
             include 'vues/v_erreurs.php';
         } else {
-            $pdo->creeNouveauFraisHorsForfait($idVisiteur, $mois, $libelle, $dateFrais, $montant);
+            $pdo->creeNouveauFraisHorsForfait($idVisiteur, $mois, $libelle,
+                $dateFrais, $montant);
         }
         break;
     case 'supprimerFrais':

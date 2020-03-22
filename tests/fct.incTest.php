@@ -1,6 +1,6 @@
 <?php
-//equire_once 'includes/fct.inc.php';
-//require_once 'includes/class.pdogsb.inc.php';
+// equire_once 'includes/fct.inc.php';
+// require_once 'includes/class.pdogsb.inc.php';
 use PHPUnit\Framework\TestCase;
 
 class fctincTest extends TestCase

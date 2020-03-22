@@ -117,17 +117,35 @@ function inverseMois(string $leLibelle): string
     $mois = substr($leLibelle, 4, 2);
     return $mois . "/" . $annee;
 }
+
 /**
  * Retour le mois en Français (en minuscule) avec l'année
- * @param string $leLibelle au format aaaamm
+ *
+ * @param string $leLibelle
+ *            au format aaaamm
  * @return string de type juillet 2020
  */
-function moisEnLettre(string $leLibelle) : string {
-    $lesMois = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+function moisEnLettre(string $leLibelle): string
+{
+    $lesMois = [
+        "janvier",
+        "février",
+        "mars",
+        "avril",
+        "mai",
+        "juin",
+        "juillet",
+        "août",
+        "septembre",
+        "octobre",
+        "novembre",
+        "décembre"
+    ];
     $annee = substr($leLibelle, 0, 4);
     $mois = substr($leLibelle, 4, 2);
-    return $lesMois[$mois-1]." ".$annee;
+    return $lesMois[$mois - 1] . " " . $annee;
 }
+
 /* gestion des erreurs */
 
 /**
@@ -243,7 +261,8 @@ function valideInfosFrais($dateFrais, $libelle, $montant)
             ajouterErreur('Date invalide');
         } else {
             if (estDateDepassee($dateFrais)) {
-                ajouterErreur("date d'enregistrement du frais dépassé, plus de 1 an");
+                ajouterErreur(
+                    "date d'enregistrement du frais dépassé, plus de 1 an");
             }
         }
     }
@@ -260,7 +279,8 @@ function valideInfosFrais($dateFrais, $libelle, $montant)
 /**
  * Ajoute le libellé d'une erreur au tableau des erreurs
  *
- * @param String $msg Libellé de l'erreur
+ * @param String $msg
+ *            Libellé de l'erreur
  *
  * @return null
  */
@@ -270,8 +290,9 @@ function ajouterErreur(string $msg)
         $_REQUEST['erreurs'] = array();
     }
     $_REQUEST['erreurs'][] = $msg;
-    addLogEvent('Erreur ("' . $msg . '") de ' . $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' (IP = ' . $_SERVER['REMOTE_ADDR']);
-
+    addLogEvent(
+        'Erreur ("' . $msg . '") de ' . $_SESSION['prenom'] . ' ' .
+        $_SESSION['nom'] . ' (IP = ' . $_SERVER['REMOTE_ADDR']);
 }
 
 /**
@@ -302,7 +323,9 @@ function ajouterInfo($msg)
         $_REQUEST['infos'] = array();
     }
     $_REQUEST['infos'][] = $msg;
-    addLogEvent('Info ("' . $msg . '") de ' . $_SESSION['prenom'] . ' ' . $_SESSION['nom'] . ' (IP = ' . $_SERVER['REMOTE_ADDR']);
+    addLogEvent(
+        'Info ("' . $msg . '") de ' . $_SESSION['prenom'] . ' ' .
+        $_SESSION['nom'] . ' (IP = ' . $_SERVER['REMOTE_ADDR']);
 }
 
 /**
@@ -322,10 +345,11 @@ function nbInfos()
 /**
  * Retourne le nombre de fiches de plus d'un an dans le tableau passé en paramètre
  *
- * @param array tableau de fiches de visiteurs
+ * @param
+ *            array tableau de fiches de visiteurs
  * @return integer nb de fiches périmées
  */
-function compterFichesPerimees(array $tableauDeFiches):integer
+function compterFichesPerimees(array $tableauDeFiches): integer
 {
     // Comptabiliser les fiches de plus de 1 an
     $compteur = 0;
@@ -340,10 +364,11 @@ function compterFichesPerimees(array $tableauDeFiches):integer
 /**
  * Retourne le montant total des fiches dans le tableau passé en paramètre
  *
- * @param array tableau de fiches de visiteurs
+ * @param
+ *            array tableau de fiches de visiteurs
  * @return float montant total
  */
-function compterMontantTotal(array $tableauDeFiches) :float
+function compterMontantTotal(array $tableauDeFiches): float
 {
     // Comptabiliser les fiches de plus de 1 an
     $montant = 0;
@@ -456,7 +481,8 @@ function envoyerleLog()
     $destinataire = 'gsb2020@free.fr';
     $expediteur = 'ne-pas-repondre@gsb2020.org';
     $reponse = 'gsb2020@free.fr';
-    $ret = mail($destinataire, 'GSB2020 : transmission du log', $msg, "Reply-to: $reponse\r\nFrom: $expediteur\r\n" . $header);
+    $ret = mail($destinataire, 'GSB2020 : transmission du log', $msg,
+        "Reply-to: $reponse\r\nFrom: $expediteur\r\n" . $header);
     if ($ret) {
         unlink('gsb2020.log');
     }
@@ -466,7 +492,7 @@ function envoyerleLog()
  * Génère un fichier PDF contenant les informations de la fiche de frais
  *
  * @param object $pdo
- *           passage du pointeur pdo pour accéder à ses fonctions
+ *            passage du pointeur pdo pour accéder à ses fonctions
  * @param array $lesFraisHorsForfait
  *            tableau associatif comportant les frais HF
  * @param array $lesFraisForfait
@@ -475,12 +501,12 @@ function envoyerleLog()
  *            informations concernant la fiche de frais
  * @return string
  */
-function genererPDF($pdo, array $lesFraisHorsForfait, array $lesFraisForfait, array $lesInfosFicheFrais): string
+function genererPDF($pdo, array $lesFraisHorsForfait, array $lesFraisForfait,
+    array $lesInfosFicheFrais): string
 {
-
-    define('FPDF_FONTPATH','styles/fonts');
-    setlocale(LC_TIME,"fr_FR","French");    //Pour affichage des dates en français
-    // Préparation de l'action : mise en place des variables nécessaires à la page
+    define('FPDF_FONTPATH', 'styles/fonts');
+    setlocale(LC_TIME, "fr_FR", "French"); // Pour affichage des dates en français
+                                           // Préparation de l'action : mise en place des variables nécessaires à la page
     require_once ('./includes/fpdf.php');
     $id_visiteur = $lesFraisHorsForfait[0]['idvisiteur'];
     $donnees_visiteur = $pdo->getNomVisiteur($id_visiteur);
@@ -491,95 +517,102 @@ function genererPDF($pdo, array $lesFraisHorsForfait, array $lesFraisForfait, ar
     $mois_annee = inverseMois($nr_fiche);
     $mois_lettre = moisEnLettre($nr_fiche);
     $vehicule = $pdo->getVehicule($id_visiteur);
-    //TODO définir le mois /année en lettre : Juillet 2019
+    // TODO définir le mois /année en lettre : Juillet 2019
     $montant_valide = $lesInfosFicheFrais['montantValide'];
     $date_validation = $lesInfosFicheFrais['dateModif'];
     // Génération avec FPDF
     $pdf = new FPDF();
     $pdf->AddPage();
-    $pdf->SetMargins(25,25);
-    $pdf->Image('images/logo.jpg', 89, 20, 32,20);
-    //Titre
-    $pdf->setDrawColor(130,163, 206);      //Bleu Clair GSB
+    $pdf->SetMargins(25, 25);
+    $pdf->Image('images/logo.jpg', 89, 20, 32, 20);
+    // Titre
+    $pdf->setDrawColor(130, 163, 206); // Bleu Clair GSB
     $pdf->SetFont('times', 'B', 16);
-    $pdf->SetXY(30,60);
-    $pdf->setTextColor(130,163,206);
-    $pdf->Cell(160,6,"REMBOURSEMENT DE FRAIS ENGAGES","B",1,"C");
-    $pdf->setTextColor(0,0,0);
-    //En tête
-    $pdf->setDrawColor(0,0,0);
-    $pdf->SetFont('','',12);
-    $pdf->SetXY(40,74);
-    $pdf->Cell(48,8,"Visiteur",0,0,"L");
-    $pdf->Cell(34,8,$id_visiteur,0,0,"L");
-    $pdf->Cell(60,8,$prenom_visiteur.' '.strtoupper($nom_visiteur),0,0,"L");
-    $pdf->SetXY(40,82);
-    $pdf->Cell(48,8,"Mois",0,0,"L");
-    $pdf->Cell(34,8,utf8_decode(ucfirst($mois_lettre)),0,0,"L");
-    //Frais forfaitaires
-    $pdf->SetDrawColor(82,127,192);             //Bleu Foncé GSB
-    $pdf->SetFont('','I',12);
-    $pdf->SetXY(40,98);
-    $pdf->Cell(48,8,"Frais Forfaitaires",0,0,"C");
-    $pdf->Cell(34,8,utf8_decode("Quantité"),0,0,"C");
-    $pdf->Cell(34,8,"Montant unitaire",0,0,"C");
-    $pdf->Cell(26,8,"Total",0,0,"C");
-    //Extraction de la BDD
-    $pdf->SetFont('','',12);
-    $pdf->Rect(40,98,142,32);
-    $index=0;
-    foreach($lesFraisForfait as $unFrais) {
-        if ($unFrais['idfrais']=="KM") {
-            $unFrais['montant_unitaire']=$vehicule['indemnite'];
+    $pdf->SetXY(30, 60);
+    $pdf->setTextColor(130, 163, 206);
+    $pdf->Cell(160, 6, "REMBOURSEMENT DE FRAIS ENGAGES", "B", 1, "C");
+    $pdf->setTextColor(0, 0, 0);
+    // En tête
+    $pdf->setDrawColor(0, 0, 0);
+    $pdf->SetFont('', '', 12);
+    $pdf->SetXY(40, 74);
+    $pdf->Cell(48, 8, "Visiteur", 0, 0, "L");
+    $pdf->Cell(34, 8, $id_visiteur, 0, 0, "L");
+    $pdf->Cell(60, 8, $prenom_visiteur . ' ' . strtoupper($nom_visiteur), 0, 0,
+        "L");
+    $pdf->SetXY(40, 82);
+    $pdf->Cell(48, 8, "Mois", 0, 0, "L");
+    $pdf->Cell(34, 8, utf8_decode(ucfirst($mois_lettre)), 0, 0, "L");
+    // Frais forfaitaires
+    $pdf->SetDrawColor(82, 127, 192); // Bleu Foncé GSB
+    $pdf->SetFont('', 'I', 12);
+    $pdf->SetXY(40, 98);
+    $pdf->Cell(48, 8, "Frais Forfaitaires", 0, 0, "C");
+    $pdf->Cell(34, 8, utf8_decode("Quantité"), 0, 0, "C");
+    $pdf->Cell(34, 8, "Montant unitaire", 0, 0, "C");
+    $pdf->Cell(26, 8, "Total", 0, 0, "C");
+    // Extraction de la BDD
+    $pdf->SetFont('', '', 12);
+    $pdf->Rect(40, 98, 142, 32);
+    $index = 0;
+    foreach ($lesFraisForfait as $unFrais) {
+        if ($unFrais['idfrais'] == "KM") {
+            $unFrais['montant_unitaire'] = $vehicule['indemnite'];
         }
-        $pdf->SetXY(40,($index*8)+106);
-        $pdf->Cell(48,8,utf8_decode($unFrais['libelle']),1,0,"L");
-        $pdf->Cell(34,8,$unFrais['quantite'],1,0,"R");
-        //Données non récupérées !
-        $pdf->Cell(34,8,$unFrais['montant_unitaire'],1,0,"R");
-        $pdf->Cell(26,8,number_format((float) $unFrais['quantite']*$unFrais['montant_unitaire'],2,".",""),1,0,"R");
-        $index++;
+        $pdf->SetXY(40, ($index * 8) + 106);
+        $pdf->Cell(48, 8, utf8_decode($unFrais['libelle']), 1, 0, "L");
+        $pdf->Cell(34, 8, $unFrais['quantite'], 1, 0, "R");
+        // Données non récupérées !
+        $pdf->Cell(34, 8, $unFrais['montant_unitaire'], 1, 0, "R");
+        $pdf->Cell(26, 8,
+            number_format(
+                (float) $unFrais['quantite'] * $unFrais['montant_unitaire'], 2,
+                ".", ""), 1, 0, "R");
+        $index ++;
     }
-    //Ajout mention indemnité kilométrique
-    $pdf->SetFont('','I',8);
-    $pdf->SetXY(40,138);
-    $pdf->Cell(48,8,utf8_decode("Note : Vous avez déclaré un véhicule ").strtoupper($vehicule['carburant'])." de ". $vehicule['puissance_admin']. " CV");
-    //Autres Frais
-    $pdf->SetFont('','I',12);
-    $pdf->SetDrawColor(82,127,192);             //Bleu Foncé GSB
-    $pdf->SetXY(40,146);
-    $pdf->Cell(160,8,"Autres Frais",0,0,"C");
-    $pdf->SetXY(40,154);
-    $pdf->Cell(48,8,"Date",0,0,"C");
-    $pdf->Cell(68,8,utf8_decode("Libellé"),0,0,"C");
-    $pdf->Cell(26,8,"Montant",0,0,"C");
-    $pdf->SetFont('','',12);
-    //Extraction données BDD
-    $index=0;
-    foreach($lesFraisHorsForfait as $unFrais) {
-        $pdf->SetXY(40,($index*8)+162);
-        $pdf->Cell(48,8,$unFrais['date'],1,0,"L");
-        $pdf->Cell(68,8,utf8_decode($unFrais['libelle']),1,0,"L");
-        $pdf->Cell(26,8,$unFrais['montant'],1,0,"R");
-        $index++;
+    // Ajout mention indemnité kilométrique
+    $pdf->SetFont('', 'I', 8);
+    $pdf->SetXY(40, 138);
+    $pdf->Cell(48, 8,
+        utf8_decode("Note : Vous avez déclaré un véhicule ") .
+        strtoupper($vehicule['carburant']) . " de " .
+        $vehicule['puissance_admin'] . " CV");
+    // Autres Frais
+    $pdf->SetFont('', 'I', 12);
+    $pdf->SetDrawColor(82, 127, 192); // Bleu Foncé GSB
+    $pdf->SetXY(40, 146);
+    $pdf->Cell(160, 8, "Autres Frais", 0, 0, "C");
+    $pdf->SetXY(40, 154);
+    $pdf->Cell(48, 8, "Date", 0, 0, "C");
+    $pdf->Cell(68, 8, utf8_decode("Libellé"), 0, 0, "C");
+    $pdf->Cell(26, 8, "Montant", 0, 0, "C");
+    $pdf->SetFont('', '', 12);
+    // Extraction données BDD
+    $index = 0;
+    foreach ($lesFraisHorsForfait as $unFrais) {
+        $pdf->SetXY(40, ($index * 8) + 162);
+        $pdf->Cell(48, 8, $unFrais['date'], 1, 0, "L");
+        $pdf->Cell(68, 8, utf8_decode($unFrais['libelle']), 1, 0, "L");
+        $pdf->Cell(26, 8, $unFrais['montant'], 1, 0, "R");
+        $index ++;
     }
-    $pdf->Rect(40,154,142,$pdf->GetY()-146);
+    $pdf->Rect(40, 154, 142, $pdf->GetY() - 146);
     // affichage du total
     // Se repositionner en fonction de la dernière ligne écrite
-    $pdf->SetXY($pdf->GetX()-60,$pdf->GetY()+16);
-    $pdf->Cell(34,8,"TOTAL ".$mois_annee,1,0,"L");
-    $pdf->Cell(26,8,$montant_valide,1,0,"R");
-    //Tracer le cadre extérieur
-    $pdf->Rect(30,60,160,($pdf->GetY()+16)-60);
-    //Attache de signature
-    //Se repositionner en dynamique
-    $pdf->SetXY($pdf->GetX()-60,$pdf->GetY()+32);
-    $date1=date('Y-m-d');
-    $date = strftime("%d/%m/%Y",strtotime($date1));
-    $pdf->Cell(60,8,utf8_decode("Fait à Paris, le ".$date),0,1,"L");
-    $pdf->SetXY(122,$pdf->GetY());
-    $pdf->Cell(60,8,"Vu l'agent comptable",0,1,"L");
-    $pdf->Image('images/signature.jpg', $pdf->GetX()+100, $pdf->getY(), 32,20);
+    $pdf->SetXY($pdf->GetX() - 60, $pdf->GetY() + 16);
+    $pdf->Cell(34, 8, "TOTAL " . $mois_annee, 1, 0, "L");
+    $pdf->Cell(26, 8, $montant_valide, 1, 0, "R");
+    // Tracer le cadre extérieur
+    $pdf->Rect(30, 60, 160, ($pdf->GetY() + 16) - 60);
+    // Attache de signature
+    // Se repositionner en dynamique
+    $pdf->SetXY($pdf->GetX() - 60, $pdf->GetY() + 32);
+    $date1 = date('Y-m-d');
+    $date = strftime("%d/%m/%Y", strtotime($date1));
+    $pdf->Cell(60, 8, utf8_decode("Fait à Paris, le " . $date), 0, 1, "L");
+    $pdf->SetXY(122, $pdf->GetY());
+    $pdf->Cell(60, 8, "Vu l'agent comptable", 0, 1, "L");
+    $pdf->Image('images/signature.jpg', $pdf->GetX() + 100, $pdf->getY(), 32, 20);
     try {
         $pdf->Output('F', 'PDF/' . $fichier_PDF);
     } catch (Exception $e) {

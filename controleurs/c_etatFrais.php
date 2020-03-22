@@ -47,10 +47,14 @@ switch ($action) {
             if ($lesInfosFicheFrais['etatPDF']) {
                 $donnees_visiteur = $pdo->getNomVisiteur($idVisiteur);
                 $nom_visiteur = $donnees_visiteur['nom'];
-                $lien_pdf = 'PDF/'.$lesFraisHorsForfait[0]['mois'] . '-' . $nom_visiteur . '.pdf';
+                $lien_pdf = 'PDF/' . $lesFraisHorsForfait[0]['mois'] . '-' .
+                    $nom_visiteur . '.pdf';
             } else {
-                $lien_pdf = genererPDF($pdo, $lesFraisHorsForfait, $lesFraisForfait, $lesInfosFicheFrais);
-                if ($lien_pdf!="") {$pdo->setPDFtraite($idVisiteur,$leMois);}
+                $lien_pdf = genererPDF($pdo, $lesFraisHorsForfait,
+                    $lesFraisForfait, $lesInfosFicheFrais);
+                if ($lien_pdf != "") {
+                    $pdo->setPDFtraite($idVisiteur, $leMois);
+                }
             }
         } else {
             $lien_pdf = "";
