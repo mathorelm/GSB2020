@@ -349,7 +349,7 @@ function nbInfos()
  *            array tableau de fiches de visiteurs
  * @return integer nb de fiches périmées
  */
-function compterFichesPerimees(array $tableauDeFiches): integer
+function compterFichesPerimees(array $tableauDeFiches): int
 {
     // Comptabiliser les fiches de plus de 1 an
     $compteur = 0;
