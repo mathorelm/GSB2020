@@ -391,6 +391,7 @@ function addLogEvent($event)
     $time = "[" . $time . "] ";
     $event = $time . $event . "\n";
     file_put_contents("GSB2020.log", $event, FILE_APPEND);
+
 }
 
 /**
