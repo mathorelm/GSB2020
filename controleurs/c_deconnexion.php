@@ -18,22 +18,23 @@ if (! $uc) {
 }
 
 switch ($action) {
-    case 'demandeDeconnexion':
+case 'demandeDeconnexion':
+    include 'vues/v_deconnexion.php';
+    addLogEvent(
+        'Déconnexion de : ' . $_SESSION['prenom'] . ' ' . $_SESSION['nom'] .
+        ' (IP = ' . $_SERVER['REMOTE_ADDR'] . ')'
+    );
+    break;
+case 'valideDeconnexion':
+    if (estConnecte()) {
         include 'vues/v_deconnexion.php';
-        addLogEvent(
-            'Déconnexion de : ' . $_SESSION['prenom'] . ' ' . $_SESSION['nom'] .
-            ' (IP = ' . $_SERVER['REMOTE_ADDR'] . ')');
-        break;
-    case 'valideDeconnexion':
-        if (estConnecte()) {
-            include 'vues/v_deconnexion.php';
-        } else {
-            ajouterErreur("Vous n'êtes pas connecté");
-            include 'vues/v_erreurs.php';
-            include 'vues/v_connexion.php';
-        }
-        break;
-    default:
+    } else {
+        ajouterErreur("Vous n'êtes pas connecté");
+        include 'vues/v_erreurs.php';
         include 'vues/v_connexion.php';
-        break;
+    }
+    break;
+default:
+    include 'vues/v_connexion.php';
+    break;
 }

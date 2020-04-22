@@ -17,8 +17,8 @@
         </div>
     </body>
     <footer>
-    	<hr/>
-    	<p class="text-center"> Site de démonstration pour BTS SIO - toute information fictive - Contact : <a href="mailto:gsb2020@free.fr"> Webmaster</a>.</p>
+        <hr/>
+        <p class="text-center"> Site de démonstration pour BTS SIO - toute information fictive - Contact : <a href="mailto:gsb2020@free.fr"> Webmaster</a>.</p>
     </footer>
 </html>
 

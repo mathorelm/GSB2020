@@ -23,13 +23,13 @@
         depuis le <?php echo $dateModif ?> <br>
         <strong><u>Montant validé :</u></strong> <?php echo $montantValide ?>
         <?php if ($lien_pdf!="") {?>
-        	<div class="row text-right">
-        	<?php //TODO : améliorer frontend sur image PDF ?>
-        	<i>Téléchargez votre PDF :</i>
-        	<a href="<?php echo $lien_pdf ?>">
-        		<img class="pdf" src="./images/pdf.jpg" alt="Cliquez ici">
-        	</a>
-        	</div>
+            <div class="row text-right">
+            <?php //TODO : améliorer frontend sur image PDF ?>
+            <i>Téléchargez votre PDF :</i>
+            <a href="<?php echo $lien_pdf ?>">
+                <img class="pdf" src="./images/pdf.jpg" alt="Cliquez ici">
+            </a>
+            </div>
         <?php }?>
     </div>
 </div>

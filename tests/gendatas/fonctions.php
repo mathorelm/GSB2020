@@ -33,7 +33,7 @@ function getLesVisiteurs($pdo)
 /**
  * Fonction générique qui retourne le nombre d'enregistrements d'une table
  *
- * @param PDO $pdo
+ * @param PDO    $pdo
  *            Instance de la classe PDO utilisée pour se connecter
  * @param String $table
  *            Nom de la table que l'on veut utiliser

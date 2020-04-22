@@ -48,8 +48,10 @@ class PdoGsb
      */
     public function __construct()
     {
-        PdoGsb::$monPdo = new PDO(PdoGsb::$serveur . ';' . PdoGsb::$bdd,
-            PdoGsb::$user, PdoGsb::$mdp);
+        PdoGsb::$monPdo = new PDO(
+            PdoGsb::$serveur . ';' . PdoGsb::$bdd,
+            PdoGsb::$user, PdoGsb::$mdp
+        );
         // Ligne inférieure à commenter si mise en prod : déclenchement des Exceptions PDO
         //PdoGsb::$monPdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         PdoGsb::$monPdo->query('SET CHARACTER SET utf8');
@@ -95,7 +97,8 @@ class PdoGsb
             'personnels.prenom AS prenom, personnels.mdp as mdp,' .
             'metiers.libelle AS metier ' . 'FROM personnels,metiers ' .
             'WHERE personnels.login = :unLogin' .
-            ' AND personnels.metier = metiers.idMetiers');
+            ' AND personnels.metier = metiers.idMetiers'
+        );
         $requetePrepare->bindParam(':unLogin', $login, PDO::PARAM_STR);
         $requetePrepare->execute();
         $res = $requetePrepare->fetch();
@@ -116,7 +119,8 @@ class PdoGsb
     {
         $requetePrepare = PdoGsb::$monPdo->prepare(
             'SELECT personnels.nom AS nom, ' .
-            'personnels.prenom AS prenom FROM personnels WHERE personnels.id = :unId');
+            'personnels.prenom AS prenom FROM personnels WHERE personnels.id = :unId'
+        );
         $requetePrepare->bindParam(':unId', $id, PDO::PARAM_STR);
         $requetePrepare->execute();
         return $requetePrepare->fetch();
@@ -141,7 +145,8 @@ class PdoGsb
         $requetePrepare = PdoGsb::$monPdo->prepare(
             'SELECT * FROM lignefraishorsforfait ' .
             'WHERE lignefraishorsforfait.idvisiteur = :unIdVisiteur ' .
-            'AND lignefraishorsforfait.mois = :unMois');
+            'AND lignefraishorsforfait.mois = :unMois'
+        );
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->execute();
@@ -168,7 +173,8 @@ class PdoGsb
         $requetePrepare = PdoGsb::$monPdo->prepare(
             'SELECT fichefrais.nbjustificatifs as nb FROM fichefrais ' .
             'WHERE fichefrais.idvisiteur = :unIdVisiteur ' .
-            'AND fichefrais.mois = :unMois');
+            'AND fichefrais.mois = :unMois'
+        );
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->execute();
@@ -199,7 +205,8 @@ class PdoGsb
             'ON fraisforfait.id = lignefraisforfait.idfraisforfait ' .
             'WHERE lignefraisforfait.idvisiteur = :unIdVisiteur ' .
             'AND lignefraisforfait.mois = :unMois ' .
-            'ORDER BY lignefraisforfait.idfraisforfait');
+            'ORDER BY lignefraisforfait.idfraisforfait'
+        );
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->execute();
@@ -215,7 +222,8 @@ class PdoGsb
     {
         $requetePrepare = PdoGsb::$monPdo->prepare(
             'SELECT fraisforfait.id as idfrais ' .
-            'FROM fraisforfait ORDER BY fraisforfait.id');
+            'FROM fraisforfait ORDER BY fraisforfait.id'
+        );
         $requetePrepare->execute();
         return $requetePrepare->fetchAll();
     }
@@ -229,7 +237,7 @@ class PdoGsb
      *            ID du visiteur
      * @param String $mois
      *            Mois sous la forme aaaamm
-     * @param Array $lesFrais
+     * @param Array  $lesFrais
      *            tableau associatif de clé idFrais et
      *            de valeur la quantité pour ce frais
      *
@@ -245,10 +253,13 @@ class PdoGsb
                 'SET lignefraisforfait.quantite = :uneQte ' .
                 'WHERE lignefraisforfait.idvisiteur = :unIdVisiteur ' .
                 'AND lignefraisforfait.mois = :unMois ' .
-                'AND lignefraisforfait.idfraisforfait = :idFrais');
+                'AND lignefraisforfait.idfraisforfait = :idFrais'
+            );
             $requetePrepare->bindParam(':uneQte', $qte, PDO::PARAM_INT);
-            $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur,
-                PDO::PARAM_STR);
+            $requetePrepare->bindParam(
+                ':unIdVisiteur', $idVisiteur,
+                PDO::PARAM_STR
+            );
             $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
             $requetePrepare->bindParam(':idFrais', $unIdFrais, PDO::PARAM_STR);
             return $requetePrepare->execute();
@@ -259,9 +270,9 @@ class PdoGsb
      * Met à jour le nombre de justificatifs de la table fichefrais
      * pour le mois et le visiteur concerné
      *
-     * @param String $idVisiteur
+     * @param String  $idVisiteur
      *            ID du visiteur
-     * @param String $mois
+     * @param String  $mois
      *            Mois sous la forme aaaamm
      * @param Integer $nbJustificatifs
      *            Nombre de justificatifs
@@ -273,9 +284,12 @@ class PdoGsb
         $requetePrepare = PdoGSB::$monPdo->prepare(
             'UPDATE fichefrais ' . 'SET nbjustificatifs = :unNbJustificatifs ' .
             'WHERE fichefrais.idvisiteur = :unIdVisiteur ' .
-            'AND fichefrais.mois = :unMois');
-        $requetePrepare->bindParam(':unNbJustificatifs', $nbJustificatifs,
-            PDO::PARAM_INT);
+            'AND fichefrais.mois = :unMois'
+        );
+        $requetePrepare->bindParam(
+            ':unNbJustificatifs', $nbJustificatifs,
+            PDO::PARAM_INT
+        );
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         return $requetePrepare->execute();
@@ -295,7 +309,8 @@ class PdoGsb
         $requetePrepare = PdoGSB::$monPdo->prepare(
             'UPDATE fichefrais ' . 'SET montantvalide = :unMontant ' .
             'WHERE fichefrais.idvisiteur = :unIdVisiteur ' .
-            'AND fichefrais.mois = :unMois');
+            'AND fichefrais.mois = :unMois'
+        );
         $requetePrepare->bindParam(':unMontant', $montantValide);
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
@@ -306,8 +321,8 @@ class PdoGsb
      * Retourne le total des frais au forfait de la fiche (en exploitant le montant unitaire)
      * Le calcul des frais KM s'appuie sur les indemnités définies par véhicule détenu
      *
-     * @param String $idVisiteur
-     * @param String $mois
+     * @param  String $idVisiteur
+     * @param  String $mois
      * @return Float le total des frais forfait
      */
     public function effectueTotalFraisForfait($idVisiteur, $mois)
@@ -342,8 +357,8 @@ class PdoGsb
     /**
      * Retourne le total des frais hors forfait (hors lignes REFUSE)
      *
-     * @param String $idVisiteur
-     * @param String $mois
+     * @param  String $idVisiteur
+     * @param  String $mois
      * @return Float le total des frais hors forfait
      */
     public function effectueTotalFraisHF($idVisiteur, $mois)
@@ -375,7 +390,8 @@ class PdoGsb
         $requetePrepare = PdoGsb::$monPdo->prepare(
             'SELECT fichefrais.mois FROM fichefrais ' .
             'WHERE fichefrais.mois = :unMois ' .
-            'AND fichefrais.idvisiteur = :unIdVisiteur');
+            'AND fichefrais.idvisiteur = :unIdVisiteur'
+        );
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->execute();
@@ -394,11 +410,11 @@ class PdoGsb
      * @return le mois sous la forme aaaamm
      */
     public function dernierMoisSaisi($idVisiteur)
-    /*TODO Test sur un visiteur faux --> erreur*/
     {
         $requetePrepare = PdoGsb::$monPdo->prepare(
             'SELECT MAX(mois) as dernierMois ' . 'FROM fichefrais ' .
-            'WHERE fichefrais.idvisiteur = :unIdVisiteur');
+            'WHERE fichefrais.idvisiteur = :unIdVisiteur'
+        );
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->execute();
         $laLigne = $requetePrepare->fetch();
@@ -424,15 +440,18 @@ class PdoGsb
     public function creeNouvellesLignesFrais($idVisiteur, $mois)
     {
         $dernierMois = $this->dernierMoisSaisi($idVisiteur);
-        $laDerniereFiche = $this->getLesInfosfichefrais($idVisiteur,
-            $dernierMois);
+        $laDerniereFiche = $this->getLesInfosfichefrais(
+            $idVisiteur,
+            $dernierMois
+        );
         if ($laDerniereFiche['idEtat'] == 'CR') {
             $this->majEtatfichefrais($idVisiteur, $dernierMois, 'CL');
         }
         $requetePrepare = PdoGsb::$monPdo->prepare(
             'INSERT INTO fichefrais (idvisiteur,mois,nbjustificatifs,' .
             'montantvalide,datemodif,idetat) ' .
-            "VALUES (:unIdVisiteur,:unMois,0,0,now(),'CR')");
+            "VALUES (:unIdVisiteur,:unMois,0,0,now(),'CR')"
+        );
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->execute();
@@ -441,12 +460,17 @@ class PdoGsb
             $requetePrepare = PdoGsb::$monPdo->prepare(
                 'INSERT INTO lignefraisforfait (idvisiteur,mois,' .
                 'idfraisforfait,quantite) ' .
-                'VALUES(:unIdVisiteur, :unMois, :idFrais, 0)');
-            $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur,
-                PDO::PARAM_STR);
+                'VALUES(:unIdVisiteur, :unMois, :idFrais, 0)'
+            );
+            $requetePrepare->bindParam(
+                ':unIdVisiteur', $idVisiteur,
+                PDO::PARAM_STR
+            );
             $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
-            $requetePrepare->bindParam(':idFrais', $unIdFrais['idfrais'],
-                PDO::PARAM_STR);
+            $requetePrepare->bindParam(
+                ':idFrais', $unIdFrais['idfrais'],
+                PDO::PARAM_STR
+            );
             $requetePrepare->execute();
         }
     }
@@ -463,19 +487,20 @@ class PdoGsb
      *            Libellé du frais
      * @param String $date
      *            Date du frais au format français jj//mm/aaaa
-     * @param Float $montant
+     * @param Float  $montant
      *            Montant du frais
      *
      * @return null
      */
     public function creeNouveauFraisHorsForfait($idVisiteur, $mois, $libelle,
-        $date, $montant)
-    {
+        $date, $montant
+    ) {
         $dateFr = dateFrancaisVersAnglais($date);
         $requetePrepare = PdoGSB::$monPdo->prepare(
             'INSERT INTO lignefraishorsforfait ' .
             'VALUES (null, :unIdVisiteur,:unMois, :unLibelle, :uneDateFr,' .
-            ':unMontant) ');
+            ':unMontant) '
+        );
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unLibelle', $libelle, PDO::PARAM_STR);
@@ -491,15 +516,16 @@ class PdoGsb
      * @param String $mois
      * @param String $libelle
      * @param String $date
-     * @param Float $montant
-     * @param Int $idFrais
+     * @param Float  $montant
+     * @param Int    $idFrais
      */
     public function majFraisHorsForfait($idVisiteur, $mois, $libelle, $date,
-        $montant, $idFrais)
-    {
+        $montant, $idFrais
+    ) {
         $dateFr = dateFrancaisVersAnglais($date);
         $requetePrepare = PdoGSB::$monPdo->prepare(
-            'UPDATE lignefraishorsforfait SET libelle=:unLibelle,date=:uneDateFr,montant=:unMontant WHERE id=:unIdFrais AND idvisiteur=:unIdVisiteur AND mois=:unMois');
+            'UPDATE lignefraishorsforfait SET libelle=:unLibelle,date=:uneDateFr,montant=:unMontant WHERE id=:unIdFrais AND idvisiteur=:unIdVisiteur AND mois=:unMois'
+        );
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unLibelle', $libelle, PDO::PARAM_STR);
@@ -517,12 +543,12 @@ class PdoGsb
      * @param String $mois_fiche
      * @param String $libelle
      * @param String $dateFrais
-     * @param Float $montant
-     * @param Int $id_fiche
+     * @param Float  $montant
+     * @param Int    $id_fiche
      */
     public function reporteFraisHorsForfait($id_visiteur, $mois_fiche, $libelle,
-        $dateFrais, $montant, $id_fiche)
-    {
+        $dateFrais, $montant, $id_fiche
+    ) {
         // supprimer la ligne dans le mois actuel
         $this->supprimerFraisHorsForfait($id_fiche);
         // vérifier si il existe une fiche pour le mois suivant --> la créer avec frais à zéro en forfaitisé.
@@ -533,8 +559,10 @@ class PdoGsb
             // il n'y a pas de fiche...créer les frais forfaits à zéro
             $this->creeNouvellesLignesFrais($id_visiteur, $mois_suivant);
         }
-        $this->creeNouveauFraisHorsForfait($id_visiteur, $mois_suivant, $libelle,
-            $dateFrais, $montant);
+        $this->creeNouveauFraisHorsForfait(
+            $id_visiteur, $mois_suivant, $libelle,
+            $dateFrais, $montant
+        );
     }
 
     /**
@@ -549,7 +577,8 @@ class PdoGsb
     {
         $requetePrepare = PdoGSB::$monPdo->prepare(
             'DELETE FROM lignefraishorsforfait ' .
-            'WHERE lignefraishorsforfait.id = :unIdFrais');
+            'WHERE lignefraishorsforfait.id = :unIdFrais'
+        );
         $requetePrepare->bindParam(':unIdFrais', $idFrais, PDO::PARAM_STR);
         $requetePrepare->execute();
     }
@@ -568,7 +597,8 @@ class PdoGsb
         $requetePrepare = PdoGSB::$monPdo->prepare(
             'SELECT fichefrais.mois AS mois FROM fichefrais ' .
             'WHERE fichefrais.idvisiteur = :unIdVisiteur ' .
-            'ORDER BY fichefrais.mois desc');
+            'ORDER BY fichefrais.mois desc'
+        );
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->execute();
         $lesMois = array();
@@ -599,7 +629,8 @@ class PdoGsb
         $requetePrepare = PdoGSB::$monPdo->prepare(
             'SELECT fichefrais.mois AS mois FROM fichefrais ' .
             "WHERE fichefrais.idvisiteur = :unIdVisiteur AND idetat = 'CL'" .
-            'ORDER BY fichefrais.mois desc');
+            'ORDER BY fichefrais.mois desc'
+        );
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->execute();
         $lesMois = array();
@@ -635,7 +666,8 @@ class PdoGsb
             'fichefrais.nbjustificatifs as pj,' . 'fichefrais.idVisiteur as id ' .
             'FROM fichefrais ' .
             'LEFT OUTER JOIN personnels ON fichefrais.idVisiteur=personnels.id ' .
-            'WHERE idetat = ' . ":unEtat" . ' ORDER BY fichefrais.datemodif asc');
+            'WHERE idetat = ' . ":unEtat" . ' ORDER BY fichefrais.datemodif asc'
+        );
         $requetePrepare->bindParam(':unEtat', $etat, PDO::PARAM_STR);
         $requetePrepare->execute();
         return $requetePrepare->fetchAll();
@@ -649,7 +681,8 @@ class PdoGsb
     public function getLesVisiteurs()
     {
         $requetePrepare = PdoGSB::$monPdo->prepare(
-            'SELECT personnels.id,personnels.nom,personnels.prenom from personnels WHERE metier=1 ORDER BY personnels.nom ASC');
+            'SELECT personnels.id,personnels.nom,personnels.prenom from personnels WHERE metier=1 ORDER BY personnels.nom ASC'
+        );
         $requetePrepare->execute();
         $lesVisiteurs = array();
         while ($laLigne = $requetePrepare->fetch()) {
@@ -673,7 +706,8 @@ class PdoGsb
     public function crypterMotsDePasse()
     {
         $requetePrepare = PdoGSB::$monPdo->prepare(
-            'SELECT personnels.id,personnels.mdp from personnels WHERE length(mdp)<60');
+            'SELECT personnels.id,personnels.mdp from personnels WHERE length(mdp)<60'
+        );
         $requetePrepare->execute();
         $res = $requetePrepare->fetchAll();
         $compteur = 0;
@@ -681,9 +715,12 @@ class PdoGsb
             $hash = password_hash($unPersonnel['mdp'], PASSWORD_BCRYPT);
             $requetePrepare = PdoGSB::$monPdo->prepare(
                 'UPDATE personnels ' . 'SET personnels.mdp = :unHash ' .
-                'WHERE personnels.id = :unId ');
-            $requetePrepare->bindParam(':unId', $unPersonnel['id'],
-                PDO::PARAM_STR);
+                'WHERE personnels.id = :unId '
+            );
+            $requetePrepare->bindParam(
+                ':unId', $unPersonnel['id'],
+                PDO::PARAM_STR
+            );
             $requetePrepare->bindParam(':unHash', $hash, PDO::PARAM_STR);
             $requetePrepare->execute();
             $compteur ++;
@@ -713,7 +750,8 @@ class PdoGsb
             'etat.libelle as libEtat ' . 'FROM fichefrais ' .
             'INNER JOIN etat ON fichefrais.idetat = etat.id ' .
             'WHERE fichefrais.idvisiteur = :unIdVisiteur ' .
-            'AND fichefrais.mois = :unMois');
+            'AND fichefrais.mois = :unMois'
+        );
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->execute();
@@ -739,7 +777,8 @@ class PdoGsb
         $requetePrepare = PdoGSB::$monPdo->prepare(
             'UPDATE fichefrais ' . 'SET idetat = :unEtat, datemodif = now() ' .
             'WHERE fichefrais.idvisiteur = :unIdVisiteur ' .
-            'AND fichefrais.mois = :unMois');
+            'AND fichefrais.mois = :unMois'
+        );
         $requetePrepare->bindParam(':unEtat', $etat, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
@@ -760,7 +799,8 @@ class PdoGsb
         $moisPrecedent = getMois($laDate);
         $requetePrepare = PdoGSB::$monPdo->prepare(
             'UPDATE fichefrais ' . "SET idetat = 'CL', datemodif = now() " .
-            "WHERE fichefrais.mois = :unMois AND idetat = 'CR'");
+            "WHERE fichefrais.mois = :unMois AND idetat = 'CR'"
+        );
         $requetePrepare->bindParam(':unMois', $moisPrecedent, PDO::PARAM_STR);
         $requetePrepare->execute();
     }
@@ -778,7 +818,8 @@ class PdoGsb
         if (((int) date("j")) >= 20) {
             $requetePrepare = PdoGSB::$monPdo->prepare(
                 'UPDATE fichefrais ' . "SET idetat = 'MP', datemodif = now() " .
-                "WHERE fichefrais.mois = :unMois AND idetat = 'VA'");
+                "WHERE fichefrais.mois = :unMois AND idetat = 'VA'"
+            );
             $requetePrepare->bindParam(':unMois', $moisPrecedent, PDO::PARAM_STR);
             $requetePrepare->execute();
         }
@@ -798,7 +839,8 @@ class PdoGsb
         if (((int) date("j")) >= 30) {
             $requetePrepare = PdoGSB::$monPdo->prepare(
                 'UPDATE fichefrais ' . "SET idetat = 'RB', datemodif = now() " .
-                "WHERE fichefrais.mois = :unMois AND idetat = 'VA'");
+                "WHERE fichefrais.mois = :unMois AND idetat = 'VA'"
+            );
             $requetePrepare->bindParam(':unMois', $moisPrecedent, PDO::PARAM_STR);
             $requetePrepare->execute();
         }
@@ -818,7 +860,8 @@ class PdoGsb
         $requetePrepare = PdoGSB::$monPdo->prepare(
             'UPDATE fichefrais ' . 'SET etatPDF = true, datemodif = now() ' .
             'WHERE fichefrais.idvisiteur = :unIdVisiteur ' .
-            'AND fichefrais.mois = :unMois');
+            'AND fichefrais.mois = :unMois'
+        );
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->execute();
@@ -827,7 +870,7 @@ class PdoGsb
     /**
      * Renvoie les paramètres connus en base pour le véhicule du visiteur
      *
-     * @param string $idVisiteur
+     * @param  string $idVisiteur
      * @return array tableau associatif : carburant, puissance_admin, indemnite
      */
     public function getVehicule(string $idVisiteur): array

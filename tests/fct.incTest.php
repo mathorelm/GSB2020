@@ -4,7 +4,6 @@ require_once 'includes/fct.inc.php';
 require_once 'includes/class.pdogsb.inc.php';
 
 class fctincTest extends \PHPUnit\Framework\TestCase
-
 {
 
     // Vérification des connections
@@ -20,9 +19,10 @@ class fctincTest extends \PHPUnit\Framework\TestCase
         $this->assertTrue(estConnecte());
     }
 
-    public function testdeconnecter() {
+    public function testdeconnecter()
+    {
         deconnecter();
-        $this->assertEquals(PHP_SESSION_NONE,session_status());
+        $this->assertEquals(PHP_SESSION_NONE, session_status());
     }
 
     public function testDateFrancaisVersAnglais()
@@ -418,57 +418,63 @@ class fctincTest extends \PHPUnit\Framework\TestCase
         unset($monPdo);
     }
 
-    public function testcompterMontantTotal() {
+    public function testcompterMontantTotal()
+    {
         $tableauDeFiches = array();
         for ($cpt=0;$cpt<10;$cpt++) {
             $uneFiche['montant']=1000;
             $uneFiche['date']='2019-12-01';
             $tableauDeFiches[$cpt]=$uneFiche;
         }
-        $this->assertEquals(10000,compterMontantTotal($tableauDeFiches));
+        $this->assertEquals(10000, compterMontantTotal($tableauDeFiches));
     }
 
-    public function testaddLogEvent() {
+    public function testaddLogEvent()
+    {
         $avant = filesize("GSB2020.LOG");
         addLogEvent("Test PHPUNIT");
         clearstatcache();
-        $this->assertNotEquals($avant,filesize("GSB2020.LOG"));
+        $this->assertNotEquals($avant, filesize("GSB2020.LOG"));
     }
 
-    public function testenvoyerLeLogOK() {
+    public function testenvoyerLeLogOK()
+    {
         ini_set('SMTP', 'smtp.free.fr');
         ini_set('smtp_port', '25');
-        copy("GSB2020.LOG","GSB2020.BAK");
-        $this->assertEquals(true,envoyerleLog());
+        copy("GSB2020.LOG", "GSB2020.BAK");
+        $this->assertEquals(true, envoyerleLog());
 
     }
 
-    public function testenvoyerLeLogException() {
+    public function testenvoyerLeLogException()
+    {
         ini_set('SMTP', 'smtp.free.fr');
         ini_set('smtp_port', '26');
-        copy("GSB2020.BAK","GSB2020.LOG");
-        $this->assertEquals(false,envoyerleLog());
+        copy("GSB2020.BAK", "GSB2020.LOG");
+        $this->assertEquals(false, envoyerleLog());
     }
 
-    public function testenvoyerLeLogKO() {
+    public function testenvoyerLeLogKO()
+    {
         //on doit forcer la fonction mail à retourner un code erreur
         ini_set('SMTP', 'smtp.free.fr');
         ini_set('smtp_port', '26');
-        rename("GSB2020.BAK","GSB2020.LOG");
-        $this->assertEquals(false,envoyerleLog());
+        rename("GSB2020.BAK", "GSB2020.LOG");
+        $this->assertEquals(false, envoyerleLog());
     }
 
-    public function testgenererPDF() {
+    public function testgenererPDF()
+    {
         $pdo = NEW PdoGsb;
         $idvisiteur='m11';
         $mois = '202001';
 
-        $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($idvisiteur,$mois);
-        $lesFraisForfait = $pdo->getLesFraisForfait($idvisiteur,$mois);
-        $lesInfosFichesFrais = $pdo->getLesInfosfichefrais($idvisiteur,$mois);
+        $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($idvisiteur, $mois);
+        $lesFraisForfait = $pdo->getLesFraisForfait($idvisiteur, $mois);
+        $lesInfosFichesFrais = $pdo->getLesInfosfichefrais($idvisiteur, $mois);
         $visiteur = $pdo->getNomVisiteur($idvisiteur);
         $nom_visiteur=$visiteur['nom'];
-        $leFichier = genererPDF($pdo,$lesFraisHorsForfait,$lesFraisForfait,$lesInfosFichesFrais);
+        $leFichier = genererPDF($pdo, $lesFraisHorsForfait, $lesFraisForfait, $lesInfosFichesFrais);
         $this->assertFileExists('./PDF/'.$lesFraisHorsForfait[0]['mois'].'-'.$nom_visiteur.'.pdf');
         unset($monPdo);
         unlink('./PDF/'.$lesFraisHorsForfait[0]['mois'].'-'.$nom_visiteur.'.pdf');

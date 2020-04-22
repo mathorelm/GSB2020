@@ -27,13 +27,13 @@ function estConnecte()
 /**
  * Enregistre dans une variable session les infos d'un visiteur
  *
- * @param String $idVisiteur
+ * @param  String $idVisiteur
  *            ID du visiteur
- * @param String $nom
+ * @param  String $nom
  *            Nom du visiteur
- * @param String $prenom
+ * @param  String $prenom
  *            Prénom du visiteur
- * @param String $metier
+ * @param  String $metier
  *            Code représentant le métier exercé
  * @return null
  */
@@ -107,7 +107,7 @@ function getMois($date)
 /**
  * Inverse la présentation du libellé aaaamm en mm/aaaa
  *
- * @param string $leLibelle
+ * @param  string $leLibelle
  *            au format aaaamm
  * @return string le mois au format mm/aaaa
  */
@@ -121,7 +121,7 @@ function inverseMois(string $leLibelle): string
 /**
  * Retour le mois en Français (en minuscule) avec l'année
  *
- * @param string $leLibelle
+ * @param  string $leLibelle
  *            au format aaaamm
  * @return string de type juillet 2020
  */
@@ -247,7 +247,7 @@ function lesQteFraisValides($lesFrais)
  *            Date des frais
  * @param String $libelle
  *            Libellé des frais
- * @param Float $montant
+ * @param Float  $montant
  *            Montant des frais
  *
  * @return null
@@ -262,7 +262,8 @@ function valideInfosFrais($dateFrais, $libelle, $montant)
         } else {
             if (estDateDepassee($dateFrais)) {
                 ajouterErreur(
-                    "date d'enregistrement du frais dépassé, plus de 1 an");
+                    "date d'enregistrement du frais dépassé, plus de 1 an"
+                );
             }
         }
     }
@@ -292,7 +293,8 @@ function ajouterErreur(string $msg)
     $_REQUEST['erreurs'][] = $msg;
     addLogEvent(
         'Erreur ("' . $msg . '") de ' . $_SESSION['prenom'] . ' ' .
-        $_SESSION['nom'] . ' (IP = ' . $_SERVER['REMOTE_ADDR']);
+        $_SESSION['nom'] . ' (IP = ' . $_SERVER['REMOTE_ADDR']
+    );
 }
 
 /**
@@ -307,14 +309,14 @@ function nbErreurs()
     } else {
         return count($_REQUEST['erreurs']);
     }
-/**
- * Ajoute le libellé d'une information au tableau des informations
- *
- * @param String $msg
- *            Libellé de l'information
- *
- * @return null
- */
+    /**
+     * Ajoute le libellé d'une information au tableau des informations
+     *
+     * @param String $msg
+     *            Libellé de l'information
+     *
+     * @return null
+     */
 }
 
 function ajouterInfo($msg)
@@ -325,7 +327,8 @@ function ajouterInfo($msg)
     $_REQUEST['infos'][] = $msg;
     addLogEvent(
         'Info ("' . $msg . '") de ' . $_SESSION['prenom'] . ' ' .
-        $_SESSION['nom'] . ' (IP = ' . $_SERVER['REMOTE_ADDR']);
+        $_SESSION['nom'] . ' (IP = ' . $_SERVER['REMOTE_ADDR']
+    );
 }
 
 /**
@@ -397,6 +400,7 @@ function addLogEvent($event)
 /**
  * Emettre un email vers l'adresse gsb2020/free.fr avec le log en cours.
  * A l'issue, vider le log.
+ *
  * @return Boolean $ret True si mail partie, False sinon
  */
 function envoyerleLog()
@@ -484,40 +488,42 @@ function envoyerleLog()
     $expediteur = 'ne-pas-repondre@gsb2020.org';
     $reponse = 'gsb2020@free.fr';
     try{
-        $ret = mail($destinataire, 'GSB2020 : transmission du log', $msg,
-                "Reply-to: $reponse\r\nFrom: $expediteur\r\n" . $header);
+        $ret = mail(
+            $destinataire, 'GSB2020 : transmission du log', $msg,
+            "Reply-to: $reponse\r\nFrom: $expediteur\r\n" . $header
+        );
         if ($ret==1) {
             unlink('gsb2020.log');
-            return TRUE;
+            return true;
         }
     } catch (Exception $e) {
         addLogEvent("Erreur d'envoi du log à gsb2020@free.fr");
     }
-    return FALSE;
+    return false;
 }
 
 /**
  * Génère un fichier PDF contenant les informations de la fiche de frais
  *
- * @param object $pdo
+ * @param  object $pdo
  *            passage du pointeur pdo pour accéder à ses fonctions
- * @param array $lesFraisHorsForfait
+ * @param  array  $lesFraisHorsForfait
  *            tableau associatif comportant les frais HF
- * @param array $lesFraisForfait
+ * @param  array  $lesFraisForfait
  *            tableau associatif comportant les frais forfaitisés
- * @param array $lesInfosFicheFrais
+ * @param  array  $lesInfosFicheFrais
  *            informations concernant la fiche de frais
  * @return string
  */
 function genererPDF($pdo, array $lesFraisHorsForfait, array $lesFraisForfait,
-    array $lesInfosFicheFrais): string
-{
+    array $lesInfosFicheFrais
+): string {
     if (!defined('FPDF_FONTPATH')) {
         define('FPDF_FONTPATH', 'styles/fonts');
     }
     setlocale(LC_TIME, "fr_FR", "French"); // Pour affichage des dates en français
                                            // Préparation de l'action : mise en place des variables nécessaires à la page
-    require_once ('./includes/fpdf.php');
+    include_once './includes/fpdf.php';
     $id_visiteur = $lesFraisHorsForfait[0]['idvisiteur'];
     $donnees_visiteur = $pdo->getNomVisiteur($id_visiteur);
     $nom_visiteur = $donnees_visiteur['nom'];
@@ -548,8 +554,10 @@ function genererPDF($pdo, array $lesFraisHorsForfait, array $lesFraisForfait,
     $pdf->SetXY(40, 74);
     $pdf->Cell(48, 8, "Visiteur", 0, 0, "L");
     $pdf->Cell(34, 8, $id_visiteur, 0, 0, "L");
-    $pdf->Cell(60, 8, $prenom_visiteur . ' ' . strtoupper($nom_visiteur), 0, 0,
-        "L");
+    $pdf->Cell(
+        60, 8, $prenom_visiteur . ' ' . strtoupper($nom_visiteur), 0, 0,
+        "L"
+    );
     $pdf->SetXY(40, 82);
     $pdf->Cell(48, 8, "Mois", 0, 0, "L");
     $pdf->Cell(34, 8, utf8_decode(ucfirst($mois_lettre)), 0, 0, "L");
@@ -574,19 +582,24 @@ function genererPDF($pdo, array $lesFraisHorsForfait, array $lesFraisForfait,
         $pdf->Cell(34, 8, $unFrais['quantite'], 1, 0, "R");
         // Données non récupérées !
         $pdf->Cell(34, 8, $unFrais['montant_unitaire'], 1, 0, "R");
-        $pdf->Cell(26, 8,
+        $pdf->Cell(
+            26, 8,
             number_format(
                 (float) $unFrais['quantite'] * $unFrais['montant_unitaire'], 2,
-                ".", ""), 1, 0, "R");
+                ".", ""
+            ), 1, 0, "R"
+        );
         $index ++;
     }
     // Ajout mention indemnité kilométrique
     $pdf->SetFont('', 'I', 8);
     $pdf->SetXY(40, 138);
-    $pdf->Cell(48, 8,
+    $pdf->Cell(
+        48, 8,
         utf8_decode("Note : Vous avez déclaré un véhicule ") .
         strtoupper($vehicule['carburant']) . " de " .
-        $vehicule['puissance_admin'] . " CV");
+        $vehicule['puissance_admin'] . " CV"
+    );
     // Autres Frais
     $pdf->SetFont('', 'I', 12);
     $pdf->SetDrawColor(82, 127, 192); // Bleu Foncé GSB

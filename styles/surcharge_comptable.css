@@ -23,7 +23,7 @@ a:focus {
 }
 
 h2 {
-	color : #f0ad4e;
+    color : #f0ad4e;
 }
 
 .panel-warning {
@@ -44,11 +44,11 @@ input:focus:invalid {
 }
 
 .card {
-	border:ridge;
-	border-radius: 10px 5px 10px 5px;
-	box-shadow : 6px 6px 6px black;
+    border:ridge;
+    border-radius: 10px 5px 10px 5px;
+    box-shadow : 6px 6px 6px black;
 }
 
 form {
-	display:inline;
+    display:inline;
 }

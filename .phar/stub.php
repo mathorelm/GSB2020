@@ -12,13 +12,15 @@ if (__FILE__ === realpath($_SERVER['SCRIPT_NAME'])) {
     $execute = false;
 }
 
-$options = getopt('', array(
+$options = getopt(
+    '', array(
     'prepend:',
     'manifest'
-));
+    )
+);
 
 if (isset($options['prepend'])) {
-    require $options['prepend'];
+    include $options['prepend'];
 }
 
 if (isset($options['manifest'])) {

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildpath>
 	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
-	<buildpathentry kind="src" path="vendor/composer">
+	<buildpathentry excluding="xdebug-handler/" kind="src" path="vendor/composer">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/composer/xdebug-handler/src">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
@@ -12,6 +17,11 @@
 		</attributes>
 	</buildpathentry>
 	<buildpathentry kind="src" path="vendor/myclabs/deep-copy/src/DeepCopy">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/pdepend/pdepend/src/main/php/PDepend">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
@@ -37,6 +47,11 @@
 		</attributes>
 	</buildpathentry>
 	<buildpathentry kind="src" path="vendor/phpdocumentor/type-resolver/src">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/phpmd/phpmd/src/main/php">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
@@ -72,6 +87,16 @@
 		</attributes>
 	</buildpathentry>
 	<buildpathentry kind="src" path="vendor/phpunit/phpunit/src">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/psr/container/src">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/psr/log/Psr/Log">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
@@ -136,7 +161,27 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/symfony/config">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/symfony/dependency-injection">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/symfony/filesystem">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
 	<buildpathentry kind="src" path="vendor/symfony/polyfill-ctype">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/symfony/service-contracts">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
