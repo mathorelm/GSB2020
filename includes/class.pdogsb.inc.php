@@ -51,7 +51,7 @@ class PdoGsb
         PdoGsb::$monPdo = new PDO(PdoGsb::$serveur . ';' . PdoGsb::$bdd,
             PdoGsb::$user, PdoGsb::$mdp);
         // Ligne inférieure à commenter si mise en prod : déclenchement des Exceptions PDO
-        // PdoGsb::$monPdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        //PdoGsb::$monPdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         PdoGsb::$monPdo->query('SET CHARACTER SET utf8');
     }
 
@@ -233,7 +233,7 @@ class PdoGsb
      *            tableau associatif de clé idFrais et
      *            de valeur la quantité pour ce frais
      *
-     * @return null
+     * @return true si l'update à fonctionné, false sinon
      */
     public function majFraisForfait($idVisiteur, $mois, $lesFrais)
     {
@@ -251,7 +251,7 @@ class PdoGsb
                 PDO::PARAM_STR);
             $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
             $requetePrepare->bindParam(':idFrais', $unIdFrais, PDO::PARAM_STR);
-            $requetePrepare->execute();
+            return $requetePrepare->execute();
         }
     }
 
@@ -266,7 +266,7 @@ class PdoGsb
      * @param Integer $nbJustificatifs
      *            Nombre de justificatifs
      *
-     * @return null
+     * @return true si l'update à fonctionné, false sinon
      */
     public function majNbJustificatifs($idVisiteur, $mois, $nbJustificatifs)
     {
@@ -278,7 +278,7 @@ class PdoGsb
             PDO::PARAM_INT);
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
-        $requetePrepare->execute();
+        return $requetePrepare->execute();
     }
 
     /**

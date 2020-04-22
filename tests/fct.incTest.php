@@ -256,9 +256,9 @@ class fctincTest extends \PHPUnit\Framework\TestCase
         $this->assertFalse(estDateValide($laDate));
         $laDate = "01/01/01/2020";
         $this->assertFalse(estDateValide($laDate));
-        $laDate = "-0.1/-9.5";
+        $laDate = "-0.1/-0.2/-0.3";
         $this->assertFalse(estDateValide($laDate));
-        $laDate = "45/50/80";
+        $laDate = "45/13/45000";
         $this->assertFalse(estDateValide($laDate));
     }
 
@@ -435,6 +435,29 @@ class fctincTest extends \PHPUnit\Framework\TestCase
         $this->assertNotEquals($avant,filesize("GSB2020.LOG"));
     }
 
+    public function testenvoyerLeLogOK() {
+        ini_set('SMTP', 'smtp.free.fr');
+        ini_set('smtp_port', '25');
+        copy("GSB2020.LOG","GSB2020.BAK");
+        $this->assertEquals(true,envoyerleLog());
+
+    }
+
+    public function testenvoyerLeLogException() {
+        ini_set('SMTP', 'smtp.free.fr');
+        ini_set('smtp_port', '26');
+        copy("GSB2020.BAK","GSB2020.LOG");
+        $this->assertEquals(false,envoyerleLog());
+    }
+
+    public function testenvoyerLeLogKO() {
+        //on doit forcer la fonction mail à retourner un code erreur
+        ini_set('SMTP', 'smtp.free.fr');
+        ini_set('smtp_port', '26');
+        rename("GSB2020.BAK","GSB2020.LOG");
+        $this->assertEquals(false,envoyerleLog());
+    }
+
     public function testgenererPDF() {
         $pdo = NEW PdoGsb;
         $idvisiteur='m11';
@@ -446,9 +469,9 @@ class fctincTest extends \PHPUnit\Framework\TestCase
         $visiteur = $pdo->getNomVisiteur($idvisiteur);
         $nom_visiteur=$visiteur['nom'];
         $leFichier = genererPDF($pdo,$lesFraisHorsForfait,$lesFraisForfait,$lesInfosFichesFrais);
-        $this->assertFileExists('/PDF/'.$lesFraisHorsForfait[0]['mois'].'-'.$nom_visiteur.'.pdf');
+        $this->assertFileExists('./PDF/'.$lesFraisHorsForfait[0]['mois'].'-'.$nom_visiteur.'.pdf');
         unset($monPdo);
-        unlink('/PDF/'.$lesFraisHorsForfait[0]['mois'].'-'.$nom_visiteur.'.pdf');
+        unlink('./PDF/'.$lesFraisHorsForfait[0]['mois'].'-'.$nom_visiteur.'.pdf');
     }
 }
 

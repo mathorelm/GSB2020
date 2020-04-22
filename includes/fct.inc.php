@@ -397,6 +397,7 @@ function addLogEvent($event)
 /**
  * Emettre un email vers l'adresse gsb2020/free.fr avec le log en cours.
  * A l'issue, vider le log.
+ * @return Boolean $ret True si mail partie, False sinon
  */
 function envoyerleLog()
 {
@@ -482,11 +483,17 @@ function envoyerleLog()
     $destinataire = 'gsb2020@free.fr';
     $expediteur = 'ne-pas-repondre@gsb2020.org';
     $reponse = 'gsb2020@free.fr';
-    $ret = mail($destinataire, 'GSB2020 : transmission du log', $msg,
-        "Reply-to: $reponse\r\nFrom: $expediteur\r\n" . $header);
-    if ($ret) {
-        unlink('gsb2020.log');
+    try{
+        $ret = mail($destinataire, 'GSB2020 : transmission du log', $msg,
+                "Reply-to: $reponse\r\nFrom: $expediteur\r\n" . $header);
+        if ($ret==1) {
+            unlink('gsb2020.log');
+            return TRUE;
+        }
+    } catch (Exception $e) {
+        addLogEvent("Erreur d'envoi du log à gsb2020@free.fr");
     }
+    return FALSE;
 }
 
 /**
@@ -505,7 +512,9 @@ function envoyerleLog()
 function genererPDF($pdo, array $lesFraisHorsForfait, array $lesFraisForfait,
     array $lesInfosFicheFrais): string
 {
-    define('FPDF_FONTPATH', 'styles/fonts');
+    if (!defined('FPDF_FONTPATH')) {
+        define('FPDF_FONTPATH', 'styles/fonts');
+    }
     setlocale(LC_TIME, "fr_FR", "French"); // Pour affichage des dates en français
                                            // Préparation de l'action : mise en place des variables nécessaires à la page
     require_once ('./includes/fpdf.php');
@@ -614,10 +623,7 @@ function genererPDF($pdo, array $lesFraisHorsForfait, array $lesFraisForfait,
     $pdf->SetXY(122, $pdf->GetY());
     $pdf->Cell(60, 8, "Vu l'agent comptable", 0, 1, "L");
     $pdf->Image('images/signature.jpg', $pdf->GetX() + 100, $pdf->getY(), 32, 20);
-    try {
-        $pdf->Output('F', 'PDF/' . $fichier_PDF);
-    } catch (Exception $e) {
-        return "";
-    }
+
+    $pdf->Output('F', 'PDF/' . $fichier_PDF);
     return "PDF/" . $fichier_PDF;
 }
