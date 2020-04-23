@@ -3,7 +3,7 @@ require_once 'includes/fct.inc.php';
 require_once 'includes/class.pdogsb.inc.php';
 use PHPUnit\Framework\TestCase;
 
-class pdogsbincTest extends TestCase
+class pdogsbincTUTest extends TestCase
 {
 
     public function testConstructOK()
@@ -80,8 +80,7 @@ class pdogsbincTest extends TestCase
         $mois = '202001';
         $monPdo = new PdoGsb();
         $this->AssertNotEmpty(
-            $monPdo->getLesFraisHorsForfait($idVisiteur, $mois)
-        );
+            $monPdo->getLesFraisHorsForfait($idVisiteur, $mois));
         unset($monPdo);
     }
 
@@ -108,7 +107,8 @@ class pdogsbincTest extends TestCase
         $idVisiteur = 'm11';
         $mois = '202001';
         $monPdo = new PdoGsb();
-        $this->AssertThat($monPdo->getNbjustificatifs($idVisiteur, $mois), $this->istype('string'));
+        $this->AssertThat($monPdo->getNbjustificatifs($idVisiteur, $mois),
+            $this->istype('string'));
         unset($monPdo);
     }
 
@@ -164,93 +164,8 @@ class pdogsbincTest extends TestCase
         unset($monPdo);
     }
 
-    public function testmajFraisForfait()
-    {
-        //La préparation de ce test montre que la fonction ne marche pas ???
-        $idVisiteur = 'm11';
-        $mois = '202001';
-        $monPdo = new PdoGsb();
-        //sauvegarder l'enregistrement des frais (return id, libelle, quantite)
-        $lesAnciensFrais = $monPdo->getLesFraisForfait($idVisiteur, $mois);
-        //récupérer un autre enregistrement
-        $lesNouveauxFrais=$monPdo->getLesFraisForfait($idVisiteur, '202002');
-        //mettre à jour l'enregistrement
-        $this->assertTrue($monPdo->majFraisForfait($idVisiteur, $mois, $lesNouveauxFrais));
-        //relire l'enregistrement effectué
-        $lesFraisTestes=$monPdo->getLesFraisForfait($idVisiteur, $mois);
-        //tester si il est bien modifié
-        //TODO : attention la fonction ne permet pas la mise à jour !!
-        //$this->AssertSame($lesNouveauxFrais,$lesFraisTestes);
-        //remettre la sauvegarde
-        $this->assertTrue($monPdo->majFraisForfait($idVisiteur, $mois, $lesAnciensFrais));
-        //fermer l'objet PDO
-        unset($monPdo);
-    }
 
-    public function testmajNbJustificatifsOK()
-    {
-        $idVisiteur = 'm11';
-        $mois = '202001';
-        $nbJustificatifs = 99;
-        $monPdo = new PdoGsb();
-        $sauvegardeJustificatifs = $monPdo->getNbJustificatifs($idVisiteur, $mois);
-        $monPdo->majNbJustificatifs($idVisiteur, $mois, $nbJustificatifs);
-        $lesJustificatifs = $monPdo->getNbJustificatifs($idVisiteur, $mois);
-        $this->assertEquals($nbJustificatifs, $lesJustificatifs);
-        //rétablir la valeur précédente
-        $monPdo->majNbJustificatifs($idVisiteur, $mois, $sauvegardeJustificatifs);
-        //fermer l'objet PDO
-        unset($monPdo);
-    }
 
-    public function testvalideSommeFrais()
-    {
-        $idVisiteur='m11';
-        $mois = '202001';
-        $monPdo = new PdoGsb();
-        //récupérer le total enregistré.
-        $requetePrepare = PdoGsb::$monPdo->prepare(
-            'SELECT montantvalide FROM fichefrais'.
-            'WHERE fichefrais.idvisiteur=:unIdVisiteur AND fichefrais.mois=:unMois'
-        );
-        $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
-        $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
-        $reponse = $requetePrepare->fetch();
-        $backup_total = $reponse['montantvalide'];
-        //Placer un total à zéro
-        $requetePrepare = PdoGSB::$monPdo->prepare(
-            'UPDATE fichefrais ' . 'SET montantvalide = :unMontant ' .
-            'WHERE fichefrais.idvisiteur = :unIdVisiteur ' .
-            'AND fichefrais.mois = :unMois'
-        );
-        $requetePrepare->bindParam(':unMontant', 124, PDO::PARAM_INT);
-        $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
-        $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
-        $requetePrepare->execute();
-        //Lancer le calcul
-        $monPdo->valideSommeFrais($idVisiteur, $mois);
-        //Récupérer le nouveau total
-        $requetePrepare = PdoGsb::$monPdo->prepare(
-            'SELECT montantvalide FROM fichefrais'.
-            'WHERE fichefrais.idvisiteur=:unIdVisiteur AND fichefrais.mois=:unMois'
-        );
-        $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
-        $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
-        $reponse = $requetePrepare->fetch();
-        $nouveau_total = $reponse['montantvalide'];
-        $this->assertEquals($backup_total, $nouveau_total);
-        //replacer la sauvegarde
-        $requetePrepare = PdoGSB::$monPdo->prepare(
-            'UPDATE fichefrais ' . 'SET montantvalide = :unMontant ' .
-            'WHERE fichefrais.idvisiteur = :unIdVisiteur ' .
-            'AND fichefrais.mois = :unMois'
-        );
-        $requetePrepare->bindParam(':unMontant', $backup_total);
-        $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
-        $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
-        $requetePrepare->execute();
-        //supprimer l'objet PDO
-        unset($monPdo);
-    }
+
 }
 
