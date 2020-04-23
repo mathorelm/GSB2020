@@ -371,12 +371,12 @@ class pdogsbincTITest extends TestCase
         // Vérifier que c'est bien passé
         $reponse = $this->accesPdo->getLesInfosficheFrais($this->id, $this->mois);
         $this->assertEquals('VA', $reponse['idEtat']);
-        // Mettre en paiement la fiche : ça marchera car le mois est volontairement ancien
+        // Mettre en paiement la fiche
         $this->accesPdo->mettreEnPaiementVAMoisPrecedent(date("j"));
         // Vérifier que c'est bien passé
         $reponse = $this->accesPdo->getLesInfosficheFrais($this->id, $this->mois);
         $this->assertEquals('MP', $reponse['idEtat']);
-        // Mettre en paiement la fiche : ça marchera car le mois est volontairement ancien
+        // Mettre en paiement la fiche
         $this->accesPdo->rembourserMPMoisPrecedent(date("j"));
         // Vérifier que c'est bien passé
         $reponse = $this->accesPdo->getLesInfosficheFrais($this->id, $this->mois);
