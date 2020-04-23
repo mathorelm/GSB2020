@@ -1,0 +1,3164 @@
+
+FILE: C:\Users\Matou29\git\GSB2020\.phar\signature.php
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags
+   |         | are not allowed by this install of PHP. This file may
+   |         | be using short open tags but PHP does not allow them.
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\.phar\stub.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AND 360 WARNINGS AFFECTING 361 LINES
+----------------------------------------------------------------------
+   1 | WARNING | File has mixed line endings; this may cause
+     |         | incorrect results
+   3 | ERROR   | Missing file doc comment
+   4 | WARNING | Line exceeds 85 characters; contains 257 characters
+  38 | WARNING | Line exceeds 85 characters; contains 98 characters
+  39 | WARNING | Line exceeds 85 characters; contains 101 characters
+  40 | WARNING | Line exceeds 85 characters; contains 87 characters
+  41 | WARNING | Line exceeds 85 characters; contains 114 characters
+  42 | WARNING | Line exceeds 85 characters; contains 119 characters
+  43 | WARNING | Line exceeds 85 characters; contains 109 characters
+  44 | WARNING | Line exceeds 85 characters; contains 91 characters
+  45 | WARNING | Line exceeds 85 characters; contains 94 characters
+  46 | WARNING | Line exceeds 85 characters; contains 94 characters
+  47 | WARNING | Line exceeds 85 characters; contains 89 characters
+  48 | WARNING | Line exceeds 85 characters; contains 111 characters
+  49 | WARNING | Line exceeds 85 characters; contains 97 characters
+  50 | WARNING | Line exceeds 85 characters; contains 101 characters
+  51 | WARNING | Line exceeds 85 characters; contains 101 characters
+  52 | WARNING | Line exceeds 85 characters; contains 101 characters
+  53 | WARNING | Line exceeds 85 characters; contains 95 characters
+  54 | WARNING | Line exceeds 85 characters; contains 108 characters
+  55 | WARNING | Line exceeds 85 characters; contains 98 characters
+  56 | WARNING | Line exceeds 85 characters; contains 102 characters
+  57 | WARNING | Line exceeds 85 characters; contains 114 characters
+  58 | WARNING | Line exceeds 85 characters; contains 108 characters
+  59 | WARNING | Line exceeds 85 characters; contains 97 characters
+  60 | WARNING | Line exceeds 85 characters; contains 119 characters
+  61 | WARNING | Line exceeds 85 characters; contains 125 characters
+  62 | WARNING | Line exceeds 85 characters; contains 125 characters
+  63 | WARNING | Line exceeds 85 characters; contains 112 characters
+  64 | WARNING | Line exceeds 85 characters; contains 103 characters
+  69 | WARNING | Line exceeds 85 characters; contains 95 characters
+  70 | WARNING | Line exceeds 85 characters; contains 96 characters
+  71 | WARNING | Line exceeds 85 characters; contains 86 characters
+  72 | WARNING | Line exceeds 85 characters; contains 87 characters
+  73 | WARNING | Line exceeds 85 characters; contains 87 characters
+  77 | WARNING | Line exceeds 85 characters; contains 93 characters
+  78 | WARNING | Line exceeds 85 characters; contains 99 characters
+  80 | WARNING | Line exceeds 85 characters; contains 91 characters
+  82 | WARNING | Line exceeds 85 characters; contains 89 characters
+  83 | WARNING | Line exceeds 85 characters; contains 92 characters
+  84 | WARNING | Line exceeds 85 characters; contains 109 characters
+  85 | WARNING | Line exceeds 85 characters; contains 86 characters
+  86 | WARNING | Line exceeds 85 characters; contains 87 characters
+  87 | WARNING | Line exceeds 85 characters; contains 86 characters
+  92 | WARNING | Line exceeds 85 characters; contains 87 characters
+  93 | WARNING | Line exceeds 85 characters; contains 86 characters
+  94 | WARNING | Line exceeds 85 characters; contains 88 characters
+  98 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 101 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 102 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 103 | WARNING | Line exceeds 85 characters; contains 107 characters
+ 105 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 106 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 108 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 109 | WARNING | Line exceeds 85 characters; contains 94 characters
+ 110 | WARNING | Line exceeds 85 characters; contains 93 characters
+ 112 | WARNING | Line exceeds 85 characters; contains 90 characters
+ 113 | WARNING | Line exceeds 85 characters; contains 90 characters
+ 114 | WARNING | Line exceeds 85 characters; contains 106 characters
+ 115 | WARNING | Line exceeds 85 characters; contains 92 characters
+ 116 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 117 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 118 | WARNING | Line exceeds 85 characters; contains 89 characters
+ 119 | WARNING | Line exceeds 85 characters; contains 106 characters
+ 122 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 128 | WARNING | Line exceeds 85 characters; contains 101 characters
+ 132 | WARNING | Line exceeds 85 characters; contains 94 characters
+ 133 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 134 | WARNING | Line exceeds 85 characters; contains 103 characters
+ 135 | WARNING | Line exceeds 85 characters; contains 103 characters
+ 136 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 137 | WARNING | Line exceeds 85 characters; contains 107 characters
+ 139 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 140 | WARNING | Line exceeds 85 characters; contains 108 characters
+ 141 | WARNING | Line exceeds 85 characters; contains 92 characters
+ 142 | WARNING | Line exceeds 85 characters; contains 101 characters
+ 143 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 144 | WARNING | Line exceeds 85 characters; contains 89 characters
+ 145 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 146 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 147 | WARNING | Line exceeds 85 characters; contains 100 characters
+ 148 | WARNING | Line exceeds 85 characters; contains 94 characters
+ 149 | WARNING | Line exceeds 85 characters; contains 132 characters
+ 151 | WARNING | Line exceeds 85 characters; contains 118 characters
+ 152 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 153 | WARNING | Line exceeds 85 characters; contains 93 characters
+ 155 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 156 | WARNING | Line exceeds 85 characters; contains 96 characters
+ 157 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 160 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 161 | WARNING | Line exceeds 85 characters; contains 89 characters
+ 163 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 165 | WARNING | Line exceeds 85 characters; contains 97 characters
+ 166 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 167 | WARNING | Line exceeds 85 characters; contains 96 characters
+ 168 | WARNING | Line exceeds 85 characters; contains 96 characters
+ 169 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 170 | WARNING | Line exceeds 85 characters; contains 94 characters
+ 171 | WARNING | Line exceeds 85 characters; contains 102 characters
+ 172 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 173 | WARNING | Line exceeds 85 characters; contains 100 characters
+ 174 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 175 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 176 | WARNING | Line exceeds 85 characters; contains 93 characters
+ 177 | WARNING | Line exceeds 85 characters; contains 91 characters
+ 178 | WARNING | Line exceeds 85 characters; contains 91 characters
+ 179 | WARNING | Line exceeds 85 characters; contains 102 characters
+ 181 | WARNING | Line exceeds 85 characters; contains 97 characters
+ 182 | WARNING | Line exceeds 85 characters; contains 90 characters
+ 183 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 184 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 185 | WARNING | Line exceeds 85 characters; contains 96 characters
+ 186 | WARNING | Line exceeds 85 characters; contains 91 characters
+ 187 | WARNING | Line exceeds 85 characters; contains 91 characters
+ 188 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 189 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 190 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 191 | WARNING | Line exceeds 85 characters; contains 89 characters
+ 192 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 195 | WARNING | Line exceeds 85 characters; contains 91 characters
+ 196 | WARNING | Line exceeds 85 characters; contains 96 characters
+ 197 | WARNING | Line exceeds 85 characters; contains 96 characters
+ 201 | WARNING | Line exceeds 85 characters; contains 98 characters
+ 204 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 205 | WARNING | Line exceeds 85 characters; contains 106 characters
+ 210 | WARNING | Line exceeds 85 characters; contains 91 characters
+ 214 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 216 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 217 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 221 | WARNING | Line exceeds 85 characters; contains 91 characters
+ 222 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 223 | WARNING | Line exceeds 85 characters; contains 97 characters
+ 224 | WARNING | Line exceeds 85 characters; contains 105 characters
+ 227 | WARNING | Line exceeds 85 characters; contains 94 characters
+ 230 | WARNING | Line exceeds 85 characters; contains 91 characters
+ 234 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 237 | WARNING | Line exceeds 85 characters; contains 106 characters
+ 238 | WARNING | Line exceeds 85 characters; contains 96 characters
+ 239 | WARNING | Line exceeds 85 characters; contains 94 characters
+ 245 | WARNING | Line exceeds 85 characters; contains 100 characters
+ 246 | WARNING | Line exceeds 85 characters; contains 100 characters
+ 247 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 248 | WARNING | Line exceeds 85 characters; contains 106 characters
+ 249 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 251 | WARNING | Line exceeds 85 characters; contains 98 characters
+ 255 | WARNING | Line exceeds 85 characters; contains 94 characters
+ 256 | WARNING | Line exceeds 85 characters; contains 92 characters
+ 257 | WARNING | Line exceeds 85 characters; contains 92 characters
+ 258 | WARNING | Line exceeds 85 characters; contains 100 characters
+ 261 | WARNING | Line exceeds 85 characters; contains 92 characters
+ 262 | WARNING | Line exceeds 85 characters; contains 100 characters
+ 263 | WARNING | Line exceeds 85 characters; contains 100 characters
+ 264 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 265 | WARNING | Line exceeds 85 characters; contains 97 characters
+ 267 | WARNING | Line exceeds 85 characters; contains 112 characters
+ 268 | WARNING | Line exceeds 85 characters; contains 106 characters
+ 269 | WARNING | Line exceeds 85 characters; contains 97 characters
+ 270 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 272 | WARNING | Line exceeds 85 characters; contains 113 characters
+ 273 | WARNING | Line exceeds 85 characters; contains 105 characters
+ 274 | WARNING | Line exceeds 85 characters; contains 111 characters
+ 276 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 281 | WARNING | Line exceeds 85 characters; contains 90 characters
+ 284 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 285 | WARNING | Line exceeds 85 characters; contains 90 characters
+ 287 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 289 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 291 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 296 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 297 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 299 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 300 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 306 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 311 | WARNING | Line exceeds 85 characters; contains 91 characters
+ 312 | WARNING | Line exceeds 85 characters; contains 106 characters
+ 318 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 319 | WARNING | Line exceeds 85 characters; contains 107 characters
+ 328 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 329 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 331 | WARNING | Line exceeds 85 characters; contains 90 characters
+ 334 | WARNING | Line exceeds 85 characters; contains 92 characters
+ 347 | WARNING | Line exceeds 85 characters; contains 110 characters
+ 350 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 356 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 360 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 362 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 363 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 364 | WARNING | Line exceeds 85 characters; contains 94 characters
+ 368 | WARNING | Line exceeds 85 characters; contains 96 characters
+ 369 | WARNING | Line exceeds 85 characters; contains 94 characters
+ 373 | WARNING | Line exceeds 85 characters; contains 96 characters
+ 374 | WARNING | Line exceeds 85 characters; contains 111 characters
+ 375 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 376 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 377 | WARNING | Line exceeds 85 characters; contains 90 characters
+ 378 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 379 | WARNING | Line exceeds 85 characters; contains 93 characters
+ 381 | WARNING | Line exceeds 85 characters; contains 109 characters
+ 391 | WARNING | Line exceeds 85 characters; contains 90 characters
+ 393 | WARNING | Line exceeds 85 characters; contains 97 characters
+ 400 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 402 | WARNING | Line exceeds 85 characters; contains 98 characters
+ 403 | WARNING | Line exceeds 85 characters; contains 89 characters
+ 406 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 407 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 418 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 434 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 437 | WARNING | Line exceeds 85 characters; contains 89 characters
+ 470 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 474 | WARNING | Line exceeds 85 characters; contains 89 characters
+ 475 | WARNING | Line exceeds 85 characters; contains 105 characters
+ 476 | WARNING | Line exceeds 85 characters; contains 96 characters
+ 477 | WARNING | Line exceeds 85 characters; contains 101 characters
+ 478 | WARNING | Line exceeds 85 characters; contains 108 characters
+ 479 | WARNING | Line exceeds 85 characters; contains 103 characters
+ 480 | WARNING | Line exceeds 85 characters; contains 100 characters
+ 481 | WARNING | Line exceeds 85 characters; contains 100 characters
+ 482 | WARNING | Line exceeds 85 characters; contains 108 characters
+ 483 | WARNING | Line exceeds 85 characters; contains 93 characters
+ 484 | WARNING | Line exceeds 85 characters; contains 115 characters
+ 485 | WARNING | Line exceeds 85 characters; contains 102 characters
+ 486 | WARNING | Line exceeds 85 characters; contains 101 characters
+ 487 | WARNING | Line exceeds 85 characters; contains 101 characters
+ 488 | WARNING | Line exceeds 85 characters; contains 105 characters
+ 489 | WARNING | Line exceeds 85 characters; contains 102 characters
+ 490 | WARNING | Line exceeds 85 characters; contains 111 characters
+ 491 | WARNING | Line exceeds 85 characters; contains 104 characters
+ 492 | WARNING | Line exceeds 85 characters; contains 119 characters
+ 493 | WARNING | Line exceeds 85 characters; contains 125 characters
+ 494 | WARNING | Line exceeds 85 characters; contains 102 characters
+ 495 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 496 | WARNING | Line exceeds 85 characters; contains 101 characters
+ 497 | WARNING | Line exceeds 85 characters; contains 100 characters
+ 498 | WARNING | Line exceeds 85 characters; contains 103 characters
+ 499 | WARNING | Line exceeds 85 characters; contains 107 characters
+ 500 | WARNING | Line exceeds 85 characters; contains 108 characters
+ 501 | WARNING | Line exceeds 85 characters; contains 114 characters
+ 502 | WARNING | Line exceeds 85 characters; contains 110 characters
+ 503 | WARNING | Line exceeds 85 characters; contains 108 characters
+ 504 | WARNING | Line exceeds 85 characters; contains 102 characters
+ 505 | WARNING | Line exceeds 85 characters; contains 98 characters
+ 506 | WARNING | Line exceeds 85 characters; contains 100 characters
+ 507 | WARNING | Line exceeds 85 characters; contains 101 characters
+ 508 | WARNING | Line exceeds 85 characters; contains 101 characters
+ 509 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 510 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 511 | WARNING | Line exceeds 85 characters; contains 102 characters
+ 512 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 515 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 516 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 517 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 518 | WARNING | Line exceeds 85 characters; contains 93 characters
+ 520 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 521 | WARNING | Line exceeds 85 characters; contains 93 characters
+ 522 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 523 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 524 | WARNING | Line exceeds 85 characters; contains 90 characters
+ 525 | WARNING | Line exceeds 85 characters; contains 91 characters
+ 526 | WARNING | Line exceeds 85 characters; contains 89 characters
+ 527 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 528 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 529 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 530 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 531 | WARNING | Line exceeds 85 characters; contains 90 characters
+ 532 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 533 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 534 | WARNING | Line exceeds 85 characters; contains 89 characters
+ 535 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 536 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 537 | WARNING | Line exceeds 85 characters; contains 90 characters
+ 538 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 539 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 540 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 541 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 543 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 545 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 546 | WARNING | Line exceeds 85 characters; contains 102 characters
+ 547 | WARNING | Line exceeds 85 characters; contains 101 characters
+ 548 | WARNING | Line exceeds 85 characters; contains 102 characters
+ 549 | WARNING | Line exceeds 85 characters; contains 109 characters
+ 550 | WARNING | Line exceeds 85 characters; contains 103 characters
+ 551 | WARNING | Line exceeds 85 characters; contains 103 characters
+ 552 | WARNING | Line exceeds 85 characters; contains 108 characters
+ 553 | WARNING | Line exceeds 85 characters; contains 101 characters
+ 554 | WARNING | Line exceeds 85 characters; contains 103 characters
+ 555 | WARNING | Line exceeds 85 characters; contains 107 characters
+ 556 | WARNING | Line exceeds 85 characters; contains 103 characters
+ 557 | WARNING | Line exceeds 85 characters; contains 103 characters
+ 558 | WARNING | Line exceeds 85 characters; contains 104 characters
+ 559 | WARNING | Line exceeds 85 characters; contains 107 characters
+ 560 | WARNING | Line exceeds 85 characters; contains 97 characters
+ 562 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 563 | WARNING | Line exceeds 85 characters; contains 101 characters
+ 564 | WARNING | Line exceeds 85 characters; contains 91 characters
+ 565 | WARNING | Line exceeds 85 characters; contains 102 characters
+ 566 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 567 | WARNING | Line exceeds 85 characters; contains 94 characters
+ 568 | WARNING | Line exceeds 85 characters; contains 111 characters
+ 569 | WARNING | Line exceeds 85 characters; contains 115 characters
+ 570 | WARNING | Line exceeds 85 characters; contains 110 characters
+ 571 | WARNING | Line exceeds 85 characters; contains 104 characters
+ 572 | WARNING | Line exceeds 85 characters; contains 106 characters
+ 573 | WARNING | Line exceeds 85 characters; contains 112 characters
+ 574 | WARNING | Line exceeds 85 characters; contains 123 characters
+ 575 | WARNING | Line exceeds 85 characters; contains 108 characters
+ 576 | WARNING | Line exceeds 85 characters; contains 106 characters
+ 577 | WARNING | Line exceeds 85 characters; contains 108 characters
+ 578 | WARNING | Line exceeds 85 characters; contains 96 characters
+ 579 | WARNING | Line exceeds 85 characters; contains 109 characters
+ 580 | WARNING | Line exceeds 85 characters; contains 103 characters
+ 581 | WARNING | Line exceeds 85 characters; contains 102 characters
+ 582 | WARNING | Line exceeds 85 characters; contains 108 characters
+ 583 | WARNING | Line exceeds 85 characters; contains 105 characters
+ 584 | WARNING | Line exceeds 85 characters; contains 106 characters
+ 585 | WARNING | Line exceeds 85 characters; contains 110 characters
+ 586 | WARNING | Line exceeds 85 characters; contains 108 characters
+ 587 | WARNING | Line exceeds 85 characters; contains 91 characters
+ 588 | WARNING | Line exceeds 85 characters; contains 94 characters
+ 589 | WARNING | Line exceeds 85 characters; contains 92 characters
+ 590 | WARNING | Line exceeds 85 characters; contains 109 characters
+ 591 | WARNING | Line exceeds 85 characters; contains 115 characters
+ 592 | WARNING | Line exceeds 85 characters; contains 111 characters
+ 593 | WARNING | Line exceeds 85 characters; contains 107 characters
+ 594 | WARNING | Line exceeds 85 characters; contains 112 characters
+ 595 | WARNING | Line exceeds 85 characters; contains 111 characters
+ 596 | WARNING | Line exceeds 85 characters; contains 106 characters
+ 597 | WARNING | Line exceeds 85 characters; contains 113 characters
+ 598 | WARNING | Line exceeds 85 characters; contains 117 characters
+ 599 | WARNING | Line exceeds 85 characters; contains 119 characters
+ 600 | WARNING | Line exceeds 85 characters; contains 114 characters
+ 601 | WARNING | Line exceeds 85 characters; contains 117 characters
+ 602 | WARNING | Line exceeds 85 characters; contains 107 characters
+ 603 | WARNING | Line exceeds 85 characters; contains 113 characters
+ 604 | WARNING | Line exceeds 85 characters; contains 112 characters
+ 605 | WARNING | Line exceeds 85 characters; contains 119 characters
+ 606 | WARNING | Line exceeds 85 characters; contains 115 characters
+ 607 | WARNING | Line exceeds 85 characters; contains 110 characters
+ 608 | WARNING | Line exceeds 85 characters; contains 118 characters
+ 609 | WARNING | Line exceeds 85 characters; contains 123 characters
+ 610 | WARNING | Line exceeds 85 characters; contains 114 characters
+ 611 | WARNING | Line exceeds 85 characters; contains 116 characters
+ 612 | WARNING | Line exceeds 85 characters; contains 104 characters
+ 613 | WARNING | Line exceeds 85 characters; contains 110 characters
+ 614 | WARNING | Line exceeds 85 characters; contains 103 characters
+ 615 | WARNING | Line exceeds 85 characters; contains 98 characters
+ 616 | WARNING | Line exceeds 85 characters; contains 103 characters
+ 617 | WARNING | Line exceeds 85 characters; contains 102 characters
+ 618 | WARNING | Line exceeds 85 characters; contains 101 characters
+ 619 | WARNING | Line exceeds 85 characters; contains 97 characters
+ 620 | WARNING | Line exceeds 85 characters; contains 96 characters
+ 621 | WARNING | Line exceeds 85 characters; contains 102 characters
+ 622 | WARNING | Line exceeds 85 characters; contains 94 characters
+ 623 | WARNING | Line exceeds 85 characters; contains 93 characters
+ 624 | WARNING | Line exceeds 85 characters; contains 96 characters
+ 625 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 626 | WARNING | Line exceeds 85 characters; contains 96 characters
+ 627 | WARNING | Line exceeds 85 characters; contains 106 characters
+ 628 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 629 | WARNING | Line exceeds 85 characters; contains 90 characters
+ 631 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 632 | WARNING | Line exceeds 85 characters; contains 88 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\controleurs\c_accueil.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 14 | ERROR | Missing @category tag in file comment
+ 14 | ERROR | Missing @package tag in file comment
+ 14 | ERROR | Missing @author tag in file comment
+ 14 | ERROR | Missing @license tag in file comment
+ 14 | ERROR | Missing @link tag in file comment
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\controleurs\c_connexion.php
+----------------------------------------------------------------------
+FOUND 6 ERRORS AND 3 WARNINGS AFFECTING 5 LINES
+----------------------------------------------------------------------
+  1 | WARNING | File has mixed line endings; this may cause incorrect
+    |         | results
+ 14 | ERROR   | Missing @category tag in file comment
+ 14 | ERROR   | Missing @package tag in file comment
+ 14 | ERROR   | Missing @author tag in file comment
+ 14 | ERROR   | Missing @license tag in file comment
+ 14 | ERROR   | Missing @link tag in file comment
+ 34 | WARNING | Line exceeds 85 characters; contains 196 characters
+ 43 | WARNING | Line exceeds 85 characters; contains 191 characters
+ 49 | ERROR   | Expected "if (...) {\n"; found "if (...) {"
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\controleurs\c_deconnexion.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AND 1 WARNING AFFECTING 2 LINES
+----------------------------------------------------------------------
+  1 | WARNING | File has mixed line endings; this may cause incorrect
+    |         | results
+ 14 | ERROR   | Missing @category tag in file comment
+ 14 | ERROR   | Missing @package tag in file comment
+ 14 | ERROR   | Missing @author tag in file comment
+ 14 | ERROR   | Missing @license tag in file comment
+ 14 | ERROR   | Missing @link tag in file comment
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\controleurs\c_etatFrais.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AND 1 WARNING AFFECTING 2 LINES
+----------------------------------------------------------------------
+  1 | WARNING | File has mixed line endings; this may cause incorrect
+    |         | results
+ 14 | ERROR   | Missing @category tag in file comment
+ 14 | ERROR   | Missing @package tag in file comment
+ 14 | ERROR   | Missing @author tag in file comment
+ 14 | ERROR   | Missing @license tag in file comment
+ 14 | ERROR   | Missing @link tag in file comment
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\controleurs\c_gererFrais.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AND 1 WARNING AFFECTING 2 LINES
+----------------------------------------------------------------------
+  1 | WARNING | File has mixed line endings; this may cause incorrect
+    |         | results
+ 14 | ERROR   | Missing @category tag in file comment
+ 14 | ERROR   | Missing @package tag in file comment
+ 14 | ERROR   | Missing @author tag in file comment
+ 14 | ERROR   | Missing @license tag in file comment
+ 14 | ERROR   | Missing @link tag in file comment
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\controleurs\c_suivreFrais.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 13 | ERROR | Missing @category tag in file comment
+ 13 | ERROR | Missing @package tag in file comment
+ 13 | ERROR | Missing @author tag in file comment
+ 13 | ERROR | Missing @license tag in file comment
+ 13 | ERROR | Missing @link tag in file comment
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\controleurs\c_valideFrais.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AND 2 WARNINGS AFFECTING 3 LINES
+----------------------------------------------------------------------
+   1 | WARNING | File has mixed line endings; this may cause
+     |         | incorrect results
+  13 | ERROR   | Missing @category tag in file comment
+  13 | ERROR   | Missing @package tag in file comment
+  13 | ERROR   | Missing @author tag in file comment
+  13 | ERROR   | Missing @license tag in file comment
+  13 | ERROR   | Missing @link tag in file comment
+ 101 | WARNING | Line exceeds 85 characters; contains 87 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\cr\_css\bootstrap.min.css
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\cr\_css\nv.d3.min.css
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\cr\_js\bootstrap.min.js
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\cr\_js\d3.min.js
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\cr\_js\jquery.min.js
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\cr\_js\nv.d3.min.js
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\cr\_js\popper.min.js
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File appears to be minified and cannot be processed
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\includes\class.pdogsb.inc.php
+----------------------------------------------------------------------
+FOUND 72 ERRORS AND 15 WARNINGS AFFECTING 82 LINES
+----------------------------------------------------------------------
+   1 | WARNING | File has mixed line endings; this may cause
+     |         | incorrect results
+   1 | ERROR   | Missing file doc comment
+  22 | ERROR   | Missing @category tag in class comment
+  22 | ERROR   | Missing @package tag in class comment
+  22 | ERROR   | Missing @author tag in class comment
+  22 | ERROR   | Missing @license tag in class comment
+  22 | ERROR   | Missing @link tag in class comment
+  55 | WARNING | Line exceeds 85 characters; contains 90 characters
+  86 | ERROR   | Missing parameter comment
+  88 | ERROR   | Missing parameter comment
+ 113 | ERROR   | Missing parameter comment
+ 122 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 135 | ERROR   | Missing parameter comment
+ 137 | ERROR   | Missing parameter comment
+ 164 | ERROR   | Missing parameter comment
+ 166 | ERROR   | Missing parameter comment
+ 189 | ERROR   | Missing parameter comment
+ 191 | ERROR   | Missing parameter comment
+ 236 | ERROR   | Missing parameter comment
+ 238 | ERROR   | Missing parameter comment
+ 240 | ERROR   | Missing parameter comment
+ 273 | ERROR   | Missing parameter comment
+ 275 | ERROR   | Missing parameter comment
+ 277 | ERROR   | Missing parameter comment
+ 301 | ERROR   | Missing parameter comment
+ 302 | ERROR   | Missing parameter comment
+ 303 | ERROR   | Missing @return tag in function comment
+ 321 | WARNING | Line exceeds 85 characters; contains 93 characters
+ 322 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 324 | ERROR   | Missing parameter comment
+ 325 | ERROR   | Missing parameter comment
+ 326 | ERROR   | Tag @return cannot be grouped with parameter tags in
+     |         | a doc comment
+ 330 | WARNING | Line exceeds 85 characters; contains 92 characters
+ 344 | WARNING | Line exceeds 85 characters; contains 91 characters
+ 345 | WARNING | Line exceeds 85 characters; contains 94 characters
+ 346 | WARNING | Line exceeds 85 characters; contains 108 characters
+ 360 | ERROR   | Missing parameter comment
+ 361 | ERROR   | Missing parameter comment
+ 362 | ERROR   | Tag @return cannot be grouped with parameter tags in
+     |         | a doc comment
+ 380 | ERROR   | Missing parameter comment
+ 382 | ERROR   | Missing parameter comment
+ 407 | ERROR   | Missing parameter comment
+ 433 | ERROR   | Missing parameter comment
+ 435 | ERROR   | Missing parameter comment
+ 482 | ERROR   | Missing parameter comment
+ 484 | ERROR   | Missing parameter comment
+ 486 | ERROR   | Missing parameter comment
+ 488 | ERROR   | Missing parameter comment
+ 490 | ERROR   | Missing parameter comment
+ 515 | ERROR   | Missing parameter comment
+ 516 | ERROR   | Missing parameter comment
+ 517 | ERROR   | Missing parameter comment
+ 518 | ERROR   | Missing parameter comment
+ 519 | ERROR   | Missing parameter comment
+ 520 | ERROR   | Missing parameter comment
+ 521 | ERROR   | Missing @return tag in function comment
+ 527 | WARNING | Line exceeds 85 characters; contains 167 characters
+ 542 | ERROR   | Missing parameter comment
+ 543 | ERROR   | Missing parameter comment
+ 544 | ERROR   | Missing parameter comment
+ 545 | ERROR   | Missing parameter comment
+ 546 | ERROR   | Missing parameter comment
+ 547 | ERROR   | Missing parameter comment
+ 548 | ERROR   | Missing @return tag in function comment
+ 554 | WARNING | Line exceeds 85 characters; contains 109 characters
+ 571 | ERROR   | Missing parameter comment
+ 589 | ERROR   | Missing parameter comment
+ 621 | ERROR   | Missing parameter comment
+ 653 | ERROR   | Missing parameter comment
+ 684 | WARNING | Line exceeds 85 characters; contains 127 characters
+ 702 | WARNING | Line exceeds 85 characters; contains 91 characters
+ 709 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 735 | ERROR   | Missing parameter comment
+ 737 | ERROR   | Missing parameter comment
+ 766 | ERROR   | Missing parameter comment
+ 768 | ERROR   | Missing parameter comment
+ 770 | ERROR   | Missing parameter comment
+ 809 | ERROR   | Doc comment short description must start with a
+     |         | capital letter
+ 811 | ERROR   | Missing @return tag in function comment
+ 830 | ERROR   | Doc comment short description must start with a
+     |         | capital letter
+ 832 | ERROR   | Missing @return tag in function comment
+ 853 | ERROR   | Missing parameter comment
+ 855 | ERROR   | Missing parameter comment
+ 857 | ERROR   | Missing @return tag in function comment
+ 873 | ERROR   | Missing parameter comment
+ 874 | ERROR   | Tag @return cannot be grouped with parameter tags in
+     |         | a doc comment
+ 879 | WARNING | Line exceeds 85 characters; contains 91 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\includes\fct.inc.php
+----------------------------------------------------------------------
+FOUND 40 ERRORS AND 3 WARNINGS AFFECTING 39 LINES
+----------------------------------------------------------------------
+   1 | WARNING | File has mixed line endings; this may cause
+     |         | incorrect results
+  15 | ERROR   | Missing @category tag in file comment
+  15 | ERROR   | Missing @package tag in file comment
+  15 | ERROR   | Missing @author tag in file comment
+  15 | ERROR   | Missing @license tag in file comment
+  15 | ERROR   | Missing @link tag in file comment
+  30 | ERROR   | Missing parameter comment
+  32 | ERROR   | Missing parameter comment
+  34 | ERROR   | Missing parameter comment
+  36 | ERROR   | Missing parameter comment
+  38 | ERROR   | Tag @return cannot be grouped with parameter tags in
+     |         | a doc comment
+  62 | ERROR   | Missing parameter comment
+  77 | ERROR   | Missing parameter comment
+  92 | ERROR   | Missing parameter comment
+ 110 | ERROR   | Missing parameter comment
+ 112 | ERROR   | Tag @return cannot be grouped with parameter tags in
+     |         | a doc comment
+ 124 | ERROR   | Missing parameter comment
+ 126 | ERROR   | Tag @return cannot be grouped with parameter tags in
+     |         | a doc comment
+ 154 | ERROR   | Missing parameter comment
+ 167 | ERROR   | Missing parameter comment
+ 186 | ERROR   | Missing parameter comment
+ 204 | ERROR   | Missing parameter comment
+ 230 | ERROR   | Missing parameter comment
+ 246 | ERROR   | Missing parameter comment
+ 248 | ERROR   | Missing parameter comment
+ 250 | ERROR   | Missing parameter comment
+ 283 | ERROR   | Missing parameter comment
+ 322 | ERROR   | Missing doc comment for function ajouterInfo()
+ 348 | ERROR   | Doc comment for parameter "$tableauDeFiches" missing
+ 351 | ERROR   | Missing parameter type
+ 353 | ERROR   | Tag @return cannot be grouped with parameter tags in
+     |         | a doc comment
+ 367 | ERROR   | Doc comment for parameter "$tableauDeFiches" missing
+ 370 | ERROR   | Missing parameter type
+ 372 | ERROR   | Tag @return cannot be grouped with parameter tags in
+     |         | a doc comment
+ 389 | ERROR   | Missing parameter comment
+ 390 | ERROR   | Missing @return tag in function comment
+ 433 | WARNING | Line exceeds 85 characters; contains 93 characters
+ 508 | ERROR   | Missing parameter comment
+ 510 | ERROR   | Missing parameter comment
+ 512 | ERROR   | Missing parameter comment
+ 514 | ERROR   | Missing parameter comment
+ 516 | ERROR   | Tag @return cannot be grouped with parameter tags in
+     |         | a doc comment
+ 525 | WARNING | Line exceeds 85 characters; contains 121 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\includes\fpdf.php
+----------------------------------------------------------------------
+FOUND 467 ERRORS AND 66 WARNINGS AFFECTING 430 LINES
+----------------------------------------------------------------------
+    1 | WARNING | File has mixed line endings; this may cause
+      |         | incorrect results
+    8 | WARNING | PHP version not specified
+    8 | ERROR   | Missing @category tag in file comment
+    8 | ERROR   | Missing @package tag in file comment
+    8 | ERROR   | Missing @author tag in file comment
+    8 | ERROR   | Missing @license tag in file comment
+    8 | ERROR   | Missing @link tag in file comment
+   12 | ERROR   | Missing doc comment for class FPDF
+   54 | WARNING | Line exceeds 85 characters; contains 90 characters
+   70 | ERROR   | Doc comment for parameter "$orientation" missing
+   70 | ERROR   | Doc comment for parameter "$unit" missing
+   70 | ERROR   | Doc comment for parameter "$size" missing
+   72 | ERROR   | There must be no blank lines after the function
+      |         | comment
+  105 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  107 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  107 | WARNING | Line exceeds 85 characters; contains 87 characters
+  111 | ERROR   | Expected "} elseif (...) {\n"; found "}\n       
+      |         | elseif(...) {\n"
+  117 | WARNING | Line exceeds 85 characters; contains 92 characters
+  119 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  121 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+      |         | {\n"
+  123 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+      |         | {\n"
+  125 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+      |         | {\n"
+  131 | WARNING | Line exceeds 85 characters; contains 120 characters
+  138 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  143 | ERROR   | Expected "} elseif (...) {\n"; found "}\n       
+      |         | elseif(...) {\n"
+  148 | ERROR   | Expected "} else {\n"; found "}\n        else {\n"
+  173 | ERROR   | Missing doc comment for function SetMargins()
+  173 | ERROR   | Method name "FPDF::SetMargins" is not in camel caps
+      |         | format
+  178 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  184 | ERROR   | Missing doc comment for function SetLeftMargin()
+  184 | ERROR   | Method name "FPDF::SetLeftMargin" is not in camel
+      |         | caps format
+  188 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  193 | ERROR   | Missing doc comment for function SetTopMargin()
+  193 | ERROR   | Method name "FPDF::SetTopMargin" is not in camel
+      |         | caps format
+  199 | ERROR   | Missing doc comment for function SetRightMargin()
+  199 | ERROR   | Method name "FPDF::SetRightMargin" is not in camel
+      |         | caps format
+  205 | ERROR   | Missing doc comment for function SetAutoPageBreak()
+  205 | ERROR   | Method name "FPDF::SetAutoPageBreak" is not in
+      |         | camel caps format
+  213 | ERROR   | Missing doc comment for function SetDisplayMode()
+  213 | ERROR   | Method name "FPDF::SetDisplayMode" is not in camel
+      |         | caps format
+  216 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  216 | WARNING | Line exceeds 85 characters; contains 111 characters
+  221 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  221 | WARNING | Line exceeds 85 characters; contains 96 characters
+  228 | ERROR   | Missing doc comment for function SetCompression()
+  228 | ERROR   | Method name "FPDF::SetCompression" is not in camel
+      |         | caps format
+  231 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  238 | ERROR   | Missing doc comment for function SetTitle()
+  238 | ERROR   | Method name "FPDF::SetTitle" is not in camel caps
+      |         | format
+  244 | ERROR   | Missing doc comment for function SetAuthor()
+  244 | ERROR   | Method name "FPDF::SetAuthor" is not in camel caps
+      |         | format
+  250 | ERROR   | Missing doc comment for function SetSubject()
+  250 | ERROR   | Method name "FPDF::SetSubject" is not in camel caps
+      |         | format
+  256 | ERROR   | Missing doc comment for function SetKeywords()
+  256 | ERROR   | Method name "FPDF::SetKeywords" is not in camel
+      |         | caps format
+  262 | ERROR   | Missing doc comment for function SetCreator()
+  262 | ERROR   | Method name "FPDF::SetCreator" is not in camel caps
+      |         | format
+  268 | ERROR   | Missing doc comment for function AliasNbPages()
+  268 | ERROR   | Method name "FPDF::AliasNbPages" is not in camel
+      |         | caps format
+  274 | ERROR   | Missing doc comment for function Error()
+  274 | ERROR   | Method name "FPDF::Error" is not in camel caps
+      |         | format
+  280 | ERROR   | Missing doc comment for function Close()
+  280 | ERROR   | Method name "FPDF::Close" is not in camel caps
+      |         | format
+  283 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  286 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  299 | ERROR   | Missing doc comment for function AddPage()
+  299 | ERROR   | Method name "FPDF::AddPage" is not in camel caps
+      |         | format
+  302 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  313 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  329 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  334 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  338 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  348 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  353 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  357 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  361 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  369 | ERROR   | Missing doc comment for function Header()
+  369 | ERROR   | Method name "FPDF::Header" is not in camel caps
+      |         | format
+  374 | ERROR   | Missing doc comment for function Footer()
+  374 | ERROR   | Method name "FPDF::Footer" is not in camel caps
+      |         | format
+  379 | ERROR   | Missing doc comment for function PageNo()
+  379 | ERROR   | Method name "FPDF::PageNo" is not in camel caps
+      |         | format
+  385 | ERROR   | Missing doc comment for function SetDrawColor()
+  385 | ERROR   | Method name "FPDF::SetDrawColor" is not in camel
+      |         | caps format
+  388 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  393 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  398 | ERROR   | Missing doc comment for function SetFillColor()
+  398 | ERROR   | Method name "FPDF::SetFillColor" is not in camel
+      |         | caps format
+  401 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  407 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  412 | ERROR   | Missing doc comment for function SetTextColor()
+  412 | ERROR   | Method name "FPDF::SetTextColor" is not in camel
+      |         | caps format
+  415 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  423 | ERROR   | Missing doc comment for function GetStringWidth()
+  423 | ERROR   | Method name "FPDF::GetStringWidth" is not in camel
+      |         | caps format
+  430 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+  436 | ERROR   | Missing doc comment for function SetLineWidth()
+  436 | ERROR   | Method name "FPDF::SetLineWidth" is not in camel
+      |         | caps format
+  440 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  445 | ERROR   | Missing doc comment for function Line()
+  445 | ERROR   | Method name "FPDF::Line" is not in camel caps
+      |         | format
+  448 | WARNING | Line exceeds 85 characters; contains 136 characters
+  451 | ERROR   | Missing doc comment for function Rect()
+  451 | ERROR   | Method name "FPDF::Rect" is not in camel caps
+      |         | format
+  454 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  456 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+      |         | {\n"
+  461 | WARNING | Line exceeds 85 characters; contains 127 characters
+  464 | ERROR   | Missing doc comment for function AddFont()
+  464 | ERROR   | Method name "FPDF::AddFont" is not in camel caps
+      |         | format
+  468 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  472 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  476 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  481 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  483 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  484 | WARNING | Line exceeds 85 characters; contains 90 characters
+  486 | WARNING | Line exceeds 85 characters; contains 110 characters
+  492 | ERROR   | Missing doc comment for function SetFont()
+  492 | ERROR   | Method name "FPDF::SetFont" is not in camel caps
+      |         | format
+  495 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  501 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  505 | ERROR   | Expected "} else {\n"; found "}\n        else {\n"
+  508 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  511 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  515 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  515 | WARNING | Line exceeds 85 characters; contains 96 characters
+  520 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  522 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  525 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  526 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  530 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  534 | ERROR   | Expected "} else {\n"; found "}\n            else
+      |         | {\n"
+  544 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  545 | WARNING | Line exceeds 85 characters; contains 100 characters
+  549 | ERROR   | Missing doc comment for function SetFontSize()
+  549 | ERROR   | Method name "FPDF::SetFontSize" is not in camel
+      |         | caps format
+  552 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  557 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  558 | WARNING | Line exceeds 85 characters; contains 100 characters
+  562 | ERROR   | Missing doc comment for function AddLink()
+  562 | ERROR   | Method name "FPDF::AddLink" is not in camel caps
+      |         | format
+  570 | ERROR   | Missing doc comment for function SetLink()
+  570 | ERROR   | Method name "FPDF::SetLink" is not in camel caps
+      |         | format
+  573 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  576 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  582 | ERROR   | Missing doc comment for function Link()
+  582 | ERROR   | Method name "FPDF::Link" is not in camel caps
+      |         | format
+  585 | WARNING | Line exceeds 85 characters; contains 118 characters
+  588 | ERROR   | Missing doc comment for function Text()
+  588 | ERROR   | Method name "FPDF::Text" is not in camel caps
+      |         | format
+  591 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  594 | WARNING | Line exceeds 85 characters; contains 110 characters
+  595 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  598 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  604 | ERROR   | Missing doc comment for function AcceptPageBreak()
+  604 | ERROR   | Method name "FPDF::AcceptPageBreak" is not in camel
+      |         | caps format
+  610 | ERROR   | Missing doc comment for function Cell()
+  610 | ERROR   | Method name "FPDF::Cell" is not in camel caps
+      |         | format
+  610 | WARNING | Line exceeds 85 characters; contains 88 characters
+  614 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  614 | WARNING | Line exceeds 85 characters; contains 117 characters
+  618 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  622 | WARNING | Line exceeds 85 characters; contains 90 characters
+  624 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  629 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  633 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  634 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  639 | WARNING | Line exceeds 85 characters; contains 112 characters
+  641 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  644 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  645 | WARNING | Line exceeds 85 characters; contains 116 characters
+  647 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  648 | WARNING | Line exceeds 85 characters; contains 116 characters
+  650 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  651 | WARNING | Line exceeds 85 characters; contains 126 characters
+  653 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  654 | WARNING | Line exceeds 85 characters; contains 126 characters
+  657 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  658 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  661 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  663 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+      |         | {\n"
+  668 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  671 | WARNING | Line exceeds 85 characters; contains 148 characters
+  672 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  673 | WARNING | Line exceeds 85 characters; contains 102 characters
+  675 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  678 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  679 | WARNING | Line exceeds 85 characters; contains 131 characters
+  682 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  686 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  689 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  693 | ERROR   | Expected "} else {\n"; found "}\n        else {\n"
+  698 | ERROR   | Missing doc comment for function MultiCell()
+  698 | ERROR   | Method name "FPDF::MultiCell" is not in camel caps
+      |         | format
+  701 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  705 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  711 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  715 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  716 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  721 | ERROR   | Expected "} else {\n"; found "}\n            else\n
+      |         |            {\n"
+  724 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  727 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  739 | ERROR   | Expected "while (...) {\n"; found "while(...)\n    
+      |         |    {\n"
+  743 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  745 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  756 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  761 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  767 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  769 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  770 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  773 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  779 | ERROR   | Expected "} else {\n"; found "}\n               
+      |         | else\n                {\n"
+  781 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  782 | WARNING | Line exceeds 85 characters; contains 91 characters
+  785 | WARNING | Line exceeds 85 characters; contains 87 characters
+  793 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  797 | ERROR   | Expected "} else {\n"; found "}\n            else
+      |         | {\n"
+  802 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  806 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  813 | ERROR   | Missing doc comment for function Write()
+  813 | ERROR   | Method name "FPDF::Write" is not in camel caps
+      |         | format
+  816 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  829 | ERROR   | Expected "while (...) {\n"; found "while(...)\n    
+      |         |    {\n"
+  833 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  840 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  848 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  852 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  854 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  855 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  865 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  868 | WARNING | Line exceeds 85 characters; contains 87 characters
+  870 | ERROR   | Expected "} else {\n"; found "}\n               
+      |         | else\n                {\n"
+  872 | WARNING | Line exceeds 85 characters; contains 89 characters
+  878 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  885 | ERROR   | Expected "} else {\n"; found "}\n            else
+      |         | {\n"
+  890 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  891 | WARNING | Line exceeds 85 characters; contains 94 characters
+  895 | ERROR   | Missing doc comment for function Ln()
+  895 | ERROR   | Method name "FPDF::Ln" is not in camel caps format
+  899 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  906 | ERROR   | Missing doc comment for function Image()
+  906 | ERROR   | Method name "FPDF::Image" is not in camel caps
+      |         | format
+  909 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  912 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  914 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  916 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  917 | WARNING | Line exceeds 85 characters; contains 99 characters
+  922 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  926 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  933 | ERROR   | Expected "} else {\n"; found "}\n        else {\n"
+  938 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  943 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  946 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  949 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  952 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  957 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  958 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  958 | WARNING | Line exceeds 85 characters; contains 121 characters
+  961 | WARNING | Line exceeds 85 characters; contains 94 characters
+  968 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  971 | WARNING | Line exceeds 85 characters; contains 151 characters
+  972 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  977 | ERROR   | Missing doc comment for function GetPageWidth()
+  977 | ERROR   | Method name "FPDF::GetPageWidth" is not in camel
+      |         | caps format
+  983 | ERROR   | Missing doc comment for function GetPageHeight()
+  983 | ERROR   | Method name "FPDF::GetPageHeight" is not in camel
+      |         | caps format
+  989 | ERROR   | Missing doc comment for function GetX()
+  989 | ERROR   | Method name "FPDF::GetX" is not in camel caps
+      |         | format
+  995 | ERROR   | Missing doc comment for function SetX()
+  995 | ERROR   | Method name "FPDF::SetX" is not in camel caps
+      |         | format
+  998 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1005 | ERROR   | Missing doc comment for function GetY()
+ 1005 | ERROR   | Method name "FPDF::GetY" is not in camel caps
+      |         | format
+ 1011 | ERROR   | Missing doc comment for function SetY()
+ 1011 | ERROR   | Method name "FPDF::SetY" is not in camel caps
+      |         | format
+ 1014 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1019 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1024 | ERROR   | Missing doc comment for function SetXY()
+ 1024 | ERROR   | Method name "FPDF::SetXY" is not in camel caps
+      |         | format
+ 1031 | ERROR   | Missing doc comment for function Output()
+ 1031 | ERROR   | Method name "FPDF::Output" is not in camel caps
+      |         | format
+ 1035 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1041 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1044 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1052 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1055 | WARNING | Line exceeds 85 characters; contains 103 characters
+ 1065 | WARNING | Line exceeds 85 characters; contains 103 characters
+ 1072 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1087 | ERROR   | There must be no blank lines after the function
+      |         | comment
+ 1087 | ERROR   | Missing @return tag in function comment
+ 1089 | ERROR   | Protected method name "FPDF::_dochecks" must not be
+      |         | prefixed with an underscore
+ 1092 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1097 | ERROR   | Missing doc comment for function _checkoutput()
+ 1097 | ERROR   | Protected method name "FPDF::_checkoutput" must not
+      |         | be prefixed with an underscore
+ 1099 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1100 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1101 | WARNING | Line exceeds 85 characters; contains 120 characters
+ 1104 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1106 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1110 | ERROR   | Expected "} else {\n"; found "}\n            else
+      |         | {\n"
+ 1111 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 1116 | ERROR   | Missing doc comment for function _getpagesize()
+ 1116 | ERROR   | Protected method name "FPDF::_getpagesize" must not
+      |         | be prefixed with an underscore
+ 1118 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1120 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1126 | ERROR   | Expected "} else {\n"; found "}\n        else\n    
+      |         |    {\n"
+ 1128 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1136 | ERROR   | Missing doc comment for function _beginpage()
+ 1136 | ERROR   | Protected method name "FPDF::_beginpage" must not
+      |         | be prefixed with an underscore
+ 1145 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1150 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1155 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1155 | WARNING | Line exceeds 85 characters; contains 119 characters
+ 1157 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1161 | ERROR   | Expected "} else {\n"; found "}\n            else\n
+      |         |            {\n"
+ 1172 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1172 | WARNING | Line exceeds 85 characters; contains 119 characters
+ 1175 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1176 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1184 | ERROR   | Missing doc comment for function _endpage()
+ 1184 | ERROR   | Protected method name "FPDF::_endpage" must not be
+      |         | prefixed with an underscore
+ 1189 | ERROR   | Missing doc comment for function _loadfont()
+ 1189 | ERROR   | Protected method name "FPDF::_loadfont" must not be
+      |         | prefixed with an underscore
+ 1192 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1196 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1199 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1202 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1208 | ERROR   | Missing doc comment for function _isascii()
+ 1208 | ERROR   | Protected method name "FPDF::_isascii" must not be
+      |         | prefixed with an underscore
+ 1212 | ERROR   | Expected "for (...) {\n"; found "for(...)\n       
+      |         | {\n"
+ 1214 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1221 | ERROR   | Missing doc comment for function _httpencode()
+ 1221 | ERROR   | Protected method name "FPDF::_httpencode" must not
+      |         | be prefixed with an underscore
+ 1224 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1227 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1230 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1237 | ERROR   | Missing doc comment for function _UTF8toUTF16()
+ 1237 | ERROR   | Protected method name "FPDF::_UTF8toUTF16" must not
+      |         | be prefixed with an underscore
+ 1243 | ERROR   | Expected "while (...) {\n"; found "while(...)\n    
+      |         |    {\n"
+ 1246 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1253 | ERROR   | Expected "} elseif (...) {\n"; found "}\n          
+      |         |  elseif(...) {\n"
+ 1259 | ERROR   | Expected "} else {\n"; found "}\n            else\n
+      |         |            {\n"
+ 1268 | ERROR   | Missing doc comment for function _escape()
+ 1268 | ERROR   | Protected method name "FPDF::_escape" must not be
+      |         | prefixed with an underscore
+ 1271 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1271 | WARNING | Line exceeds 85 characters; contains 120 characters
+ 1272 | WARNING | Line exceeds 85 characters; contains 94 characters
+ 1278 | ERROR   | Missing doc comment for function _textstring()
+ 1278 | ERROR   | Protected method name "FPDF::_textstring" must not
+      |         | be prefixed with an underscore
+ 1281 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1287 | ERROR   | Missing doc comment for function _dounderline()
+ 1287 | ERROR   | Protected method name "FPDF::_dounderline" must not
+      |         | be prefixed with an underscore
+ 1293 | WARNING | Line exceeds 85 characters; contains 157 characters
+ 1296 | ERROR   | Missing doc comment for function _parsejpg()
+ 1296 | ERROR   | Protected method name "FPDF::_parsejpg" must not be
+      |         | prefixed with an underscore
+ 1300 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1303 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1306 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1308 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+      |         | {\n"
+ 1315 | WARNING | Line exceeds 85 characters; contains 108 characters
+ 1318 | ERROR   | Missing doc comment for function _parsepng()
+ 1318 | ERROR   | Protected method name "FPDF::_parsepng" must not be
+      |         | prefixed with an underscore
+ 1322 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1330 | ERROR   | Missing doc comment for function _parsepngstream()
+ 1330 | ERROR   | Protected method name "FPDF::_parsepngstream" must
+      |         | not be prefixed with an underscore
+ 1333 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1333 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 1339 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1345 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1349 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1351 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+      |         | {\n"
+ 1353 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+      |         | {\n"
+ 1358 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1361 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1364 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1368 | WARNING | Line exceeds 85 characters; contains 115 characters
+ 1374 | ERROR   | Expected "do {\n...} while (...);\n"; found "do\n  
+      |         |      {\n...}\n        while(...);\n"
+ 1378 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1383 | ERROR   | Expected "} elseif (...) {\n"; found "}\n          
+      |         |  elseif(...) {\n"
+ 1386 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1388 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+      |         | {\n"
+ 1389 | WARNING | Line exceeds 85 characters; contains 103 characters
+ 1390 | ERROR   | Expected "} else {\n"; found "} else\n             
+      |         |   {\n"
+ 1393 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1399 | ERROR   | Expected "} elseif (...) {\n"; found "}\n          
+      |         |  elseif(...) {\n"
+ 1404 | ERROR   | Expected "} elseif (...) {\n"; found "}\n          
+      |         |  elseif(...) {\n"
+ 1412 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1415 | WARNING | Line exceeds 85 characters; contains 129 characters
+ 1416 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1418 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1419 | WARNING | Line exceeds 85 characters; contains 89 characters
+ 1424 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1427 | ERROR   | Expected "for (...) {\n"; found "for(...)\n        
+      |         |        {\n"
+ 1437 | ERROR   | Expected "} else {\n"; found "}\n            else\n
+      |         |            {\n"
+ 1441 | ERROR   | Expected "for (...) {\n"; found "for(...)\n        
+      |         |        {\n"
+ 1455 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1463 | ERROR   | Missing doc comment for function _readstream()
+ 1463 | ERROR   | Protected method name "FPDF::_readstream" must not
+      |         | be prefixed with an underscore
+ 1467 | ERROR   | Expected "while (...) {\n"; found "while(...)\n    
+      |         |    {\n"
+ 1470 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1476 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1482 | ERROR   | Missing doc comment for function _readint()
+ 1482 | ERROR   | Protected method name "FPDF::_readint" must not be
+      |         | prefixed with an underscore
+ 1489 | ERROR   | Missing doc comment for function _parsegif()
+ 1489 | ERROR   | Protected method name "FPDF::_parsegif" must not be
+      |         | prefixed with an underscore
+ 1492 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1495 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1499 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1508 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1518 | ERROR   | Missing doc comment for function _out()
+ 1518 | ERROR   | Protected method name "FPDF::_out" must not be
+      |         | prefixed with an underscore
+ 1521 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1523 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+      |         | {\n"
+ 1525 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+      |         | {\n"
+ 1527 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+      |         | {\n"
+ 1532 | ERROR   | Missing doc comment for function _put()
+ 1532 | ERROR   | Protected method name "FPDF::_put" must not be
+      |         | prefixed with an underscore
+ 1537 | ERROR   | Missing doc comment for function _getoffset()
+ 1537 | ERROR   | Protected method name "FPDF::_getoffset" must not
+      |         | be prefixed with an underscore
+ 1542 | ERROR   | Missing doc comment for function _newobj()
+ 1542 | ERROR   | Protected method name "FPDF::_newobj" must not be
+      |         | prefixed with an underscore
+ 1545 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1552 | ERROR   | Missing doc comment for function _putstream()
+ 1552 | ERROR   | Protected method name "FPDF::_putstream" must not
+      |         | be prefixed with an underscore
+ 1559 | ERROR   | Missing doc comment for function _putstreamobject()
+ 1559 | ERROR   | Protected method name "FPDF::_putstreamobject" must
+      |         | not be prefixed with an underscore
+ 1561 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1565 | ERROR   | Expected "} else {\n"; found "}\n        else {\n"
+ 1575 | ERROR   | Missing doc comment for function _putpage()
+ 1575 | ERROR   | Protected method name "FPDF::_putpage" must not be
+      |         | prefixed with an underscore
+ 1580 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1581 | WARNING | Line exceeds 85 characters; contains 127 characters
+ 1583 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1587 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1590 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n
+      |         |            {\n"
+ 1592 | WARNING | Line exceeds 85 characters; contains 103 characters
+ 1593 | WARNING | Line exceeds 85 characters; contains 96 characters
+ 1594 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1595 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 1596 | ERROR   | Expected "} else {\n"; found "} else\n             
+      |         |   {\n"
+ 1599 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1602 | WARNING | Line exceeds 85 characters; contains 124 characters
+ 1604 | WARNING | Line exceeds 85 characters; contains 124 characters
+ 1609 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1615 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1616 | WARNING | Line exceeds 85 characters; contains 96 characters
+ 1621 | ERROR   | Missing doc comment for function _putpages()
+ 1621 | ERROR   | Protected method name "FPDF::_putpages" must not be
+      |         | prefixed with an underscore
+ 1624 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+ 1627 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+ 1634 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+ 1639 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1643 | ERROR   | Expected "} else {\n"; found "}\n        else\n    
+      |         |    {\n"
+ 1653 | ERROR   | Missing doc comment for function _putfonts()
+ 1653 | ERROR   | Protected method name "FPDF::_putfonts" must not be
+      |         | prefixed with an underscore
+ 1655 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n
+      |         |        {\n"
+ 1661 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1665 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1666 | WARNING | Line exceeds 85 characters; contains 114 characters
+ 1669 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1673 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1680 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n
+      |         |        {\n"
+ 1683 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1684 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1686 | WARNING | Line exceeds 85 characters; contains 122 characters
+ 1692 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1693 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1698 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1708 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1711 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1717 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1720 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1726 | ERROR   | Expected "} elseif (...) {\n"; found "}\n          
+      |         |  elseif(...) {\n"
+ 1735 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1740 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1749 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+ 1757 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)
+      |         | {\n"
+ 1760 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1761 | WARNING | Line exceeds 85 characters; contains 116 characters
+ 1766 | ERROR   | Expected "} else {\n"; found "}\n            else\n
+      |         |            {\n"
+ 1770 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1778 | ERROR   | Missing doc comment for function _tounicodecmap()
+ 1778 | ERROR   | Protected method name "FPDF::_tounicodecmap" must
+      |         | not be prefixed with an underscore
+ 1784 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n
+      |         |        {\n"
+ 1786 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1787 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 1790 | ERROR   | Expected "} else {\n"; found "}\n            else\n
+      |         |            {\n"
+ 1809 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1814 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1826 | ERROR   | Missing doc comment for function _putimages()
+ 1826 | ERROR   | Protected method name "FPDF::_putimages" must not
+      |         | be prefixed with an underscore
+ 1828 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n
+      |         |        {\n"
+ 1836 | ERROR   | Missing doc comment for function _putimage()
+ 1836 | ERROR   | Protected method name "FPDF::_putimage" must not be
+      |         | prefixed with an underscore
+ 1844 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1845 | WARNING | Line exceeds 85 characters; contains 113 characters
+ 1846 | ERROR   | Expected "} else {\n"; found "} else\n        {\n"
+ 1849 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1854 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1857 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1860 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1862 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+ 1867 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1874 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1876 | WARNING | Line exceeds 85 characters; contains 143 characters
+ 1880 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1885 | ERROR   | Missing doc comment for function _putxobjectdict()
+ 1885 | ERROR   | Protected method name "FPDF::_putxobjectdict" must
+      |         | not be prefixed with an underscore
+ 1887 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)
+      |         | {\n"
+ 1892 | ERROR   | Missing doc comment for function _putresourcedict()
+ 1892 | ERROR   | Protected method name "FPDF::_putresourcedict" must
+      |         | not be prefixed with an underscore
+ 1896 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)
+      |         | {\n"
+ 1905 | ERROR   | Missing doc comment for function _putresources()
+ 1905 | ERROR   | Protected method name "FPDF::_putresources" must
+      |         | not be prefixed with an underscore
+ 1917 | ERROR   | Missing doc comment for function _putinfo()
+ 1917 | ERROR   | Protected method name "FPDF::_putinfo" must not be
+      |         | prefixed with an underscore
+ 1921 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)
+      |         | {\n"
+ 1926 | ERROR   | Missing doc comment for function _putcatalog()
+ 1926 | ERROR   | Protected method name "FPDF::_putcatalog" must not
+      |         | be prefixed with an underscore
+ 1931 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1933 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+      |         | {\n"
+ 1935 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+      |         | {\n"
+ 1937 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+      |         | {\n"
+ 1938 | WARNING | Line exceeds 85 characters; contains 109 characters
+ 1940 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 1942 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+      |         | {\n"
+ 1944 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+      |         | {\n"
+ 1949 | ERROR   | Missing doc comment for function _putheader()
+ 1949 | ERROR   | Protected method name "FPDF::_putheader" must not
+      |         | be prefixed with an underscore
+ 1954 | ERROR   | Missing doc comment for function _puttrailer()
+ 1954 | ERROR   | Protected method name "FPDF::_puttrailer" must not
+      |         | be prefixed with an underscore
+ 1961 | ERROR   | Missing doc comment for function _enddoc()
+ 1961 | ERROR   | Protected method name "FPDF::_enddoc" must not be
+      |         | prefixed with an underscore
+ 1983 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\includes\makefont\makefont.php
+----------------------------------------------------------------------
+FOUND 117 ERRORS AND 6 WARNINGS AFFECTING 104 LINES
+----------------------------------------------------------------------
+   1 | WARNING | File has mixed line endings; this may cause
+     |         | incorrect results
+   8 | WARNING | PHP version not specified
+   8 | ERROR   | Missing @category tag in file comment
+   8 | ERROR   | Missing @package tag in file comment
+   8 | ERROR   | Missing @author tag in file comment
+   8 | ERROR   | Missing @license tag in file comment
+   8 | ERROR   | Missing @link tag in file comment
+  12 | ERROR   | Missing doc comment for function Message()
+  12 | ERROR   | Function name "Message" is invalid; consider
+     |         | "message" instead
+  14 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  15 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  20 | ERROR   | Expected "} else {\n"; found "}\n    else\n    {\n"
+  22 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  29 | ERROR   | Missing doc comment for function Notice()
+  29 | ERROR   | Function name "Notice" is invalid; consider "notice"
+     |         | instead
+  34 | ERROR   | Missing doc comment for function Warning()
+  34 | ERROR   | Function name "Warning" is invalid; consider
+     |         | "warning" instead
+  39 | ERROR   | Missing doc comment for function Error()
+  39 | ERROR   | Function name "Error" is invalid; consider "error"
+     |         | instead
+  45 | ERROR   | Missing doc comment for function LoadMap()
+  45 | ERROR   | Function name "LoadMap" is invalid; consider
+     |         | "loadMap" instead
+  49 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  53 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |   {\n"
+  64 | ERROR   | Missing doc comment for function
+     |         | GetInfoFromTrueType()
+  64 | ERROR   | Function name "GetInfoFromTrueType" is invalid;
+     |         | consider "getInfoFromTrueType" instead
+  76 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  77 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  80 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  82 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |           {\n"
+  84 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  91 | ERROR   | Expected "} else {\n"; found "}\n        else {\n"
+ 105 | WARNING | Line exceeds 85 characters; contains 118 characters
+ 109 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |   {\n"
+ 111 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 112 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 117 | ERROR   | Expected "} else {\n"; found "}\n            else
+     |         | {\n"
+ 126 | ERROR   | Missing doc comment for function GetInfoFromType1()
+ 126 | ERROR   | Function name "GetInfoFromType1" is invalid;
+     |         | consider "getInfoFromType1" instead
+ 129 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 131 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 136 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 143 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 155 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 159 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 162 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |   {\n"
+ 165 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 169 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 174 | ERROR   | Expected "} elseif (...) {\n"; found "}\n       
+     |         | elseif(...) {\n"
+ 176 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+     |         | {\n"
+ 178 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+     |         | {\n"
+ 180 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+     |         | {\n"
+ 182 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+     |         | {\n"
+ 184 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+     |         | {\n"
+ 186 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+     |         | {\n"
+ 188 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+     |         | {\n"
+ 190 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+     |         | {\n"
+ 191 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 192 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+     |         | {\n"
+ 194 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+     |         | {\n"
+ 199 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 202 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 205 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 208 | WARNING | Line exceeds 85 characters; contains 91 characters
+ 209 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 215 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |   {\n"
+ 217 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 218 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 229 | ERROR   | Missing doc comment for function
+     |         | MakeFontDescriptor()
+ 229 | ERROR   | Function name "MakeFontDescriptor" is invalid;
+     |         | consider "makeFontDescriptor" instead
+ 236 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 243 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 247 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 257 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 259 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+     |         | {\n"
+ 270 | ERROR   | Missing doc comment for function MakeWidthArray()
+ 270 | ERROR   | Function name "MakeWidthArray" is invalid; consider
+     |         | "makeWidthArray" instead
+ 273 | ERROR   | Expected "for (...) {\n"; found "for(...)\n    {\n"
+ 275 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 277 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+     |         | {\n"
+ 279 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+     |         | {\n"
+ 285 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 288 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 296 | ERROR   | Missing doc comment for function MakeFontEncoding()
+ 296 | ERROR   | Function name "MakeFontEncoding" is invalid;
+     |         | consider "makeFontEncoding" instead
+ 302 | ERROR   | Expected "for (...) {\n"; found "for(...)\n    {\n"
+ 304 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 305 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 315 | ERROR   | Missing doc comment for function MakeUnicodeArray()
+ 315 | ERROR   | Function name "MakeUnicodeArray" is invalid;
+     |         | consider "makeUnicodeArray" instead
+ 319 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |   {\n"
+ 322 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 323 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 324 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 328 | ERROR   | Expected "} else {\n"; found "}\n               
+     |         | else\n                {\n"
+ 334 | ERROR   | Expected "} else {\n"; found "}\n            else
+     |         | {\n"
+ 341 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |   {\n"
+ 343 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 350 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 360 | ERROR   | Missing doc comment for function SaveToFile()
+ 360 | ERROR   | Function name "SaveToFile" is invalid; consider
+     |         | "saveToFile" instead
+ 363 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 370 | ERROR   | Missing doc comment for function
+     |         | MakeDefinitionFile()
+ 370 | ERROR   | Function name "MakeDefinitionFile" is invalid;
+     |         | consider "makeDefinitionFile" instead
+ 381 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 385 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 387 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 391 | ERROR   | Expected "} else {\n"; found "}\n        else\n     
+     |         |   {\n"
+ 394 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 403 | ERROR   | Missing doc comment for function MakeFont()
+ 403 | ERROR   | Function name "MakeFont" is invalid; consider
+     |         | "makeFont" instead
+ 406 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 410 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 412 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+     |         | {\n"
+ 420 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 427 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 428 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 434 | ERROR   | Expected "} else {\n"; found "}\n        else\n     
+     |         |   {\n"
+ 438 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 446 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 449 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 453 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 458 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 463 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\includes\makefont\ttfparser.php
+----------------------------------------------------------------------
+FOUND 168 ERRORS AND 11 WARNINGS AFFECTING 140 LINES
+----------------------------------------------------------------------
+   1 | WARNING | File has mixed line endings; this may cause
+     |         | incorrect results
+   1 | ERROR   | Missing file doc comment
+   8 | ERROR   | Missing @category tag in class comment
+   8 | ERROR   | Missing @package tag in class comment
+   8 | ERROR   | Missing @author tag in class comment
+   8 | ERROR   | Missing @license tag in class comment
+   8 | ERROR   | Missing @link tag in class comment
+  35 | ERROR   | Missing doc comment for function __construct()
+  38 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  43 | ERROR   | Missing doc comment for function __destruct()
+  45 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  50 | ERROR   | Missing doc comment for function Parse()
+  50 | ERROR   | Method name "TTFParser::Parse" is not in camel caps
+     |         | format
+  65 | ERROR   | Missing doc comment for function ParseOffsetTable()
+  65 | ERROR   | Method name "TTFParser::ParseOffsetTable" is not in
+     |         | camel caps format
+  68 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  69 | WARNING | Line exceeds 85 characters; contains 91 characters
+  71 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  77 | ERROR   | Expected "for (...) {\n"; found "for(...)\n       
+     |         | {\n"
+  83 | WARNING | Line exceeds 85 characters; contains 101 characters
+  87 | ERROR   | Missing doc comment for function ParseHead()
+  87 | ERROR   | Method name "TTFParser::ParseHead" is not in camel
+     |         | caps format
+  92 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 106 | ERROR   | Missing doc comment for function ParseHhea()
+ 106 | ERROR   | Method name "TTFParser::ParseHhea" is not in camel
+     |         | caps format
+ 113 | ERROR   | Missing doc comment for function ParseMaxp()
+ 113 | ERROR   | Method name "TTFParser::ParseMaxp" is not in camel
+     |         | caps format
+ 120 | ERROR   | Missing doc comment for function ParseHmtx()
+ 120 | ERROR   | Method name "TTFParser::ParseHmtx" is not in camel
+     |         | caps format
+ 124 | ERROR   | Expected "for (...) {\n"; found "for(...)\n       
+     |         | {\n"
+ 130 | ERROR   | Expected "for (...) {\n"; found "for(...)\n       
+     |         | {\n"
+ 137 | ERROR   | Missing doc comment for function ParseLoca()
+ 137 | ERROR   | Method name "TTFParser::ParseLoca" is not in camel
+     |         | caps format
+ 141 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 143 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+ 147 | ERROR   | Expected "} else {\n"; found "}\n        else\n     
+     |         |   {\n"
+ 150 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+ 154 | ERROR   | Expected "for (...) {\n"; found "for(...)\n       
+     |         | {\n"
+ 161 | ERROR   | Missing doc comment for function ParseGlyf()
+ 161 | ERROR   | Method name "TTFParser::ParseGlyf" is not in camel
+     |         | caps format
+ 164 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |       {\n"
+ 166 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 168 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 173 | ERROR   | Expected "do {\n...} while (...);\n"; found "do\n   
+     |         |                 {\n...}\n                   
+     |         | while(...); // MORE_COMPONENTS\n"
+ 178 | ERROR   | Expected "if (...) {\n"; found "if(...) { //
+     |         | ARG_1_AND_2_ARE_WORDS\n"
+ 183 | ERROR   | Expected "if (...) {\n"; found "if(...) { //
+     |         | WE_HAVE_A_SCALE\n"
+ 185 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+     |         | { // WE_HAVE_AN_X_AND_Y_SCALE\n"
+ 187 | ERROR   | Expected "} elseif (...) {\n"; found "} elseif(...)
+     |         | { // WE_HAVE_A_TWO_BY_TWO\n"
+ 200 | ERROR   | Missing doc comment for function ParseCmap()
+ 200 | ERROR   | Method name "TTFParser::ParseCmap" is not in camel
+     |         | caps format
+ 206 | ERROR   | Expected "for (...) {\n"; found "for(...)\n       
+     |         | {\n"
+ 211 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 215 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 226 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 232 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+ 236 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+ 239 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+ 243 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+ 247 | ERROR   | Expected "for (...) {\n"; found "for(...)\n       
+     |         | {\n"
+ 253 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 256 | ERROR   | Expected "for (...) {\n"; found "for(...)\n         
+     |         |   {\n"
+ 258 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 261 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 263 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 267 | ERROR   | Expected "} else {\n"; found "}\n               
+     |         | else {\n"
+ 270 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 273 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 280 | ERROR   | Missing doc comment for function ParseName()
+ 280 | ERROR   | Method name "TTFParser::ParseName" is not in camel
+     |         | caps format
+ 288 | ERROR   | Expected "for (...) {\n"; found "for(...)\n       
+     |         | {\n"
+ 294 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 304 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 309 | ERROR   | Missing doc comment for function ParseOS2()
+ 309 | ERROR   | Method name "TTFParser::ParseOS2" is not in camel
+     |         | caps format
+ 322 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 326 | ERROR   | Expected "} else {\n"; found "}\n        else {\n"
+ 331 | ERROR   | Missing doc comment for function ParsePost()
+ 331 | ERROR   | Method name "TTFParser::ParsePost" is not in camel
+     |         | caps format
+ 340 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 347 | ERROR   | Expected "for (...) {\n"; found "for(...)\n         
+     |         |   {\n"
+ 351 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 355 | ERROR   | Expected "for (...) {\n"; found "for(...)\n         
+     |         |   {\n"
+ 360 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |           {\n"
+ 362 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 370 | ERROR   | Expected "} else {\n"; found "}\n        else {\n"
+ 375 | ERROR   | Missing doc comment for function Subset()
+ 375 | ERROR   | Method name "TTFParser::Subset" is not in camel caps
+     |         | format
+ 388 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |       {\n"
+ 390 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 397 | ERROR   | Missing doc comment for function AddGlyph()
+ 397 | ERROR   | Method name "TTFParser::AddGlyph" is not in camel
+     |         | caps format
+ 399 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 402 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 403 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)
+     |         | {\n"
+ 410 | ERROR   | Missing doc comment for function Build()
+ 410 | ERROR   | Method name "TTFParser::Build" is not in camel caps
+     |         | format
+ 422 | ERROR   | Missing doc comment for function BuildCmap()
+ 422 | ERROR   | Method name "TTFParser::BuildCmap" is not in camel
+     |         | caps format
+ 424 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 433 | ERROR   | Expected "for (...) {\n"; found "for(...)\n       
+     |         | {\n"
+ 435 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 439 | ERROR   | Expected "} else {\n"; found "}\n            else
+     |         | {\n"
+ 453 | ERROR   | Expected "for (...) {\n"; found "for(...)\n       
+     |         | {\n"
+ 458 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 462 | ERROR   | Expected "for (...) {\n"; found "for(...)\n         
+     |         |       {\n"
+ 468 | ERROR   | Expected "} else {\n"; found "}\n            else\n 
+     |         |           {\n"
+ 471 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 482 | ERROR   | Expected "while (...) {\n"; found "while(...)\n     
+     |         |   {\n"
+ 490 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)
+     |         | {\n"
+ 494 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)
+     |         | {\n"
+ 497 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)
+     |         | {\n"
+ 500 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)
+     |         | {\n"
+ 512 | ERROR   | Missing doc comment for function BuildHhea()
+ 512 | ERROR   | Method name "TTFParser::BuildHhea" is not in camel
+     |         | caps format
+ 516 | WARNING | Line exceeds 85 characters; contains 103 characters
+ 520 | ERROR   | Missing doc comment for function BuildHmtx()
+ 520 | ERROR   | Method name "TTFParser::BuildHmtx" is not in camel
+     |         | caps format
+ 523 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |       {\n"
+ 531 | ERROR   | Missing doc comment for function BuildLoca()
+ 531 | ERROR   | Method name "TTFParser::BuildLoca" is not in camel
+     |         | caps format
+ 535 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |       {\n"
+ 537 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 544 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 552 | ERROR   | Missing doc comment for function BuildGlyf()
+ 552 | ERROR   | Method name "TTFParser::BuildGlyf" is not in camel
+     |         | caps format
+ 556 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |       {\n"
+ 561 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 563 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |               {\n"
+ 566 | WARNING | Line exceeds 85 characters; contains 92 characters
+ 574 | ERROR   | Missing doc comment for function BuildMaxp()
+ 574 | ERROR   | Method name "TTFParser::BuildMaxp" is not in camel
+     |         | caps format
+ 578 | WARNING | Line exceeds 85 characters; contains 91 characters
+ 582 | ERROR   | Missing doc comment for function BuildPost()
+ 582 | ERROR   | Method name "TTFParser::BuildPost" is not in camel
+     |         | caps format
+ 585 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 592 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |           {\n"
+ 595 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 600 | ERROR   | Expected "} else {\n"; found "}\n               
+     |         | else {\n"
+ 606 | ERROR   | Expected "} else {\n"; found "}\n        else\n     
+     |         |   {\n"
+ 616 | ERROR   | Missing doc comment for function BuildFont()
+ 616 | ERROR   | Method name "TTFParser::BuildFont" is not in camel
+     |         | caps format
+ 619 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |       {\n"
+ 619 | WARNING | Line exceeds 85 characters; contains 126 characters
+ 621 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 627 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |       {\n"
+ 629 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 635 | WARNING | Line exceeds 85 characters; contains 123 characters
+ 640 | ERROR   | Expected "while (...) {\n"; found "while(...)\n     
+     |         |   {\n"
+ 647 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 648 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |       {\n"
+ 651 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 656 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)
+     |         | {\n"
+ 663 | WARNING | Line exceeds 85 characters; contains 113 characters
+ 666 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)
+     |         | {\n"
+ 673 | ERROR   | Missing doc comment for function LoadTable()
+ 673 | ERROR   | Method name "TTFParser::LoadTable" is not in camel
+     |         | caps format
+ 678 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 684 | ERROR   | Missing doc comment for function SetTable()
+ 684 | ERROR   | Method name "TTFParser::SetTable" is not in camel
+     |         | caps format
+ 688 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 696 | ERROR   | Missing doc comment for function Seek()
+ 696 | ERROR   | Method name "TTFParser::Seek" is not in camel caps
+     |         | format
+ 698 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 704 | ERROR   | Missing doc comment for function Skip()
+ 704 | ERROR   | Method name "TTFParser::Skip" is not in camel caps
+     |         | format
+ 709 | ERROR   | Missing doc comment for function Read()
+ 709 | ERROR   | Method name "TTFParser::Read" is not in camel caps
+     |         | format
+ 714 | ERROR   | Missing doc comment for function ReadUShort()
+ 714 | ERROR   | Method name "TTFParser::ReadUShort" is not in camel
+     |         | caps format
+ 720 | ERROR   | Missing doc comment for function ReadShort()
+ 720 | ERROR   | Method name "TTFParser::ReadShort" is not in camel
+     |         | caps format
+ 724 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+ 730 | ERROR   | Missing doc comment for function ReadULong()
+ 730 | ERROR   | Method name "TTFParser::ReadULong" is not in camel
+     |         | caps format
+ 736 | ERROR   | Missing doc comment for function CheckSum()
+ 736 | ERROR   | Method name "TTFParser::CheckSum" is not in camel
+     |         | caps format
+ 741 | ERROR   | Expected "for (...) {\n"; found "for(...)\n       
+     |         | {\n"
+ 749 | ERROR   | Missing doc comment for function Error()
+ 749 | ERROR   | Method name "TTFParser::Error" is not in camel caps
+     |         | format
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\includes\tutorial\calligra.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AND 14 WARNINGS AFFECTING 15 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | Missing file doc comment
+  4 | WARNING | Line exceeds 85 characters; contains 158 characters
+  8 | WARNING | Line exceeds 85 characters; contains 280 characters
+  9 | WARNING | Line exceeds 85 characters; contains 243 characters
+ 10 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 11 | WARNING | Line exceeds 85 characters; contains 204 characters
+ 12 | WARNING | Line exceeds 85 characters; contains 203 characters
+ 13 | WARNING | Line exceeds 85 characters; contains 223 characters
+ 14 | WARNING | Line exceeds 85 characters; contains 299 characters
+ 15 | WARNING | Line exceeds 85 characters; contains 302 characters
+ 16 | WARNING | Line exceeds 85 characters; contains 292 characters
+ 17 | WARNING | Line exceeds 85 characters; contains 309 characters
+ 18 | WARNING | Line exceeds 85 characters; contains 306 characters
+ 19 | WARNING | Line exceeds 85 characters; contains 195 characters
+ 21 | WARNING | Line exceeds 85 characters; contains 304 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\includes\tutorial\makefont.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 2 | ERROR | You must use "/**" style comments for a file comment
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\includes\tutorial\tuto1.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\includes\tutorial\tuto2.php
+----------------------------------------------------------------------
+FOUND 7 ERRORS AND 1 WARNING AFFECTING 6 LINES
+----------------------------------------------------------------------
+  1 | WARNING | File has mixed line endings; this may cause incorrect
+    |         | results
+  2 | ERROR   | Missing file doc comment
+  4 | ERROR   | Missing doc comment for class PDF
+  7 | ERROR   | You must use "/**" style comments for a function
+    |         | comment
+  7 | ERROR   | Method name "PDF::Header" is not in camel caps format
+ 22 | ERROR   | You must use "/**" style comments for a function
+    |         | comment
+ 22 | ERROR   | Method name "PDF::Footer" is not in camel caps format
+ 38 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\includes\tutorial\tuto3.php
+----------------------------------------------------------------------
+FOUND 12 ERRORS AFFECTING 7 LINES
+----------------------------------------------------------------------
+  2 | ERROR | Missing file doc comment
+  4 | ERROR | Missing doc comment for class PDF
+  6 | ERROR | Missing doc comment for function Header()
+  6 | ERROR | Method name "PDF::Header" is not in camel caps format
+ 27 | ERROR | Missing doc comment for function Footer()
+ 27 | ERROR | Method name "PDF::Footer" is not in camel caps format
+ 39 | ERROR | Missing doc comment for function TitreChapitre()
+ 39 | ERROR | Method name "PDF::TitreChapitre" is not in camel caps
+    |       | format
+ 51 | ERROR | Missing doc comment for function CorpsChapitre()
+ 51 | ERROR | Method name "PDF::CorpsChapitre" is not in camel caps
+    |       | format
+ 66 | ERROR | Missing doc comment for function AjouterChapitre()
+ 66 | ERROR | Method name "PDF::AjouterChapitre" is not in camel caps
+    |       | format
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\includes\tutorial\tuto4.php
+----------------------------------------------------------------------
+FOUND 18 ERRORS AFFECTING 11 LINES
+----------------------------------------------------------------------
+  2 | ERROR | Missing file doc comment
+  4 | ERROR | Missing doc comment for class PDF
+  9 | ERROR | Missing doc comment for function Header()
+  9 | ERROR | Method name "PDF::Header" is not in camel caps format
+ 27 | ERROR | Missing doc comment for function Footer()
+ 27 | ERROR | Method name "PDF::Footer" is not in camel caps format
+ 36 | ERROR | Missing doc comment for function SetCol()
+ 36 | ERROR | Method name "PDF::SetCol" is not in camel caps format
+ 45 | ERROR | Missing doc comment for function AcceptPageBreak()
+ 45 | ERROR | Method name "PDF::AcceptPageBreak" is not in camel caps
+    |       | format
+ 48 | ERROR | Expected "if (...) {\n"; found "if(...) {\n"
+ 56 | ERROR | Expected "} else {\n"; found "}\n        else\n       
+    |       | {\n"
+ 65 | ERROR | Missing doc comment for function TitreChapitre()
+ 65 | ERROR | Method name "PDF::TitreChapitre" is not in camel caps
+    |       | format
+ 76 | ERROR | Missing doc comment for function CorpsChapitre()
+ 76 | ERROR | Method name "PDF::CorpsChapitre" is not in camel caps
+    |       | format
+ 92 | ERROR | Missing doc comment for function AjouterChapitre()
+ 92 | ERROR | Method name "PDF::AjouterChapitre" is not in camel caps
+    |       | format
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\includes\tutorial\tuto5.php
+----------------------------------------------------------------------
+FOUND 18 ERRORS AND 3 WARNINGS AFFECTING 17 LINES
+----------------------------------------------------------------------
+  1 | WARNING | File has mixed line endings; this may cause incorrect
+    |         | results
+  2 | ERROR   | Missing file doc comment
+  4 | ERROR   | Missing doc comment for class PDF
+  7 | ERROR   | You must use "/**" style comments for a function
+    |         | comment
+  7 | ERROR   | Method name "PDF::LoadData" is not in camel caps
+    |         | format
+ 12 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)
+    |         | {\n"
+ 19 | ERROR   | You must use "/**" style comments for a function
+    |         | comment
+ 19 | ERROR   | Method name "PDF::BasicTable" is not in camel caps
+    |         | format
+ 22 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)
+    |         | {\n"
+ 27 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n  
+    |         |      {\n"
+ 29 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)
+    |         | {\n"
+ 37 | ERROR   | You must use "/**" style comments for a function
+    |         | comment
+ 37 | ERROR   | Method name "PDF::ImprovedTable" is not in camel caps
+    |         | format
+ 42 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+ 47 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n  
+    |         |      {\n"
+ 60 | ERROR   | You must use "/**" style comments for a function
+    |         | comment
+ 60 | ERROR   | Method name "PDF::FancyTable" is not in camel caps
+    |         | format
+ 70 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+ 80 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n  
+    |         |      {\n"
+ 84 | WARNING | Line exceeds 85 characters; contains 92 characters
+ 85 | WARNING | Line exceeds 85 characters; contains 92 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\includes\tutorial\tuto6.php
+----------------------------------------------------------------------
+FOUND 27 ERRORS AND 4 WARNINGS AFFECTING 26 LINES
+----------------------------------------------------------------------
+   1 | WARNING | File has mixed line endings; this may cause
+     |         | incorrect results
+   2 | ERROR   | Missing file doc comment
+   4 | ERROR   | Missing doc comment for class PDF
+  11 | ERROR   | Missing doc comment for function WriteHTML()
+  11 | ERROR   | Method name "PDF::WriteHTML" is not in camel caps
+     |         | format
+  16 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |       {\n"
+  18 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  20 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  26 | ERROR   | Expected "} else {\n"; found "}\n            else\n 
+     |         |           {\n"
+  29 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  31 | ERROR   | Expected "} else {\n"; found "} else\n              
+     |         |  {\n"
+  37 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |                     {\n"
+  39 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  49 | ERROR   | Missing doc comment for function OpenTag()
+  49 | ERROR   | Method name "PDF::OpenTag" is not in camel caps
+     |         | format
+  52 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  55 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  58 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  63 | ERROR   | Missing doc comment for function CloseTag()
+  63 | ERROR   | Method name "PDF::CloseTag" is not in camel caps
+     |         | format
+  66 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  69 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  74 | ERROR   | Missing doc comment for function SetStyle()
+  74 | ERROR   | Method name "PDF::SetStyle" is not in camel caps
+     |         | format
+  79 | ERROR   | Expected "foreach (...) {\n"; found "foreach(...)\n 
+     |         |       {\n"
+  81 | ERROR   | Expected "if (...) {\n"; found "if(...) {\n"
+  88 | ERROR   | Missing doc comment for function PutLink()
+  88 | ERROR   | Method name "PDF::PutLink" is not in camel caps
+     |         | format
+  99 | WARNING | Line exceeds 85 characters; contains 104 characters
+ 100 | WARNING | Line exceeds 85 characters; contains 99 characters
+ 101 | WARNING | Line exceeds 85 characters; contains 101 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\includes\tutorial\tuto7.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 2 | ERROR | Missing file doc comment
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\index.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 15 | ERROR | Missing @category tag in file comment
+ 15 | ERROR | Missing @package tag in file comment
+ 15 | ERROR | Missing @author tag in file comment
+ 15 | ERROR | Missing @license tag in file comment
+ 15 | ERROR | Missing @link tag in file comment
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\styles\fonts\courier.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AND 2 WARNINGS AFFECTING 4 LINES
+----------------------------------------------------------------------
+  1 | WARNING | File has mixed line endings; this may cause incorrect
+    |         | results
+  2 | ERROR   | Missing file doc comment
+  6 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+ 10 | WARNING | Line exceeds 85 characters; contains 304 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\styles\fonts\courierb.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AND 2 WARNINGS AFFECTING 4 LINES
+----------------------------------------------------------------------
+  1 | WARNING | File has mixed line endings; this may cause incorrect
+    |         | results
+  2 | ERROR   | Missing file doc comment
+  6 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+ 10 | WARNING | Line exceeds 85 characters; contains 304 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\styles\fonts\courierbi.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AND 2 WARNINGS AFFECTING 4 LINES
+----------------------------------------------------------------------
+  1 | WARNING | File has mixed line endings; this may cause incorrect
+    |         | results
+  2 | ERROR   | Missing file doc comment
+  6 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+ 10 | WARNING | Line exceeds 85 characters; contains 304 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\styles\fonts\courieri.php
+----------------------------------------------------------------------
+FOUND 2 ERRORS AND 2 WARNINGS AFFECTING 4 LINES
+----------------------------------------------------------------------
+  1 | WARNING | File has mixed line endings; this may cause incorrect
+    |         | results
+  2 | ERROR   | Missing file doc comment
+  6 | ERROR   | Expected "for (...) {\n"; found "for(...) {\n"
+ 10 | WARNING | Line exceeds 85 characters; contains 304 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\styles\fonts\helvetica.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AND 13 WARNINGS AFFECTING 14 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | Missing file doc comment
+  7 | WARNING | Line exceeds 85 characters; contains 280 characters
+  8 | WARNING | Line exceeds 85 characters; contains 243 characters
+  9 | WARNING | Line exceeds 85 characters; contains 203 characters
+ 10 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 11 | WARNING | Line exceeds 85 characters; contains 203 characters
+ 12 | WARNING | Line exceeds 85 characters; contains 227 characters
+ 13 | WARNING | Line exceeds 85 characters; contains 317 characters
+ 14 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 15 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 16 | WARNING | Line exceeds 85 characters; contains 313 characters
+ 17 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 18 | WARNING | Line exceeds 85 characters; contains 201 characters
+ 20 | WARNING | Line exceeds 85 characters; contains 304 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\styles\fonts\helveticab.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AND 13 WARNINGS AFFECTING 14 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | Missing file doc comment
+  7 | WARNING | Line exceeds 85 characters; contains 280 characters
+  8 | WARNING | Line exceeds 85 characters; contains 243 characters
+  9 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 10 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 11 | WARNING | Line exceeds 85 characters; contains 203 characters
+ 12 | WARNING | Line exceeds 85 characters; contains 227 characters
+ 13 | WARNING | Line exceeds 85 characters; contains 317 characters
+ 14 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 15 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 16 | WARNING | Line exceeds 85 characters; contains 313 characters
+ 17 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 18 | WARNING | Line exceeds 85 characters; contains 201 characters
+ 20 | WARNING | Line exceeds 85 characters; contains 304 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\styles\fonts\helveticabi.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AND 13 WARNINGS AFFECTING 14 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | Missing file doc comment
+  7 | WARNING | Line exceeds 85 characters; contains 280 characters
+  8 | WARNING | Line exceeds 85 characters; contains 243 characters
+  9 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 10 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 11 | WARNING | Line exceeds 85 characters; contains 203 characters
+ 12 | WARNING | Line exceeds 85 characters; contains 227 characters
+ 13 | WARNING | Line exceeds 85 characters; contains 317 characters
+ 14 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 15 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 16 | WARNING | Line exceeds 85 characters; contains 313 characters
+ 17 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 18 | WARNING | Line exceeds 85 characters; contains 201 characters
+ 20 | WARNING | Line exceeds 85 characters; contains 304 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\styles\fonts\helveticai.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AND 13 WARNINGS AFFECTING 14 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | Missing file doc comment
+  7 | WARNING | Line exceeds 85 characters; contains 280 characters
+  8 | WARNING | Line exceeds 85 characters; contains 243 characters
+  9 | WARNING | Line exceeds 85 characters; contains 203 characters
+ 10 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 11 | WARNING | Line exceeds 85 characters; contains 203 characters
+ 12 | WARNING | Line exceeds 85 characters; contains 227 characters
+ 13 | WARNING | Line exceeds 85 characters; contains 317 characters
+ 14 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 15 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 16 | WARNING | Line exceeds 85 characters; contains 313 characters
+ 17 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 18 | WARNING | Line exceeds 85 characters; contains 201 characters
+ 20 | WARNING | Line exceeds 85 characters; contains 304 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\styles\fonts\symbol.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AND 13 WARNINGS AFFECTING 14 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | Missing file doc comment
+  7 | WARNING | Line exceeds 85 characters; contains 280 characters
+  8 | WARNING | Line exceeds 85 characters; contains 243 characters
+  9 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 10 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 11 | WARNING | Line exceeds 85 characters; contains 203 characters
+ 12 | WARNING | Line exceeds 85 characters; contains 217 characters
+ 13 | WARNING | Line exceeds 85 characters; contains 268 characters
+ 14 | WARNING | Line exceeds 85 characters; contains 301 characters
+ 15 | WARNING | Line exceeds 85 characters; contains 314 characters
+ 16 | WARNING | Line exceeds 85 characters; contains 313 characters
+ 17 | WARNING | Line exceeds 85 characters; contains 310 characters
+ 18 | WARNING | Line exceeds 85 characters; contains 199 characters
+ 19 | WARNING | Line exceeds 85 characters; contains 1357 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\styles\fonts\times.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AND 13 WARNINGS AFFECTING 14 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | Missing file doc comment
+  7 | WARNING | Line exceeds 85 characters; contains 280 characters
+  8 | WARNING | Line exceeds 85 characters; contains 243 characters
+  9 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 10 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 11 | WARNING | Line exceeds 85 characters; contains 203 characters
+ 12 | WARNING | Line exceeds 85 characters; contains 227 characters
+ 13 | WARNING | Line exceeds 85 characters; contains 315 characters
+ 14 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 15 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 16 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 17 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 18 | WARNING | Line exceeds 85 characters; contains 201 characters
+ 20 | WARNING | Line exceeds 85 characters; contains 304 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\styles\fonts\timesb.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AND 13 WARNINGS AFFECTING 14 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | Missing file doc comment
+  7 | WARNING | Line exceeds 85 characters; contains 280 characters
+  8 | WARNING | Line exceeds 85 characters; contains 244 characters
+  9 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 10 | WARNING | Line exceeds 85 characters; contains 203 characters
+ 11 | WARNING | Line exceeds 85 characters; contains 203 characters
+ 12 | WARNING | Line exceeds 85 characters; contains 227 characters
+ 13 | WARNING | Line exceeds 85 characters; contains 317 characters
+ 14 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 15 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 16 | WARNING | Line exceeds 85 characters; contains 313 characters
+ 17 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 18 | WARNING | Line exceeds 85 characters; contains 201 characters
+ 20 | WARNING | Line exceeds 85 characters; contains 304 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\styles\fonts\timesbi.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AND 13 WARNINGS AFFECTING 14 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | Missing file doc comment
+  7 | WARNING | Line exceeds 85 characters; contains 280 characters
+  8 | WARNING | Line exceeds 85 characters; contains 243 characters
+  9 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 10 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 11 | WARNING | Line exceeds 85 characters; contains 203 characters
+ 12 | WARNING | Line exceeds 85 characters; contains 227 characters
+ 13 | WARNING | Line exceeds 85 characters; contains 316 characters
+ 14 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 15 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 16 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 17 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 18 | WARNING | Line exceeds 85 characters; contains 201 characters
+ 20 | WARNING | Line exceeds 85 characters; contains 304 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\styles\fonts\timesi.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AND 13 WARNINGS AFFECTING 14 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | Missing file doc comment
+  7 | WARNING | Line exceeds 85 characters; contains 280 characters
+  8 | WARNING | Line exceeds 85 characters; contains 243 characters
+  9 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 10 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 11 | WARNING | Line exceeds 85 characters; contains 203 characters
+ 12 | WARNING | Line exceeds 85 characters; contains 227 characters
+ 13 | WARNING | Line exceeds 85 characters; contains 313 characters
+ 14 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 15 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 16 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 17 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 18 | WARNING | Line exceeds 85 characters; contains 201 characters
+ 20 | WARNING | Line exceeds 85 characters; contains 304 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\styles\fonts\zapfdingbats.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AND 13 WARNINGS AFFECTING 14 LINES
+----------------------------------------------------------------------
+  2 | ERROR   | Missing file doc comment
+  7 | WARNING | Line exceeds 85 characters; contains 236 characters
+  8 | WARNING | Line exceeds 85 characters; contains 223 characters
+  9 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 10 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 11 | WARNING | Line exceeds 85 characters; contains 203 characters
+ 12 | WARNING | Line exceeds 85 characters; contains 225 characters
+ 13 | WARNING | Line exceeds 85 characters; contains 288 characters
+ 14 | WARNING | Line exceeds 85 characters; contains 298 characters
+ 15 | WARNING | Line exceeds 85 characters; contains 312 characters
+ 16 | WARNING | Line exceeds 85 characters; contains 313 characters
+ 17 | WARNING | Line exceeds 85 characters; contains 310 characters
+ 18 | WARNING | Line exceeds 85 characters; contains 199 characters
+ 19 | WARNING | Line exceeds 85 characters; contains 446 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\tests\class.pdogsb.incTest.php
+----------------------------------------------------------------------
+FOUND 23 ERRORS AND 4 WARNINGS AFFECTING 26 LINES
+----------------------------------------------------------------------
+   1 | WARNING | File has mixed line endings; this may cause
+     |         | incorrect results
+   2 | ERROR   | Missing file doc comment
+   6 | ERROR   | Missing doc comment for class pdogsbincTest
+   6 | ERROR   | Class name must begin with a capital letter
+   9 | ERROR   | Missing doc comment for function testConstructOK()
+  16 | ERROR   | Missing doc comment for function testDestructOK()
+  22 | ERROR   | Missing doc comment for function testgetPdoGsbOK()
+  29 | ERROR   | Missing doc comment for function
+     |         | testgetInfosVisiteurOK()
+  45 | ERROR   | Missing doc comment for function
+     |         | testgetInfosVisiteurKO()
+  53 | ERROR   | Missing doc comment for function
+     |         | testgetNomVisiteurOK()
+  65 | ERROR   | Missing doc comment for function
+     |         | testgetNomVisiteurKO()
+  77 | ERROR   | Missing doc comment for function
+     |         | testgetLesFraisHorsForfaitOK()
+  88 | ERROR   | Missing doc comment for function
+     |         | testgetLesFraisHorsForfaitIDKO()
+  97 | ERROR   | Missing doc comment for function
+     |         | testgetLesFraisHorsForfaitMOISKO()
+ 106 | ERROR   | Missing doc comment for function
+     |         | testgetNbjustificatifsOK()
+ 111 | WARNING | Line exceeds 85 characters; contains 100 characters
+ 115 | ERROR   | Missing doc comment for function
+     |         | testgetNbjustificatifsIDKO()
+ 124 | ERROR   | Missing doc comment for function
+     |         | testgetnbJustificatifsMOISKO()
+ 133 | ERROR   | Missing doc comment for function
+     |         | testgetLesFraisForfaitOK()
+ 142 | ERROR   | Missing doc comment for function
+     |         | testgetLesFraisForfaitIDKO()
+ 151 | ERROR   | Missing doc comment for function
+     |         | testgetLesFraisForfaitMOISKO()
+ 160 | ERROR   | Missing doc comment for function testgetLesIdFrais()
+ 167 | ERROR   | Missing doc comment for function
+     |         | testmajFraisForfait()
+ 178 | WARNING | Line exceeds 85 characters; contains 91 characters
+ 185 | WARNING | Line exceeds 85 characters; contains 90 characters
+ 190 | ERROR   | Missing doc comment for function
+     |         | testmajNbJustificatifsOK()
+ 206 | ERROR   | Missing doc comment for function
+     |         | testvalideSommeFrais()
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\tests\fct.incTest.php
+----------------------------------------------------------------------
+FOUND 43 ERRORS AND 3 WARNINGS AFFECTING 45 LINES
+----------------------------------------------------------------------
+   1 | WARNING | File has mixed line endings; this may cause
+     |         | incorrect results
+   2 | ERROR   | Missing file doc comment
+   6 | ERROR   | Missing doc comment for class fctincTest
+   6 | ERROR   | Class name must begin with a capital letter
+  10 | ERROR   | You must use "/**" style comments for a function
+     |         | comment
+  15 | ERROR   | Missing doc comment for function
+     |         | testEstConnecteOUI()
+  22 | ERROR   | Missing doc comment for function testdeconnecter()
+  28 | ERROR   | Missing doc comment for function
+     |         | testDateFrancaisVersAnglais()
+  33 | ERROR   | Missing doc comment for function
+     |         | testDateAnglaisVersFrancais()
+  38 | ERROR   | Missing doc comment for function testgetMoisReussi()
+  76 | ERROR   | Missing doc comment for function testgetMoisErreur()
+  86 | ERROR   | Missing doc comment for function
+     |         | testinverseMoisReussi()
+ 122 | ERROR   | Missing doc comment for function
+     |         | testinverseMoisErreur()
+ 132 | ERROR   | Missing doc comment for function
+     |         | testmoisEnLettreReussi()
+ 168 | ERROR   | Missing doc comment for function
+     |         | testestEntierPositifVRAI()
+ 174 | ERROR   | Missing doc comment for function
+     |         | testestEntierPositifFAUX()
+ 182 | ERROR   | Missing doc comment for function
+     |         | testestEntierPositifNULL()
+ 188 | ERROR   | Missing doc comment for function
+     |         | testestTableauEntiersVRAI()
+ 207 | ERROR   | Missing doc comment for function
+     |         | testestTableauEntiersFAUX()
+ 226 | ERROR   | Missing doc comment for function
+     |         | testestDateDepasseeVRAI()
+ 236 | ERROR   | Missing doc comment for function
+     |         | testestDateDepasseeFAUX()
+ 241 | ERROR   | Missing doc comment for function
+     |         | testestDateValideVRAI()
+ 251 | ERROR   | Missing doc comment for function
+     |         | testestDateValideFAUX()
+ 265 | ERROR   | Missing doc comment for function
+     |         | testLesQteFraisValidesVRAI()
+ 277 | ERROR   | Missing doc comment for function
+     |         | testLesQteFraisValidesFAUX()
+ 289 | ERROR   | Missing doc comment for function
+     |         | testvalideInfosFraisToutOK()
+ 298 | ERROR   | Missing doc comment for function
+     |         | testvalideInfosFraisDateKO()
+ 310 | ERROR   | Missing doc comment for function
+     |         | testvalideInfosFraisDatePerimee()
+ 326 | ERROR   | Missing doc comment for function
+     |         | testvalideInfosFraisLibelleKO()
+ 338 | ERROR   | Missing doc comment for function
+     |         | testvalideInfosFraisMontantKO()
+ 350 | ERROR   | Missing doc comment for function
+     |         | testvalideInfosFraisToutKO()
+ 359 | ERROR   | Missing doc comment for function testajouterErreur()
+ 369 | ERROR   | Missing doc comment for function
+     |         | testnbErreursSuperieurZero()
+ 381 | ERROR   | Missing doc comment for function
+     |         | testnbErreursEgalZero()
+ 386 | ERROR   | Missing doc comment for function testAjouterInfo()
+ 396 | ERROR   | Missing doc comment for function
+     |         | testajouterInfosSuperieurZero()
+ 408 | ERROR   | Missing doc comment for function
+     |         | testnbInfosEgalZero()
+ 413 | ERROR   | Missing doc comment for function
+     |         | testcompterFichesPerimeesOK()
+ 421 | ERROR   | Missing doc comment for function
+     |         | testcompterMontantTotal()
+ 432 | ERROR   | Missing doc comment for function testaddLogEvent()
+ 440 | ERROR   | Missing doc comment for function
+     |         | testenvoyerLeLogOK()
+ 449 | ERROR   | Missing doc comment for function
+     |         | testenvoyerLeLogException()
+ 457 | ERROR   | Missing doc comment for function
+     |         | testenvoyerLeLogKO()
+ 466 | ERROR   | Missing doc comment for function testgenererPDF()
+ 477 | WARNING | Line exceeds 85 characters; contains 100 characters
+ 478 | WARNING | Line exceeds 85 characters; contains 99 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\tests\gendatas\fonctions.php
+----------------------------------------------------------------------
+FOUND 18 ERRORS AND 7 WARNINGS AFFECTING 21 LINES
+----------------------------------------------------------------------
+  15 | ERROR   | Missing @category tag in file comment
+  15 | ERROR   | Missing @package tag in file comment
+  15 | ERROR   | Missing @author tag in file comment
+  15 | ERROR   | Missing @license tag in file comment
+  15 | ERROR   | Missing @link tag in file comment
+  20 | ERROR   | Missing parameter comment
+  36 | ERROR   | Missing parameter comment
+  38 | ERROR   | Missing parameter comment
+  54 | ERROR   | Missing parameter comment
+  70 | ERROR   | Missing parameter comment
+  77 | WARNING | Line exceeds 85 characters; contains 95 characters
+  86 | ERROR   | Missing parameter comment
+ 110 | ERROR   | Missing parameter comment
+ 134 | ERROR   | Missing parameter comment
+ 166 | WARNING | Line exceeds 85 characters; contains 202 characters
+ 177 | ERROR   | Missing parameter comment
+ 196 | WARNING | Line exceeds 85 characters; contains 161 characters
+ 274 | ERROR   | Missing parameter comment
+ 300 | ERROR   | Missing parameter comment
+ 328 | WARNING | Line exceeds 85 characters; contains 175 characters
+ 338 | ERROR   | Missing parameter comment
+ 356 | ERROR   | Missing parameter comment
+ 367 | WARNING | Line exceeds 85 characters; contains 180 characters
+ 371 | WARNING | Line exceeds 85 characters; contains 294 characters
+ 382 | WARNING | Line exceeds 85 characters; contains 127 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\tests\gendatas\majGSB.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AND 2 WARNINGS AFFECTING 3 LINES
+----------------------------------------------------------------------
+ 14 | ERROR   | Missing @category tag in file comment
+ 14 | ERROR   | Missing @package tag in file comment
+ 14 | ERROR   | Missing @author tag in file comment
+ 14 | ERROR   | Missing @license tag in file comment
+ 14 | ERROR   | Missing @link tag in file comment
+ 27 | WARNING | Line exceeds 85 characters; contains 93 characters
+ 28 | WARNING | Line exceeds 85 characters; contains 99 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\js\js_dynamique_valideFrais.js
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | WARNING | File has mixed line endings; this may cause incorrect
+   |         | results
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\js\js_report_refus.js
+----------------------------------------------------------------------
+FOUND 2 ERRORS AND 1 WARNING AFFECTING 3 LINES
+----------------------------------------------------------------------
+  1 | WARNING | File has mixed line endings; this may cause incorrect
+    |         | results
+ 21 | ERROR   | Tag @returns cannot be grouped with parameter tags in
+    |         | a doc comment
+ 39 | ERROR   | Tag @returns cannot be grouped with parameter tags in
+    |         | a doc comment
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\v_accueil.php
+----------------------------------------------------------------------
+FOUND 7 ERRORS AND 4 WARNINGS AFFECTING 5 LINES
+----------------------------------------------------------------------
+ 14 | ERROR   | Missing @category tag in file comment
+ 14 | ERROR   | Missing @package tag in file comment
+ 14 | ERROR   | Missing @author tag in file comment
+ 14 | ERROR   | Missing @license tag in file comment
+ 14 | ERROR   | Missing @link tag in file comment
+ 21 | WARNING | Line exceeds 85 characters; contains 102 characters
+ 27 | ERROR   | Expected "if (...) {\n"; found "if (...) {"
+ 27 | WARNING | Line exceeds 85 characters; contains 94 characters
+ 29 | ERROR   | Expected "if (...) {\n"; found "if (...) {"
+ 29 | WARNING | Line exceeds 85 characters; contains 95 characters
+ 51 | WARNING | Line exceeds 85 characters; contains 93 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\v_connexion.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 14 | ERROR | Missing @category tag in file comment
+ 14 | ERROR | Missing @package tag in file comment
+ 14 | ERROR | Missing @author tag in file comment
+ 14 | ERROR | Missing @license tag in file comment
+ 14 | ERROR | Missing @link tag in file comment
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\v_deconnexion.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 14 | ERROR | Missing @category tag in file comment
+ 14 | ERROR | Missing @package tag in file comment
+ 14 | ERROR | Missing @author tag in file comment
+ 14 | ERROR | Missing @license tag in file comment
+ 14 | ERROR | Missing @link tag in file comment
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\v_entete.php
+----------------------------------------------------------------------
+FOUND 6 ERRORS AND 6 WARNINGS AFFECTING 7 LINES
+----------------------------------------------------------------------
+ 14 | ERROR   | Missing @category tag in file comment
+ 14 | ERROR   | Missing @package tag in file comment
+ 14 | ERROR   | Missing @author tag in file comment
+ 14 | ERROR   | Missing @license tag in file comment
+ 14 | ERROR   | Missing @link tag in file comment
+ 23 | WARNING | Line exceeds 85 characters; contains 91 characters
+ 28 | WARNING | Line exceeds 85 characters; contains 188 characters
+ 29 | WARNING | Line exceeds 85 characters; contains 208 characters
+ 30 | WARNING | Line exceeds 85 characters; contains 210 characters
+ 33 | ERROR   | Expected "if (...) {\n"; found "if (...) {"
+ 33 | WARNING | Line exceeds 85 characters; contains 141 characters
+ 54 | WARNING | Line exceeds 85 characters; contains 100 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\v_entete_comptable.php
+----------------------------------------------------------------------
+FOUND 13 ERRORS AND 10 WARNINGS AFFECTING 15 LINES
+----------------------------------------------------------------------
+ 14 | ERROR   | [ ] Missing @category tag in file comment
+ 14 | ERROR   | [ ] Missing @package tag in file comment
+ 14 | ERROR   | [ ] Missing @author tag in file comment
+ 14 | ERROR   | [ ] Missing @license tag in file comment
+ 14 | ERROR   | [ ] Missing @link tag in file comment
+ 16 | ERROR   | [ ] Expected "if (...) {\n"; found "if (...) { "
+ 16 | WARNING | [ ] Line exceeds 85 characters; contains 98
+    |         |     characters
+ 17 | ERROR   | [x] Closing brace indented incorrectly; expected 32
+    |         |     spaces, found 37
+ 19 | WARNING | [ ] Line exceeds 85 characters; contains 86
+    |         |     characters
+ 23 | ERROR   | [ ] Expected "if (...) {\n"; found "if (...) { "
+ 23 | WARNING | [ ] Line exceeds 85 characters; contains 92
+    |         |     characters
+ 24 | ERROR   | [x] Closing brace indented incorrectly; expected 31
+    |         |     spaces, found 36
+ 25 | WARNING | [ ] Line exceeds 85 characters; contains 102
+    |         |     characters
+ 30 | ERROR   | [ ] Expected "if (...) {\n"; found "if (...) { "
+ 30 | WARNING | [ ] Line exceeds 85 characters; contains 92
+    |         |     characters
+ 31 | ERROR   | [x] Closing brace indented incorrectly; expected 31
+    |         |     spaces, found 36
+ 32 | WARNING | [ ] Line exceeds 85 characters; contains 92
+    |         |     characters
+ 33 | WARNING | [ ] Line exceeds 85 characters; contains 86
+    |         |     characters
+ 37 | ERROR   | [ ] Expected "if (...) {\n"; found "if (...) { "
+ 37 | WARNING | [ ] Line exceeds 85 characters; contains 92
+    |         |     characters
+ 38 | ERROR   | [x] Closing brace indented incorrectly; expected 31
+    |         |     spaces, found 36
+ 39 | WARNING | [ ] Line exceeds 85 characters; contains 97
+    |         |     characters
+ 40 | WARNING | [ ] Line exceeds 85 characters; contains 89
+    |         |     characters
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 4 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\v_entete_visiteur.php
+----------------------------------------------------------------------
+FOUND 13 ERRORS AND 11 WARNINGS AFFECTING 16 LINES
+----------------------------------------------------------------------
+ 14 | ERROR   | [ ] Missing @category tag in file comment
+ 14 | ERROR   | [ ] Missing @package tag in file comment
+ 14 | ERROR   | [ ] Missing @author tag in file comment
+ 14 | ERROR   | [ ] Missing @license tag in file comment
+ 14 | ERROR   | [ ] Missing @link tag in file comment
+ 16 | ERROR   | [ ] Expected "if (...) {\n"; found "if (...) { "
+ 16 | WARNING | [ ] Line exceeds 85 characters; contains 100
+    |         |     characters
+ 17 | ERROR   | [x] Closing brace indented incorrectly; expected 34
+    |         |     spaces, found 39
+ 19 | WARNING | [ ] Line exceeds 85 characters; contains 86
+    |         |     characters
+ 23 | ERROR   | [ ] Expected "if (...) {\n"; found "if (...) { "
+ 23 | WARNING | [ ] Line exceeds 85 characters; contains 91
+    |         |     characters
+ 24 | ERROR   | [x] Closing brace indented incorrectly; expected 31
+    |         |     spaces, found 36
+ 25 | WARNING | [ ] Line exceeds 85 characters; contains 89
+    |         |     characters
+ 26 | WARNING | [ ] Line exceeds 85 characters; contains 88
+    |         |     characters
+ 30 | ERROR   | [ ] Expected "if (...) {\n"; found "if (...) { "
+ 30 | WARNING | [ ] Line exceeds 85 characters; contains 90
+    |         |     characters
+ 31 | ERROR   | [x] Closing brace indented incorrectly; expected 31
+    |         |     spaces, found 36
+ 32 | WARNING | [ ] Line exceeds 85 characters; contains 93
+    |         |     characters
+ 33 | WARNING | [ ] Line exceeds 85 characters; contains 90
+    |         |     characters
+ 37 | ERROR   | [ ] Expected "if (...) {\n"; found "if (...) { "
+ 37 | WARNING | [ ] Line exceeds 85 characters; contains 92
+    |         |     characters
+ 38 | ERROR   | [x] Closing brace indented incorrectly; expected 31
+    |         |     spaces, found 36
+ 39 | WARNING | [ ] Line exceeds 85 characters; contains 97
+    |         |     characters
+ 40 | WARNING | [ ] Line exceeds 85 characters; contains 89
+    |         |     characters
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 4 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\v_erreurs.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 14 | ERROR | Missing @category tag in file comment
+ 14 | ERROR | Missing @package tag in file comment
+ 14 | ERROR | Missing @author tag in file comment
+ 14 | ERROR | Missing @license tag in file comment
+ 14 | ERROR | Missing @link tag in file comment
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\v_etatFrais.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 14 | ERROR | Missing @category tag in file comment
+ 14 | ERROR | Missing @package tag in file comment
+ 14 | ERROR | Missing @author tag in file comment
+ 14 | ERROR | Missing @license tag in file comment
+ 14 | ERROR | Missing @link tag in file comment
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\v_info.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 14 | ERROR | Missing @category tag in file comment
+ 14 | ERROR | Missing @package tag in file comment
+ 14 | ERROR | Missing @author tag in file comment
+ 14 | ERROR | Missing @license tag in file comment
+ 14 | ERROR | Missing @link tag in file comment
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\v_listeFraisForfait.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AND 1 WARNING AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 14 | ERROR   | Missing @category tag in file comment
+ 14 | ERROR   | Missing @package tag in file comment
+ 14 | ERROR   | Missing @author tag in file comment
+ 14 | ERROR   | Missing @license tag in file comment
+ 14 | ERROR   | Missing @link tag in file comment
+ 36 | WARNING | Line exceeds 85 characters; contains 113 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\v_listeFraisHorsForfait.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AND 2 WARNINGS AFFECTING 3 LINES
+----------------------------------------------------------------------
+ 14 | ERROR   | Missing @category tag in file comment
+ 14 | ERROR   | Missing @package tag in file comment
+ 14 | ERROR   | Missing @author tag in file comment
+ 14 | ERROR   | Missing @license tag in file comment
+ 14 | ERROR   | Missing @link tag in file comment
+ 41 | WARNING | Line exceeds 85 characters; contains 105 characters
+ 42 | WARNING | Line exceeds 85 characters; contains 124 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\v_listeMois.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 14 | ERROR | Missing @category tag in file comment
+ 14 | ERROR | Missing @package tag in file comment
+ 14 | ERROR | Missing @author tag in file comment
+ 14 | ERROR | Missing @license tag in file comment
+ 14 | ERROR | Missing @link tag in file comment
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\v_listeVisiteurs.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AND 4 WARNINGS AFFECTING 5 LINES
+----------------------------------------------------------------------
+ 14 | ERROR   | Missing @category tag in file comment
+ 14 | ERROR   | Missing @package tag in file comment
+ 14 | ERROR   | Missing @author tag in file comment
+ 14 | ERROR   | Missing @license tag in file comment
+ 14 | ERROR   | Missing @link tag in file comment
+ 30 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 49 | WARNING | Line exceeds 85 characters; contains 103 characters
+ 50 | WARNING | Line exceeds 85 characters; contains 96 characters
+ 86 | WARNING | Line exceeds 85 characters; contains 91 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\v_pied.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AND 1 WARNING AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 14 | ERROR   | Missing @category tag in file comment
+ 14 | ERROR   | Missing @package tag in file comment
+ 14 | ERROR   | Missing @author tag in file comment
+ 14 | ERROR   | Missing @license tag in file comment
+ 14 | ERROR   | Missing @link tag in file comment
+ 21 | WARNING | Line exceeds 85 characters; contains 159 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\v_suiviFraisComptable.php
+----------------------------------------------------------------------
+FOUND 158 ERRORS AND 25 WARNINGS AFFECTING 114 LINES
+----------------------------------------------------------------------
+   1 | WARNING | [ ] File has mixed line endings; this may cause
+     |         |     incorrect results
+   1 | ERROR   | [x] End of line character is invalid; expected "\n"
+     |         |     but found "\r\n"
+  14 | ERROR   | [ ] Missing @category tag in file comment
+  14 | ERROR   | [ ] Missing @package tag in file comment
+  14 | ERROR   | [ ] Missing @author tag in file comment
+  14 | ERROR   | [ ] Missing @license tag in file comment
+  14 | ERROR   | [ ] Missing @link tag in file comment
+  23 | WARNING | [ ] Line exceeds 85 characters; contains 124
+     |         |     characters
+  23 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  26 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  27 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  27 | WARNING | [ ] Line exceeds 85 characters; contains 102
+     |         |     characters
+  28 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  28 | ERROR   | [x] Line indented incorrectly; expected 52 spaces,
+     |         |     found 60
+  28 | ERROR   | [x] Closing brace indented incorrectly; expected 0
+     |         |     spaces, found 60
+  29 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  30 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  31 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  32 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  32 | WARNING | [ ] Line exceeds 85 characters; contains 89
+     |         |     characters
+  33 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  33 | WARNING | [ ] Line exceeds 85 characters; contains 102
+     |         |     characters
+  34 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  34 | ERROR   | [x] Line indented incorrectly; expected 52 spaces,
+     |         |     found 60
+  34 | ERROR   | [x] Closing brace indented incorrectly; expected 0
+     |         |     spaces, found 60
+  35 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  36 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  36 | WARNING | [ ] Line exceeds 85 characters; contains 88
+     |         |     characters
+  37 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  38 | WARNING | [ ] Line exceeds 85 characters; contains 140
+     |         |     characters
+  38 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  42 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  43 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  44 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  45 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  46 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  47 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  47 | ERROR   | [ ] Expected "foreach (...) {\n"; found
+     |         |     "foreach(...) {\n"
+  48 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  48 | ERROR   | [x] Line indented incorrectly; expected 8 spaces,
+     |         |     found 12
+  49 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  50 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  50 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 4
+  50 | ERROR   | [x] No space found after comma in argument list
+  50 | ERROR   | [x] No space found after comma in argument list
+  51 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  51 | ERROR   | [x] Line indented incorrectly; expected 8 spaces,
+     |         |     found 4
+  52 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  52 | ERROR   | [x] Line indented incorrectly; expected at least 12
+     |         |     spaces, found 8
+  53 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  53 | ERROR   | [x] Line indented incorrectly; expected 8 spaces,
+     |         |     found 4
+  54 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  54 | ERROR   | [x] Line indented incorrectly; expected at least 12
+     |         |     spaces, found 8
+  55 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  55 | ERROR   | [x] Line indented incorrectly; expected 8 spaces,
+     |         |     found 4
+  56 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  56 | ERROR   | [x] Line indented incorrectly; expected 8 spaces,
+     |         |     found 4
+  57 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  58 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  58 | WARNING | [ ] Line exceeds 85 characters; contains 106
+     |         |     characters
+  59 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  60 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  61 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  61 | WARNING | [ ] Line exceeds 85 characters; contains 128
+     |         |     characters
+  62 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  63 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  64 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  65 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  66 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  66 | ERROR   | [x] Spaces must be used for alignment; tabs are not
+     |         |     allowed
+  66 | WARNING | [ ] Line exceeds 85 characters; contains 141
+     |         |     characters
+  67 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  67 | ERROR   | [x] Spaces must be used for alignment; tabs are not
+     |         |     allowed
+  67 | WARNING | [ ] Line exceeds 85 characters; contains 135
+     |         |     characters
+  68 | WARNING | [ ] Line exceeds 85 characters; contains 127
+     |         |     characters
+  68 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  69 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  69 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 5
+  70 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  71 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  72 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  72 | ERROR   | [x] Spaces must be used for alignment; tabs are not
+     |         |     allowed
+  72 | WARNING | [ ] Line exceeds 85 characters; contains 140
+     |         |     characters
+  73 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  73 | ERROR   | [x] Spaces must be used for alignment; tabs are not
+     |         |     allowed
+  73 | WARNING | [ ] Line exceeds 85 characters; contains 134
+     |         |     characters
+  74 | WARNING | [ ] Line exceeds 85 characters; contains 145
+     |         |     characters
+  74 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  75 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  76 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  77 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  78 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  79 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  80 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  81 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  82 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  83 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  84 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  85 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  86 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  86 | ERROR   | [ ] Expected "foreach (...) {\n"; found
+     |         |     "foreach(...) {\n"
+  87 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  87 | ERROR   | [x] Line indented incorrectly; expected 8 spaces,
+     |         |     found 12
+  88 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  89 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  89 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 4
+  89 | ERROR   | [x] No space found after comma in argument list
+  89 | ERROR   | [x] No space found after comma in argument list
+  90 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  90 | ERROR   | [x] Line indented incorrectly; expected 8 spaces,
+     |         |     found 4
+  91 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  91 | ERROR   | [x] Line indented incorrectly; expected at least 12
+     |         |     spaces, found 8
+  92 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  92 | ERROR   | [x] Line indented incorrectly; expected 8 spaces,
+     |         |     found 4
+  93 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  93 | ERROR   | [x] Line indented incorrectly; expected at least 12
+     |         |     spaces, found 8
+  94 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  94 | ERROR   | [x] Line indented incorrectly; expected 8 spaces,
+     |         |     found 4
+  95 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  95 | ERROR   | [x] Line indented incorrectly; expected 8 spaces,
+     |         |     found 4
+  96 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  97 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  97 | WARNING | [ ] Line exceeds 85 characters; contains 106
+     |         |     characters
+  98 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+  99 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 100 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 100 | WARNING | [ ] Line exceeds 85 characters; contains 128
+     |         |     characters
+ 101 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 102 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 103 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 104 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 105 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 105 | ERROR   | [x] Spaces must be used for alignment; tabs are not
+     |         |     allowed
+ 105 | WARNING | [ ] Line exceeds 85 characters; contains 141
+     |         |     characters
+ 106 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 106 | ERROR   | [x] Spaces must be used for alignment; tabs are not
+     |         |     allowed
+ 106 | WARNING | [ ] Line exceeds 85 characters; contains 135
+     |         |     characters
+ 107 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 107 | WARNING | [ ] Line exceeds 85 characters; contains 216
+     |         |     characters
+ 108 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 109 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 110 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 110 | ERROR   | [x] Spaces must be used for alignment; tabs are not
+     |         |     allowed
+ 110 | WARNING | [ ] Line exceeds 85 characters; contains 141
+     |         |     characters
+ 111 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 111 | ERROR   | [x] Spaces must be used for alignment; tabs are not
+     |         |     allowed
+ 111 | WARNING | [ ] Line exceeds 85 characters; contains 135
+     |         |     characters
+ 112 | WARNING | [ ] Line exceeds 85 characters; contains 152
+     |         |     characters
+ 112 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 113 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 114 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 115 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 116 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 117 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 118 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 119 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 120 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 121 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 122 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 123 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 124 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 124 | ERROR   | [ ] Expected "foreach (...) {\n"; found
+     |         |     "foreach(...) {\n"
+ 125 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 125 | ERROR   | [x] Line indented incorrectly; expected at least 8
+     |         |     spaces, found 6
+ 126 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 126 | ERROR   | [x] Line indented incorrectly; expected 8 spaces,
+     |         |     found 6
+ 127 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 128 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 129 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 130 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 130 | WARNING | [ ] Line exceeds 85 characters; contains 106
+     |         |     characters
+ 131 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 132 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 133 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 133 | WARNING | [ ] Line exceeds 85 characters; contains 128
+     |         |     characters
+ 134 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 135 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 136 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 137 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 138 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+ 138 | ERROR   | [x] Closing brace indented incorrectly; expected 6
+     |         |     spaces, found 2
+ 138 | ERROR   | [x] Closing brace must be on a line by itself
+ 139 | ERROR   | [x] Spaces must be used to indent lines; tabs are
+     |         |     not allowed
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 150 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\v_validFraisComptable.php
+----------------------------------------------------------------------
+FOUND 5 ERRORS AND 5 WARNINGS AFFECTING 6 LINES
+----------------------------------------------------------------------
+ 14 | ERROR   | Missing @category tag in file comment
+ 14 | ERROR   | Missing @package tag in file comment
+ 14 | ERROR   | Missing @author tag in file comment
+ 14 | ERROR   | Missing @license tag in file comment
+ 14 | ERROR   | Missing @link tag in file comment
+ 21 | WARNING | Line exceeds 85 characters; contains 92 characters
+ 40 | WARNING | Line exceeds 85 characters; contains 109 characters
+ 44 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 45 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 55 | WARNING | Line exceeds 85 characters; contains 94 characters
+----------------------------------------------------------------------
+
+
+FILE: C:\Users\Matou29\git\GSB2020\vues\v_validFraisHFComptable.php
+----------------------------------------------------------------------
+FOUND 6 ERRORS AND 8 WARNINGS AFFECTING 9 LINES
+----------------------------------------------------------------------
+  1 | WARNING | File has mixed line endings; this may cause incorrect
+    |         | results
+ 14 | ERROR   | Missing @category tag in file comment
+ 14 | ERROR   | Missing @package tag in file comment
+ 14 | ERROR   | Missing @author tag in file comment
+ 14 | ERROR   | Missing @license tag in file comment
+ 14 | ERROR   | Missing @link tag in file comment
+ 22 | WARNING | Line exceeds 85 characters; contains 141 characters
+ 47 | WARNING | Line exceeds 85 characters; contains 87 characters
+ 49 | WARNING | Line exceeds 85 characters; contains 89 characters
+ 53 | WARNING | Line exceeds 85 characters; contains 88 characters
+ 62 | WARNING | Line exceeds 85 characters; contains 86 characters
+ 66 | ERROR   | Expected "if (...) {\n"; found "if (...) {"
+ 66 | WARNING | Line exceeds 85 characters; contains 125 characters
+ 68 | WARNING | Line exceeds 85 characters; contains 91 characters
+----------------------------------------------------------------------
+
+Time: 13.21 secs; Memory: 64MB
+
