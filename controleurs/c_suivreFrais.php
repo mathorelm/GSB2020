@@ -26,8 +26,8 @@ $mois = filter_input(INPUT_POST, 'mois', FILTER_SANITIZE_STRING);
 
 switch ($action) {
 case 'afficherSuivi':
-    $pdo->mettreEnPaiementVAMoisPrecedent();
-    $pdo->rembourserMPMoisPrecedent();
+    $pdo->mettreEnPaiementVAMoisPrecedent(20);
+    $pdo->rembourserMPMoisPrecedent(30);
     break;
 case 'VAversMP':
     $pdo->majEtatFicheFrais($id_visiteur, $mois, 'MP');

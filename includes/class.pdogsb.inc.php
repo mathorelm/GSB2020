@@ -776,13 +776,13 @@ class PdoGsb
      * script de mise en paiement des fiches "VA"
      * du mois précédent si le jour du mois actuel > 20
      */
-    public function mettreEnPaiementVAMoisPrecedent()
+    public function mettreEnPaiementVAMoisPrecedent($LeJour)
     {
         // retourne le mois précédent
         $laDate = date('d-m-Y', strtotime('-1 month'));
         $laDate = str_replace("-", "/", $laDate);
         $moisPrecedent = getMois($laDate);
-        if (((int) date("j")) >= 20) {
+        if (((int) date("j")) >= $LeJour) {
             $requetePrepare = PdoGSB::$monPdo->prepare(
                 'UPDATE fichefrais ' . "SET idetat = 'MP', datemodif = now() " .
                 "WHERE fichefrais.mois = :unMois AND idetat = 'VA'");
@@ -796,13 +796,13 @@ class PdoGsb
      * script de remboursement des fiches "MP"
      * du mois précédent si le jour du mois actuel > 30
      */
-    public function rembourserMPMoisPrecedent()
+    public function rembourserMPMoisPrecedent($LeJour)
     {
         // retourne le mois précédent
         $laDate = date('d-m-Y', strtotime('-1 month'));
         $laDate = str_replace("-", "/", $laDate);
         $moisPrecedent = getMois($laDate);
-        if (((int) date("j")) >= 30) {
+        if (((int) date("j")) >= $LeJour) {
             $requetePrepare = PdoGSB::$monPdo->prepare(
                 'UPDATE fichefrais ' . "SET idetat = 'RB', datemodif = now() " .
                 "WHERE fichefrais.mois = :unMois AND idetat = 'MP'");

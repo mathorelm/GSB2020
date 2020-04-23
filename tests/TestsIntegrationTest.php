@@ -372,19 +372,15 @@ class pdogsbincTITest extends TestCase
         $reponse = $this->accesPdo->getLesInfosficheFrais($this->id, $this->mois);
         $this->assertEquals('VA', $reponse['idEtat']);
         // Mettre en paiement la fiche : ça marchera car le mois est volontairement ancien
-        $this->accesPdo->mettreEnPaiementVAMoisPrecedent();
+        $this->accesPdo->mettreEnPaiementVAMoisPrecedent(date("j"));
         // Vérifier que c'est bien passé
         $reponse = $this->accesPdo->getLesInfosficheFrais($this->id, $this->mois);
-        if (date("j") >= 20) {
-            $this->assertEquals('MP', $reponse['idEtat']);
-        }
+        $this->assertEquals('MP', $reponse['idEtat']);
         // Mettre en paiement la fiche : ça marchera car le mois est volontairement ancien
-        $this->accesPdo->rembourserMPMoisPrecedent();
+        $this->accesPdo->rembourserMPMoisPrecedent(date("j"));
         // Vérifier que c'est bien passé
         $reponse = $this->accesPdo->getLesInfosficheFrais($this->id, $this->mois);
-        if (date("j") >= 30) {
-            $this->assertEquals('RB', $reponse['idEtat']);
-        }
+        $this->assertEquals('RB', $reponse['idEtat']);
     }
 
     public function testDernierTest()
