@@ -399,7 +399,7 @@ function addLogEvent($event)
  *
  * @return Boolean $ret True si mail partie, False sinon
  */
-function envoyerleLog()
+function envoyerLeLog()
 {
     // ----------------------------------
     // Construction de l'entête

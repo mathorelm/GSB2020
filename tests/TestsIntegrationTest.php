@@ -203,7 +203,7 @@ class pdogsbincTITest extends TestCase
         $this->assertNotEmpty($retour);
         // Vérifier le flag PDF
         $this->assertEquals(0, $retour['etatPDF']);
-        $this->accesPdo->setPDFtraite($this->id, $this->mois);
+        $this->accesPdo->setPdfTraite($this->id, $this->mois);
         // Vérifier que c'est bon
         $retour = $this->accesPdo->getLesInfosFicheFrais($this->id, $this->mois);
         $this->assertEquals(1, $retour['etatPDF']);
@@ -348,18 +348,18 @@ class pdogsbincTITest extends TestCase
     public function testManipulationStatutFiche()
     {
         // Remettre les fiches à "CR"
-        $this->accesPdo->majEtatficheFrais($this->id, $this->mois, 'CR');
-        $this->accesPdo->majEtatficheFrais($this->id, $this->moissuivant, 'CR');
+        $this->accesPdo->majEtatFicheFrais($this->id, $this->mois, 'CR');
+        $this->accesPdo->majEtatFicheFrais($this->id, $this->moissuivant, 'CR');
         // Vérifier que c'est bien passé
-        $reponse = $this->accesPdo->getLesInfosficheFrais($this->id, $this->mois);
+        $reponse = $this->accesPdo->getLesInfosFicheFrais($this->id, $this->mois);
         $this->assertEquals('CR', $reponse['idEtat']);
-        $reponse = $this->accesPdo->getLesInfosficheFrais($this->id,
+        $reponse = $this->accesPdo->getLesInfosFicheFrais($this->id,
             $this->moissuivant);
         $this->assertEquals('CR', $reponse['idEtat']);
         // Clôturer les fiches
         $this->accesPdo->clotureFichesMoisPrecedent();
         // Vérifier que c'est bien passé
-        $reponse = $this->accesPdo->getLesInfosficheFrais($this->id, $this->mois);
+        $reponse = $this->accesPdo->getLesInfosFicheFrais($this->id, $this->mois);
         $this->assertEquals('CL', $reponse['idEtat']);
         // Vérifier la fonction LesMoisAValider
         $retour = $this->accesPdo->getLesMoisAValider($this->id);
@@ -367,17 +367,17 @@ class pdogsbincTITest extends TestCase
         // Valider une fiche
         $this->accesPdo->valideSommeFrais($this->id, $this->mois);
         // Vérifier que c'est bien passé
-        $reponse = $this->accesPdo->getLesInfosficheFrais($this->id, $this->mois);
+        $reponse = $this->accesPdo->getLesInfosFicheFrais($this->id, $this->mois);
         $this->assertEquals('VA', $reponse['idEtat']);
         // Mettre en paiement la fiche
         $this->accesPdo->mettreEnPaiementVAMoisPrecedent(date("j"));
         // Vérifier que c'est bien passé
-        $reponse = $this->accesPdo->getLesInfosficheFrais($this->id, $this->mois);
+        $reponse = $this->accesPdo->getLesInfosFicheFrais($this->id, $this->mois);
         $this->assertEquals('MP', $reponse['idEtat']);
         // Mettre en paiement la fiche
         $this->accesPdo->rembourserMPMoisPrecedent(date("j"));
         // Vérifier que c'est bien passé
-        $reponse = $this->accesPdo->getLesInfosficheFrais($this->id, $this->mois);
+        $reponse = $this->accesPdo->getLesInfosFicheFrais($this->id, $this->mois);
         $this->assertEquals('RB', $reponse['idEtat']);
     }
 
@@ -397,7 +397,7 @@ class pdogsbincTITest extends TestCase
             $this->moissuivant);
         $this->assertEmpty($retour);
         // Plus de fiche frais
-        $retour = $this->accesPdo->getLesInfosficheFrais($this->id, $this->mois);
+        $retour = $this->accesPdo->getLesInfosFicheFrais($this->id, $this->mois);
         $this->assertEmpty($retour);
         $this->detruireVisiteurFictif();
     }

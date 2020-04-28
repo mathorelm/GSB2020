@@ -413,7 +413,7 @@ class fctincTest extends \PHPUnit\Framework\TestCase
     public function testcompterFichesPerimeesOK()
     {
         $monPdo = new PdoGsb();
-        $lesFichesRB = $monPdo->getlesFiches('RB');
+        $lesFichesRB = $monPdo->getLesFiches('RB');
         $this->assertNotEquals(0, compterFichesPerimees($lesFichesRB));
         unset($monPdo);
     }
@@ -442,7 +442,7 @@ class fctincTest extends \PHPUnit\Framework\TestCase
         ini_set('SMTP', 'smtp.free.fr');
         ini_set('smtp_port', '25');
         copy("GSB2020.LOG", "GSB2020.BAK");
-        $this->assertEquals(true, envoyerleLog());
+        $this->assertEquals(true, envoyerLeLog());
     }
 
     public function testenvoyerLeLogException()
@@ -450,7 +450,7 @@ class fctincTest extends \PHPUnit\Framework\TestCase
         ini_set('SMTP', 'smtp.free.fr');
         ini_set('smtp_port', '26');
         copy("GSB2020.BAK", "GSB2020.LOG");
-        $this->assertEquals(false, envoyerleLog());
+        $this->assertEquals(false, envoyerLeLog());
     }
 
     public function testenvoyerLeLogKO()
@@ -459,7 +459,7 @@ class fctincTest extends \PHPUnit\Framework\TestCase
         ini_set('SMTP', 'smtp.free.fr');
         ini_set('smtp_port', '26');
         rename("GSB2020.BAK", "GSB2020.LOG");
-        $this->assertEquals(false, envoyerleLog());
+        $this->assertEquals(false, envoyerLeLog());
     }
 
     public function testgenererPDF()
@@ -470,7 +470,7 @@ class fctincTest extends \PHPUnit\Framework\TestCase
 
         $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($idvisiteur, $mois);
         $lesFraisForfait = $pdo->getLesFraisForfait($idvisiteur, $mois);
-        $lesInfosFichesFrais = $pdo->getLesInfosfichefrais($idvisiteur, $mois);
+        $lesInfosFichesFrais = $pdo->getLesInfosFicheFrais($idvisiteur, $mois);
         $visiteur = $pdo->getNomVisiteur($idvisiteur);
         $nom_visiteur = $visiteur['nom'];
         $leFichier = genererPDF($pdo, $lesFraisHorsForfait, $lesFraisForfait,

@@ -39,26 +39,26 @@ switch ($action) {
         include 'vues/v_listeVisiteurs.inc.php';
         break;
     case 'voirListeFrais':
-        $id_visiteur = filter_input(INPUT_POST, 'lstVisiteurs',
+        $idVisiteur = filter_input(INPUT_POST, 'lstVisiteurs',
             FILTER_SANITIZE_STRING);
-        $nom_prenom = $pdo->getNomVisiteur($id_visiteur);
-        $mois_fiche = filter_input(INPUT_POST, 'lstMois', FILTER_SANITIZE_STRING);
-        $lesFraisForfait = $pdo->getLesFraisForfait($id_visiteur, $mois_fiche);
-        $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($id_visiteur,
-            $mois_fiche);
-        $nbJustificatifs = $pdo->getNbjustificatifs($id_visiteur, $mois_fiche);
+        $nomPrenom = $pdo->getNomVisiteur($idVisiteur);
+        $moisFiche = filter_input(INPUT_POST, 'lstMois', FILTER_SANITIZE_STRING);
+        $lesFraisForfait = $pdo->getLesFraisForfait($idVisiteur, $moisFiche);
+        $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($idVisiteur,
+            $moisFiche);
+        $nbJustificatifs = $pdo->getNbjustificatifs($idVisiteur, $moisFiche);
         include 'vues/v_listeVisiteurs.inc.php';
         include 'vues/v_validFraisComptable.inc.php';
         include 'vues/v_validFraisHFComptable.inc.php';
         break;
     case "corrigerFraisForfait":
-        $id_visiteur = filter_input(INPUT_POST, 'idNom', FILTER_SANITIZE_STRING);
-        $nom_prenom = $pdo->getNomVisiteur($id_visiteur);
-        $mois_fiche = filter_input(INPUT_POST, 'mois', FILTER_SANITIZE_STRING);
+        $idVisiteur = filter_input(INPUT_POST, 'idNom', FILTER_SANITIZE_STRING);
+        $nomPrenom = $pdo->getNomVisiteur($idVisiteur);
+        $moisFiche = filter_input(INPUT_POST, 'mois', FILTER_SANITIZE_STRING);
         $lesFrais = filter_input(INPUT_POST, 'lesFrais', FILTER_DEFAULT,
             FILTER_FORCE_ARRAY);
         if (lesQteFraisValides($lesFrais)) {
-            $pdo->majFraisForfait($id_visiteur, $mois_fiche, $lesFrais);
+            $pdo->majFraisForfait($idVisiteur, $moisFiche, $lesFrais);
             ajouterInfo(
                 'La modification des frais forfaitisés à été prise en compte ! ');
             include 'vues/v_info.inc.php';
@@ -67,19 +67,19 @@ switch ($action) {
             include 'vues/v_erreurs.inc.php';
         }
         ;
-        $lesFraisForfait = $pdo->getLesFraisForfait($id_visiteur, $mois_fiche);
-        $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($id_visiteur,
-            $mois_fiche);
-        $nbJustificatifs = $pdo->getNbjustificatifs($id_visiteur, $mois_fiche);
+        $lesFraisForfait = $pdo->getLesFraisForfait($idVisiteur, $moisFiche);
+        $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($idVisiteur,
+            $moisFiche);
+        $nbJustificatifs = $pdo->getNbjustificatifs($idVisiteur, $moisFiche);
         include 'vues/v_listeVisiteurs.inc.php';
         include 'vues/v_validFraisComptable.inc.php';
         include 'vues/v_validFraisHFComptable.inc.php';
         break;
     case "corrigerFraisHF":
-        $id_visiteur = filter_input(INPUT_POST, 'idNom', FILTER_SANITIZE_STRING);
-        $nom_prenom = $pdo->getNomVisiteur($id_visiteur);
-        $mois_fiche = filter_input(INPUT_POST, 'mois', FILTER_SANITIZE_STRING);
-        $id_fiche = filter_input(INPUT_POST, 'idFiche', FILTER_SANITIZE_STRING);
+        $idVisiteur = filter_input(INPUT_POST, 'idNom', FILTER_SANITIZE_STRING);
+        $nomPrenom = $pdo->getNomVisiteur($idVisiteur);
+        $moisFiche = filter_input(INPUT_POST, 'mois', FILTER_SANITIZE_STRING);
+        $idFiche = filter_input(INPUT_POST, 'idFiche', FILTER_SANITIZE_STRING);
         $dateFrais = dateAnglaisVersFrancais(
             filter_input(INPUT_POST, 'HFdate', FILTER_SANITIZE_STRING));
         $libelle = filter_input(INPUT_POST, 'HFlibelle', FILTER_SANITIZE_STRING);
@@ -89,12 +89,12 @@ switch ($action) {
         } else {
             if (substr($libelle, 0, 6) == "REPORT") {
                 // traitement spécifique : suppression mois actuel + insertion mois suivant
-                $pdo->reporteFraisHorsForfait($id_visiteur, $mois_fiche,
-                    $libelle, $dateFrais, $montant, $id_fiche);
+                $pdo->reporteFraisHorsForfait($idVisiteur, $moisFiche, $libelle,
+                    $dateFrais, $montant, $idFiche);
                 ajouterInfo("Report de la ligne au mois suivant.");
             } else {
-                $pdo->majFraisHorsForfait($id_visiteur, $mois_fiche, $libelle,
-                    $dateFrais, $montant, $id_fiche);
+                $pdo->majFraisHorsForfait($idVisiteur, $moisFiche, $libelle,
+                    $dateFrais, $montant, $idFiche);
                 ajouterInfo(
                     "La modification demandée a été effectuée pour '" . $libelle .
                     "' (" . $montant . "€) à la date du " . $dateFrais);
@@ -102,10 +102,10 @@ switch ($action) {
             include 'vues/v_info.inc.php';
         }
         ;
-        $lesFraisForfait = $pdo->getLesFraisForfait($id_visiteur, $mois_fiche);
-        $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($id_visiteur,
-            $mois_fiche);
-        $nbJustificatifs = $pdo->getNbjustificatifs($id_visiteur, $mois_fiche);
+        $lesFraisForfait = $pdo->getLesFraisForfait($idVisiteur, $moisFiche);
+        $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($idVisiteur,
+            $moisFiche);
+        $nbJustificatifs = $pdo->getNbjustificatifs($idVisiteur, $moisFiche);
         include 'vues/v_listeVisiteurs.inc.php';
         include 'vues/v_validFraisComptable.inc.php';
         include 'vues/v_validFraisHFComptable.inc.php';
@@ -114,11 +114,11 @@ switch ($action) {
     case "validerFiche":
         $nbJustificatifs = filter_input(INPUT_POST, 'nbJustificatifs',
             FILTER_SANITIZE_STRING);
-        $id_visiteur = filter_input(INPUT_POST, 'idNom', FILTER_SANITIZE_STRING);
-        $mois_fiche = filter_input(INPUT_POST, 'mois', FILTER_SANITIZE_STRING);
-        $pdo->majNbJustificatifs($id_visiteur, $mois_fiche, $nbJustificatifs);
-        $pdo->valideSommeFrais($id_visiteur, $mois_fiche);
-        $pdo->majEtatFicheFrais($id_visiteur, $mois_fiche, "VA");
+        $idVisiteur = filter_input(INPUT_POST, 'idNom', FILTER_SANITIZE_STRING);
+        $moisFiche = filter_input(INPUT_POST, 'mois', FILTER_SANITIZE_STRING);
+        $pdo->majNbJustificatifs($idVisiteur, $moisFiche, $nbJustificatifs);
+        $pdo->valideSommeFrais($idVisiteur, $moisFiche);
+        $pdo->majEtatFicheFrais($idVisiteur, $moisFiche, "VA");
         ajouterInfo("La validation a été effectuée !");
         include 'vues/v_info.inc.php';
         header('Location: index.php');

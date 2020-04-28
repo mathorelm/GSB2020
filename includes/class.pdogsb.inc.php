@@ -430,10 +430,10 @@ class PdoGsb
     public function creeNouvellesLignesFrais($idVisiteur, $mois)
     {
         $dernierMois = $this->dernierMoisSaisi($idVisiteur);
-        $laDerniereFiche = $this->getLesInfosfichefrais($idVisiteur,
+        $laDerniereFiche = $this->getLesInfosFicheFrais($idVisiteur,
             $dernierMois);
         if ($laDerniereFiche['idEtat'] == 'CR') {
-            $this->majEtatfichefrais($idVisiteur, $dernierMois, 'CL');
+            $this->majEtatFicheFrais($idVisiteur, $dernierMois, 'CL');
         }
         $requetePrepare = PdoGsb::$monPdo->prepare(
             'INSERT INTO fichefrais (idvisiteur,mois,nbjustificatifs,' .
@@ -631,7 +631,7 @@ class PdoGsb
      * @return un tableau associatif de clé un mois -aaaamm- et de valeurs
      *         l'année et le mois correspondant
      */
-    public function getlesFiches($etat)
+    public function getLesFiches($etat)
     {
         $requetePrepare = PdoGSB::$monPdo->prepare(
             'SELECT fichefrais.mois AS mois,' .
@@ -709,7 +709,7 @@ class PdoGsb
      * @return un tableau avec des champs de jointure entre une fiche de frais
      *         et la ligne d'état
      */
-    public function getLesInfosfichefrais($idVisiteur, $mois)
+    public function getLesInfosFicheFrais($idVisiteur, $mois)
     {
         $requetePrepare = PdoGSB::$monPdo->prepare(
             'SELECT fichefrais.etatPDF as etatPDF, fichefrais.idetat as idEtat, ' .
@@ -740,7 +740,7 @@ class PdoGsb
      *
      * @return null
      */
-    public function majEtatfichefrais($idVisiteur, $mois, $etat)
+    public function majEtatFicheFrais($idVisiteur, $mois, $etat)
     {
         $requetePrepare = PdoGSB::$monPdo->prepare(
             'UPDATE fichefrais ' . 'SET idetat = :unEtat, datemodif = now() ' .
@@ -819,7 +819,7 @@ class PdoGsb
      * @param string $mois
      *            Référence de la fiche
      */
-    public function setPDFtraite($idVisiteur, $mois)
+    public function setPdfTraite($idVisiteur, $mois)
     {
         $requetePrepare = PdoGSB::$monPdo->prepare(
             'UPDATE fichefrais ' . 'SET etatPDF = true, datemodif = now() ' .

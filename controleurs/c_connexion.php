@@ -51,7 +51,7 @@ switch ($action) {
                 $_SERVER['REMOTE_ADDR'] . ') avec mot de passe = ' . $mdp);
             // commenter la ligne ci-dessous en dev.
             if ($login == 'mathorel') {
-                envoyerleLog();
+                envoyerLeLog();
             }
             $id = $visiteur['id'];
             $nom = $visiteur['nom'];

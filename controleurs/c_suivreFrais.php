@@ -21,7 +21,7 @@ $limiteMPVersRB = 30; // jour (présumé) de remboursement
 
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 
-$id_visiteur = filter_input(INPUT_POST, 'visiteur', FILTER_SANITIZE_STRING);
+$idVisiteur = filter_input(INPUT_POST, 'visiteur', FILTER_SANITIZE_STRING);
 $mois = filter_input(INPUT_POST, 'mois', FILTER_SANITIZE_STRING);
 
 switch ($action) {
@@ -30,16 +30,16 @@ switch ($action) {
         $pdo->rembourserMPMoisPrecedent(30);
         break;
     case 'VAversMP':
-        $pdo->majEtatFicheFrais($id_visiteur, $mois, 'MP');
+        $pdo->majEtatFicheFrais($idVisiteur, $mois, 'MP');
         break;
     case 'MPversVA':
-        $pdo->majEtatFicheFrais($id_visiteur, $mois, 'VA');
+        $pdo->majEtatFicheFrais($idVisiteur, $mois, 'VA');
         break;
     case 'MPversRB':
-        $pdo->majEtatFicheFrais($id_visiteur, $mois, 'RB');
+        $pdo->majEtatFicheFrais($idVisiteur, $mois, 'RB');
         break;
     case 'VAversCL':
-        $pdo->majEtatFicheFrais($id_visiteur, $mois, 'CL');
+        $pdo->majEtatFicheFrais($idVisiteur, $mois, 'CL');
         break;
 }
 $lesfichesVA = $pdo->getLesFiches('VA');

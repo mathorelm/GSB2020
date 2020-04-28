@@ -53,7 +53,7 @@ switch ($action) {
                 $lien_pdf = genererPDF($pdo, $lesFraisHorsForfait,
                     $lesFraisForfait, $lesInfosFicheFrais);
                 if ($lien_pdf != "") {
-                    $pdo->setPDFtraite($idVisiteur, $leMois);
+                    $pdo->setPdfTraite($idVisiteur, $leMois);
                 }
             }
         } else {
