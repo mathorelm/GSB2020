@@ -163,9 +163,5 @@ class pdogsbincTUTest extends TestCase
         $this->AssertNotEmpty($monPdo->getLesidFrais());
         unset($monPdo);
     }
-
-
-
-
 }
 

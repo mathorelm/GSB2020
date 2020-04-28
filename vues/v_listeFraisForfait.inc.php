@@ -16,7 +16,9 @@
 
 <div class="row">
     <h2>Renseigner ma fiche de frais du mois
-        <?php echo $numMois . '-' . $numAnnee ?>
+        <?php
+
+echo $numMois . '-' . $numAnnee?>
     </h2>
     <h3>Eléments forfaitisés</h3>
     <div class="col-md-4">
@@ -28,17 +30,26 @@
                 foreach ($lesFraisForfait as $unFrais) {
                     $idFrais = $unFrais['idfrais'];
                     $libelle = htmlspecialchars($unFrais['libelle']);
-                    $quantite = $unFrais['quantite']; ?>
+                    $quantite = $unFrais['quantite'];
+                    ?>
                     <div class="form-group">
-                        <label for="idFrais"><?php echo $libelle;
-                        if ($idFrais=="KM") {
-                            $vehicule=$pdo->getVehicule($_SESSION['idVisiteur']);
-                            echo " (".strtoupper($vehicule['carburant'])." ".$vehicule['puissance_admin']." CV)";
-                        }?></label>
+                        <label for="idFrais"><?php
+
+echo $libelle;
+                    if ($idFrais == "KM") {
+                        $vehicule = $pdo->getVehicule($_SESSION['idVisiteur']);
+                        echo " (" . strtoupper($vehicule['carburant']) . " " .
+                            $vehicule['puissance_admin'] . " CV)";
+                    }
+                    ?></label>
                         <input type="text" id="idFrais"
-                               name="lesFrais[<?php echo $idFrais ?>]"
+                               name="lesFrais[<?php
+
+echo $idFrais?>]"
                                size="10" maxlength="5"
-                               value="<?php echo $quantite ?>"
+                               value="<?php
+
+echo $quantite?>"
                                class="form-control">
                     </div>
                     <?php

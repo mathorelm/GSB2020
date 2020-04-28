@@ -13,24 +13,18 @@
  * @link      http://gsb2020.free.fr
  */
 
-function activerBoutonCorriger()
-{
-    document.getElementById('corrigerForfait').disabled = false;
+function activerBoutonCorriger() {
+	document.getElementById('corrigerForfait').disabled = false;
 }
-function desactiverBoutonCorriger()
-{
-    document.getElementById('corrigerForfait').disabled = true;
+function desactiverBoutonCorriger() {
+	document.getElementById('corrigerForfait').disabled = true;
 }
 
-window.addEventListener(
-    "load", function () {
-        window.document.getElementById("reinit").addEventListener(
-            "click",
-            desactiverBoutonCorriger
-        );
-        let tabZonesText = window.document.querySelectorAll('.form-control');
-        for (let i = 0; i < tabZonesText.length; i++) {
-            tabZonesText[i].addEventListener("keypress", activerBoutonCorriger);
-        }
-    }
-);
+window.addEventListener("load", function() {
+	window.document.getElementById("reinit").addEventListener("click",
+			desactiverBoutonCorriger);
+	let tabZonesText = window.document.querySelectorAll('.form-control');
+	for (let i = 0; i < tabZonesText.length; i++) {
+		tabZonesText[i].addEventListener("keypress", activerBoutonCorriger);
+	}
+});

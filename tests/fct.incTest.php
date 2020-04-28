@@ -173,7 +173,7 @@ class fctincTest extends \PHPUnit\Framework\TestCase
 
     public function testestEntierPositifFAUX()
     {
-        $test = - 13;
+        $test = -13;
         $this->assertFalse(estEntierPositif($test));
         $test = 0.1;
         $this->assertFalse(estEntierPositif($test));
@@ -208,7 +208,7 @@ class fctincTest extends \PHPUnit\Framework\TestCase
     {
         $tableau = array(
             1,
-            - 2,
+            -2,
             3,
             4,
             5.5,
@@ -278,7 +278,7 @@ class fctincTest extends \PHPUnit\Framework\TestCase
     {
         $lesFrais = array(
             1,
-            - 1,
+            -1,
             0.5,
             4,
             5
@@ -412,7 +412,7 @@ class fctincTest extends \PHPUnit\Framework\TestCase
 
     public function testcompterFichesPerimeesOK()
     {
-        $monPdo = NEW PdoGsb;
+        $monPdo = new PdoGsb();
         $lesFichesRB = $monPdo->getlesFiches('RB');
         $this->assertNotEquals(0, compterFichesPerimees($lesFichesRB));
         unset($monPdo);
@@ -421,10 +421,10 @@ class fctincTest extends \PHPUnit\Framework\TestCase
     public function testcompterMontantTotal()
     {
         $tableauDeFiches = array();
-        for ($cpt=0;$cpt<10;$cpt++) {
-            $uneFiche['montant']=1000;
-            $uneFiche['date']='2019-12-01';
-            $tableauDeFiches[$cpt]=$uneFiche;
+        for ($cpt = 0; $cpt < 10; $cpt ++) {
+            $uneFiche['montant'] = 1000;
+            $uneFiche['date'] = '2019-12-01';
+            $tableauDeFiches[$cpt] = $uneFiche;
         }
         $this->assertEquals(10000, compterMontantTotal($tableauDeFiches));
     }
@@ -443,7 +443,6 @@ class fctincTest extends \PHPUnit\Framework\TestCase
         ini_set('smtp_port', '25');
         copy("GSB2020.LOG", "GSB2020.BAK");
         $this->assertEquals(true, envoyerleLog());
-
     }
 
     public function testenvoyerLeLogException()
@@ -456,7 +455,7 @@ class fctincTest extends \PHPUnit\Framework\TestCase
 
     public function testenvoyerLeLogKO()
     {
-        //on doit forcer la fonction mail à retourner un code erreur
+        // on doit forcer la fonction mail à retourner un code erreur
         ini_set('SMTP', 'smtp.free.fr');
         ini_set('smtp_port', '26');
         rename("GSB2020.BAK", "GSB2020.LOG");
@@ -465,19 +464,24 @@ class fctincTest extends \PHPUnit\Framework\TestCase
 
     public function testgenererPDF()
     {
-        $pdo = NEW PdoGsb;
-        $idvisiteur='m11';
+        $pdo = new PdoGsb();
+        $idvisiteur = 'm11';
         $mois = '202001';
 
         $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($idvisiteur, $mois);
         $lesFraisForfait = $pdo->getLesFraisForfait($idvisiteur, $mois);
         $lesInfosFichesFrais = $pdo->getLesInfosfichefrais($idvisiteur, $mois);
         $visiteur = $pdo->getNomVisiteur($idvisiteur);
-        $nom_visiteur=$visiteur['nom'];
-        $leFichier = genererPDF($pdo, $lesFraisHorsForfait, $lesFraisForfait, $lesInfosFichesFrais);
-        $this->assertFileExists('./PDF/'.$lesFraisHorsForfait[0]['mois'].'-'.$nom_visiteur.'.pdf');
+        $nom_visiteur = $visiteur['nom'];
+        $leFichier = genererPDF($pdo, $lesFraisHorsForfait, $lesFraisForfait,
+            $lesInfosFichesFrais);
+        $this->assertFileExists(
+            './PDF/' . $lesFraisHorsForfait[0]['mois'] . '-' . $nom_visiteur .
+            '.pdf');
         unset($monPdo);
-        unlink('./PDF/'.$lesFraisHorsForfait[0]['mois'].'-'.$nom_visiteur.'.pdf');
+        unlink(
+            './PDF/' . $lesFraisHorsForfait[0]['mois'] . '-' . $nom_visiteur .
+            '.pdf');
     }
 }
 

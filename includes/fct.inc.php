@@ -27,13 +27,13 @@ function estConnecte()
 /**
  * Enregistre dans une variable session les infos d'un visiteur
  *
- * @param  String $idVisiteur
+ * @param String $idVisiteur
  *            ID du visiteur
- * @param  String $nom
+ * @param String $nom
  *            Nom du visiteur
- * @param  String $prenom
+ * @param String $prenom
  *            Prénom du visiteur
- * @param  String $metier
+ * @param String $metier
  *            Code représentant le métier exercé
  * @return null
  */
@@ -107,7 +107,7 @@ function getMois($date)
 /**
  * Inverse la présentation du libellé aaaamm en mm/aaaa
  *
- * @param  string $leLibelle
+ * @param string $leLibelle
  *            au format aaaamm
  * @return string le mois au format mm/aaaa
  */
@@ -121,7 +121,7 @@ function inverseMois(string $leLibelle): string
 /**
  * Retour le mois en Français (en minuscule) avec l'année
  *
- * @param  string $leLibelle
+ * @param string $leLibelle
  *            au format aaaamm
  * @return string de type juillet 2020
  */
@@ -173,7 +173,7 @@ function estTableauEntiers($tabEntiers)
 {
     $boolReturn = true;
     foreach ($tabEntiers as $unEntier) {
-        if (! estEntierPositif($unEntier)) {
+        if (!estEntierPositif($unEntier)) {
             $boolReturn = false;
         }
     }
@@ -213,10 +213,10 @@ function estDateValide($date)
     if (count($tabDate) != 3) {
         $dateOK = false;
     } else {
-        if (! estTableauEntiers($tabDate)) {
+        if (!estTableauEntiers($tabDate)) {
             $dateOK = false;
         } else {
-            if (! checkdate($tabDate[1], $tabDate[0], $tabDate[2])) {
+            if (!checkdate($tabDate[1], $tabDate[0], $tabDate[2])) {
                 $dateOK = false;
             }
         }
@@ -247,7 +247,7 @@ function lesQteFraisValides($lesFrais)
  *            Date des frais
  * @param String $libelle
  *            Libellé des frais
- * @param Float  $montant
+ * @param Float $montant
  *            Montant des frais
  *
  * @return null
@@ -257,13 +257,12 @@ function valideInfosFrais($dateFrais, $libelle, $montant)
     if ($dateFrais == '') {
         ajouterErreur('Le champ date ne doit pas être vide');
     } else {
-        if (! estDatevalide($dateFrais)) {
+        if (!estDatevalide($dateFrais)) {
             ajouterErreur('Date invalide');
         } else {
             if (estDateDepassee($dateFrais)) {
                 ajouterErreur(
-                    "date d'enregistrement du frais dépassé, plus de 1 an"
-                );
+                    "date d'enregistrement du frais dépassé, plus de 1 an");
             }
         }
     }
@@ -272,7 +271,7 @@ function valideInfosFrais($dateFrais, $libelle, $montant)
     }
     if ($montant == '') {
         ajouterErreur('Le champ montant ne peut pas être vide');
-    } elseif (! is_numeric($montant)) {
+    } elseif (!is_numeric($montant)) {
         ajouterErreur('Le champ montant doit être numérique');
     }
 }
@@ -287,14 +286,13 @@ function valideInfosFrais($dateFrais, $libelle, $montant)
  */
 function ajouterErreur(string $msg)
 {
-    if (! isset($_REQUEST['erreurs'])) {
+    if (!isset($_REQUEST['erreurs'])) {
         $_REQUEST['erreurs'] = array();
     }
     $_REQUEST['erreurs'][] = $msg;
     addLogEvent(
         'Erreur ("' . $msg . '") de ' . $_SESSION['prenom'] . ' ' .
-        $_SESSION['nom'] . ' (IP = ' . $_SERVER['REMOTE_ADDR']
-    );
+        $_SESSION['nom'] . ' (IP = ' . $_SERVER['REMOTE_ADDR']);
 }
 
 /**
@@ -304,31 +302,30 @@ function ajouterErreur(string $msg)
  */
 function nbErreurs()
 {
-    if (! isset($_REQUEST['erreurs'])) {
+    if (!isset($_REQUEST['erreurs'])) {
         return 0;
     } else {
         return count($_REQUEST['erreurs']);
     }
-    /**
-     * Ajoute le libellé d'une information au tableau des informations
-     *
-     * @param String $msg
-     *            Libellé de l'information
-     *
-     * @return null
-     */
+/**
+ * Ajoute le libellé d'une information au tableau des informations
+ *
+ * @param String $msg
+ *            Libellé de l'information
+ *
+ * @return null
+ */
 }
 
 function ajouterInfo($msg)
 {
-    if (! isset($_REQUEST['infos'])) {
+    if (!isset($_REQUEST['infos'])) {
         $_REQUEST['infos'] = array();
     }
     $_REQUEST['infos'][] = $msg;
     addLogEvent(
         'Info ("' . $msg . '") de ' . $_SESSION['prenom'] . ' ' .
-        $_SESSION['nom'] . ' (IP = ' . $_SERVER['REMOTE_ADDR']
-    );
+        $_SESSION['nom'] . ' (IP = ' . $_SERVER['REMOTE_ADDR']);
 }
 
 /**
@@ -338,7 +335,7 @@ function ajouterInfo($msg)
  */
 function nbInfos()
 {
-    if (! isset($_REQUEST['infos'])) {
+    if (!isset($_REQUEST['infos'])) {
         return 0;
     } else {
         return count($_REQUEST['infos']);
@@ -357,7 +354,7 @@ function compterFichesPerimees(array $tableauDeFiches): int
     // Comptabiliser les fiches de plus de 1 an
     $compteur = 0;
     foreach ($tableauDeFiches as $uneFiche) {
-        if (! estDateDepassee(dateAnglaisVersFrancais($uneFiche['date']))) {
+        if (!estDateDepassee(dateAnglaisVersFrancais($uneFiche['date']))) {
             $compteur ++;
         }
     }
@@ -376,7 +373,7 @@ function compterMontantTotal(array $tableauDeFiches): float
     // Comptabiliser les fiches de plus de 1 an
     $montant = 0;
     foreach ($tableauDeFiches as $uneFiche) {
-        if (! estDateDepassee(dateAnglaisVersFrancais($uneFiche['date']))) {
+        if (!estDateDepassee(dateAnglaisVersFrancais($uneFiche['date']))) {
             $montant += (float) $uneFiche['montant'];
         }
     }
@@ -394,7 +391,6 @@ function addLogEvent($event)
     $time = "[" . $time . "] ";
     $event = $time . $event . "\n";
     file_put_contents("GSB2020.log", $event, FILE_APPEND);
-
 }
 
 /**
@@ -487,16 +483,15 @@ function envoyerleLog()
     $destinataire = 'gsb2020@free.fr';
     $expediteur = 'ne-pas-repondre@gsb2020.org';
     $reponse = 'gsb2020@free.fr';
-    try{
-        $ret = mail(
-            $destinataire, 'GSB2020 : transmission du log', $msg,
-            "Reply-to: $reponse\r\nFrom: $expediteur\r\n" . $header
-        );
-        if ($ret==1) {
+    try {
+        $ret = mail($destinataire, 'GSB2020 : transmission du log', $msg,
+            "Reply-to: $reponse\r\nFrom: $expediteur\r\n" . $header);
+        if ($ret == 1) {
             unlink('gsb2020.log');
             return true;
         }
-    } catch (Exception $e) {
+    }
+    catch (Exception $e) {
         addLogEvent("Erreur d'envoi du log à gsb2020@free.fr");
     }
     return false;
@@ -505,19 +500,19 @@ function envoyerleLog()
 /**
  * Génère un fichier PDF contenant les informations de la fiche de frais
  *
- * @param  object $pdo
+ * @param object $pdo
  *            passage du pointeur pdo pour accéder à ses fonctions
- * @param  array  $lesFraisHorsForfait
+ * @param array $lesFraisHorsForfait
  *            tableau associatif comportant les frais HF
- * @param  array  $lesFraisForfait
+ * @param array $lesFraisForfait
  *            tableau associatif comportant les frais forfaitisés
- * @param  array  $lesInfosFicheFrais
+ * @param array $lesInfosFicheFrais
  *            informations concernant la fiche de frais
  * @return string
  */
 function genererPDF($pdo, array $lesFraisHorsForfait, array $lesFraisForfait,
-    array $lesInfosFicheFrais
-): string {
+    array $lesInfosFicheFrais): string
+{
     if (!defined('FPDF_FONTPATH')) {
         define('FPDF_FONTPATH', 'styles/fonts');
     }
@@ -554,10 +549,8 @@ function genererPDF($pdo, array $lesFraisHorsForfait, array $lesFraisForfait,
     $pdf->SetXY(40, 74);
     $pdf->Cell(48, 8, "Visiteur", 0, 0, "L");
     $pdf->Cell(34, 8, $id_visiteur, 0, 0, "L");
-    $pdf->Cell(
-        60, 8, $prenom_visiteur . ' ' . strtoupper($nom_visiteur), 0, 0,
-        "L"
-    );
+    $pdf->Cell(60, 8, $prenom_visiteur . ' ' . strtoupper($nom_visiteur), 0, 0,
+        "L");
     $pdf->SetXY(40, 82);
     $pdf->Cell(48, 8, "Mois", 0, 0, "L");
     $pdf->Cell(34, 8, utf8_decode(ucfirst($mois_lettre)), 0, 0, "L");
@@ -582,24 +575,19 @@ function genererPDF($pdo, array $lesFraisHorsForfait, array $lesFraisForfait,
         $pdf->Cell(34, 8, $unFrais['quantite'], 1, 0, "R");
         // Données non récupérées !
         $pdf->Cell(34, 8, $unFrais['montant_unitaire'], 1, 0, "R");
-        $pdf->Cell(
-            26, 8,
+        $pdf->Cell(26, 8,
             number_format(
                 (float) $unFrais['quantite'] * $unFrais['montant_unitaire'], 2,
-                ".", ""
-            ), 1, 0, "R"
-        );
+                ".", ""), 1, 0, "R");
         $index ++;
     }
     // Ajout mention indemnité kilométrique
     $pdf->SetFont('', 'I', 8);
     $pdf->SetXY(40, 138);
-    $pdf->Cell(
-        48, 8,
+    $pdf->Cell(48, 8,
         utf8_decode("Note : Vous avez déclaré un véhicule ") .
         strtoupper($vehicule['carburant']) . " de " .
-        $vehicule['puissance_admin'] . " CV"
-    );
+        $vehicule['puissance_admin'] . " CV");
     // Autres Frais
     $pdf->SetFont('', 'I', 12);
     $pdf->SetDrawColor(82, 127, 192); // Bleu Foncé GSB

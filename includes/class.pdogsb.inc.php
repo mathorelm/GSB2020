@@ -301,8 +301,7 @@ class PdoGsb
         $montantValide += $this->effectueTotalFraisHF($idVisiteur, $mois);
         $requetePrepare = PdoGSB::$monPdo->prepare(
             'UPDATE fichefrais ' . 'SET montantvalide = :unMontant, ' .
-            "idetat = 'VA' ".
-            'WHERE fichefrais.idvisiteur = :unIdVisiteur ' .
+            "idetat = 'VA' " . 'WHERE fichefrais.idvisiteur = :unIdVisiteur ' .
             'AND fichefrais.mois = :unMois');
         $requetePrepare->bindParam(':unMontant', $montantValide);
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
@@ -387,7 +386,7 @@ class PdoGsb
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->execute();
-        if (! $requetePrepare->fetch()) {
+        if (!$requetePrepare->fetch()) {
             $boolReturn = true;
         }
         return $boolReturn;

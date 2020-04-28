@@ -139,8 +139,6 @@ class pdogsbincTITest extends TestCase
         $requetePrepare->execute();
     }
 
-
-
     public function testcreationVisiteur()
     {
         // Il ne doit pas y avoir de visiteur qui possède ce couple $login/$mdp
@@ -204,12 +202,12 @@ class pdogsbincTITest extends TestCase
         $retour = $this->accesPdo->getLesInfosFicheFrais($this->id, $this->mois);
         $this->assertNotEmpty($retour);
         // Vérifier le flag PDF
-        $this->assertEquals(0,$retour['etatPDF']);
-        $this->accesPdo->setPDFtraite($this->id,$this->mois);
-        //Vérifier que c'est bon
-        $retour = $this->accesPdo->getLesInfosFicheFrais($this->id,$this->mois);
-        $this->assertEquals(1,$retour['etatPDF']);
-        //Je crée également une fiche "mois précédent", vide et non testée.
+        $this->assertEquals(0, $retour['etatPDF']);
+        $this->accesPdo->setPDFtraite($this->id, $this->mois);
+        // Vérifier que c'est bon
+        $retour = $this->accesPdo->getLesInfosFicheFrais($this->id, $this->mois);
+        $this->assertEquals(1, $retour['etatPDF']);
+        // Je crée également une fiche "mois précédent", vide et non testée.
         $retour = $this->accesPdo->creeNouvellesLignesFrais($this->id,
             $this->moisprecedent);
     }
@@ -363,7 +361,7 @@ class pdogsbincTITest extends TestCase
         // Vérifier que c'est bien passé
         $reponse = $this->accesPdo->getLesInfosficheFrais($this->id, $this->mois);
         $this->assertEquals('CL', $reponse['idEtat']);
-        //Vérifier la fonction LesMoisAValider
+        // Vérifier la fonction LesMoisAValider
         $retour = $this->accesPdo->getLesMoisAValider($this->id);
         $this->assertNotEmpty($retour);
         // Valider une fiche
