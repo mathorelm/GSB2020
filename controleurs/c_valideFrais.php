@@ -36,7 +36,7 @@ foreach ($lesVisiteurs as $unVisiteur) {
 }
 switch ($action) {
 case 'selectionnerUtilisateur':
-    include 'vues/v_listeVisiteurs.php';
+    include 'vues/v_listeVisiteurs.inc.php';
     break;
 case 'voirListeFrais':
     $id_visiteur = filter_input(
@@ -51,9 +51,9 @@ case 'voirListeFrais':
         $mois_fiche
     );
     $nbJustificatifs = $pdo->getNbjustificatifs($id_visiteur, $mois_fiche);
-    include 'vues/v_listeVisiteurs.php';
-    include 'vues/v_validFraisComptable.php';
-    include 'vues/v_validFraisHFComptable.php';
+    include 'vues/v_listeVisiteurs.inc.php';
+    include 'vues/v_validFraisComptable.inc.php';
+    include 'vues/v_validFraisHFComptable.inc.php';
     break;
 case "corrigerFraisForfait":
     $id_visiteur = filter_input(INPUT_POST, 'idNom', FILTER_SANITIZE_STRING);
@@ -68,10 +68,10 @@ case "corrigerFraisForfait":
         ajouterInfo(
             'La modification des frais forfaitisés à été prise en compte ! '
         );
-        include 'vues/v_info.php';
+        include 'vues/v_info.inc.php';
     } else {
         ajouterErreur('Les valeurs des frais doivent être numériques');
-        include 'vues/v_erreurs.php';
+        include 'vues/v_erreurs.inc.php';
     }
     ;
     $lesFraisForfait = $pdo->getLesFraisForfait($id_visiteur, $mois_fiche);
@@ -80,9 +80,9 @@ case "corrigerFraisForfait":
         $mois_fiche
     );
     $nbJustificatifs = $pdo->getNbjustificatifs($id_visiteur, $mois_fiche);
-    include 'vues/v_listeVisiteurs.php';
-    include 'vues/v_validFraisComptable.php';
-    include 'vues/v_validFraisHFComptable.php';
+    include 'vues/v_listeVisiteurs.inc.php';
+    include 'vues/v_validFraisComptable.inc.php';
+    include 'vues/v_validFraisHFComptable.inc.php';
     break;
 case "corrigerFraisHF":
     $id_visiteur = filter_input(INPUT_POST, 'idNom', FILTER_SANITIZE_STRING);
@@ -95,7 +95,7 @@ case "corrigerFraisHF":
     $libelle = filter_input(INPUT_POST, 'HFlibelle', FILTER_SANITIZE_STRING);
     $montant = filter_input(INPUT_POST, 'HFmontant', FILTER_VALIDATE_FLOAT);
     if (nbErreurs() != 0) {
-        include 'vues/v_erreurs.php';
+        include 'vues/v_erreurs.inc.php';
     } else {
         if (substr($libelle, 0, 6) == "REPORT") {
             // traitement spécifique : suppression mois actuel + insertion mois suivant
@@ -114,7 +114,7 @@ case "corrigerFraisHF":
                 "' (" . $montant . "€) à la date du " . $dateFrais
             );
         }
-        include 'vues/v_info.php';
+        include 'vues/v_info.inc.php';
     }
     ;
     $lesFraisForfait = $pdo->getLesFraisForfait($id_visiteur, $mois_fiche);
@@ -123,9 +123,9 @@ case "corrigerFraisHF":
         $mois_fiche
     );
     $nbJustificatifs = $pdo->getNbjustificatifs($id_visiteur, $mois_fiche);
-    include 'vues/v_listeVisiteurs.php';
-    include 'vues/v_validFraisComptable.php';
-    include 'vues/v_validFraisHFComptable.php';
+    include 'vues/v_listeVisiteurs.inc.php';
+    include 'vues/v_validFraisComptable.inc.php';
+    include 'vues/v_validFraisHFComptable.inc.php';
     break;
 
 case "validerFiche":
@@ -139,7 +139,7 @@ case "validerFiche":
     $pdo->valideSommeFrais($id_visiteur, $mois_fiche);
     $pdo->majEtatFicheFrais($id_visiteur, $mois_fiche, "VA");
     ajouterInfo("La validation a été effectuée !");
-    include 'vues/v_info.php';
+    include 'vues/v_info.inc.php';
     header('Location: index.php');
     break;
 }

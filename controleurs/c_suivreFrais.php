@@ -50,4 +50,4 @@ $montantVA = CompterMontantTotal($lesfichesVA);
 $montantMP = CompterMontantTotal($lesfichesMP);
 $montantRB = CompterMontantTotal($lesfichesRB);
 $ficheaffichee = CompterfichesPerimees($lesfichesRB);
-require 'vues/v_suiviFraisComptable.php';
+require 'vues/v_suiviFraisComptable.inc.php';

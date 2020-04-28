@@ -22,13 +22,13 @@ case 'selectionnerMois':
     // les mois étant triés décroissants
     $lesCles = array_keys($lesMois);
     $moisASelectionner = $lesCles[0];
-    include 'vues/v_listeMois.php';
+    include 'vues/v_listeMois.inc.php';
     break;
 case 'voirEtatFrais':
     $leMois = filter_input(INPUT_POST, 'lstMois', FILTER_SANITIZE_STRING);
     $lesMois = $pdo->getLesMoisDisponibles($idVisiteur);
     $moisASelectionner = $leMois;
-    include 'vues/v_listeMois.php';
+    include 'vues/v_listeMois.inc.php';
     $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($idVisiteur, $leMois);
     $lesFraisForfait = $pdo->getLesFraisForfait($idVisiteur, $leMois);
     $lesInfosFicheFrais = $pdo->getLesInfosFicheFrais($idVisiteur, $leMois);
@@ -62,5 +62,5 @@ case 'voirEtatFrais':
         $lien_pdf = "";
     }
     // FIN GENERATION
-    include 'vues/v_etatFrais.php';
+    include 'vues/v_etatFrais.inc.php';
 }

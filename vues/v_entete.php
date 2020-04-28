@@ -30,11 +30,11 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <link href="./styles/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="./styles/style.css" rel="stylesheet">
-        <?php if (isset($_SESSION['metier'])) {?><link href="./styles/surcharge_<?php echo $_SESSION['metier']?>.css" rel="stylesheet"><?php 
+        <?php if (isset($_SESSION['metier'])) {?><link href="./styles/surcharge_<?php echo $_SESSION['metier']?>.inc.css" rel="stylesheet"><?php
         }?>
     </head>
     <body>
-        <?php //erreur HTML ok : le </div> est dans v_pied.php?>
+        <?php //erreur HTML ok : le </div> est dans v_pied.inc.php?>
         <div class="container">
             <?php
             $uc = filter_input(INPUT_GET, 'uc', FILTER_SANITIZE_STRING);

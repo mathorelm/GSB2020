@@ -2516,7 +2516,7 @@ FOUND 7 ERRORS AND 4 WARNINGS AFFECTING 5 LINES
 ----------------------------------------------------------------------
 
 
-FILE: C:\Users\Matou29\git\GSB2020\vues\v_connexion.php
+FILE: C:\Users\Matou29\git\GSB2020\vues\v_connexion.inc.php
 ----------------------------------------------------------------------
 FOUND 5 ERRORS AFFECTING 1 LINE
 ----------------------------------------------------------------------

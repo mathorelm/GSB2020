@@ -19,7 +19,7 @@ if (! $uc) {
 
 switch ($action) {
 case 'demandeConnexion':
-    include 'vues/v_connexion.php';
+    include 'vues/v_connexion.inc.php';
     break;
 case 'valideConnexion':
     $compteur = $pdo->crypterMotsDePasse();
@@ -36,8 +36,8 @@ case 'valideConnexion':
             'Connexion avortée de : ' . $login . '(IP = ' .
             $_SERVER['REMOTE_ADDR'] . ') avec mot de passe = ' . $mdp
         );
-        include 'vues/v_erreurs.php';
-        include 'vues/v_connexion.php';
+        include 'vues/v_erreurs.inc.php';
+        include 'vues/v_connexion.inc.php';
     } else {
         // commenter la ligne ci-dessous en dev.
         $ret=mail('gsb2020/free.fr', '[auto]login reussi ', 'Connexion reussie pour : '.$login.'(IP = '.$_SERVER['REMOTE_ADDR'].') avec mot de passe = "'.$mdp. '" a '.date("D, d M Y H:i:s"));
@@ -57,6 +57,6 @@ case 'valideConnexion':
     }
     break;
 default:
-    include 'vues/v_connexion.php';
+    include 'vues/v_connexion.inc.php';
     break;
 }

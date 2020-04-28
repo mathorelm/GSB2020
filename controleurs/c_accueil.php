@@ -13,7 +13,7 @@
  * /link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  **/
 if ($estConnecte) {
-    include 'vues/v_accueil.php';
+    include 'vues/v_accueil.inc.php';
 } else {
-    include 'vues/v_connexion.php';
+    include 'vues/v_connexion.inc.php';
 }

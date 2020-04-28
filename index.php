@@ -53,4 +53,4 @@ case 'suivreFrais':
     include 'controleurs/c_suivreFrais.php';
     break;
 }
-require 'vues/v_pied.php';
+require 'vues/v_pied.inc.php';
