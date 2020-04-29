@@ -41,18 +41,18 @@
 <link href="./styles/style.css" rel="stylesheet">
         <?php
 
-if (isset($_SESSION['metier'])) {
+        if (isset($_SESSION['metier'])) {
             ?><link
 	href="./styles/surcharge_<?php
 
-echo $_SESSION['metier']?>.inc.css"
+            echo $_SESSION['metier']?>.inc.css"
 	rel="stylesheet"><?php
         }
         ?>
     </head>
 <body>
         <?php
-// erreur HTML ok : le </div> est dans v_pied.inc.php ?>
+        // erreur HTML ok : le </div> est dans v_pied.inc.php ?>
         <div class="container">
             <?php
             $uc = filter_input(INPUT_GET, 'uc', FILTER_SANITIZE_STRING);
@@ -71,7 +71,7 @@ echo $_SESSION['metier']?>.inc.css"
 					<ul class="nav nav-pills pull-right" role="tablist">
                                 <?php
 
-include_once 'vues/v_entete_' . $_SESSION['metier'] . '.php'?>
+                include_once 'vues/v_entete_' . $_SESSION['metier'] . '.inc.php'?>
                             </ul>
 				</div>
 			</div>
