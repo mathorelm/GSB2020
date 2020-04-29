@@ -72,16 +72,13 @@
                         ?>
                          <option value="<?php
 
-echo $unId?>">
-                                <?php
+echo $unId?>"> <?php
 
 echo $nom . ' ' . $prenom?> </option>
                     <?php
-
-}
+                    }
                     ?>
                 </select>
-			</div>
 
 			<select id="lstMois" name="lstMois" class="form-control">
 				<option label="entete" value="0" disabled selected>...</option>
@@ -94,19 +91,17 @@ echo $nom . ' ' . $prenom?> </option>
                         ?>
                         <option label="<?php
 
-echo $unID?>"
-					value="<?php
+echo $unID?>" value="<?php
 
 echo $leMois?>">
                         <?php
 
 echo $numMois . '/' . $numAnnee?></option>
                     <?php
-
-}
+                    }
                     ?>
                 </select>
 
-	</div>
+		</div>
 	</form>
 </div>
