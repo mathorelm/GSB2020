@@ -15,6 +15,7 @@
 ?>
 
 </div>
+</div>
 <footer>
 	<hr />
 	<p class="text-center">
