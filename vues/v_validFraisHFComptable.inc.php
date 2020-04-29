@@ -104,7 +104,7 @@ $lignesAjustifier = count($lesFraisHorsForfait);
 
                 if (substr($libelle, 0, 6) == 'REFUSE') {
                     echo ' disabled';
-                    $$lignesAjustifier = $$lignesAjustifier - 1;
+                    $lignesAjustifier = $lignesAjustifier - 1;
                 }
                 ?>>Refuser</button>
                         <button class="btn btn-danger" type="reset">Réinitialiser</button>
@@ -132,7 +132,7 @@ $lignesAjustifier = count($lesFraisHorsForfait);
                     echo $nbJustificatifs?>" class="form-control"
                     pattern="[<?php
 
-                    echo $$lignesAjustifier?>]" required> <input
+                    echo $lignesAjustifier?>]" required> <input
                     id="idNom" name="idNom" type="hidden"
                     value="<?php
 
