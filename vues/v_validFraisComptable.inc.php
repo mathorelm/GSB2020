@@ -19,7 +19,7 @@
     <h2>Valider la fiche de frais
         <?php
 
-        echo $moisFiche . ' - ' . $nomPrenom['nom'] . ' ' . $nom_prenom['prenom']?>
+        echo $moisFiche . ' - ' . $nomPrenom['nom'] . ' ' . $nomPrenom['prenom']?>
     </h2>
     <h3>Eléments forfaitisés</h3>
     <div class="col-xs-4">
