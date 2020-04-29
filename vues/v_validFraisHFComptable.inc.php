@@ -16,7 +16,7 @@
 
 <?php
 
-$lignes_a_justifier = count($lesFraisHorsForfait);
+$lignesAjustifier = count($lesFraisHorsForfait);
 ?>
 <script src="/vues/js/js_report_refus.js"></script>
 <hr>
@@ -24,7 +24,7 @@ $lignes_a_justifier = count($lesFraisHorsForfait);
     <div class="panel panel-warning">
         <div class="panel-heading">Descriptif des éléments hors forfait - <?php
 
-echo count($lesFraisHorsForfait)?> entrée(s) listée(s).</div>
+        echo count($lesFraisHorsForfait)?> entrée(s) listée(s).</div>
         <table class="table table-bordered table-responsive">
             <thead>
                 <tr>
@@ -47,72 +47,71 @@ echo count($lesFraisHorsForfait)?> entrée(s) listée(s).</div>
                         action="index.php?uc=valideFrais&action=corrigerFraisHF"
                         name="form<?php
 
-echo $id?>">
+                echo $id?>">
 
 
                     <td><input type="date" id="HFdate<?php
 
-echo $id?>" name="HFdate"
+                echo $id?>" name="HFdate"
                         value="<?php
 
-echo $date?>" class="form-control" required></td>
+                echo $date?>" class="form-control" required></td>
                     <td><input type="text" id="HFlibelle<?php
 
-echo $id?>"
+                echo $id?>"
                         name="HFlibelle" value="<?php
 
-echo htmlspecialchars($libelle)?>"
+                echo htmlspecialchars($libelle)?>"
                         class="form-control" required></td>
                     <td><input type="text" id="HFmontant<?php
 
-echo $id?>"
+                echo $id?>"
                         name="HFmontant" value="<?php
 
-echo $montant?>"
+                echo $montant?>"
                         class="form-control" pattern="[0-9]+(\.[0-9]+)?" required></td>
                     <td><input id="idNom<?php
 
-echo $id?>" name="idNom" type="hidden"
+                echo $id?>" name="idNom" type="hidden"
                         value="<?php
 
-echo $id_visiteur?>"> <input
+                echo $idVisiteur?>"> <input
                         id="mois<?php
 
-echo $id?>" name="mois" type="hidden"
+                echo $id?>" name="mois" type="hidden"
                         value="<?php
 
-echo $mois_fiche?>"> <input
+                echo $moisFiche?>"> <input
                         id="idFiche<?php
 
-echo $id?>" name="idFiche" type="hidden"
+                echo $id?>" name="idFiche" type="hidden"
                         value="<?php
 
-echo $id?>">
+                echo $id?>">
                         <button class="btn btn-success" type="submit"
                             id="Corriger<?php
 
-echo $id?>">Corriger</button>
+                echo $id?>">Corriger</button>
                         <button class="btn btn-warning" type="button" name="Reporter"
                             id="<?php
 
-echo $id?>">Reporter</button>
+                echo $id?>">Reporter</button>
                         <button class="btn" type="button" name="Refuser"
                             id="<?php
 
-echo $id?>"
+                echo $id?>"
                 <?php
 
-if (substr($libelle, 0, 6) == 'REFUSE') {
+                if (substr($libelle, 0, 6) == 'REFUSE') {
                     echo ' disabled';
-                    $lignes_a_justifier = $lignes_a_justifier - 1;
+                    $$lignesAjustifier = $$lignesAjustifier - 1;
                 }
                 ?>>Refuser</button>
                         <button class="btn btn-danger" type="reset">Réinitialiser</button>
                     </td>
                     </form>
             <?php
-
-}
+            }
             ?>
             </tr>
             </tbody>
@@ -130,17 +129,17 @@ if (substr($libelle, 0, 6) == 'REFUSE') {
                     name="nbJustificatifs" size="2" maxlength="5"
                     value="<?php
 
-echo $nbJustificatifs?>" class="form-control"
+                    echo $nbJustificatifs?>" class="form-control"
                     pattern="[<?php
 
-echo $lignes_a_justifier?>]" required> <input
+                    echo $$lignesAjustifier?>]" required> <input
                     id="idNom" name="idNom" type="hidden"
                     value="<?php
 
-echo $id_visiteur?>"> <input id="mois" name="mois"
+                    echo $idVisiteur?>"> <input id="mois" name="mois"
                     type="hidden" value="<?php
 
-echo $mois_fiche?>">
+                    echo $moisFiche?>">
             </div>
             <button class="btn btn-success" type="submit" id="Validation">Valider
                 la Fiche</button>
