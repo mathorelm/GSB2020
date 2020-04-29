@@ -60,7 +60,7 @@
 	<div class="col-md-4">
 		<form id="formulaire"
 			action="index.php?uc=valideFrais&action=voirListeFrais" method="post"
-			role="form">
+			>
 			<div class="form-group">
 				<select id="lstVisiteurs" name="lstVisiteurs" class="form-control">
 					<option label="entete" value="0" disabled selected>...</option>

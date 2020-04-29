@@ -15,7 +15,6 @@
 ?>
 
 </div>
-</body>
 <footer>
 	<hr />
 	<p class="text-center">
@@ -23,6 +22,7 @@
 		Contact : <a href="mailto:gsb2020@free.fr"> Webmaster</a>.
 	</p>
 </footer>
+</body>
 </html>
 
 

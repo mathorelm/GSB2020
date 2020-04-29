@@ -63,7 +63,7 @@ echo $id?>"
 	<h3>Nouvel élément hors forfait</h3>
 	<div class="col-md-4">
 		<form action="index.php?uc=gererFrais&action=validerCreationFrais"
-			method="post" role="form">
+			method="post" >
 			<div class="form-group">
 				<label for="txtDate">Date (jj/mm/aaaa): </label> <input type="date"
 					id="txtDate" name="dateFrais" class="form-control" id="text"

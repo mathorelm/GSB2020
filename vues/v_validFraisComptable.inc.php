@@ -24,7 +24,7 @@
     <div class="col-xs-4">
         <form method="post"
             action="index.php?uc=valideFrais&action=corrigerFraisForfait"
-            role="form">
+            >
             <fieldset>
                 <?php
                 foreach ($lesFraisForfait as $unFrais) {

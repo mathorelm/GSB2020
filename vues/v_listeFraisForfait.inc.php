@@ -24,7 +24,7 @@ echo $numMois . '-' . $numAnnee?>
     <div class="col-md-4">
         <form method="post"
               action="index.php?uc=gererFrais&action=validerMajFraisForfait"
-              role="form">
+              >
             <fieldset>
                 <?php
                 foreach ($lesFraisForfait as $unFrais) {

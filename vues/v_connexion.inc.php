@@ -21,7 +21,7 @@
 				<h3 class="panel-title">Identification utilisateur</h3>
 			</div>
 			<div class="panel-body">
-				<form role="form" method="post"
+				<form  method="post"
 					action="index.php?uc=connexion&action=valideConnexion">
 					<fieldset>
 						<div class="form-group">
