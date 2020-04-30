@@ -14,45 +14,8 @@
  */
 ?>
 
-<?php
-// TODO passer le script dans un fichier JS
-?>
-<script>
-        function afficheListeMois() {
+<script src="/vues/js/js_dynamique_listeVisiteurs.js"></script>
 
-            mesVisiteurs = document.getElementById("lstVisiteurs");
-            mesMois = document.getElementById("lstMois");
-            monChoix = mesVisiteurs.options[mesVisiteurs.selectedIndex].value;
-            // permet de rendre visible le select "LstMois"
-            mesMois.style.display = "block";
-            mesMois.selectedIndex = 0;
-            marqueurchoix = false;
-            //cacher les éléments qui ne correspondent pas à l'ID sélectionné.
-            for (let i = 0; i<document.getElementById("lstMois").options.length;i++) {
-                if (mesMois.options[i].label!=monChoix) {
-                    mesMois.options[i].style.display="none";
-                } else {
-                    mesMois.options[i].style.display="block";
-                    marqueurchoix = true;
-                }
-            }
-            mesMois.options[0].style.display = "block";
-        }
-        function declencheFiche() {
-            mesVisiteurs = document.getElementById("lstVisiteurs");
-            mesMois = document.getElementById("lstMois");
-            monChoix = mesVisiteurs.options[mesVisiteurs.selectedIndex].value;
-            maFiche = mesMois.options[mesMois.selectedIndex].value;
-            document.forms["formulaire"].submit();
-            }
-
-        window.addEventListener("load",function() {
-            window.document.querySelector("#lstVisiteurs").addEventListener("change",afficheListeMois);
-            window.document.querySelector("#lstMois").addEventListener("change",declencheFiche);
-            document.getElementById("lstMois").style.display = "none";
-            });
-
-</script>
 <div class="row">
 	<div class="col-md-4">
 		<h5>Sélectionner un visiteur :</h5>
@@ -72,14 +35,13 @@
                         ?>
                          <option value="<?php
 
-echo $unId?>">
+                        echo $unId?>">
                          <?php
 
-echo $nom . ' ' . $prenom?>
+                        echo $nom . ' ' . $prenom?>
                          </option>
                     <?php
-
-}
+                    }
                     ?>
                 </select>
 
@@ -94,17 +56,16 @@ echo $nom . ' ' . $prenom?>
                         ?>
                         <option label="<?php
 
-echo $unID?>"
+                        echo $unID?>"
                                 value="<?php
 
-echo $leMois?>">
+                        echo $leMois?>">
                         <?php
 
-echo $numMois . '/' . $numAnnee?>
+                        echo $numMois . '/' . $numAnnee?>
                         </option>
                     <?php
-
-}
+                    }
                     ?>
                 </select>
 
