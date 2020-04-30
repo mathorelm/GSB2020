@@ -17,7 +17,7 @@
 /**
  * Teste si un quelconque visiteur est connecté
  *
- * @return vrai ou faux
+ * /return vrai ou faux
  */
 function estConnecte()
 {
@@ -27,15 +27,15 @@ function estConnecte()
 /**
  * Enregistre dans une variable session les infos d'un visiteur
  *
- * @param String $idVisiteur
- *            ID du visiteur
- * @param String $nom
- *            Nom du visiteur
- * @param String $prenom
- *            Prénom du visiteur
- * @param String $metier
- *            Code représentant le métier exercé
- * @return null
+ * /param String $idVisiteur
+ * ID du visiteur
+ * /param String $nom
+ * Nom du visiteur
+ * /param String $prenom
+ * Prénom du visiteur
+ * /param String $metier
+ * Code représentant le métier exercé
+ * /return null
  */
 function connecter($idVisiteur, $nom, $prenom, $metier)
 {
@@ -48,7 +48,7 @@ function connecter($idVisiteur, $nom, $prenom, $metier)
 /**
  * Détruit la session active
  *
- * @return null
+ * /return null
  */
 function deconnecter()
 {
@@ -59,10 +59,10 @@ function deconnecter()
  * Transforme une date au format français jj/mm/aaaa vers le format anglais
  * aaaa-mm-jj
  *
- * @param String $maDate
- *            au format jj/mm/aaaa
+ * /param String $maDate
+ * au format jj/mm/aaaa
  *
- * @return Date au format anglais aaaa-mm-jj
+ * /return Date au format anglais aaaa-mm-jj
  */
 function dateFrancaisVersAnglais($maDate)
 {
@@ -74,10 +74,10 @@ function dateFrancaisVersAnglais($maDate)
  * Transforme une date au format format anglais aaaa-mm-jj vers le format
  * français jj/mm/aaaa
  *
- * @param String $maDate
- *            au format aaaa-mm-jj
+ * /param String $maDate
+ * au format aaaa-mm-jj
  *
- * @return Date au format format français jj/mm/aaaa
+ * /return Date au format format français jj/mm/aaaa
  */
 function dateAnglaisVersFrancais($maDate)
 {
@@ -89,10 +89,10 @@ function dateAnglaisVersFrancais($maDate)
 /**
  * Retourne le mois au format aaaamm selon le jour dans le mois
  *
- * @param String $date
- *            au format jj/mm/aaaa
+ * /param String $date
+ * au format jj/mm/aaaa
  *
- * @return String Mois au format aaaamm
+ * /return String Mois au format aaaamm
  */
 function getMois($date)
 {
@@ -107,9 +107,9 @@ function getMois($date)
 /**
  * Inverse la présentation du libellé aaaamm en mm/aaaa
  *
- * @param string $leLibelle
- *            au format aaaamm
- * @return string le mois au format mm/aaaa
+ * /param string $leLibelle
+ * au format aaaamm
+ * /return string le mois au format mm/aaaa
  */
 function inverseMois(string $leLibelle): string
 {
@@ -121,9 +121,9 @@ function inverseMois(string $leLibelle): string
 /**
  * Retour le mois en Français (en minuscule) avec l'année
  *
- * @param string $leLibelle
- *            au format aaaamm
- * @return string de type juillet 2020
+ * /param string $leLibelle
+ * au format aaaamm
+ * /return string de type juillet 2020
  */
 function moisEnLettre(string $leLibelle): string
 {
@@ -151,10 +151,10 @@ function moisEnLettre(string $leLibelle): string
 /**
  * Indique si une valeur est un entier positif ou nul
  *
- * @param Integer $valeur
- *            Valeur
+ * /param Integer $valeur
+ * Valeur
  *
- * @return Boolean vrai ou faux
+ * /return Boolean vrai ou faux
  */
 function estEntierPositif($valeur)
 {
@@ -164,10 +164,10 @@ function estEntierPositif($valeur)
 /**
  * Indique si un tableau de valeurs est constitué d'entiers positifs ou nuls
  *
- * @param Array $tabEntiers
- *            Un tableau d'entier
+ * /param Array $tabEntiers
+ * Un tableau d'entier
  *
- * @return Boolean vrai ou faux
+ * /return Boolean vrai ou faux
  */
 function estTableauEntiers($tabEntiers)
 {
@@ -183,10 +183,10 @@ function estTableauEntiers($tabEntiers)
 /**
  * Vérifie si une date est inférieure d'un an à la date actuelle
  *
- * @param String $dateTestee
- *            Date à tester
+ * /param String $dateTestee
+ * Date à tester
  *
- * @return Boolean vrai ou faux
+ * /return Boolean vrai ou faux
  */
 function estDateDepassee($dateTestee)
 {
@@ -201,10 +201,10 @@ function estDateDepassee($dateTestee)
 /**
  * Vérifie la validité du format d'une date française jj/mm/aaaa
  *
- * @param String $date
- *            Date à tester
+ * /param String $date
+ * Date à tester
  *
- * @return Boolean vrai ou faux
+ * /return Boolean vrai ou faux
  */
 function estDateValide($date)
 {
@@ -227,10 +227,10 @@ function estDateValide($date)
 /**
  * Vérifie que le tableau de frais ne contient que des valeurs numériques
  *
- * @param Array $lesFrais
- *            Tableau d'entier
+ * /param Array $lesFrais
+ * Tableau d'entier
  *
- * @return Boolean vrai ou faux
+ * /return Boolean vrai ou faux
  */
 function lesQteFraisValides($lesFrais)
 {
@@ -243,14 +243,14 @@ function lesQteFraisValides($lesFrais)
  *
  * Des message d'erreurs sont ajoutés au tableau des erreurs
  *
- * @param String $dateFrais
- *            Date des frais
- * @param String $libelle
- *            Libellé des frais
- * @param Float $montant
- *            Montant des frais
+ * /param String $dateFrais
+ * Date des frais
+ * /param String $libelle
+ * Libellé des frais
+ * /param Float $montant
+ * Montant des frais
  *
- * @return null
+ * /return null
  */
 function valideInfosFrais($dateFrais, $libelle, $montant)
 {
@@ -279,10 +279,10 @@ function valideInfosFrais($dateFrais, $libelle, $montant)
 /**
  * Ajoute le libellé d'une erreur au tableau des erreurs
  *
- * @param String $msg
- *            Libellé de l'erreur
+ * /param String $msg
+ * Libellé de l'erreur
  *
- * @return null
+ * /return null
  */
 function ajouterErreur(string $msg)
 {
@@ -298,7 +298,7 @@ function ajouterErreur(string $msg)
 /**
  * Retoune le nombre de lignes du tableau des erreurs
  *
- * @return Integer le nombre d'erreurs
+ * /return Integer le nombre d'erreurs
  */
 function nbErreurs()
 {
@@ -310,10 +310,10 @@ function nbErreurs()
 /**
  * Ajoute le libellé d'une information au tableau des informations
  *
- * @param String $msg
- *            Libellé de l'information
+ * /param String $msg
+ * Libellé de l'information
  *
- * @return null
+ * /return null
  */
 }
 
@@ -331,7 +331,7 @@ function ajouterInfo($msg)
 /**
  * Retoune le nombre de lignes du tableau des informations
  *
- * @return Integer le nombre d'informations
+ * /return Integer le nombre d'informations
  */
 function nbInfos()
 {
@@ -345,9 +345,8 @@ function nbInfos()
 /**
  * Retourne le nombre de fiches de plus d'un an dans le tableau passé en paramètre
  *
- * @param
- *            array tableau de fiches de visiteurs
- * @return integer nb de fiches périmées
+ * /param array tableau de fiches de visiteurs
+ * /return integer nb de fiches périmées
  */
 function compterFichesPerimees(array $tableauDeFiches): int
 {
@@ -364,9 +363,8 @@ function compterFichesPerimees(array $tableauDeFiches): int
 /**
  * Retourne le montant total des fiches dans le tableau passé en paramètre
  *
- * @param
- *            array tableau de fiches de visiteurs
- * @return float montant total
+ * /param array tableau de fiches de visiteurs
+ * /return float montant total
  */
 function compterMontantTotal(array $tableauDeFiches): float
 {
@@ -383,7 +381,7 @@ function compterMontantTotal(array $tableauDeFiches): float
 /**
  * Ajoute l'événement (avec TimeStamp) au fichier GSB2020.log
  *
- * @param string $event
+ * /param string $event
  */
 function addLogEvent($event)
 {
@@ -397,7 +395,7 @@ function addLogEvent($event)
  * Emettre un email vers l'adresse gsb2020/free.fr avec le log en cours.
  * A l'issue, vider le log.
  *
- * @return Boolean $ret True si mail partie, False sinon
+ * /return Boolean $ret True si mail partie, False sinon
  */
 function envoyerLeLog()
 {
@@ -500,15 +498,15 @@ function envoyerLeLog()
 /**
  * Génère un fichier PDF contenant les informations de la fiche de frais
  *
- * @param object $pdo
- *            passage du pointeur pdo pour accéder à ses fonctions
- * @param array $lesFraisHorsForfait
- *            tableau associatif comportant les frais HF
- * @param array $lesFraisForfait
- *            tableau associatif comportant les frais forfaitisés
- * @param array $lesInfosFicheFrais
- *            informations concernant la fiche de frais
- * @return string
+ * /param object $pdo
+ * passage du pointeur pdo pour accéder à ses fonctions
+ * /param array $lesFraisHorsForfait
+ * tableau associatif comportant les frais HF
+ * /param array $lesFraisForfait
+ * tableau associatif comportant les frais forfaitisés
+ * /param array $lesInfosFicheFrais
+ * informations concernant la fiche de frais
+ * /return string
  */
 function genererPDF($pdo, array $lesFraisHorsForfait, array $lesFraisForfait,
     array $lesInfosFicheFrais): string
