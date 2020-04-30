@@ -33,40 +33,40 @@
                     $quantite = $unFrais['quantite'];
                     ?>
                     <div class="form-group">
-                    <label for="idFrais<?php
+                    	<label for="idFrais<?php
 
-                    echo $idFrais?>"><?php
+echo $idFrais?>">
+                    	<?php
 
-                    echo $libelle;
+echo $libelle;
                     if ($idFrais == "KM") {
                         $vehicule = $pdo->getVehicule($idVisiteur);
                         echo "<br/>";
                         echo " (" . strtoupper($vehicule['carburant']) . " " .
                             $vehicule['puissance_admin'] . " CV)";
                     }
-                    ?></label>
+                    ?>
+                        </label>
                     <input type="text" id="txtIdFrais<?php
 
-                    echo $idFrais?>"
-                        name="txtlesFrais[<?php
+echo $idFrais?>" name="txtlesFrais[<?php
 
-                    echo $idFrais?>]" size="8" maxlength="5"
+echo $idFrais?>]" size="8" maxlength="5"
                         value="<?php
 
-                    echo $quantite?>" class="form-control" required>
-                </div>
-                    <?php
-                }
+echo $quantite?>" class="form-control" required>
+                	</div>
+                <?php
+
+}
                 ?>
-                <input id="hdIdNom" name="hdIdNom" type="hidden"
-                    value="<?php
+                <input id="hdIdNom" name="hdIdNom" type="hidden" value="<?php
 
-                    echo $idVisiteur?>"> <input id="hdMois" name="hdMois"
-                    type="hidden" value="<?php
+echo $idVisiteur?>">
+                <input id="hdMois" name="hdMois" type="hidden" value="<?php
 
-                    echo $moisFiche?>">
-                <button class="btn btn-success" type="submit" id="cmdCorrigerForfait"
-                    disabled>Corriger</button>
+echo $moisFiche?>">
+                <button class="btn btn-success" type="submit" id="cmdCorrigerForfait" disabled>Corriger</button>
                 <button id="brReinit" class="btn btn-danger" type="reset">Réinitialiser</button>
             </fieldset>
         </form>
