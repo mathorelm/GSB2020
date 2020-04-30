@@ -49,6 +49,8 @@ switch ($action) {
         $idFrais = filter_input(INPUT_GET, 'idFrais', FILTER_SANITIZE_STRING);
         $pdo->supprimerFraisHorsForfait($idFrais);
         break;
+    default:
+        include 'vues/v_accueil.inc.php';
 }
 $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($idVisiteur, $mois);
 $lesFraisForfait = $pdo->getLesFraisForfait($idVisiteur, $mois);

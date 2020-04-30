@@ -41,6 +41,8 @@ switch ($action) {
     case 'VAversCL':
         $pdo->majEtatFicheFrais($idVisiteur, $mois, 'CL');
         break;
+    default:
+    // Pas de comportement spécifique en cas de mauvais paramètre passé
 }
 $lesfichesVA = $pdo->getLesFiches('VA');
 $lesfichesMP = $pdo->getLesFiches('MP');

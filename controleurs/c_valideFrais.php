@@ -123,4 +123,6 @@ switch ($action) {
         include 'vues/v_info.inc.php';
         header('Location: index.php');
         break;
+    default:
+        include 'vues/v_accueil.inc.php';
 }

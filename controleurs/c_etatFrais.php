@@ -38,11 +38,7 @@ switch ($action) {
         $montantValide = $lesInfosFicheFrais['montantValide'];
         $nbJustificatifs = $lesInfosFicheFrais['nbJustificatifs'];
         $dateModif = dateAnglaisVersFrancais($lesInfosFicheFrais['dateModif']);
-        // AJOUTER FONCTION GENERATION PDF
-        // La génération doit avoir lieu a 2 conditions :
-        // - le fichier ne doit pas avoir été déjà généré
-        // - la fiche de frais doit être remboursée
-        // -----------------------------------------------
+        // GENERATION PDF
         if ($lesInfosFicheFrais['idEtat'] == "RB") {
             if ($lesInfosFicheFrais['etatPDF']) {
                 $donnees_visiteur = $pdo->getNomVisiteur($idVisiteur);
@@ -61,4 +57,7 @@ switch ($action) {
         }
         // FIN GENERATION
         include 'vues/v_etatFrais.inc.php';
+        break;
+    default:
+        include 'vues/v_accueil.inc.php';
 }
