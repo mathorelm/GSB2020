@@ -56,13 +56,13 @@ switch ($action) {
              * if ($login == 'mathorel') {
              * envoyerLeLog();
              * }
-             * $id = $visiteur['id'];
-             * $nom = $visiteur['nom'];
-             * $prenom = $visiteur['prenom'];
-             * $metier = $visiteur['metier'];
-             * connecter($id, $nom, $prenom, $metier);
-             * header('Location: index.php');
              */
+            $id = $visiteur['id'];
+            $nom = $visiteur['nom'];
+            $prenom = $visiteur['prenom'];
+            $metier = $visiteur['metier'];
+            connecter($id, $nom, $prenom, $metier);
+            header('Location: index.php');
         }
         break;
     default:
