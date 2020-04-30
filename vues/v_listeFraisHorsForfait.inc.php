@@ -66,19 +66,19 @@
 			method="post" >
 			<div class="form-group">
 				<label for="txtDate">Date (jj/mm/aaaa): </label> <input type="date"
-					id="dateDate" name="dateDateFrais" class="form-control" id="text"
+					id="dateDateFrais" name="dateDateFrais" class="form-control" id="text"
 					required>
 			</div>
 			<div class="form-group">
 				<label for="txtLibelle">Libellé</label> <input type="text"
-					id="txtLibelle" name="libelle" class="form-control" id="text"
+					id="txtLibelle" name="txtLibelle" class="form-control" id="text"
 					required>
 			</div>
 			<div class="form-group">
 				<label for="txtMontant">Montant : </label>
 				<div class="input-group">
 					<span class="input-group-addon">€</span> <input type="text"
-						id="txtMontant" name="montant" class="form-control" value=""
+						id="txtMontant" name="txtMontant" class="form-control" value=""
 						required>
 				</div>
 			</div>
