@@ -21,8 +21,8 @@ $limiteMPVersRB = 30; // jour (présumé) de remboursement
 
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 
-$idVisiteur = filter_input(INPUT_POST, 'visiteur', FILTER_SANITIZE_STRING);
-$mois = filter_input(INPUT_POST, 'mois', FILTER_SANITIZE_STRING);
+$idVisiteur = filter_input(INPUT_POST, 'hdVisiteur', FILTER_SANITIZE_STRING);
+$mois = filter_input(INPUT_POST, 'hdMois', FILTER_SANITIZE_STRING);
 
 switch ($action) {
     case 'afficherSuivi':
