@@ -34,20 +34,20 @@
                             ?>
                             <option selected value="<?php
 
-echo $mois?>">
+                            echo $mois?>">
                                 <?php
 
-echo $numMois . '/' . $numAnnee?>
+                            echo $numMois . '/' . $numAnnee?>
                             </option>
                             <?php
                         } else {
                             ?>
                             <option value="<?php
 
-echo $mois?>">
+                            echo $mois?>">
                                 <?php
 
-echo $numMois . '/' . $numAnnee?>
+                            echo $numMois . '/' . $numAnnee?>
                             </option>
                             <?php
                         }
@@ -60,5 +60,6 @@ echo $numMois . '/' . $numAnnee?>
 			<input id="annuler" type="reset" value="Effacer" class="btn btn-danger"
 			    role="button">
 		</form>
+		</div>
 	</div>
 </div>
