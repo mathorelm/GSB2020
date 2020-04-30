@@ -16,9 +16,9 @@
 
 <script src="/vues/js/js_dynamique_valideFrais.js"></script>
 <div class="row">
-    <h2>Valider la fiche de frais
-        <?php
-        echo $moisFiche . ' - ' . $nomPrenom['nom'] . ' ' . $nomPrenom['prenom']?>
+    <h2>Valider la fiche de frais <?php
+
+echo $moisFiche . ' - ' . $nomPrenom['nom'] . ' ' . $nomPrenom['prenom']?>
     </h2>
     <h3>Eléments forfaitisés</h3>
     <div class="col-xs-4">
