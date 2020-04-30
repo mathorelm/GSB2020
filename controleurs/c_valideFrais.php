@@ -52,10 +52,10 @@ switch ($action) {
         include 'vues/v_validFraisHFComptable.inc.php';
         break;
     case "corrigerFraisForfait":
-        $idVisiteur = filter_input(INPUT_POST, 'idNom', FILTER_SANITIZE_STRING);
+        $idVisiteur = filter_input(INPUT_POST, 'hdIdNom', FILTER_SANITIZE_STRING);
         $nomPrenom = $pdo->getNomVisiteur($idVisiteur);
-        $moisFiche = filter_input(INPUT_POST, 'mois', FILTER_SANITIZE_STRING);
-        $lesFrais = filter_input(INPUT_POST, 'lesFrais', FILTER_DEFAULT,
+        $moisFiche = filter_input(INPUT_POST, 'hdMois', FILTER_SANITIZE_STRING);
+        $lesFrais = filter_input(INPUT_POST, 'txtlesFrais', FILTER_DEFAULT,
             FILTER_FORCE_ARRAY);
         if (lesQteFraisValides($lesFrais)) {
             $pdo->majFraisForfait($idVisiteur, $moisFiche, $lesFrais);
@@ -76,14 +76,16 @@ switch ($action) {
         include 'vues/v_validFraisHFComptable.inc.php';
         break;
     case "corrigerFraisHF":
-        $idVisiteur = filter_input(INPUT_POST, 'idNom', FILTER_SANITIZE_STRING);
+        $idVisiteur = filter_input(INPUT_POST, 'hdIdNom', FILTER_SANITIZE_STRING);
         $nomPrenom = $pdo->getNomVisiteur($idVisiteur);
-        $moisFiche = filter_input(INPUT_POST, 'mois', FILTER_SANITIZE_STRING);
-        $idFiche = filter_input(INPUT_POST, 'idFiche', FILTER_SANITIZE_STRING);
+        $moisFiche = filter_input(INPUT_POST, 'hdMois', FILTER_SANITIZE_STRING);
+        $idFiche = filter_input(INPUT_POST, 'hdIdFiche', FILTER_SANITIZE_STRING);
         $dateFrais = dateAnglaisVersFrancais(
-            filter_input(INPUT_POST, 'HFdate', FILTER_SANITIZE_STRING));
-        $libelle = filter_input(INPUT_POST, 'HFlibelle', FILTER_SANITIZE_STRING);
-        $montant = filter_input(INPUT_POST, 'HFmontant', FILTER_VALIDATE_FLOAT);
+            filter_input(INPUT_POST, 'dateHFdate', FILTER_SANITIZE_STRING));
+        $libelle = filter_input(INPUT_POST, 'txtHFlibelle',
+            FILTER_SANITIZE_STRING);
+        $montant = filter_input(INPUT_POST, 'txtHFmontant',
+            FILTER_VALIDATE_FLOAT);
         if (nbErreurs() != 0) {
             include 'vues/v_erreurs.inc.php';
         } else {
@@ -112,10 +114,10 @@ switch ($action) {
         break;
 
     case "validerFiche":
-        $nbJustificatifs = filter_input(INPUT_POST, 'nbJustificatifs',
+        $nbJustificatifs = filter_input(INPUT_POST, 'txtNbJustificatifs',
             FILTER_SANITIZE_STRING);
-        $idVisiteur = filter_input(INPUT_POST, 'idNom', FILTER_SANITIZE_STRING);
-        $moisFiche = filter_input(INPUT_POST, 'mois', FILTER_SANITIZE_STRING);
+        $idVisiteur = filter_input(INPUT_POST, 'hdIdNom', FILTER_SANITIZE_STRING);
+        $moisFiche = filter_input(INPUT_POST, 'hdMois', FILTER_SANITIZE_STRING);
         $pdo->majNbJustificatifs($idVisiteur, $moisFiche, $nbJustificatifs);
         $pdo->valideSommeFrais($idVisiteur, $moisFiche);
         $pdo->majEtatFicheFrais($idVisiteur, $moisFiche, "VA");

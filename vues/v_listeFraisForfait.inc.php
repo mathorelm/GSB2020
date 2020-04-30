@@ -18,7 +18,7 @@
     <h2>Renseigner ma fiche de frais du mois
         <?php
 
-echo $numMois . '-' . $numAnnee?>
+        echo $numMois . '-' . $numAnnee?>
     </h2>
     <h3>Eléments forfaitisés</h3>
     <div class="col-md-4">
@@ -35,21 +35,21 @@ echo $numMois . '-' . $numAnnee?>
                     <div class="form-group">
                         <label for="idFrais"><?php
 
-echo $libelle;
+                    echo $libelle;
                     if ($idFrais == "KM") {
                         $vehicule = $pdo->getVehicule($_SESSION['idVisiteur']);
                         echo " (" . strtoupper($vehicule['carburant']) . " " .
                             $vehicule['puissance_admin'] . " CV)";
                     }
                     ?></label>
-                        <input type="text" id="idFrais"
-                               name="lesFrais[<?php
+                        <input type="text" id="txtIdFrais"
+                               name="txtLesFrais[<?php
 
-echo $idFrais?>]"
+                    echo $idFrais?>]"
                                size="10" maxlength="5"
                                value="<?php
 
-echo $quantite?>"
+                    echo $quantite?>"
                                class="form-control">
                     </div>
                     <?php

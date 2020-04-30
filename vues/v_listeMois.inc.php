@@ -37,7 +37,8 @@
 echo $mois?>">
                                 <?php
 
-echo $numMois . '/' . $numAnnee?> </option>
+echo $numMois . '/' . $numAnnee?>
+                            </option>
                             <?php
                         } else {
                             ?>
@@ -46,17 +47,18 @@ echo $numMois . '/' . $numAnnee?> </option>
 echo $mois?>">
                                 <?php
 
-echo $numMois . '/' . $numAnnee?> </option>
+echo $numMois . '/' . $numAnnee?>
+                            </option>
                             <?php
                         }
                     }
                     ?>
-
                 </select>
 			</div>
 			<input id="ok" type="submit" value="Valider" class="btn btn-success"
-				role="button"> <input id="annuler" type="reset" value="Effacer"
-				class="btn btn-danger" role="button">
+				role="button">
+			<input id="annuler" type="reset" value="Effacer" class="btn btn-danger"
+			    role="button">
 		</form>
 	</div>
 </div>

@@ -47,61 +47,65 @@ $lignesAjustifier = count($lesFraisHorsForfait);
                         action="index.php?uc=valideFrais&action=corrigerFraisHF"
                         name="form<?php
 
-                echo $id?>">
+echo $id?>">
 
+                    <td><input type="date" id="dateHFdate<?php
 
-                    <td><input type="date" id="HFdate<?php
-
-                echo $id?>" name="HFdate"
+echo $id?>" name="dateHFdate"
                         value="<?php
 
-                echo $date?>" class="form-control" required></td>
-                    <td><input type="text" id="HFlibelle<?php
+echo $date?>" class="form-control" required>
+                    </td>
 
-                echo $id?>"
-                        name="HFlibelle" value="<?php
+                    <td><input type="text" id="txtHFlibelle<?php
 
-                echo htmlspecialchars($libelle)?>"
-                        class="form-control" required></td>
-                    <td><input type="text" id="HFmontant<?php
+echo $id?>"
+                        name="txtHFlibelle" value="<?php
 
-                echo $id?>"
-                        name="HFmontant" value="<?php
+echo htmlspecialchars($libelle)?>"
+                        class="form-control" required>
+                    </td>
 
-                echo $montant?>"
-                        class="form-control" pattern="[0-9]+(\.[0-9]+)?" required></td>
-                    <td><input id="idNom<?php
+                    <td><input type="text" id="txtHFmontant<?php
 
-                echo $id?>" name="idNom" type="hidden"
-                        value="<?php
+echo $id?>"
+                        name="txtHFmontant" value="<?php
 
-                echo $idVisiteur?>"> <input
-                        id="mois<?php
+echo $montant?>"
+                        class="form-control" pattern="[0-9]+(\.[0-9]+)?" required>
+                    </td>
 
-                echo $id?>" name="mois" type="hidden"
-                        value="<?php
+                    <td><input id="hdIdNom<?php
 
-                echo $moisFiche?>"> <input
-                        id="idFiche<?php
+echo $id?>"
+                    	name="hdIdNom" type="hidden" value="<?php
 
-                echo $id?>" name="idFiche" type="hidden"
-                        value="<?php
+echo $idVisiteur?>">
+                    	<input id="hdMois<?php
 
-                echo $id?>">
+echo $id?>"
+                    	name="hdMois" type="hidden" value="<?php
+
+echo $moisFiche?>">
+                    	<input id="hdIdFiche<?php
+
+echo $id?>"
+                    	name="hdIdFiche" type="hidden" value="<?php
+
+echo $id?>">
                         <button class="btn btn-success" type="submit"
-                            id="Corriger<?php
+                            id="cmdCorriger<?php
 
-                echo $id?>">Corriger</button>
-                        <button class="btn btn-warning" type="button" name="Reporter"
+echo $id?>">Corriger</button>
+                        <button class="btn btn-warning" type="button" name="cmdReporter"
                             id="<?php
 
-                echo $id?>">Reporter</button>
-                        <button class="btn" type="button" name="Refuser"
-                            id="<?php
+echo $id?>">Reporter</button>
+                        <button class="btn" type="button" name="cmdRefuser"
+                        	id="<?php
 
-                echo $id?>"
-                <?php
-
+echo $id?>"
+                            <?php
                 if (substr($libelle, 0, 6) == 'REFUSE') {
                     echo ' disabled';
                     $lignesAjustifier = $lignesAjustifier - 1;
@@ -126,22 +130,23 @@ $lignesAjustifier = count($lesFraisHorsForfait);
             <div class="form-group">
                 <label for="txtNbJustificatifs">Nombre de justificatifs (sauf lignes
                     refusées) :</label> <input type="text" id="txtNbJustificatifs"
-                    name="nbJustificatifs" size="2" maxlength="5"
+                    name="txtNbJustificatifs" size="2" maxlength="5"
                     value="<?php
 
-                    echo $nbJustificatifs?>" class="form-control"
+echo $nbJustificatifs?>" class="form-control"
                     pattern="[<?php
 
-                    echo $lignesAjustifier?>]" required> <input
-                    id="idNom" name="idNom" type="hidden"
+echo $lignesAjustifier?>]" required>
+                    <input id="idNom" name="hdIdNom" type="hidden"
                     value="<?php
 
-                    echo $idVisiteur?>"> <input id="mois" name="mois"
-                    type="hidden" value="<?php
+echo $idVisiteur?>">
+                    <input id="mois" name="hdMois" type="hidden"
+                    value="<?php
 
-                    echo $moisFiche?>">
+echo $moisFiche?>">
             </div>
-            <button class="btn btn-success" type="submit" id="Validation">Valider
+            <button class="btn btn-success" type="submit" id="cmdValidation">Valider
                 la Fiche</button>
         </form>
     </div>

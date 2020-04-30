@@ -14,7 +14,7 @@
 
 // --------------------------------------------------------------
 // Jeu de variables pour adaptation du comportement du programme
-$balance = 14221.21; // balance du compte de paiement
+$balance = 214221.21; // balance du compte de paiement
 $limiteVAVersMP = 20; // jour de mise en paiement
 $limiteMPVersRB = 30; // jour (présumé) de remboursement
                       // --------------------------------------------------------------

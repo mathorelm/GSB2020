@@ -17,7 +17,8 @@
 
 if (!$uc || $uc == 'accueil') {
                                     ?>class="active" <?php
-                                }
+
+}
                                 ?>>
                                     <a href="index.php">
                                         <span class="glyphicon glyphicon-home"></span>
@@ -28,7 +29,8 @@ if (!$uc || $uc == 'accueil') {
 
 if ($uc == 'valideFrais') {
                                     ?>class="active"<?php
-                                }
+
+}
                                 ?>>
                                     <a href="index.php?uc=valideFrais&action=selectionnerUtilisateur">
                                         <span class="glyphicon glyphicon-ok"></span>
@@ -39,7 +41,8 @@ if ($uc == 'valideFrais') {
 
 if ($uc == 'suivreFrais') {
                                     ?>class="active"<?php
-                                }
+
+}
                                 ?>>
                                     <a href="index.php?uc=suivreFrais&action=afficherSuivi">
                                         <span class="glyphicon glyphicon-euro"></span>
@@ -50,7 +53,8 @@ if ($uc == 'suivreFrais') {
 
 if ($uc == 'deconnexion') {
                                     ?>class="active"<?php
-                                }
+
+}
                                 ?>>
                                     <a href="index.php?uc=deconnexion&action=demandeDeconnexion">
                                         <span class="glyphicon glyphicon-log-out"></span>

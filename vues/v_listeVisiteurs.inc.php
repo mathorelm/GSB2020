@@ -72,11 +72,14 @@
                         ?>
                          <option value="<?php
 
-echo $unId?>"> <?php
+echo $unId?>">
+                         <?php
 
-echo $nom . ' ' . $prenom?> </option>
+echo $nom . ' ' . $prenom?>
+                         </option>
                     <?php
-                    }
+
+}
                     ?>
                 </select>
 
@@ -91,14 +94,17 @@ echo $nom . ' ' . $prenom?> </option>
                         ?>
                         <option label="<?php
 
-echo $unID?>" value="<?php
+echo $unID?>"
+                                value="<?php
 
 echo $leMois?>">
                         <?php
 
-echo $numMois . '/' . $numAnnee?></option>
+echo $numMois . '/' . $numAnnee?>
+                        </option>
                     <?php
-                    }
+
+}
                     ?>
                 </select>
 

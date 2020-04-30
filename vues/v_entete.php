@@ -52,7 +52,7 @@
     </head>
 <body>
         <?php
-        // erreur HTML ok : le </div> est dans v_pied.inc.php ?>
+// erreur HTML ok : le </div> est dans v_pied.inc.php ?>
         <div class="container">
             <?php
             $uc = filter_input(INPUT_GET, 'uc', FILTER_SANITIZE_STRING);

@@ -38,17 +38,17 @@
                 <tr>
 					<td> <?php
 
-echo $date?></td>
+                echo $date?></td>
 					<td> <?php
 
-echo $libelle?></td>
+                echo $libelle?></td>
 					<td><?php
 
-echo $montant?></td>
+                echo $montant?></td>
 					<td><a
 						href="index.php?uc=gererFrais&action=supprimerFrais&idFrais=<?php
 
-echo $id?>"
+                echo $id?>"
 						onclick="return confirm('Voulez-vous vraiment supprimer ce frais?');">Supprimer
 							ce frais</a></td>
 				</tr>
@@ -66,7 +66,7 @@ echo $id?>"
 			method="post" >
 			<div class="form-group">
 				<label for="txtDate">Date (jj/mm/aaaa): </label> <input type="date"
-					id="txtDate" name="dateFrais" class="form-control" id="text"
+					id="dateDate" name="dateDateFrais" class="form-control" id="text"
 					required>
 			</div>
 			<div class="form-group">

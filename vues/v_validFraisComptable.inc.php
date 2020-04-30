@@ -46,10 +46,10 @@
                             $vehicule['puissance_admin'] . " CV)";
                     }
                     ?></label>
-                    <input type="text" id="idFrais<?php
+                    <input type="text" id="txtIdFrais<?php
 
                     echo $idFrais?>"
-                        name="lesFrais[<?php
+                        name="txtlesFrais[<?php
 
                     echo $idFrais?>]" size="8" maxlength="5"
                         value="<?php
@@ -59,16 +59,16 @@
                     <?php
                 }
                 ?>
-                <input id="idNom" name="idNom" type="hidden"
+                <input id="hdIdNom" name="hdIdNom" type="hidden"
                     value="<?php
 
-                    echo $idVisiteur?>"> <input id="mois" name="mois"
+                    echo $idVisiteur?>"> <input id="hdMois" name="hdMois"
                     type="hidden" value="<?php
 
                     echo $moisFiche?>">
-                <button class="btn btn-success" type="submit" id="corrigerForfait"
+                <button class="btn btn-success" type="submit" id="cmdCorrigerForfait"
                     disabled>Corriger</button>
-                <button id="reinit" class="btn btn-danger" type="reset">Réinitialiser</button>
+                <button id="brReinit" class="btn btn-danger" type="reset">Réinitialiser</button>
             </fieldset>
         </form>
     </div>

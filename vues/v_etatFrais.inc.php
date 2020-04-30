@@ -21,13 +21,12 @@
 
 echo $numMois . '-' . $numAnnee?> : </div>
 	<div class="panel-body">
-		<strong><u>Etat :</u></strong> <?php
+		<strong><em>Etat :</em></strong> <?php
 
 echo $libEtat?>
         depuis le <?php
 
-echo $dateModif?> <br> <strong><u>Montant
-				validé :</u></strong> <?php
+echo $dateModif?> <br> <strong><em>Montant validé :</em></strong> <?php
 
 echo $montantValide?>
         <?php
@@ -35,13 +34,10 @@ echo $montantValide?>
 if ($lien_pdf != "") {
             ?>
             <div class="row text-right">
-            <?php
-// TODO : améliorer frontend sur image PDF ?>
             <i>Téléchargez votre PDF :</i> <a
 				href="<?php
 
-echo $lien_pdf?>"> <img class="pdf"
-				src="./images/pdf.jpg" alt="Cliquez ici">
+echo $lien_pdf?>"> <img class="pdf" src="./images/pdf.jpg" alt="Cliquez ici">
 			</a>
 		</div>
         <?php
@@ -60,7 +56,7 @@ echo $lien_pdf?>"> <img class="pdf"
                 ?>
                 <th> <?php
 
-echo htmlspecialchars($libelle)?></th>
+                echo htmlspecialchars($libelle)?></th>
                 <?php
             }
             ?>
@@ -72,7 +68,7 @@ echo htmlspecialchars($libelle)?></th>
                 ?>
                 <td class="qteForfait"><?php
 
-echo $quantite?> </td>
+                echo $quantite?> </td>
                 <?php
             }
             ?>
@@ -83,7 +79,7 @@ echo $quantite?> </td>
 	<div class="panel-heading">Descriptif des éléments hors forfait -
         <?php
 
-echo $nbJustificatifs?> justificatifs reçus</div>
+        echo $nbJustificatifs?> justificatifs reçus</div>
 	<table class="table table-bordered table-responsive">
 		<tr>
 			<th class="date">Date</th>
@@ -99,13 +95,13 @@ echo $nbJustificatifs?> justificatifs reçus</div>
             <tr>
 			<td><?php
 
-echo $date?></td>
+            echo $date?></td>
 			<td><?php
 
-echo $libelle?></td>
+            echo $libelle?></td>
 			<td><?php
 
-echo $montant?></td>
+            echo $montant?></td>
 		</tr>
             <?php
         }

@@ -24,30 +24,29 @@ $mois_precedent = (int) date('n', strtotime('-1 month'));
 	<h2>Supervision des mises en paiement des fiches</h2>
 </div>
 <div class="row">
-	<H3>Balance actuelle du compte de paiement : <span <?php
+	<H3>Balance actuelle du compte de paiement :
+	<span <?php
 
 if ($balance < 0) {
     echo 'style="background:red;color:white"';
 }
 ;
 ?> >
-	                                                   <?php
+	<?php
 
 echo $balance;
-                                                    ?>
-	                                             </span> euros.</H3>
-	<H3>Balance estimée au 30 du mois          : <span <?php
+?> </span> euros.</H3>
+	<H3>Balance estimée au 30 du mois          :
+	<span <?php
 
 if (($balance - $montantMP) < 0) {
     echo 'style="background:red;color:white"';
 }
 ;
 ?> >
-	                                                   <?php
-
+	<?php
 echo ($balance - $montantMP);
-                                                    ?>
-	                                             </span> euros.</H3>
+?> </span> euros.</H3>
 	<p> Fiche en retard en <a style="background:red;color:white">rouge</a>. Le classement va des fiches les plus anciennes aux plus jeunes.</p>
 </div>
 <hr/>
@@ -81,32 +80,30 @@ $mois_fiche = (int) substr($uneFiche['mois'], 4, 2);
 
 echo $couleur?>;color:white'>
 					<strong>FICHE</strong> <?php
-
-echo $uneFiche['mois'] . ' - ' . $uneFiche['nom'] . ' ' . $uneFiche['prenom'];
+    echo $uneFiche['mois'] . ' - ' . $uneFiche['nom'] . ' ' . $uneFiche['prenom'];
     ?>
 				</h5>
 				<div class="card-body text-left">
 					<h6 class="card-title">Statut : <?php
-
-echo $uneFiche['statut'] . ' (' . dateAnglaisVersFrancais($uneFiche['date']) .
+    echo $uneFiche['statut'] . ' (' . dateAnglaisVersFrancais($uneFiche['date']) .
         ')';
     ?></h6>
 					<p class="card-text">Montant : <?php
-
-echo $uneFiche['montant'] . ' euros ';
+    echo $uneFiche['montant'] . ' euros ';
     ?></p>
 				</div>
 				<div class="card-footer text-right">
 				<form action="index.php?uc=suivreFrais&action=VAversCL" method="post">
 					<input	id="visiteur2<?php
-
-echo $uneFiche['id'] . $uneFiche['mois']?>" name="visiteur" type="hidden"	value="<?php
+    echo $uneFiche['id'] . $uneFiche['mois']?>
+                        " name="visiteur" type="hidden"	value="
+                        <?php
 
 echo $uneFiche['id'];
     ?>">
 					<input	id="mois2<?php
-
-echo $uneFiche['id'] . $uneFiche['mois']?>" name="mois" type="hidden"	value="<?php
+    echo $uneFiche['id'] . $uneFiche['mois']?>" name="mois" type="hidden"	value="
+                        <?php
 
 echo $uneFiche['mois'];
     ?>">
@@ -118,13 +115,16 @@ echo chr(38) . '#60;' . chr(38) . '#60;' . chr(38) . '#60;'?></button>
 				<form action="index.php?uc=suivreFrais&action=VAversMP" method="post">
 					<input	id="visiteur<?php
 
-echo $uneFiche['id'] . $uneFiche['mois']?>" name="visiteur" type="hidden"	value="<?php
+echo $uneFiche['id'] . $uneFiche['mois']?>
+					" name="visiteur" type="hidden"	value="
+					<?php
 
 echo $uneFiche['id'];
     ?>">
 					<input	id="mois<?php
 
-echo $uneFiche['id'] . $uneFiche['mois']?>" name="mois" type="hidden"	value="<?php
+echo $uneFiche['id'] . $uneFiche['mois']?>" name="mois" type="hidden"	value="
+					<?php
 
 echo $uneFiche['mois'];
     ?>">
@@ -151,13 +151,11 @@ echo $montantMP;
 ?> euros.
 		<hr/>
 		<?php
-
 foreach ($lesfichesMP as $uneFiche) {
     ?>
 			<div class="card">
 				<?php
-
-$mois_fiche = (int) substr($uneFiche['mois'], 4, 2);
+    $mois_fiche = (int) substr($uneFiche['mois'], 4, 2);
     if (($mois_fiche != $mois_precedent) && ($jour_actuel <= $limiteMPVersRB)) {
         $couleur = "red";
     } else {
@@ -174,10 +172,10 @@ echo $uneFiche['mois'] . ' - ' . $uneFiche['nom'] . ' ' . $uneFiche['prenom'];
 				</h5>
 				<div class="card-body text-left">
 					<h6 class="card-title">Statut : <?php
-
-echo $uneFiche['statut'] . ' (' . dateAnglaisVersFrancais($uneFiche['date']) .
+    echo $uneFiche['statut'] . ' (' . dateAnglaisVersFrancais($uneFiche['date']) .
         ')';
-    ?></h6>
+    ?>
+                    </h6>
 					<p class="card-text">Montant : <?php
 
 echo $uneFiche['montant'] . ' euros ';
@@ -186,31 +184,35 @@ echo $uneFiche['montant'] . ' euros ';
 				<div class="card-footer">
 				<form action="index.php?uc=suivreFrais&action=MPversVA" method="post">
 					<input	id="visiteur2<?php
-
-echo $uneFiche['id'] . $uneFiche['mois']?>" name="visiteur" type="hidden"	value="<?php
+    echo $uneFiche['id'] . $uneFiche['mois']?>" name="visiteur" type="hidden"
+                        value="<?php
 
 echo $uneFiche['id'];
     ?>">
 					<input	id="mois2<?php
 
-echo $uneFiche['id'] . $uneFiche['mois']?>" name="mois" type="hidden"	value="<?php
+echo $uneFiche['id'] . $uneFiche['mois']?>" name="mois" type="hidden"
+						value="<?php
 
 echo $uneFiche['mois'];
     ?>">
-					<button class="btn btn-danger btn-sm" type="submit" data-toggle="tooltip" data-placement="top" title="suspendre la mise en paiement (retour VA)"><?php
+					<button class="btn btn-danger btn-sm" type="submit" data-toggle="tooltip" data-placement="top" title="suspendre la mise en paiement (retour VA)">
+					<?php
 
 echo chr(38) . '#60;' . chr(38) . '#60;' . chr(38) . '#60;'?></button>
 				</form>
 				<form action="index.php?uc=suivreFrais&action=MPversRB" method="post">
 					<input	id="visiteur3<?php
 
-echo $uneFiche['id'] . $uneFiche['mois']?>" name="visiteur" type="hidden"	value="<?php
+echo $uneFiche['id'] . $uneFiche['mois']?>" name="visiteur" type="hidden"
+					 		value="<?php
 
 echo $uneFiche['id'];
     ?>">
 					<input	id="mois3<?php
 
-echo $uneFiche['id'] . $uneFiche['mois']?>" name="mois" type="hidden"	value="<?php
+echo $uneFiche['id'] . $uneFiche['mois']?>" name="mois" type="hidden"
+					     	value="<?php
 
 echo $uneFiche['mois'];
     ?>">
@@ -220,7 +222,6 @@ echo $uneFiche['mois'];
 			</div>
 			<hr/>
 		<?php
-
 }
 ;
 ?>
@@ -237,9 +238,7 @@ echo $montantRB;
 ?> euros.
 		<hr/>
 		<?php
-
 foreach ($lesfichesRB as $uneFiche) {
-    // TODO : limiter l'affichage à un an
     if (!estDateDepassee(dateAnglaisVersFrancais($uneFiche['date']))) {
         ?>
 			<div class="card">
@@ -263,8 +262,7 @@ echo $uneFiche['montant'] . ' euros ';
 			</div>
 			<hr/>
 		<?php
-
-}
+    }
     ;
 }
 ;
