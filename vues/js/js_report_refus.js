@@ -22,12 +22,12 @@
  */
 function reporterLigne(evenement) {
 	let id = evenement.srcElement.id;
-	libelleTest = "REPORT : " + document.getElementById("HFlibelle" + id).value;
+	libelleTest = "REPORT : " + document.getElementById("txtHFlibelle" + id).value;
 	if (libelleTest.length > 100) {
-		document.getElementById("HFlibelle" + id).value = libelleTest.substr(9,
+		document.getElementById("txtHFlibelle" + id).value = libelleTest.substr(9,
 				100);
 	} else {
-		document.getElementById("HFlibelle" + id).value = libelleTest;
+		document.getElementById("txtHFlibelle" + id).value = libelleTest;
 	}
 	document.forms["form" + id].submit();
 };
@@ -40,21 +40,21 @@ function reporterLigne(evenement) {
  */
 function refuserLigne(evenement) {
 	let id = evenement.srcElement.id;
-	libelleTest = "REFUSE : " + document.getElementById("HFlibelle" + id).value;
+	libelleTest = "REFUSE : " + document.getElementById("txtHFlibelle" + id).value;
 	if (libelleTest.length > 100) {
-		document.getElementById("HFlibelle" + id).value = libelleTest.substr(9,
+		document.getElementById("txtHFlibelle" + id).value = libelleTest.substr(9,
 				100);
 	} else {
-		document.getElementById("HFlibelle" + id).value = libelleTest;
+		document.getElementById("txtHFlibelle" + id).value = libelleTest;
 	}
 	document.forms["form" + id].submit();
 };
 
 window.addEventListener("load", function() {
 	let tabButtonsReporter = window.document
-			.querySelectorAll('button[name="Reporter"]');
+			.querySelectorAll('button[name="cmdReporter"]');
 	let tabButtonsRefuser = window.document
-			.querySelectorAll('button[name="Refuser"]');
+			.querySelectorAll('button[name="cmdRefuser"]');
 	for (let i = 0; i < tabButtonsReporter.length; i++) {
 		tabButtonsReporter[i].addEventListener("click", reporterLigne);
 		tabButtonsRefuser[i].addEventListener("click", refuserLigne);
