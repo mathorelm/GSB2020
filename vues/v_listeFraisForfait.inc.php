@@ -42,7 +42,7 @@
                             $vehicule['puissance_admin'] . " CV)";
                     }
                     ?></label>
-                        <input type="text" id="txtIdFrais"
+                        <input type="text" id="txtLesFrais"
                                name="txtLesFrais[<?php
 
                     echo $idFrais?>]"
