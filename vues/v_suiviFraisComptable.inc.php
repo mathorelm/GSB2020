@@ -227,7 +227,7 @@ echo $uneFiche['mois'];
 ?>
 	</div>
 	<div class="col-sm-4 text-center">
-		fiches remboursÃ©es (1 an) : <?php
+		fiches remboursées (1 an) : <?php
 
 echo $ficheaffichee;
 ?>
