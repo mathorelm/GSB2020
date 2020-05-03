@@ -1,6 +1,6 @@
 <?php
 /**
- * \brief estion de l'accueil
+ * \brief Gestion de l'accueil
  *
  * PHP Version 7
  *

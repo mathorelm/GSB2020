@@ -1,6 +1,6 @@
 <?php
 /**
- * \brief ue Pied de page
+ * \brief Vue Pied de page
  *
  * PHP Version 7
  *

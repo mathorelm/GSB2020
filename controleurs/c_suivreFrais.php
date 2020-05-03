@@ -1,6 +1,6 @@
 <?php
 /**
- * \brief estion de la validation des frais
+ * \brief Gestion de la validation des frais
  *
  * PHP Version 7
  *

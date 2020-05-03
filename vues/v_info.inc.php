@@ -1,6 +1,6 @@
 <?php
 /**
- * \brief ue Erreurs
+ * \brief Vue Erreurs
  *
  * PHP Version 7
  *
