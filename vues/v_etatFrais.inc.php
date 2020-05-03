@@ -1,16 +1,16 @@
 <?php
 /**
- * Vue État de Frais
+ * \brief Vue État de Frais
  *
  * PHP Version 7
  *
- * /package   GSB
- * /author    Réseau CERTA <contact@reseaucerta.org>
- * /author    José GIL <jgil@ac-nice.fr>
- * /copyright 2017 Réseau CERTA
- * /license   Réseau CERTA
- * /version   GIT: <0>
- * /link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
+ * \package   GSB
+ * \author    Réseau CERTA <contact@reseaucerta.org>
+ * \author    José GIL <jgil@ac-nice.fr>
+ * \copyright 2017 Réseau CERTA
+ * \license   Réseau CERTA
+ * \version   GIT: <0>
+ * \link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
 ?>
 
@@ -19,30 +19,29 @@
 	<div class="panel-heading">Fiche de frais du mois
         <?php
 
-echo $numMois . '-' . $numAnnee?> : </div>
+        echo $numMois . '-' . $numAnnee?> : </div>
 	<div class="panel-body">
 		<strong><em>Etat :</em></strong> <?php
 
 echo $libEtat?>
         depuis le <?php
 
-echo $dateModif?> <br> <strong><em>Montant validé :</em></strong> <?php
+        echo $dateModif?> <br> <strong><em>Montant validé :</em></strong> <?php
 
 echo $montantValide?>
         <?php
 
-if ($lien_pdf != "") {
+        if ($lien_pdf != "") {
             ?>
             <div class="row text-right">
             <i>Téléchargez votre PDF :</i> <a
 				href="<?php
 
-echo $lien_pdf?>"> <img class="pdf" src="./images/pdf.jpg" alt="Cliquez ici">
+            echo $lien_pdf?>"> <img class="pdf" src="./images/pdf.jpg" alt="Cliquez ici">
 			</a>
 		</div>
         <?php
-
-}
+        }
         ?>
     </div>
 </div>

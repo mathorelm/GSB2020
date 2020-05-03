@@ -1590,7 +1590,7 @@ class FPDF
             foreach($this->PageLinks[$n] as $pl)
             {
                   $rect = sprintf('%.2F %.2F %.2F %.2F', $pl[0], $pl[1], $pl[0]+$pl[2], $pl[1]-$pl[3]);
-                  $annots .= '<</Type /Annot /Subtype /Link /Rect ['.$rect.'] /Border [0 0 0] ';
+                  $annots .= '<</Type /Annot /Subtype \link /Rect ['.$rect.'] /Border [0 0 0] ';
                 if(is_string($pl[4])) {
                     $annots .= '/A <</S /URI /URI '.$this->_textstring($pl[4]).'>>>>';
                 } else

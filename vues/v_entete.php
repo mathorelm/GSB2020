@@ -1,16 +1,16 @@
 <?php
 /**
- * Vue Entête
+ * \brief Vue Entête
  *
  * PHP Version 7
  *
- * /package   GSB
- * /author    Réseau CERTA <contact@reseaucerta.org>
- * /author    José GIL <jgi@/ac-nice.fr>
- * /copyright 2017 Réseau CERTA
- * /license   Réseau CERTA
- * /version   GIT: <0>
- * /link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
+ * \package   GSB
+ * \author    Réseau CERTA <contact@reseaucerta.org>
+ * \author    José GIL <jgi@/ac-nice.fr>
+ * \copyright 2017 Réseau CERTA
+ * \license   Réseau CERTA
+ * \version   GIT: <0>
+ * \link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
 ?>
 
@@ -52,7 +52,7 @@
     </head>
 <body>
         <?php
-// erreur HTML ok : le </div> est dans v_pied.inc.php ?>
+        // erreur HTML ok : le </div> est dans v_pied.inc.php ?>
         <div class="container">
             <?php
             $uc = filter_input(INPUT_GET, 'uc', FILTER_SANITIZE_STRING);

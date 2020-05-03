@@ -1,7 +1,6 @@
 <?php
 require_once 'includes/fct.inc.php';
 require_once 'includes/class.pdogsb.inc.php';
-use PHPUnit\Framework\TestCase;
 
 class pdogsbincTITest extends TestCase
 {
@@ -311,7 +310,7 @@ class pdogsbincTITest extends TestCase
         // reporter un frais HF
         $lesFraisHF = $this->accesPdo->getLesFraisHorsForfait($this->id,
             $this->mois);
-        $this->accesPdo->reporteFraisHorsForfait($this->id, $this->mois,
+        $this->accesPdo->reporteFraisHorsForfait($this->id,
             'REPORTE : ' . $lesFraisHF[0]['libelle'], $lesFraisHF[0]['date'],
             $lesFraisHF[0]['montant'], $lesFraisHF[0]['id']);
         // Vérifier qu'il n'y a plus que 2 frais HF en liste

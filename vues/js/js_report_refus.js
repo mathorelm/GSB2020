@@ -1,24 +1,24 @@
 /**
- * Fonctions auxiliaires pour vue "Validation Frais Hors Forfait Comptable"
+ * \brief Fonctions auxiliaires pour vue "Validation Frais Hors Forfait Comptable"
  *
- * JavaScript
+ * \details fonctions JavaScript
  *
- * @category  PPE
- * @package   GSB
- * @author    Réseau CERTA <contact@reseaucerta.org>
- * @author    Louis-Marin Mathorel <gsb2020@free.fr>
- * @copyright 2017 Réseau CERTA
- * @license   Réseau CERTA
- * @version   GIT: <0>
- * @link      http://gsb2020.org
+ * \category  PPE
+ * \package   GSB
+ * \author    Réseau CERTA <contact@reseaucerta.org>
+ * \author    Louis-Marin Mathorel <gsb2020@free.fr>
+ * \copyright 2017 Réseau CERTA
+ * \license   Réseau CERTA
+ * \version   GIT: <0>
+ * \link      http://gsb2020.org
  */
 
 /**
- * Insère "REPORT : " sur la ligne demandée puis provoque l'envoi du formulaire
+ * \brief Insère "REPORT : " sur la ligne demandée puis provoque l'envoi du formulaire
  * pour mise à jour. Gère la limitation à 100 caractères de la BDD.
  *
- * @param   iD : index de la ligne HF à reporter (fourni par la page HTML)
- * @returns null
+ * \param   iD : index de la ligne HF à reporter (fourni par la page HTML)
+ * \returns null
  */
 function reporterLigne(evenement) {
 	let id = evenement.srcElement.id;
@@ -32,11 +32,11 @@ function reporterLigne(evenement) {
 	document.forms["form" + id].submit();
 };
 /**
- * Insère "REFUSE : " sur la ligne demandée puis provoque l'envoi du formulaire
+ * \brief Insère "REFUSE : " sur la ligne demandée puis provoque l'envoi du formulaire
  * pour mise à jour. Gère la limitation à 100 caractères de la BDD.
  *
- * @param   iD : index de la ligne HF à reporter (fourni par la page HTML)
- * @returns null
+ * \param   iD : index de la ligne HF à reporter (fourni par la page HTML)
+ * \returns null
  */
 function refuserLigne(evenement) {
 	let id = evenement.srcElement.id;

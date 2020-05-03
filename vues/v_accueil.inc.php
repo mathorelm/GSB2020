@@ -1,16 +1,16 @@
 <?php
 /**
- * Vue Accueil
+ * \brief Vue Accueil
  *
  * PHP Version 7
  *
- * /package   GSB
- * /author    Réseau CERTA <contact@reseaucerta.org>
- * /author    José GIL <jgil@ac-nice.fr>
- * /copyright 2017 Réseau CERTA
- * /license   Réseau CERTA
- * /version   GIT: <0>
- * /link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
+ * \package   GSB
+ * \author    Réseau CERTA <contact@reseaucerta.org>
+ * \author    José GIL <jgil@ac-nice.fr>
+ * \copyright 2017 Réseau CERTA
+ * \license   Réseau CERTA
+ * \version   GIT: <0>
+ * \link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
 ?>
 
@@ -26,14 +26,14 @@
 	<div class="col-md-12">
         <?php
 
-if ($_SESSION['metier'] == "visiteur") {
+        if ($_SESSION['metier'] == "visiteur") {
             ?> <div
 			class="panel panel-primary"><?php
         }
         ?>
         <?php
 
-if ($_SESSION['metier'] == "comptable") {
+        if ($_SESSION['metier'] == "comptable") {
             ?> <div
 				class="panel panel-warning"><?php
         }
@@ -48,7 +48,7 @@ if ($_SESSION['metier'] == "comptable") {
 						<div class="col-xs-12 col-md-12">
                         <?php
 
-if ($_SESSION['metier'] == "visiteur") {
+                        if ($_SESSION['metier'] == "visiteur") {
                             ?>
                             <a
 								href="index.php?uc=gererFrais&action=saisirFrais"
@@ -61,12 +61,11 @@ if ($_SESSION['metier'] == "visiteur") {
 								fiches de frais
 							</a>
                         <?php
-
-}
+                        }
                         ?>
                            <?php
 
-if ($_SESSION['metier'] == "comptable") {
+                        if ($_SESSION['metier'] == "comptable") {
                             ?>
                             <a
 								href="index.php?uc=valideFrais&action=selectionnerUtilisateur"
@@ -79,8 +78,7 @@ if ($_SESSION['metier'] == "comptable") {
 								paiements
 							</a>
                            <?php
-
-}
+                        }
                         ?>
                     </div>
 					</div>

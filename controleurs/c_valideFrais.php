@@ -1,15 +1,15 @@
 <?php
 /**
- * Gestion de la validation des frais
+ * \brief Gestion de la validation des frais
  *
  * PHP Version 7
  *
- * /package   GSB
- * /author    Louis-Marin MATHOREL <gsb2020@free.fr>
- * /copyright 2017 Réseau CERTA
- * /license   Réseau CERTA
- * /version   GIT: <0>
- * /link      http://gsb2020.free.fr Contexte « Laboratoire GSB »
+ * \package   GSB
+ * \author    Louis-Marin MATHOREL <gsb2020@free.fr>
+ * \copyright 2017 Réseau CERTA
+ * \license   Réseau CERTA
+ * \version   GIT: <0>
+ * \link      http://gsb2020.free.fr Contexte « Laboratoire GSB »
  */
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 // Clôturer les fiches de frais du mois précédent
@@ -91,8 +91,8 @@ switch ($action) {
         } else {
             if (substr($libelle, 0, 6) == "REPORT") {
                 // traitement spécifique : suppression mois actuel + insertion mois suivant
-                $pdo->reporteFraisHorsForfait($idVisiteur, $moisFiche, $libelle,
-                    $dateFrais, $montant, $idFiche);
+                $pdo->reporteFraisHorsForfait($idVisiteur, $libelle, $dateFrais,
+                    $montant, $idFiche);
                 ajouterInfo("Report de la ligne au mois suivant.");
             } else {
                 $pdo->majFraisHorsForfait($idVisiteur, $moisFiche, $libelle,

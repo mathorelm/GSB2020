@@ -1,6 +1,6 @@
 <?php
 /**
- * \details Vue Formulaire liste de frais hors forfait
+ *\brief  Vue Formulaire liste de frais hors forfait
  *
  * \details PHP Version 7
  *
@@ -47,64 +47,64 @@ $lignesAjustifier = count($lesFraisHorsForfait);
                         action="index.php?uc=valideFrais&action=corrigerFraisHF"
                         name="form<?php
 
-echo $id?>">
+                echo $id?>">
 
                     <td><input type="date" id="dateHFdate<?php
 
-echo $id?>" name="dateHFdate"
+                echo $id?>" name="dateHFdate"
                         value="<?php
 
-echo $date?>" class="form-control" required>
+                echo $date?>" class="form-control" required>
                     </td>
 
                     <td><input type="text" id="txtHFlibelle<?php
 
-echo $id?>"
+                echo $id?>"
                         name="txtHFlibelle" value="<?php
 
-echo htmlspecialchars($libelle)?>"
+                echo htmlspecialchars($libelle)?>"
                         class="form-control" required>
                     </td>
 
                     <td><input type="text" id="txtHFmontant<?php
 
-echo $id?>"
+                echo $id?>"
                         name="txtHFmontant" value="<?php
 
-echo $montant?>"
+                echo $montant?>"
                         class="form-control" pattern="[0-9]+(\.[0-9]+)?" required>
                     </td>
 
                     <td><input id="hdIdNom<?php
 
-echo $id?>"
+                echo $id?>"
                     	name="hdIdNom" type="hidden" value="<?php
 
-echo $idVisiteur?>">
+                echo $idVisiteur?>">
                     	<input id="hdMois<?php
 
-echo $id?>"
+                echo $id?>"
                     	name="hdMois" type="hidden" value="<?php
 
-echo $moisFiche?>">
+                echo $moisFiche?>">
                     	<input id="hdIdFiche<?php
 
-echo $id?>"
+                echo $id?>"
                     	name="hdIdFiche" type="hidden" value="<?php
 
-echo $id?>">
+                echo $id?>">
                         <button class="btn btn-success" type="submit"
                             id="cmdCorriger<?php
 
-echo $id?>">Corriger</button>
+                echo $id?>">Corriger</button>
                         <button class="btn btn-warning" type="button" name="cmdReporter"
                             id="<?php
 
-echo $id?>">Reporter</button>
+                echo $id?>">Reporter</button>
                         <button class="btn" type="button" name="cmdRefuser"
                         	id="<?php
 
-echo $id?>"
+                echo $id?>"
                             <?php
                 if (substr($libelle, 0, 6) == 'REFUSE') {
                     echo ' disabled';
@@ -133,18 +133,18 @@ echo $id?>"
                     name="txtNbJustificatifs" size="2" maxlength="5"
                     value="<?php
 
-echo $nbJustificatifs?>" class="form-control"
+                    echo $nbJustificatifs?>" class="form-control"
                     pattern="[<?php
 
-echo $lignesAjustifier?>]" required>
+                    echo $lignesAjustifier?>]" required>
                     <input id="idNom" name="hdIdNom" type="hidden"
                     value="<?php
 
-echo $idVisiteur?>">
+                    echo $idVisiteur?>">
                     <input id="mois" name="hdMois" type="hidden"
                     value="<?php
 
-echo $moisFiche?>">
+                    echo $moisFiche?>">
             </div>
             <button class="btn btn-success" type="submit" id="cmdValidation">Valider
                 la Fiche</button>

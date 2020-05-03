@@ -1,6 +1,6 @@
 <?php
 /**
- * Vue Formulaire modification fiche frais du comptable
+ * \brief Vue Formulaire modification fiche frais du comptable
  *
  * PHP Version 7
  *
@@ -18,7 +18,7 @@
 <div class="row">
     <h2>Valider la fiche de frais <?php
 
-echo $moisFiche . ' - ' . $nomPrenom['nom'] . ' ' . $nomPrenom['prenom']?>
+    echo $moisFiche . ' - ' . $nomPrenom['nom'] . ' ' . $nomPrenom['prenom']?>
     </h2>
     <h3>Eléments forfaitisés</h3>
     <div class="col-xs-4">
@@ -35,10 +35,10 @@ echo $moisFiche . ' - ' . $nomPrenom['nom'] . ' ' . $nomPrenom['prenom']?>
                     <div class="form-group">
                     	<label for="idFrais<?php
 
-echo $idFrais?>">
+                    echo $idFrais?>">
                     	<?php
 
-echo $libelle;
+                    echo $libelle;
                     if ($idFrais == "KM") {
                         $vehicule = $pdo->getVehicule($idVisiteur);
                         echo "<br/>";
@@ -49,23 +49,22 @@ echo $libelle;
                         </label>
                     <input type="text" id="txtIdFrais<?php
 
-echo $idFrais?>" name="txtlesFrais[<?php
+                    echo $idFrais?>" name="txtlesFrais[<?php
 
-echo $idFrais?>]" size="8" maxlength="5"
+                    echo $idFrais?>]" size="8" maxlength="5"
                         value="<?php
 
-echo $quantite?>" class="form-control" required>
+                    echo $quantite?>" class="form-control" required>
                 	</div>
                 <?php
-
-}
+                }
                 ?>
                 <input id="hdIdNom" name="hdIdNom" type="hidden" value="<?php
 
-echo $idVisiteur?>">
+                echo $idVisiteur?>">
                 <input id="hdMois" name="hdMois" type="hidden" value="<?php
 
-echo $moisFiche?>">
+                echo $moisFiche?>">
                 <button class="btn btn-success" type="submit" id="cmdCorrigerForfait" disabled>Corriger</button>
                 <button id="brReinit" class="btn btn-danger" type="reset">Réinitialiser</button>
             </fieldset>

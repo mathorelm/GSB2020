@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Index du projet GSB
+ * \brief Index du projet GSB
  *
  * PHP Version 7
  *
