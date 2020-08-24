@@ -22,8 +22,7 @@
 	</div>
 	<div class="col-md-4">
 		<form id="formulaire"
-			action="index.php?uc=valideFrais&action=voirListeFrais" method="post"
-			>
+			action="index.php?uc=valideFrais&action=voirListeFrais" method="post">
 			<div class="form-group">
 				<select id="lstVisiteurs" name="lstVisiteurs" class="form-control">
 					<option label="entete" value="0" disabled selected>...</option>
@@ -35,18 +34,17 @@
                         ?>
                          <option value="<?php
 
-                        echo $unId?>">
+echo $unId?>">
                          <?php
 
-                        echo $nom . ' ' . $prenom?>
+echo $nom . ' ' . $prenom?>
                          </option>
                     <?php
                     }
                     ?>
-                </select>
-
-			<select id="lstMois" name="lstMois" class="form-control">
-				<option label="entete" value="0" disabled selected>...</option>
+                </select> <select id="lstMois" name="lstMois"
+					class="form-control">
+					<option label="entete" value="0" disabled selected>...</option>
                     <?php
                     foreach ($TouslesMois as $unMois) {
                         $unID = $unMois['ID'];
@@ -56,19 +54,20 @@
                         ?>
                         <option label="<?php
 
-                        echo $unID?>"
-                                value="<?php
+echo $unID?>"
+						value="<?php
 
-                        echo $leMois?>">
+echo $leMois?>">
                         <?php
 
-                        echo $numMois . '/' . $numAnnee?>
+echo $numMois . '/' . $numAnnee?>
                         </option>
                     <?php
                     }
                     ?>
                 </select>
 			</div>
-		</div>
+
+	</div>
 	</form>
 </div>
