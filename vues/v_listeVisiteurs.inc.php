@@ -25,7 +25,7 @@
 			action="index.php?uc=valideFrais&action=voirListeFrais" method="post">
 			<div class="form-group">
 				<select id="lstVisiteurs" name="lstVisiteurs" class="form-control">
-					<option label="entete" value="0" disabled selected>...</option>
+					<option value="" disabled selected>...</option>
                     <?php
                     foreach ($lesVisiteurs as $unVisiteur) {
                         $unId = $unVisiteur['id'];
@@ -44,7 +44,7 @@ echo $nom . ' ' . $prenom?>
                     ?>
                 </select> <select id="lstMois" name="lstMois"
 					class="form-control">
-					<option label="entete" value="0" disabled selected>...</option>
+					<option value="" disabled selected>...</option>
                     <?php
                     foreach ($TouslesMois as $unMois) {
                         $unID = $unMois['ID'];
