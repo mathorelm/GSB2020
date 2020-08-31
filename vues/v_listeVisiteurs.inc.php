@@ -13,7 +13,6 @@
  * \link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
 ?>
-
 <script src="/vues/js/js_dynamique_listeVisiteurs.js"></script>
 
 <div class="row">
@@ -52,12 +51,14 @@
                         $numAnnee = $unMois['numAnnee'];
                         $numMois = $unMois['numMois'];
                         ?>
-                        <option value="<?php
+                        <option label=<?php
 
-echo $leMois?>">
+                        echo $unID?> value="<?php
+
+                        echo $leMois?>">
                         <?php
 
-echo $numMois . '/' . $numAnnee?>
+                        echo $numMois . '/' . $numAnnee?>
                         </option>
                     <?php
                     }
