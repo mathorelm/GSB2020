@@ -51,7 +51,7 @@
                         $numAnnee = $unMois['numAnnee'];
                         $numMois = $unMois['numMois'];
                         ?>
-                        <option label=<?php
+                        <option id=<?php
 
                         echo $unID?> value="<?php
 

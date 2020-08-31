@@ -26,7 +26,7 @@ function afficheListeMois() {
 	marqueurchoix = false;
 	//cacher les éléments qui ne correspondent pas à l'ID sélectionné.
 	for (let i = 0; i < document.getElementById("lstMois").options.length; i++) {
-		if (mesMois.options[i].label != monChoix) {
+		if (mesMois.options[i].id != monChoix) {
 			mesMois.options[i].style.display = "none";
 		} else {
 			mesMois.options[i].style.display = "block";
