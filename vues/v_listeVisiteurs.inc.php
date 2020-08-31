@@ -34,10 +34,10 @@
                         ?>
                          <option value="<?php
 
-echo $unId?>">
+                        echo $unId?>">
                          <?php
 
-echo $nom . ' ' . $prenom?>
+                        echo $nom . ' ' . $prenom?>
                          </option>
                     <?php
                     }
@@ -52,10 +52,7 @@ echo $nom . ' ' . $prenom?>
                         $numAnnee = $unMois['numAnnee'];
                         $numMois = $unMois['numMois'];
                         ?>
-                        <option label="<?php
-
-echo $unID?>"
-						value="<?php
+                        <option value="<?php
 
 echo $leMois?>">
                         <?php
