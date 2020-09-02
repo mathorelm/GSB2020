@@ -39,6 +39,7 @@ switch ($action) {
         // TODO : attention ici le libellé est en UNICODE. Conversion ?
         $libelle = filter_input(INPUT_POST, 'txtLibelle', FILTER_SANITIZE_STRING);
         echo $libelle;
+        die();
         $montant = filter_input(INPUT_POST, 'txtMontant', FILTER_VALIDATE_FLOAT);
         if (nbErreurs() != 0) {
             include 'vues/v_erreurs.inc.php';
