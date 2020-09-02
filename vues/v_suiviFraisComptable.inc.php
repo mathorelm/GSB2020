@@ -214,7 +214,7 @@ foreach ($lesfichesMP as $uneFiche) {
 
     echo $uneFiche['mois'];
     ?>">
-					<button class="btn btn-success btn-sm" type="submit" data-toggle="tooltip" data-placement="top" title="placer en archive (remboursÃ©e)">>>></button>
+					<button class="btn btn-success btn-sm" type="submit" data-toggle="tooltip" data-placement="top" title="placer en archive (remboursée)">>>></button>
 				</form>
 				</div>
 			</div>
