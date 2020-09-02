@@ -276,8 +276,6 @@ function ajouterErreur(string $msg)
         addLogEvent(
             'Erreur ("' . $msg . '") de ' . $_SESSION['prenom'] . ' ' .
             $_SESSION['nom'] . ' (IP = ' . $_SERVER['REMOTE_ADDR']);
-    } else {
-        addLogEvent('Erreur de connexion par IP = ' . $_SERVER['REMOTE_ADDR']);
     }
 }
 
