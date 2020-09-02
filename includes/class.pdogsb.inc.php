@@ -498,9 +498,10 @@ class PdoGsb
      * \param String $dateFrais Date du frais hors forfait à reporter
      * \param Float $montant Montant du frais hors forfait à reporter
      * \param Int $idFiche fiche dans laquelle se situe le frais actuellement
+     * \return String $mois_suivant référence de la fiche sur laquelle le frais a été inscrit
      */
     public function reporteFraisHorsForfait($idVisiteur, $libelle, $dateFrais,
-        $montant, $idFiche)
+        $montant, $idFiche): string
     {
         // supprimer la ligne dans le mois actuel
         $this->supprimerFraisHorsForfait($idFiche);
@@ -514,6 +515,7 @@ class PdoGsb
         }
         $this->creeNouveauFraisHorsForfait($idVisiteur, $mois_suivant, $libelle,
             $dateFrais, $montant);
+        return $mois_suivant;
     }
 
     /**
