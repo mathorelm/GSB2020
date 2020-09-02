@@ -93,7 +93,9 @@ switch ($action) {
                 // traitement spécifique : suppression mois actuel + insertion mois suivant
                 $pdo->reporteFraisHorsForfait($idVisiteur, $libelle, $dateFrais,
                     $montant, $idFiche);
-                ajouterInfo("Report de la ligne au mois suivant.");
+                ajouterInfo(
+                    "Report de la ligne sur la fiche " .
+                    date('d-m-Y', strtotime('+1 month')) . ".");
             } else {
                 $pdo->majFraisHorsForfait($idVisiteur, $moisFiche, $libelle,
                     $dateFrais, $montant, $idFiche);
