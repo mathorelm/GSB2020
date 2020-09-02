@@ -37,8 +37,8 @@ switch ($action) {
         $dateFrais = dateAnglaisVersFrancais(
             filter_input(INPUT_POST, 'dateDateFrais', FILTER_SANITIZE_STRING));
         // TODO : attention ici le libellé est en UNICODE. Conversion ?
-        $libelle = utf8_encode(
-            filter_input(INPUT_POST, 'txtLibelle', FILTER_SANITIZE_STRING));
+        $libelle = filter_input(INPUT_POST, 'txtLibelle', FILTER_SANITIZE_STRING);
+        echo $libelle;
         $montant = filter_input(INPUT_POST, 'txtMontant', FILTER_VALIDATE_FLOAT);
         if (nbErreurs() != 0) {
             include 'vues/v_erreurs.inc.php';
