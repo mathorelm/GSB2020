@@ -22,14 +22,19 @@
  */
 function reporterLigne(evenement) {
 	let id = evenement.srcElement.id;
-	libelleTest = "REPORT : " + document.getElementById("txtHFlibelle" + id).value;
-	if (libelleTest.length > 100) {
-		document.getElementById("txtHFlibelle" + id).value = libelleTest.substr(9,
+	let laLigne = document.getElementById("txtHFlibelle"+id).value;
+	if (laLigne.substring(0,6))<>"REFUSE") {
+		libelleTest = "REPORT : " + laLigne;
+		if (libelleTest.length > 100) {
+			document.getElementById("txtHFlibelle" + id).value = libelleTest.substring(9,
 				100);
+		} else {
+			document.getElementById("txtHFlibelle" + id).value = libelleTest;
+		}
+		document.forms["form" + id].submit();
 	} else {
-		document.getElementById("txtHFlibelle" + id).value = libelleTest;
-	}
-	document.forms["form" + id].submit();
+		alert('Impossible de reporter un frais refusé.');
+	};
 };
 /**
  * \brief Insère "REFUSE : " sur la ligne demandée puis provoque l'envoi du formulaire
@@ -42,7 +47,7 @@ function refuserLigne(evenement) {
 	let id = evenement.srcElement.id;
 	libelleTest = "REFUSE : " + document.getElementById("txtHFlibelle" + id).value;
 	if (libelleTest.length > 100) {
-		document.getElementById("txtHFlibelle" + id).value = libelleTest.substr(9,
+		document.getElementById("txtHFlibelle" + id).value = libelleTest.substring(9,
 				100);
 	} else {
 		document.getElementById("txtHFlibelle" + id).value = libelleTest;
