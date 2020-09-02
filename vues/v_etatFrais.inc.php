@@ -28,7 +28,7 @@ echo $libEtat?>
 
         echo $dateModif?> <br> <strong><em>Montant validé :</em></strong> <?php
 
-echo $montantValide?>
+        echo $montantValide?>
         <?php
 
         if ($lien_pdf != "") {
@@ -55,7 +55,7 @@ echo $montantValide?>
                 ?>
                 <th> <?php
 
-                echo htmlspecialchars($libelle)?></th>
+                echo $libelle?></th>
                 <?php
             }
             ?>
