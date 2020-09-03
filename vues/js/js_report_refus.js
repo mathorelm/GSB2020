@@ -60,7 +60,7 @@ window.addEventListener("load", function() {
 			.querySelectorAll('button[name="cmdReporter"]');
 	let tabButtonsRefuser = window.document
 			.querySelectorAll('button[name="cmdRefuser"]');
-	let tabTextHFlibelle = window.document.querySelectroAll('text[name="txtHFlibelle"]');
+	let tabTextHFlibelle = window.document.querySelectorAll('text[name="txtHFlibelle"]');
 	for (let i = 0; i < tabButtonsReporter.length; i++) {
 		let leFrais = tabTextHFlibelle[i].value;
 		if (leFrais.substring(0,6)!="REFUSE") {
