@@ -60,8 +60,20 @@ window.addEventListener("load", function() {
 			.querySelectorAll('button[name="cmdReporter"]');
 	let tabButtonsRefuser = window.document
 			.querySelectorAll('button[name="cmdRefuser"]');
+	let tabTextHFlibelle = window.document.querySelectroAll('text[name="txtHFlibelle"]');
 	for (let i = 0; i < tabButtonsReporter.length; i++) {
-		tabButtonsReporter[i].addEventListener("click", reporterLigne);
-		tabButtonsRefuser[i].addEventListener("click", refuserLigne);
+		let leFrais = tabTextHFlibelle[i].value;
+		if (leFrais.substring(0,6)!="REFUSE") {
+			//ajouter la possibilité de reporter si non refusé
+			tabButtonsReporter[i].addEventListener("click", reporterLigne);
+			tabButtonsRefuser[i].addEventListener("click", refuserLigne);
+		} else {
+			//impossible d'intervenir pour modifier la mention "REFUSE"
+			tabTextHFlibelle[i].readonly = true;
+			//cacher les boutons
+			tabButtonsReporter[i].visible = false;
+			tabButtonsRefuser[i].visible = false;
+		}
+
 	}
 });
