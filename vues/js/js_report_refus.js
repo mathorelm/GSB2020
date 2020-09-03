@@ -29,9 +29,8 @@ function reporterLigne(evenement) {
 		100);
 	} else {
 		document.getElementById("txtHFlibelle" + id).value = libelleTest;
-	}
-	document.forms["form" + id].submit();
 	};
+	document.forms["form" + id].submit();
 };
 /**
  * \brief Insère "REFUSE : " sur la ligne demandée puis provoque l'envoi du
