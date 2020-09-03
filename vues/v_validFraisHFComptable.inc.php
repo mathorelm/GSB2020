@@ -62,7 +62,7 @@ $lignesAjustifier = count($lesFraisHorsForfait);
                 echo $id?>"
                         name="txtHFlibelle" value="<?php
 
-                echo htmlspecialchars($libelle)?>"
+                echo $libelle?>"
                         class="form-control" required>
                     </td>
 
@@ -100,7 +100,11 @@ $lignesAjustifier = count($lesFraisHorsForfait);
                         <button class="btn btn-warning" type="button" name="cmdReporter"
                             id="<?php
 
-                echo $id?>">Reporter</button>
+                echo $id?>"<?php
+                if (substr($libelle, 0, 6) == 'REFUSE') {
+                    echo ' disabled';
+                }
+                ?>>Reporter</button>
                         <button class="btn" type="button" name="cmdRefuser"
                         	id="<?php
 

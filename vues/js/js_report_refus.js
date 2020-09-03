@@ -23,17 +23,14 @@
 function reporterLigne(evenement) {
 	let id = evenement.srcElement.id;
 	let laLigne = document.getElementById("txtHFlibelle"+id).value;
-	if (laLigne.substring(0,6)!="REFUSE") {
-		libelleTest = "REPORT : " + laLigne;
-		if (libelleTest.length > 100) {
-			document.getElementById("txtHFlibelle" + id).value = libelleTest.substring(9,
-				100);
-		} else {
-			document.getElementById("txtHFlibelle" + id).value = libelleTest;
-		}
-		document.forms["form" + id].submit();
+	libelleTest = "REPORT : " + laLigne;
+	if (libelleTest.length > 100) {
+		document.getElementById("txtHFlibelle" + id).value = libelleTest.substring(9,
+		100);
 	} else {
-		alert('Impossible de reporter un frais refusé.');
+		document.getElementById("txtHFlibelle" + id).value = libelleTest;
+	}
+	document.forms["form" + id].submit();
 	};
 };
 /**
@@ -60,19 +57,9 @@ window.addEventListener("load", function() {
 			.querySelectorAll('button[name="cmdReporter"]');
 	let tabButtonsRefuser = window.document
 			.querySelectorAll('button[name="cmdRefuser"]');
-	let tabTextHFlibelle = window.document.querySelectorAll('text[name="txtHFlibelle"]');
 	for (let i = 0; i < tabButtonsReporter.length; i++) {
-		let leFrais = tabTextHFlibelle[i].value;
-		if (leFrais.substring(0,6)!="REFUSE") {
-			//ajouter la possibilité de reporter si non refusé
-			tabButtonsReporter[i].addEventListener("click", reporterLigne);
-			tabButtonsRefuser[i].addEventListener("click", refuserLigne);
-		} else {
-			//impossible d'intervenir pour modifier la mention "REFUSE"
-			tabTextHFlibelle[i].readonly = true;
-			//cacher les boutons
-			tabButtonsReporter[i].visible = false;
-			tabButtonsRefuser[i].visible = false;
+		tabButtonsReporter[i].addEventListener("click", reporterLigne);
+		tabButtonsRefuser[i].addEventListener("click", refuserLigne);
 		}
 
 	}
