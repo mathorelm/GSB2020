@@ -49,7 +49,7 @@ if (($balance - $montantMP) < 0) {
                                                     echo ($balance - $montantMP);
                                                     ?>
 	                                             </span> euros.</H3>
-	<p> Fiche en retard en <a style="background:red;color:white">rouge</a>. Le classement va des fiches les plus anciennes aux plus jeunes.</p>
+	<p> Fiche en retard en <a style="background:red;color:white">rouge</a>. Le classement est effectué en fonction du la date du changement de statut : les plus anciennes en haut.</p>
 </div>
 <hr/>
 <div class="row">
