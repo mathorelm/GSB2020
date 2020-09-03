@@ -23,7 +23,6 @@
 function reporterLigne(evenement) {
 	let id = evenement.srcElement.id;
 	let laLigne = document.getElementById("txtHFlibelle"+id).value;
-	alert(laLigne.substring(0,6));
 	if (laLigne.substring(0,6)!="REFUSE") {
 		libelleTest = "REPORT : " + laLigne;
 		if (libelleTest.length > 100) {
