@@ -14,17 +14,17 @@
  */
 
 /**
- * \brief Insère "REPORT : " sur la ligne demandée puis provoque l'envoi du formulaire
- * pour mise à jour. Gère la limitation à 100 caractères de la BDD.
+ * \brief Insère "REPORT : " sur la ligne demandée puis provoque l'envoi du
+ * formulaire pour mise à jour. Gère la limitation à 100 caractères de la BDD.
  *
- * \param   iD : index de la ligne HF à reporter (fourni par la page HTML)
+ * \param iD : index de la ligne HF à reporter (fourni par la page HTML)
  * \returns null
  */
 function reporterLigne(evenement) {
 	let id = evenement.srcElement.id;
 	let laLigne = document.getElementById("txtHFlibelle"+id).value;
 	alert(laLigne.substring(0,6));
-	if (laLigne.substring(0,6))<>"REFUSE") {
+	if (laLigne.substring(0,6))!="REFUSE") {
 		libelleTest = "REPORT : " + laLigne;
 		if (libelleTest.length > 100) {
 			document.getElementById("txtHFlibelle" + id).value = libelleTest.substring(9,
@@ -38,10 +38,10 @@ function reporterLigne(evenement) {
 	};
 };
 /**
- * \brief Insère "REFUSE : " sur la ligne demandée puis provoque l'envoi du formulaire
- * pour mise à jour. Gère la limitation à 100 caractères de la BDD.
+ * \brief Insère "REFUSE : " sur la ligne demandée puis provoque l'envoi du
+ * formulaire pour mise à jour. Gère la limitation à 100 caractères de la BDD.
  *
- * \param   iD : index de la ligne HF à reporter (fourni par la page HTML)
+ * \param iD : index de la ligne HF à reporter (fourni par la page HTML)
  * \returns null
  */
 function refuserLigne(evenement) {
